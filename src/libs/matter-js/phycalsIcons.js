@@ -30,7 +30,10 @@ export function phycalsIcons() {
                     startShowIcons();
                 }
             };
-            img.src = `src/assets/images/svg/physical-icons/${texture}.svg`;
+            img.src = new URL(
+                `../../assets/images/svg/physical-icons/${texture}.svg`,
+                import.meta.url
+            ).href;
         });
     }
 
@@ -87,7 +90,10 @@ export function phycalsIcons() {
                 restitution: 0.2,
                 render: {
                     sprite: {
-                        texture: `src/assets/images/svg/physical-icons/${texture}.svg`,
+                        texture: new URL(
+                            `../../assets/images/svg/physical-icons/${texture}.svg`,
+                            import.meta.url
+                        ).href,
                         xScale: 1,
                         yScale: 1,
                     },
