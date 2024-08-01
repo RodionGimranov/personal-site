@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background: #2b2a2a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.home_intro_text_animation,
+.outro_text_container,
+.home_about_me_text,
+.logo_tilt_effect,
+.update_info_card,
+.action_prompt,
+.typing_text,
+.skills_card,
+.web_title {
+    cursor: default;
+    user-select: none;
+}
+
+.close_changelog_btn_icon,
+.card_viewing_sign,
+.folder_icon,
+.close_icon,
+.note_icon {
+    user-select: none;
+}
+
+.page_title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
