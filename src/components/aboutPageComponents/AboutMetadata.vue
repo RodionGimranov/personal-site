@@ -1,13 +1,13 @@
 <template>
     <div class="code_editor">
         <div class="menu_bar">
-            <span class="close_button menu_btn"></span>
-            <span class="minimize_button menu_btn"></span>
-            <span class="fullscreen_button menu_btn"></span>
+            <span class="close_btn menu_btn"></span>
+            <span class="minimize_btn menu_btn"></span>
+            <span class="fullscreen_btn menu_btn"></span>
         </div>
         <div class="title_bar">
             <div class="file_tab">
-                <img class="lang_icon" src="../../assets/images/svg/metadata-icons/small-js-icon.svg" alt="Programming language icon">
+                <img class="lang_icon" src="../../assets/images/svg/metadata-icons/small-js-icon.svg" alt="JavaScript icon">
                 <p class="file_name">projectData.js</p>
                 <img class="close_file_icon" src="../../assets/images/svg/metadata-icons/close-file-icon.svg" alt="Cross icon">
             </div>
@@ -35,19 +35,19 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">"4081"</p>
+                    <p :style="{ color: '#CE9178'}">"4099"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_3">{
                     <p :style="{ color: '#9CDCFE'}">number_of_folders:</p>
-                    <p :style="{ color: '#CE9178'}">"478"</p>
+                    <p :style="{ color: '#CE9178'}">"503"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_4">{
                     <p :style="{ color: '#9CDCFE'}">number_of_files:</p>
-                    <p :style="{ color: '#CE9178'}">"2822"</p>
+                    <p :style="{ color: '#CE9178'}">"2858"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
@@ -108,16 +108,16 @@
     border-radius: 100px;
 }
 
-.close_button {
-    background: #ED6A5E;
+.close_btn {
+    background: $mac_close_btn_color;
 }
 
-.minimize_button {
-    background: #F5BD50;
+.minimize_btn {
+    background: $mac_minimize_btn_color;
 }
 
-.fullscreen_button {
-    background: #61C454;
+.fullscreen_btn {
+    background: $max_fullscreen_btn_color;
 }
 
 .title_bar {
@@ -133,7 +133,7 @@
 
 .file_tab {
     height: 35px;
-    background: #1C1C1E;
+    background: $block_bg_color;
     padding: 0px 10px 0px 20px;
 
     display: flex;
@@ -168,7 +168,7 @@
     align-items: center;
 
     &:hover {
-        background: #303031;
+        background: $toolbar_hover_bg_color;
     }
 }
 
@@ -189,7 +189,7 @@
     font-weight: 400;
     line-height: 21px;
     word-wrap: break-word;
-    color: #808080;
+    color: $line_number_color;
     text-align: right;
 }
 
@@ -214,17 +214,17 @@
 }
 
 .comment {
-    color: #6A9955;
+    color: $comment_code_color;
 }
 
 .line_1 {
-    color: #C586C0;
+    color: $pink_code_text_color;
     gap: 10px;
 }
 
 .line_2, .line_3, .line_4, .line_5 {
     display: flex;
-    color: #C586C0;
+    color: $pink_code_text_color;
     margin-left: 10px;
 
     & > *:not(:last-child) {
@@ -233,6 +233,6 @@
 }
 
 .line_6 {
-    color: #FFD700;
+    color: $yellow_code_text_color;
 }
 </style>
