@@ -2,14 +2,7 @@
     <div class="image_block_container">
         <img class="image" :src="currentItem.gallery_image" alt="Gallery image" />
         <div class="slider_wrapper">
-            <div class="slider_indicators">
-                <span
-                    class="dot"
-                    v-for="index in 5"
-                    :key="index"
-                    :class="{ active: index - 1 === currentIndex % 5 }"
-                ></span>
-            </div>
+            <SliderIndicators :numberOfDots="5" :currentIndex="currentIndex" />
         </div>
     </div>
 </template>
@@ -17,6 +10,8 @@
 <script setup>
 import { useSwitch } from "../../composablse/useSwitch.js";
 import { galleryDataList } from "../../data/galleryDataList.js";
+
+import SliderIndicators from "../SliderIndicators.vue";
 
 const { currentIndex, currentItem } = useSwitch(galleryDataList);
 </script>
@@ -54,30 +49,5 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     display: flex;
     justify-content: center;
     align-items: flex-end;
-}
-
-.slider_indicators {
-    padding: 5px 10px;
-    border-radius: 100px;
-    backdrop-filter: blur(20px);
-    background: $slider_indicator_bg_color;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-}
-
-.dot {
-    width: 10px;
-    height: 10px;
-
-    transition: 0.5s;
-    border-radius: 100px;
-    background: $secondary_gray_color;
-
-    &.active {
-        background: $primary_white_color;
-    }
 }
 </style>

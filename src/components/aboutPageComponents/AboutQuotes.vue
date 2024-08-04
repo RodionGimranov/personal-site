@@ -6,14 +6,7 @@
             <p class="author_of_the_quote">- {{ currentItem.author }}</p>
         </div>
         <div class="controls_container">
-            <div class="slider_indicators">
-                <span
-                    class="dot"
-                    v-for="index in 5"
-                    :key="index"
-                    :class="{ active: index - 1 === currentIndex % 5 }"
-                ></span>
-            </div>
+            <SliderIndicators :numberOfDots="5" :currentIndex="currentIndex" />
         </div>
     </div>
 </template>
@@ -21,6 +14,8 @@
 <script setup>
 import { useSwitch } from "../../composablse/useSwitch.js";
 import { quotesDataList } from "../../data/quotesDataList.js";
+
+import SliderIndicators from "../SliderIndicators.vue";
 
 const { currentIndex, currentItem } = useSwitch(quotesDataList);
 </script>
