@@ -35,7 +35,7 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">"4099"</p>
+                    <p :style="{ color: '#CE9178'}">"4117"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
