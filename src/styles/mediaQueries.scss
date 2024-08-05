@@ -117,7 +117,7 @@
     body {
         // ABOUT
         .blocks_row {
-            width: 440px;
+            width: 326px;
             justify-content: center;
         }
         .text_content_container {
@@ -131,6 +131,12 @@
         }
         .logo_tilt_effect {
             display: none;
+        }
+        .code_text {
+            font-size: 13px;
+        }
+        .about_page_container {
+            transform: scale(1.1);
         }
     }
 }
@@ -219,16 +225,6 @@
 // 440PX
 @media (max-width: 440px) {
     body {
-        // ABOUT
-        .blocks_row {
-            width: 100%;
-            justify-content: center;
-        }
-        .image_block_container,
-        .music_block_container,
-        .text_content_container {
-            width: 100%;
-        }
         // MODAL PROJECT CARD
         .tech_name {
             font-size: 16px;
@@ -260,6 +256,12 @@
             width: calc(100vw - 30px);
         }
         // ABOUT
+        .about_page_container {
+            transform: scale(1);
+        }
+        .blocks_row {
+            width: 100%;
+        }
         .block_title {
             font-size: 22px;
         }
