@@ -194,12 +194,12 @@ watch(currentSong, async () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .control_btn {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
 
     transition: 0.2s;
     border-radius: 100px;
