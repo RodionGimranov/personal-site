@@ -35,7 +35,7 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">"4076"</p>
+                    <p :style="{ color: '#CE9178'}">4125"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
@@ -47,7 +47,7 @@
                 </p>
                 <p class="code_text line_4">{
                     <p :style="{ color: '#9CDCFE'}">number_of_files:</p>
-                    <p :style="{ color: '#CE9178'}">"2939"</p>
+                    <p :style="{ color: '#CE9178'}">"2940"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
