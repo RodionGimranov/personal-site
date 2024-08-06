@@ -21,7 +21,7 @@
             </button>
             <button class="control_btn play" v-if="!isPlaying" @click="playSong">
                 <img
-                    class="button_control_icon"
+                    class="button_control_icon play_icon"
                     src="../../assets/images/svg/musicPlayer-icons/Play-song-icon.svg"
                     alt="Button Icon"
                 />
@@ -210,6 +210,19 @@ watch(currentSong, async () => {
 
     &:active {
         background: $button_active_color;
+
+        .button_control_icon {
+            transform: scale(0.8);
+        }
     }
+}
+
+.button_control_icon {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.play_icon {
+    margin-left: 2px;
 }
 </style>
