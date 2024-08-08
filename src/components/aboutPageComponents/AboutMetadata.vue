@@ -35,7 +35,7 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">4125"</p>
+                    <p :style="{ color: '#CE9178'}">4106"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
@@ -53,7 +53,7 @@
                 </p>
                 <p class="code_text line_5">{
                     <p :style="{ color: '#9CDCFE'}">project_size:</p>
-                    <p :style="{ color: '#CE9178'}">"328 MB"</p>
+                    <p :style="{ color: '#CE9178'}">"325 MB"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
