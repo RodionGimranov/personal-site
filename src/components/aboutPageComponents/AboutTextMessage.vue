@@ -3,9 +3,8 @@
         <div class="message_block">
             <p class="message_title">New personal site 🎉</p>
             <p class="message_text">
-                If you're reading this... thank you! Happy to have you here in my little corner of
-                the internet and I hope you're enjoying yourself.<br />
-                I have plenty more coming and hope you'll stick around ❤️
+                If you're reading this... thank you! I'm glad you're here in my little corner of the
+                internet. I have plenty more coming up, and I hope you're enjoying it here. ❤️
             </p>
         </div>
         <span class="future_content_block">Here will be content</span>
