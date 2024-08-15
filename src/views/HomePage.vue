@@ -4,7 +4,7 @@
             <HomeIntroText />
         </section>
         <HomeBioText />
-        <section class="home_section skills_section">
+        <section class="home_section">
             <p class="home_section_title">Skills</p>
             <HomeSkills />
         </section>
