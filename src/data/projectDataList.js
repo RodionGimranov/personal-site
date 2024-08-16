@@ -21,8 +21,8 @@ export const projectDataList = [
             "https://firebasestorage.googleapis.com/v0/b/personal-website-d1f33.appspot.com/o/Small%20video%20project%20covers%2FPortfolio-Website-2-Screen-Recording.mp4?alt=media&token=6a6fc079-eccc-47f2-a261-f5790dde39f2",
         large_project_cover:
             "https://firebasestorage.googleapis.com/v0/b/personal-website-d1f33.appspot.com/o/Large%20video%20project%20covers%2FPortfolio-Website-2-Screen-Recording.mp4?alt=media&token=0e4283b7-e3b7-4150-9b1b-2bba279ec549",
-        link_to_deploy: "https://rodiongimranov.github.io/Personal_WebSite/index.html",
-        link_to_github: "https://github.com/RodionGimranov/Personal_WebSite",
+        link_to_deploy: "https://rodiongimranov.github.io/personal-site/#/Home",
+        link_to_github: "https://github.com/RodionGimranov/personal-site",
     },
     {
         id: 1,
