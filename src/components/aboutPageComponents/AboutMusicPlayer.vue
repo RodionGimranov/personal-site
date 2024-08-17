@@ -1,7 +1,15 @@
 <template>
     <div class="music_block_container">
         <img class="album_art_image" :src="currentSong.album_image" alt="Album Art" />
-        <p class="song_title">{{ currentSong.song_name }}</p>
+        <div class="song_title_container">
+            <p class="song_title">{{ currentSong.song_name }}</p>
+            <img
+                class="explicit_icon"
+                src="../../assets/images/svg/musicPlayer-icons/explicit-icon.svg"
+                alt="Explicit content icon"
+                v-show="currentSong.explicit_content === true"
+            />
+        </div>
         <p class="artist_name">{{ currentSong.artist_name }}</p>
         <audio ref="audioPlayer" :src="currentSong.song_url" @ended="playNextSong"></audio>
         <div class="controls_btn_container">
@@ -19,14 +27,14 @@
                     alt="Button Icon"
                 />
             </button>
-            <button class="control_btn play" v-if="!isPlaying" @click="playSong">
+            <button class="control_btn play" v-show="!isPlaying" @click="playSong">
                 <img
                     class="button_control_icon play_icon"
                     src="../../assets/images/svg/musicPlayer-icons/Play-song-icon.svg"
                     alt="Button Icon"
                 />
             </button>
-            <button class="control_btn stop" v-if="isPlaying" @click="stopSong">
+            <button class="control_btn stop" v-show="isPlaying" @click="stopSong">
                 <img
                     class="button_control_icon"
                     src="../../assets/images/svg/musicPlayer-icons/Stop-song-icon.svg"
@@ -40,14 +48,14 @@
                     alt="Button Icon"
                 />
             </button>
-            <button class="control_btn volume_on" v-if="isVolumeOn" @click="muteVolume">
+            <button class="control_btn volume_on" v-show="isVolumeOn" @click="muteVolume">
                 <img
                     class="button_control_icon"
                     src="../../assets/images/svg/musicPlayer-icons/Volume-on-icon.svg"
                     alt="Button Icon"
                 />
             </button>
-            <button class="control_btn volume_off" v-if="!isVolumeOn" @click="unmuteVolume">
+            <button class="control_btn volume_off" v-show="!isVolumeOn" @click="unmuteVolume">
                 <img
                     class="button_control_icon"
                     src="../../assets/images/svg/musicPlayer-icons/Volume-off-icon.svg"
@@ -171,8 +179,15 @@ watch(currentSong, async () => {
     border-radius: 20px;
 }
 
-.song_title {
+.song_title_container {
     margin-bottom: 7px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.song_title {
     font-size: 18px;
     font-weight: 500;
     color: $primary_white_color;
