@@ -22,7 +22,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     width: 326px;
     min-height: 326px;
 
-    padding: 15px;
+    padding: 12px;
     overflow: hidden;
     border-radius: 30px;
     background: $block_bg_color;
@@ -35,7 +35,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
 .image {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 18px;
 }
 
 .slider_wrapper {
@@ -44,7 +44,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     height: 100%;
 
     z-index: 100;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 
     display: flex;
     justify-content: center;
