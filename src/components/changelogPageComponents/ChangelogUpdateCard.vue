@@ -9,7 +9,7 @@
             v-for="description in update.description"
             :key="description.text"
         >
-            - {{ description.text }}.
+            {{ description.text }}.
         </p>
     </div>
 </template>
