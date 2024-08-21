@@ -35,19 +35,19 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">4106"</p>
+                    <p :style="{ color: '#CE9178'}">4140"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_3">{
                     <p :style="{ color: '#9CDCFE'}">number_of_folders:</p>
-                    <p :style="{ color: '#CE9178'}">"554"</p>
+                    <p :style="{ color: '#CE9178'}">"656"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_4">{
                     <p :style="{ color: '#9CDCFE'}">number_of_files:</p>
-                    <p :style="{ color: '#CE9178'}">"2940"</p>
+                    <p :style="{ color: '#CE9178'}">"3140"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
@@ -184,6 +184,7 @@
 }
 
 .line_number {
+    cursor: default;
     font-family: 'Menlo';
     font-size: 14px;
     font-weight: 400;
