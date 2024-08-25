@@ -91,7 +91,6 @@ watchEffect(() => {
 <style lang="scss">
 .home_page_container {
     width: 1200px;
-    overflow: hidden;
     margin-bottom: 150px;
 
     display: flex;
