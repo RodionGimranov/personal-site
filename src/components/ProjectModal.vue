@@ -146,6 +146,11 @@ onClickOutside(modalRef, () => {
     }
 }
 
+.close_icon {
+    width: 18px;
+    height: 18px;
+}
+
 .modal_card_content {
     width: 100%;
     display: flex;
