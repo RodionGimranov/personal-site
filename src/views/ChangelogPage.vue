@@ -41,7 +41,7 @@
                 <span class="sort_by_btn_bg" :class="bgClass"></span>
             </div>
             <div class="update_list">
-                <ChangelogUpdateCard
+                <UpdateCard
                     v-for="update in displayedUpdates"
                     :key="update.id"
                     :update="update"
@@ -58,7 +58,7 @@ import { useRouter } from "vue-router";
 import { updateDataList } from "../data/updateDataList.js";
 import { useSort } from "../composablse/useSort.js";
 
-import ChangelogUpdateCard from "../components/changelogPageComponents/ChangelogUpdateCard.vue";
+import UpdateCard from "../components/changelogPageComponents/UpdateCard.vue";
 
 const isMarginBottom = ref(false);
 const isVisible = ref(true);

@@ -1,19 +1,19 @@
 <template>
     <main class="home_page_container">
         <section class="home_intro_section" ref="runTextScaleAnimation">
-            <HomeIntroText />
+            <IntroTextBlock />
         </section>
-        <HomeBioText />
+        <BioTextBlock />
         <section class="home_section">
             <p class="home_section_title">Skills</p>
-            <HomeSkills />
+            <SkillsBlock />
         </section>
         <section class="home_section">
             <p class="home_section_title">Projects</p>
-            <HomeProjects @selectedProject="openProjectModal" />
+            <ProjectsBlock @selectedProject="openProjectModal" />
         </section>
         <section class="home_section">
-            <HomeOutroText />
+            <OutroTextBlock />
         </section>
     </main>
     <ProjectModal
@@ -29,11 +29,11 @@ import { ref, onMounted, onUnmounted, watchEffect } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import HomeIntroText from "../components/homePageComponents/HomeIntroText.vue";
-import HomeBioText from "../components/homePageComponents/HomeBioText.vue";
-import HomeSkills from "../components/homePageComponents/HomeSkills.vue";
-import HomeProjects from "../components/homePageComponents/HomeProjects.vue";
-import HomeOutroText from "../components/homePageComponents/HomeOutroText.vue";
+import IntroTextBlock from "../components/homePageComponents/IntroTextBlock.vue";
+import BioTextBlock from "../components/homePageComponents/BioTextBlock.vue";
+import SkillsBlock from "../components/homePageComponents/SkillsBlock.vue";
+import ProjectsBlock from "../components/homePageComponents/ProjectsBlock.vue";
+import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue";
 import ProjectModal from "../components/ProjectModal.vue";
 
 const isCommonCardOpen = ref(false);

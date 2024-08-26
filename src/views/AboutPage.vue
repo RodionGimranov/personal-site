@@ -1,27 +1,27 @@
 <template>
     <main class="about_page_container">
         <div class="blocks_row block1">
-            <AboutGallery />
-            <AboutTextMessage />
-            <AboutMusicPlayer />
-            <AboutMetadata />
-            <AboutLogo3D />
+            <GalleryBlock />
+            <TextMessageBlock />
+            <MusicPlayerBlock />
+            <MetadataBlock />
+            <Logo3DBlock />
         </div>
         <div class="blocks_row block2">
-            <AboutTollStack />
-            <AboutQuotes />
+            <TollStackBlock />
+            <QuotesBlock />
         </div>
     </main>
 </template>
 
 <script setup>
-import AboutGallery from "../components/aboutPageComponents/AboutGallery.vue";
-import AboutTextMessage from "../components/aboutPageComponents/AboutTextMessage.vue";
-import AboutMusicPlayer from "../components/aboutPageComponents/AboutMusicPlayer.vue";
-import AboutMetadata from "../components/aboutPageComponents/AboutMetadata.vue";
-import AboutLogo3D from "../components/aboutPageComponents/AboutLogo3D.vue";
-import AboutTollStack from "../components/aboutPageComponents/AboutTollStack.vue";
-import AboutQuotes from "../components/aboutPageComponents/AboutQuotes.vue";
+import GalleryBlock from "../components/aboutPageComponents/GalleryBlock.vue";
+import TextMessageBlock from "../components/aboutPageComponents/TextMessageBlock.vue";
+import MusicPlayerBlock from "../components/aboutPageComponents/MusicPlayerBlock.vue";
+import MetadataBlock from "../components/aboutPageComponents/MetadataBlock.vue";
+import Logo3DBlock from "../components/aboutPageComponents/Logo3DBlock.vue";
+import TollStackBlock from "../components/aboutPageComponents/TollStackBlock.vue";
+import QuotesBlock from "../components/aboutPageComponents/QuotesBlock.vue";
 </script>
 
 <style lang="scss">
