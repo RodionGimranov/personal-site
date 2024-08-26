@@ -14,7 +14,6 @@
 
 <script setup>
 import { onMounted } from "vue";
-
 import { gsapAnimation } from "../../libs/gsap-js/gsapAnimation.js";
 
 onMounted(() => {

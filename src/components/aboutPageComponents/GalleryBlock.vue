@@ -11,7 +11,7 @@
 import { useSwitch } from "../../composablse/useSwitch.js";
 import { galleryDataList } from "../../data/galleryDataList.js";
 
-import SliderIndicators from "../SliderIndicators.vue";
+import SliderIndicators from "../aboutPageComponents/SliderIndicators.vue";
 
 const { currentIndex, currentItem } = useSwitch(galleryDataList);
 </script>

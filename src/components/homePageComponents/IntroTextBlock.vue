@@ -1,10 +1,12 @@
 <template>
-    <p class="home_intro_text_animation">I enjoy creating</p>
-    <div class="color_text">
-        <p class="web_title letter_W">w</p>
-        <p class="web_title letter_e">e</p>
-        <p class="web_title letter_b">b</p>
-        <p ref="typingText" class="typing_text"></p>
+    <div class="home_intro_text_container">
+        <p class="home_intro_text_animation">I enjoy creating</p>
+        <div class="color_text">
+            <p class="web_title letter_W">w</p>
+            <p class="web_title letter_e">e</p>
+            <p class="web_title letter_b">b</p>
+            <p ref="typingText" class="typing_text"></p>
+        </div>
     </div>
 </template>
 
@@ -92,6 +94,10 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss">
+.home_intro_text_container {
+    overflow: hidden;
+}
+
 .home_intro_text_animation,
 .typing_text {
     font-size: 100px;

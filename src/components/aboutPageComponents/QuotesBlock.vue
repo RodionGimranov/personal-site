@@ -15,7 +15,7 @@
 import { useSwitch } from "../../composablse/useSwitch.js";
 import { quotesDataList } from "../../data/quotesDataList.js";
 
-import SliderIndicators from "../SliderIndicators.vue";
+import SliderIndicators from "../aboutPageComponents/SliderIndicators.vue";
 
 const { currentIndex, currentItem } = useSwitch(quotesDataList);
 </script>
