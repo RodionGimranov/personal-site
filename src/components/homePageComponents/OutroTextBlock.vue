@@ -83,6 +83,7 @@ setInterval(() => {
 }
 
 .button_color {
+    cursor: pointer;
     transition: 0.2s;
     padding: 0px 24px;
 
