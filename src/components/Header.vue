@@ -21,7 +21,7 @@
                 :class="{ _isActive: isActive('/Projects') }"
                 @click="handleNavigation('/Projects')"
             >
-                <span class="new_project_indicator"></span>Projects
+                <span class="project_indicator"></span>Projects
             </router-link>
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
@@ -111,7 +111,7 @@ watch(route, (newRoute) => {
     }
 }
 
-.new_project_indicator {
+.project_indicator {
     width: 8px;
     height: 8px;
 
