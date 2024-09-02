@@ -58,7 +58,7 @@ import emitter from "../../eventBus.js";
 
 import { projectDataList } from "../../data/projectDataList.js";
 
-const selectedProjectIds = [0, 4, 5];
+const selectedProjectIds = [3, 4, 5];
 const displayedProjects = ref([]);
 
 const updateDisplayedProjects = () => {
