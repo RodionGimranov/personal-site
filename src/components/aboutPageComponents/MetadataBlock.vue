@@ -35,25 +35,25 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">4140"</p>
+                    <p :style="{ color: '#CE9178'}">4312"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_3">{
                     <p :style="{ color: '#9CDCFE'}">number_of_folders:</p>
-                    <p :style="{ color: '#CE9178'}">"656"</p>
+                    <p :style="{ color: '#CE9178'}">"703"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_4">{
                     <p :style="{ color: '#9CDCFE'}">number_of_files:</p>
-                    <p :style="{ color: '#CE9178'}">"3140"</p>
+                    <p :style="{ color: '#CE9178'}">"3333"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
                 <p class="code_text line_5">{
                     <p :style="{ color: '#9CDCFE'}">project_size:</p>
-                    <p :style="{ color: '#CE9178'}">"325 MB"</p>
+                    <p :style="{ color: '#CE9178'}">"329 MB"</p>
                     <p clsss="">}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
