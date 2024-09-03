@@ -14,10 +14,10 @@
 
 <script setup>
 import { onMounted } from "vue";
-import { gsapAnimation } from "../../libs/gsap-js/gsapAnimation.js";
+import { BioTextAnim } from "../../libs/gsap-js/BioTextAnim.js";
 
 onMounted(() => {
-    gsapAnimation();
+    BioTextAnim();
 });
 </script>
 

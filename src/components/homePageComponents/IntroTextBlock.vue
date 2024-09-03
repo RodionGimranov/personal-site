@@ -12,6 +12,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
+import { IntroTextAnim } from "../../libs/gsap-js/IntroTextAnim.js"; 
 
 const typingText = ref(null);
 
@@ -83,6 +84,8 @@ function setTyper(element, typingWords) {
 }
 
 onMounted(() => {
+    IntroTextAnim();
+    
     nextTick(() => {
         setTyper(typingText.value, typingWords);
     });
