@@ -101,4 +101,14 @@ export const updateDataList = [
             },
         ],
     },
+    {
+        id: 11,
+        version: "2.0.1",
+        date: "03.09.2024",
+        description: [
+            { text: "Visual bugs resolved" },
+            { text: "Site performance optimized" },
+            { text: "Added a sound wave visualizer to the music player" },
+        ],
+    },
 ];
