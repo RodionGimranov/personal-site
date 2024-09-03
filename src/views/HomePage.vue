@@ -1,6 +1,6 @@
 <template>
     <main class="home_page_container">
-        <section class="home_intro_section" ref="runTextScaleAnimation">
+        <section class="home_intro_section">
             <IntroTextBlock />
         </section>
         <BioTextBlock />
@@ -25,9 +25,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watchEffect } from "vue";
-
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import IntroTextBlock from "../components/homePageComponents/IntroTextBlock.vue";
 import BioTextBlock from "../components/homePageComponents/BioTextBlock.vue";
@@ -54,24 +51,7 @@ const handleKeydown = (event) => {
     }
 };
 
-gsap.registerPlugin(ScrollTrigger);
-
-const runTextScaleAnimation = ref(null);
-
 onMounted(() => {
-    gsap.to(runTextScaleAnimation.value, {
-        scrollTrigger: {
-            trigger: ".home_intro_section",
-            start: "top top%",
-            end: "bottom 15%",
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-        },
-        scale: 2,
-        autoAlpha: 0,
-    });
-
     window.addEventListener("keydown", handleKeydown);
 });
 
