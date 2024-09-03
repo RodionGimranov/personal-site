@@ -58,7 +58,7 @@
 <script setup>
 import { ref } from "vue";
 
-const latestUpdateMsg = ref("Last updated on August 1, 2024");
+const latestUpdateMsg = ref("Last updated on September 3, 2024");
 const localTime = ref();
 
 const updateLocalTime = async () => {
