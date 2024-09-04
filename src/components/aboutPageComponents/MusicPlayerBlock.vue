@@ -47,7 +47,7 @@ watch(currentSongIndex, () => {
     padding: 20px;
     overflow: hidden;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ watch(currentSongIndex, () => {
     width: 150px;
     height: 150px;
 
-    background: #333;
+    background: $third_bg;
     border-radius: 20px;
 }
 
@@ -83,13 +83,13 @@ watch(currentSongIndex, () => {
 .song_title {
     font-size: 18px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .artist_name {
     margin-bottom: 32px;
     font-size: 18px;
     font-weight: 400;
-    color: $song_name_color;
+    color: $secondary_red;
 }
 </style>

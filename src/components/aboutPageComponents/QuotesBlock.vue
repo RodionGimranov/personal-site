@@ -27,7 +27,7 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
 
     padding: 20px;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
     margin-bottom: 15px;
     font-size: 25px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .quote_container {
@@ -56,7 +56,7 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
 .quote_text {
     font-size: 20px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .author_of_the_quote {
@@ -66,7 +66,7 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
 
     font-size: 18px;
     font-weight: 500;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 
 .controls_container {

@@ -107,8 +107,8 @@ const selectedProject = (project) => {
     cursor: pointer;
     overflow: hidden;
     border-radius: 30px;
-    background: $card_bg_color;
-    border: 1px solid $card_border_color;
+    background: $third_bg;
+    border: 1px solid $card_border;
 
     display: flex;
     justify-content: center;
@@ -144,11 +144,11 @@ const selectedProject = (project) => {
     padding: 4px 12px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $card_project_name_bg_color;
+    background: $content_bg;
 
     font-size: 18px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .card_viewing_sign_container {
@@ -157,7 +157,7 @@ const selectedProject = (project) => {
 
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $card_project_name_bg_color;
+    background: $content_bg;
 
     display: flex;
     justify-content: center;
@@ -182,7 +182,7 @@ const selectedProject = (project) => {
 .view_all_project_btn {
     font-size: 22px;
     font-weight: 500;
-    color: $text_gray_color;
+    color: $third_gray;
 
     transition: 0.2s;
     padding: 6px 12px;
@@ -193,12 +193,12 @@ const selectedProject = (project) => {
     align-items: center;
 
     &:hover {
-        color: $primary_white_color;
-        background: $button_hover_color;
+        color: $primary_white;
+        background: $button_hover;
     }
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
     }
 }
 
@@ -210,7 +210,7 @@ const selectedProject = (project) => {
 }
 
 .view_all_project_btn:hover .navigation_arrow {
-    stroke: $primary_white_color;
+    stroke: $primary_white;
     margin-left: 15px;
 }
 </style>

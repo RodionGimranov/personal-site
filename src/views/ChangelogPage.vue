@@ -115,7 +115,7 @@ onBeforeUnmount(() => {
 
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $header_bg_color;
+    background: $header_bg;
     transition: all 0.3s ease-out 0s;
 
     display: flex;
@@ -124,11 +124,11 @@ onBeforeUnmount(() => {
 
     &:hover {
         transform: scale(1.1);
-        background: $button_hover_color;
+        background: $button_hover;
     }
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
     }
 }
 
@@ -146,7 +146,7 @@ onBeforeUnmount(() => {
     margin-bottom: 50px;
     border-radius: 100px;
     padding: 4px 4px 4px 19px;
-    background: $header_bg_color;
+    background: $header_bg;
 
     display: flex;
     justify-content: flex-start;
@@ -157,7 +157,7 @@ onBeforeUnmount(() => {
 .sort_by_title {
     font-size: 20px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .sort_by_old_btn,
@@ -168,14 +168,14 @@ onBeforeUnmount(() => {
 
     font-size: 20px;
     font-weight: 500;
-    color: $primary_gray_color;
+    color: $primary_gray;
 
     &:hover {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 
     &.activeSort {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 }
 
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
     z-index: -1;
     transition: 0.2s;
     border-radius: 100px;
-    background: $header_button_bg_color;
+    background: $header_button_bg;
 }
 
 .bg_old {

@@ -103,7 +103,7 @@ setInterval(updateLocalTime, 60000);
     transition: 0.2s;
     padding: 6px 12px;
     border-radius: 100px;
-    background: $button_default_color;
+    background: $button_default;
 
     display: flex;
     justify-content: flex-start;
@@ -112,28 +112,28 @@ setInterval(updateLocalTime, 60000);
 
     font-size: 20px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 
     &:hover {
         gap: 10px;
-        color: $primary_white_color;
-        background: $button_hover_color;
+        color: $primary_white;
+        background: $button_hover;
     }
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
     }
 }
 
 .arrow_to_changelog {
     fill: none;
     transition: 0.2s;
-    stroke: #949494;
+    stroke: $third_gray;
     will-change: margin-left;
 }
 
 .routerToChangelog:hover .arrow_to_changelog {
-    stroke: $primary_white_color;
+    stroke: $primary_white;
 }
 
 .media_container {
@@ -159,7 +159,7 @@ setInterval(updateLocalTime, 60000);
 .footer_text {
     font-size: 16px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 
 .social_link {
@@ -168,7 +168,7 @@ setInterval(updateLocalTime, 60000);
     align-items: center;
 
     &:hover {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 }
 

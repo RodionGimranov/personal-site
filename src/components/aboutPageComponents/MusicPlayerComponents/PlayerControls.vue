@@ -141,7 +141,7 @@ const changeSong = async () => {
     width: 100%;
     padding: 3px 0px;
     border-radius: 100px;
-    border: 1px solid $primary_white_color;
+    border: 1px solid $primary_white;
 
     display: flex;
     justify-content: center;
@@ -161,7 +161,7 @@ const changeSong = async () => {
     align-items: center;
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
 
         .button_control_icon {
             transform: scale(0.8);

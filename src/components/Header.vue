@@ -82,7 +82,7 @@ watch(route, (newRoute) => {
     padding: 4px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $header_bg_color;
+    background: $header_bg;
 
     display: flex;
     flex-direction: row;
@@ -100,14 +100,14 @@ watch(route, (newRoute) => {
 
     font-size: 20px;
     font-weight: 500;
-    color: $text_header_color;
+    color: $text_header;
 
     &:hover {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 
     &._isActive {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 }
 
@@ -117,7 +117,7 @@ watch(route, (newRoute) => {
 
     margin-right: 10px;
     border-radius: 100px;
-    background: $indicator_color;
+    background: $primary_red;
 }
 
 .header_btn_bg {
@@ -126,7 +126,7 @@ watch(route, (newRoute) => {
 
     z-index: -1;
     border-radius: 100px;
-    background: $header_button_bg_color;
+    background: $header_button_bg;
     transition:
         width 0.3s,
         transform 0.3s;

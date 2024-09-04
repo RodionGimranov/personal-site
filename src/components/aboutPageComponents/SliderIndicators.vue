@@ -29,7 +29,7 @@ const props = defineProps({
     padding: 5px 10px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $slider_indicator_bg_color;
+    background: $content_bg;
 
     display: flex;
     justify-content: flex-start;
@@ -43,10 +43,10 @@ const props = defineProps({
 
     transition: 0.5s;
     border-radius: 100px;
-    background: $secondary_gray_color;
+    background: $slider_dot_bg;
 
     &.active {
-        background: $primary_white_color;
+        background: $primary_white;
     }
 }
 </style>

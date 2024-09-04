@@ -98,7 +98,7 @@ onMounted(() => {
     padding: 10px;
     border-radius: 30px;
     will-change: filter;
-    background: $block_bg_color;
+    background: $secondary_bg;
     transition: all 0.2s linear;
     --drop-shadow-color: transparent;
 
@@ -122,7 +122,7 @@ onMounted(() => {
 .skill_description {
     font-size: 20px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
     text-align: center;
 }
 
@@ -141,14 +141,14 @@ onMounted(() => {
 
     font-size: 18px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 
 .physical_icons_wrapper {
     cursor: grab;
     overflow: hidden;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     justify-content: center;

@@ -20,12 +20,12 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: $primary_body_color;
+    background: $primary_bg;
 
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 
     display: flex;
     flex-direction: column;

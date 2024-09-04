@@ -102,6 +102,6 @@ watchEffect(() => {
     margin-bottom: 20px;
     font-size: 38px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 </style>

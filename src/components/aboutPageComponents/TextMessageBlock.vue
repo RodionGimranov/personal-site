@@ -31,7 +31,7 @@
 
     padding: 20px;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -43,13 +43,13 @@
 .message_title {
     font-size: 20px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .message_text {
     font-size: 17px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 
 .future_content_block {
@@ -65,6 +65,6 @@
 
     font-size: 18px;
     font-weight: 400;
-    color: #949494;
+    color: $third_gray;
 }
 </style>

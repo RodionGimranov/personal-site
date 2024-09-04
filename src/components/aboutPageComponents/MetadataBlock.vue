@@ -35,7 +35,7 @@
                 </p>
                 <p class="code_text line_2">{
                     <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">4312"</p>
+                    <p :style="{ color: '#CE9178'}">4370"</p>
                     <p>}</p>
                     <p :style="{ color: '#D4D4D4'}">,</p>
                 </p>
@@ -82,7 +82,7 @@
     cursor: text;
     overflow: hidden;
     border-radius: 30px;
-    background: $block_bg_color; 
+    background: $secondary_bg; 
 
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
     width: 100%;
     cursor: default;
     padding: 15px 20px 10px 20px;
-    background: $menu_bar_bg_color;
+    background: $third_bg;
 
     display: flex;
     justify-content: flex-start;
@@ -109,22 +109,22 @@
 }
 
 .close_btn {
-    background: $mac_close_btn_color;
+    background: $mac_close_btn;
 }
 
 .minimize_btn {
-    background: $mac_minimize_btn_color;
+    background: $mac_minimize_btn;
 }
 
 .fullscreen_btn {
-    background: $max_fullscreen_btn_color;
+    background: $max_fullscreen_btn;
 }
 
 .title_bar {
     width: 100%;
     cursor: pointer;
     padding: 0px 20px 0px 0px;
-    background: $title_bar_bg_color;
+    background: $title_bar_bg;
 
     display: flex;
     justify-content: space-between;
@@ -133,7 +133,7 @@
 
 .file_tab {
     height: 35px;
-    background: $block_bg_color;
+    background: $secondary_bg;
     padding: 0px 10px 0px 20px;
 
     display: flex;
@@ -146,7 +146,7 @@
     font-family: 'Menlo';
     font-size: 12px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .toolbar {
@@ -168,7 +168,7 @@
     align-items: center;
 
     &:hover {
-        background: $toolbar_hover_bg_color;
+        background: $toolbar_hover_bg;
     }
 }
 
@@ -190,7 +190,7 @@
     font-weight: 400;
     line-height: 21px;
     word-wrap: break-word;
-    color: $line_number_color;
+    color: $line_number;
     text-align: right;
 }
 
@@ -207,7 +207,7 @@
     font-weight: 400;
     line-height: 21px;
     word-wrap: break-word;
-    color: $primary_white_color; 
+    color: $primary_white; 
 
     display: flex;
     justify-content: flex-start;
@@ -215,17 +215,17 @@
 }
 
 .comment {
-    color: $comment_code_color;
+    color: $comment_code;
 }
 
 .line_1 {
-    color: $pink_code_text_color;
+    color: $pink_code_text;
     gap: 10px;
 }
 
 .line_2, .line_3, .line_4, .line_5 {
     display: flex;
-    color: $pink_code_text_color;
+    color: $pink_code_text;
     margin-left: 10px;
 
     & > *:not(:last-child) {
@@ -234,6 +234,6 @@
 }
 
 .line_6 {
-    color: $yellow_code_text_color;
+    color: $yellow_code_text;
 }
 </style>

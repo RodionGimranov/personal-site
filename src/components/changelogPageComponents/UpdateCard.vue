@@ -38,7 +38,7 @@ const props = defineProps({
     align-items: flex-start;
 
     &:hover {
-        background: $block_bg_color;
+        background: $secondary_bg;
     }
 }
 
@@ -54,19 +54,19 @@ const props = defineProps({
 .update_version {
     font-size: 25px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .update_description {
     margin-bottom: 3px;
     font-size: 20px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .update_date {
     font-size: 20px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 </style>

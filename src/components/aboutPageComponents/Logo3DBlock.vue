@@ -23,7 +23,7 @@ onMounted(() => {
 
     padding: 20px;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     justify-content: center;

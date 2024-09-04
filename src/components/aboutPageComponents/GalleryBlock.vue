@@ -25,7 +25,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     padding: 12px;
     overflow: hidden;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     justify-content: center;

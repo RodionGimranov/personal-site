@@ -43,7 +43,7 @@ onMounted(() => {
     background-clip: text;
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    background-image: linear-gradient(90deg, #fff, #fff);
+    background-image: linear-gradient(90deg, $primary_white, $primary_white);
     will-change: background-size;
 }
 </style>

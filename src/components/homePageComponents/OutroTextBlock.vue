@@ -66,7 +66,7 @@ setInterval(() => {
 .outro_text {
     font-size: 70px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 
     display: flex;
     justify-content: flex-start;
@@ -88,6 +88,6 @@ setInterval(() => {
     padding: 0px 24px;
 
     font-size: 55px;
-    color: $primary_black_color;
+    color: $primary_black;
 }
 </style>

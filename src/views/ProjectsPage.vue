@@ -138,7 +138,7 @@ const {
     margin-bottom: 50px;
     border-radius: 100px;
     padding: 4px 4px 4px 19px;
-    background: $header_bg_color;
+    background: $header_bg;
 
     display: flex;
     justify-content: flex-start;
@@ -148,7 +148,7 @@ const {
 .sort_by_title {
     font-size: 20px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .sort_by_old_btn,
@@ -159,14 +159,14 @@ const {
 
     font-size: 20px;
     font-weight: 500;
-    color: $primary_gray_color;
+    color: $primary_gray;
 
     &:hover {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 
     &.activeSort {
-        color: $primary_white_color;
+        color: $primary_white;
     }
 }
 
@@ -177,7 +177,7 @@ const {
     z-index: -1;
     transition: 0.2s;
     border-radius: 100px;
-    background: $header_button_bg_color;
+    background: $header_button_bg;
 }
 
 .bg_old {
@@ -209,8 +209,8 @@ const {
     transition: 0.2s;
     overflow: hidden;
     border-radius: 30px;
-    background: $card_bg_color;
-    border: 1px solid $card_border_color;
+    background: $third_bg;
+    border: 1px solid $card_border;
 
     display: flex;
     justify-content: center;
@@ -246,11 +246,11 @@ const {
     padding: 4px 12px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $card_project_name_bg_color;
+    background: $content_bg;
 
     font-size: 18px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .card_viewing_sign_container {
@@ -259,7 +259,7 @@ const {
 
     border-radius: 100px;
     backdrop-filter: blur(20px);
-    background: $card_project_name_bg_color;
+    background: $content_bg;
 
     display: flex;
     justify-content: center;

@@ -90,7 +90,7 @@ onClickOutside(modalRef, () => {
 
     z-index: 9999;
     backdrop-filter: blur(20px);
-    background: $project_card_container_bg_color;
+    background: $project_card_container_bg;
 
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ onClickOutside(modalRef, () => {
     padding: 15px;
     overflow: hidden;
     border-radius: 30px;
-    background: $block_bg_color;
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@ onClickOutside(modalRef, () => {
 .modal_project_card_name {
     font-size: 34px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .close_modal_card_btn {
@@ -131,18 +131,18 @@ onClickOutside(modalRef, () => {
 
     transition: 0.2s;
     border-radius: 100px;
-    background: $button_default_color;
+    background: $button_default;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:hover {
-        background: $button_hover_color;
+        background: $button_hover;
     }
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
     }
 }
 
@@ -165,7 +165,7 @@ onClickOutside(modalRef, () => {
 
     object-fit: cover;
     border-radius: 20px;
-    background: $card_bg_color;
+    background: $third_bg;
 }
 
 .modal_project_card_info {
@@ -187,14 +187,14 @@ onClickOutside(modalRef, () => {
     margin-bottom: 5px;
     font-size: 18px;
     font-weight: 400;
-    color: $text_gray_color;
+    color: $third_gray;
 }
 
 .project_detail {
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 400;
-    color: $primary_white_color;
+    color: $primary_white;
 }
 
 .project_technologies_container {
@@ -212,7 +212,7 @@ onClickOutside(modalRef, () => {
 
     font-size: 18px;
     font-weight: 500;
-    color: $primary_body_color;
+    color: $primary_bg;
 }
 
 .info_project_btn {
@@ -226,20 +226,20 @@ onClickOutside(modalRef, () => {
     transition: 0.2s;
     padding: 6px 24px;
     border-radius: 100px;
-    background: $button_default_color;
+    background: $button_default;
 
     font-size: 24px;
     font-weight: 500;
-    color: $text_gray_color;
+    color: $third_gray;
     text-align: center;
 
     &:hover {
-        color: $primary_white_color;
-        background: $button_hover_color;
+        color: $primary_white;
+        background: $button_hover;
     }
 
     &:active {
-        background: $button_active_color;
+        background: $button_active;
     }
 }
 

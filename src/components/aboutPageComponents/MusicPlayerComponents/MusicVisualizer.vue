@@ -139,8 +139,8 @@ onUnmounted(() => {
     width: 3px;
     min-height: 3px;
 
-    transition: height 0.1s ease-out;
+    transition: height 0.2s ease-out;
     border-radius: 100px;
-    background: $song_name_color;
+    background: $secondary_red;
 }
 </style>

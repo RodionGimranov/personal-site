@@ -105,7 +105,7 @@ onBeforeUnmount(() => {
 .typing_text {
     font-size: 100px;
     font-weight: 500;
-    color: $primary_white_color;
+    color: $primary_white;
     text-align: center;
     line-height: normal;
 }
@@ -125,15 +125,15 @@ onBeforeUnmount(() => {
 }
 
 .letter_W {
-    color: $letter_W_color;
+    color: $letter_W;
 }
 
 .letter_e {
-    color: $letter_e_color;
+    color: $letter_e;
 }
 
 .letter_b {
-    color: $letter_b_color;
+    color: $letter_b;
     margin-right: 30px;
 }
 
