@@ -65,3 +65,12 @@ button {
     align-items: center;
     gap: 10px;
 }
+.image_block_container,
+.text_content_container,
+.music_block_container,
+.code_editor,
+.logo_tilt_effect,
+.tool_block_container,
+.quotes_block_container {
+    overflow: hidden;
+}
