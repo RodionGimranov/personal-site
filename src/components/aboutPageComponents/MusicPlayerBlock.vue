@@ -45,7 +45,6 @@ watch(currentSongIndex, () => {
     height: 326px;
 
     padding: 20px;
-    overflow: hidden;
     border-radius: 30px;
     background: $secondary_bg;
 

@@ -23,7 +23,6 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     min-height: 326px;
 
     padding: 12px;
-    overflow: hidden;
     border-radius: 30px;
     background: $secondary_bg;
 

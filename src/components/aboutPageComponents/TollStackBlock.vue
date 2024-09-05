@@ -44,7 +44,6 @@ const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];
 
     background: $secondary_bg;
     border-radius: 30px;
-    overflow: hidden;
     padding: 20px 0px;
 
     display: flex;
