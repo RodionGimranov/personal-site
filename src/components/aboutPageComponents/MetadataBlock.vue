@@ -7,72 +7,64 @@
         </div>
         <div class="title_bar">
             <div class="file_tab">
-                <img class="lang_icon" src="../../assets/images/svg/metadata-icons/small-js-icon.svg" alt="JavaScript icon">
+                <img
+                    class="lang_icon"
+                    src="../../assets/images/svg/metadata-icons/small-js-icon.svg"
+                    alt="JavaScript icon"
+                />
                 <p class="file_name">projectData.js</p>
-                <img class="close_file_icon" src="../../assets/images/svg/metadata-icons/close-file-icon.svg" alt="Cross icon">
+                <img
+                    class="close_file_icon"
+                    src="../../assets/images/svg/metadata-icons/close-file-icon.svg"
+                    alt="Cross icon"
+                />
             </div>
             <div class="toolbar">
                 <button class="toolbar_btn">
-                    <img class="toolbar_icon" src="../../assets/images/svg/metadata-icons/source-control-icon.svg" alt="Toollbat icon">
+                    <img
+                        class="toolbar_icon"
+                        src="../../assets/images/svg/metadata-icons/source-control-icon.svg"
+                        alt="Toollbat icon"
+                    />
                 </button>
                 <button class="toolbar_btn">
-                    <img class="toolbar_icon" src="../../assets/images/svg/metadata-icons/split-editor-icon.svg" alt="Toollbat icon">
+                    <img
+                        class="toolbar_icon"
+                        src="../../assets/images/svg/metadata-icons/split-editor-icon.svg"
+                        alt="Toollbat icon"
+                    />
                 </button>
                 <button class="toolbar_btn">
-                    <img class="toolbar_icon" src="../../assets/images/svg/metadata-icons/more-actions-icon.svg" alt="Toollbat icon">
+                    <img
+                        class="toolbar_icon"
+                        src="../../assets/images/svg/metadata-icons/more-actions-icon.svg"
+                        alt="Toollbat icon"
+                    />
                 </button>
             </div>
         </div>
         <div class="editor_area">
-            <p class="line_number">1<br>2<br>3<br>4<br>5<br>6<br>7</p>
-            <div class="code_text_container">
-                <p class="code_text comment">// Here are the project metadata</p>
-                <p class="code_text line_1">export
-                    <p :style="{ color: '#569CD6'}">const</p>
-                    <p :style="{ color: '#4FC1FF'}">projectMetaData</p>
-                    <p :style="{ color: '#D4D4D4'}">=</p>
-                    <p :style="{ color: '#FFD700'}">[</p>
-                </p>
-                <p class="code_text line_2">{
-                    <p :style="{ color: '#9CDCFE'}">number_of_lines_code:</p>
-                    <p :style="{ color: '#CE9178'}">4370"</p>
-                    <p>}</p>
-                    <p :style="{ color: '#D4D4D4'}">,</p>
-                </p>
-                <p class="code_text line_3">{
-                    <p :style="{ color: '#9CDCFE'}">number_of_folders:</p>
-                    <p :style="{ color: '#CE9178'}">"703"</p>
-                    <p clsss="">}</p>
-                    <p :style="{ color: '#D4D4D4'}">,</p>
-                </p>
-                <p class="code_text line_4">{
-                    <p :style="{ color: '#9CDCFE'}">number_of_files:</p>
-                    <p :style="{ color: '#CE9178'}">"3333"</p>
-                    <p clsss="">}</p>
-                    <p :style="{ color: '#D4D4D4'}">,</p>
-                </p>
-                <p class="code_text line_5">{
-                    <p :style="{ color: '#9CDCFE'}">project_size:</p>
-                    <p :style="{ color: '#CE9178'}">"329 MB"</p>
-                    <p clsss="">}</p>
-                    <p :style="{ color: '#D4D4D4'}">,</p>
-                </p>
-                <p class="code_text line_6">]
-                    <p :style="{ color: '#D4D4D4'}">;</p>
-                </p>
+            <div class="line_breakpoint_wrapper">
+                <div class="сode_breakpoint_container">
+                    <span class="code_breakpoint" v-for="breakpoint in 7"></span>
+                </div>
+                <p class="line_number">1<br />2<br />3<br />4<br />5<br />6<br />7</p>
             </div>
+            <CodeTextContainer />
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import CodeTextContainer from "./MetadataComponents/CodeTextContainer.vue";
+</script>
 
 <style lang="scss">
 @font-face {
-    font-family: 'Menlo';
+    font-family: "Menlo";
     font-weight: 400;
     font-style: normal;
-    src: url('../../assets/fonts/Menlo-Regular.ttf') format('ttf');
+    src: url("../../assets/fonts/Menlo-Regular.ttf") format("ttf");
 }
 
 .code_editor {
@@ -80,9 +72,8 @@
     height: 250px;
 
     cursor: text;
-    overflow: hidden;
     border-radius: 30px;
-    background: $secondary_bg; 
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -143,7 +134,7 @@
 }
 
 .file_name {
-    font-family: 'Menlo';
+    font-family: "Menlo";
     font-size: 12px;
     font-weight: 400;
     color: $primary_white;
@@ -175,7 +166,7 @@
 .editor_area {
     width: 100%;
     height: 100%;
-    padding: 10px 20px;
+    padding: 10px 5px;
 
     display: flex;
     justify-content: flex-start;
@@ -183,57 +174,44 @@
     gap: 10px;
 }
 
+.line_breakpoint_wrapper {
+    cursor: default;
+    display: flex;
+    gap: 5px;
+}
+
+.сode_breakpoint_container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.code_breakpoint {
+    width: 10px;
+    height: 10px;
+
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.1s;
+    border-radius: 100px;
+    background: $third_red;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
 .line_number {
     cursor: default;
-    font-family: 'Menlo';
+    font-family: "Menlo";
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     word-wrap: break-word;
     color: $line_number;
     text-align: right;
-}
-
-.code_text_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.code_text {
-    font-family: 'Menlo';
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    word-wrap: break-word;
-    color: $primary_white; 
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.comment {
-    color: $comment_code;
-}
-
-.line_1 {
-    color: $pink_code_text;
-    gap: 10px;
-}
-
-.line_2, .line_3, .line_4, .line_5 {
-    display: flex;
-    color: $pink_code_text;
-    margin-left: 10px;
-
-    & > *:not(:last-child) {
-        margin-left: 10px;
-    }
-}
-
-.line_6 {
-    color: $yellow_code_text;
 }
 </style>
