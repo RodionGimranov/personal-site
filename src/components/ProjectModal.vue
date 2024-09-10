@@ -230,11 +230,10 @@ onClickOutside(modalRef, () => {
 
     font-size: 24px;
     font-weight: 500;
-    color: $third_gray;
+    color: $primary_white;
     text-align: center;
 
     &:hover {
-        color: $primary_white;
         background: $button_hover;
     }
 
