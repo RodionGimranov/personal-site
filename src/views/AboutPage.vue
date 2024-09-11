@@ -17,8 +17,8 @@
 <script setup>
 import GalleryBlock from "../components/aboutPageComponents/GalleryBlock.vue";
 import TextMessageBlock from "../components/aboutPageComponents/TextMessageBlock.vue";
-import MusicPlayerBlock from "../components/aboutPageComponents/MusicPlayerBlock.vue";
-import MetadataBlock from "../components/aboutPageComponents/MetadataBlock.vue";
+import MusicPlayerBlock from "../components/aboutPageComponents/MusicPlayerComponents/MusicPlayerBlock.vue";
+import MetadataBlock from "../components/aboutPageComponents/MetadataComponents/MetadataBlock.vue";
 import Logo3DBlock from "../components/aboutPageComponents/Logo3DBlock.vue";
 import TollStackBlock from "../components/aboutPageComponents/TollStackBlock.vue";
 import QuotesBlock from "../components/aboutPageComponents/QuotesBlock.vue";
