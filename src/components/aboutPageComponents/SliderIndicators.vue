@@ -2,9 +2,9 @@
     <div class="slider_indicators">
         <span
             class="slider_dot"
-            v-for="index in 5"
-            :key="index"
-            :class="{ active: index - 1 === currentIndex % 5 }"
+            v-for="dots in 5"
+            :key="dots"
+            :class="{ active: dots - 1 === currentIndex % 5 }"
         ></span>
     </div>
 </template>
