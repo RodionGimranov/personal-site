@@ -232,6 +232,10 @@
 }
 @media (max-width: 440px) {
     body {
+        // HOME 
+        .home_about_me_text span {
+            color: #fff;
+        }
         // MODAL PROJECT CARD
         .tech_name {
             font-size: 16px;
