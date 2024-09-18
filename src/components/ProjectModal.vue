@@ -1,10 +1,10 @@
 <template>
-    <transition name="show-modal-card">
-        <section v-if="project" class="modal_project_card_container">
-            <div ref="modalRef" class="modal_card_project">
-                <div class="modal_card_header">
-                    <p class="modal_project_card_name">{{ project.name }}</p>
-                    <button class="close_modal_card_btn" @click="closeCommonCard">
+    <transition name="show-project-modal">
+        <section v-if="project" class="project_modal_container">
+            <div ref="projectModalRef" class="project_modal">
+                <div class="project_modal_header">
+                    <p class="project_modal_card_name">{{ project.name }}</p>
+                    <button class="close_project_modal_btn" @click="closeProjectModal">
                         <img
                             class="close_icon"
                             src="../assets/images/svg/cross-icon.svg"
@@ -12,10 +12,10 @@
                         />
                     </button>
                 </div>
-                <div class="modal_card_content">
+                <div class="project_modal_content">
                     <video
                         :key="project.large_project_cover"
-                        class="modal_video_cover"
+                        class="project_large_video"
                         preload="metadata"
                         autoplay
                         loop
@@ -26,7 +26,7 @@
                         <source :src="project.large_project_cover" type="video/mp4" />
                         Your browser does not support the video :(
                     </video>
-                    <div class="modal_project_card_info">
+                    <div class="modal_project_info">
                         <div class="info_text_content">
                             <p class="project_title">Description</p>
                             <p class="project_detail">{{ project.description }}</p>
@@ -63,25 +63,25 @@
 import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
-const modalRef = ref(null);
+const projectModalRef = ref(null);
 
 const props = defineProps({
     project: Object,
 });
 
-const emit = defineEmits(["closeCommonCard"]);
+const emit = defineEmits(["closeProjectModal"]);
 
-const closeCommonCard = () => {
-    emit("closeCommonCard");
+const closeProjectModal = () => {
+    emit("closeProjectModal");
 };
 
-onClickOutside(modalRef, () => {
-    closeCommonCard();
+onClickOutside(projectModalRef, () => {
+    closeProjectModal();
 });
 </script>
 
 <style lang="scss">
-.modal_project_card_container {
+.project_modal_container {
     position: fixed;
     top: 0;
     left: 0;
@@ -90,14 +90,14 @@ onClickOutside(modalRef, () => {
 
     z-index: 9999;
     backdrop-filter: blur(20px);
-    background: $project_card_container_bg;
+    background: $modal_container_bg;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.modal_card_project {
+.project_modal {
     width: 1200px;
     padding: 15px;
     overflow: hidden;
@@ -111,7 +111,7 @@ onClickOutside(modalRef, () => {
     gap: 15px;
 }
 
-.modal_card_header {
+.project_modal_header {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -119,13 +119,13 @@ onClickOutside(modalRef, () => {
     gap: 10px;
 }
 
-.modal_project_card_name {
+.project_modal_card_name {
     font-size: 34px;
     font-weight: 500;
     color: $primary_white;
 }
 
-.close_modal_card_btn {
+.close_project_modal_btn {
     width: 38px;
     height: 38px;
 
@@ -151,7 +151,7 @@ onClickOutside(modalRef, () => {
     height: 18px;
 }
 
-.modal_card_content {
+.project_modal_content {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -159,7 +159,7 @@ onClickOutside(modalRef, () => {
     gap: 25px;
 }
 
-.modal_video_cover {
+.project_large_video {
     min-width: 600px;
     height: 350px;
 
@@ -168,7 +168,7 @@ onClickOutside(modalRef, () => {
     background: $third_bg;
 }
 
-.modal_project_card_info {
+.modal_project_info {
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -242,18 +242,18 @@ onClickOutside(modalRef, () => {
     }
 }
 
-.show-modal-card-enter-active,
-.show-modal-card-leave-active {
+.show-project-modal-enter-active,
+.show-project-modal-leave-active {
     transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.show-modal-card-enter-from,
-.show-modal-card-leave-to {
+.show-project-modal-enter-from,
+.show-project-modal-leave-to {
     opacity: 0;
 }
 
-.show-modal-card-enter-to,
-.show-modal-card-leave-from {
+.show-project-modal-enter-to,
+.show-project-modal-leave-from {
     opacity: 1;
 }
 </style>
