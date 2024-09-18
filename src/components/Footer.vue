@@ -1,23 +1,6 @@
 <template>
     <footer class="footer_container">
         <section class="changelog_button_container">
-            <router-link to="/Changelog" class="routerToChangelog"
-                >{{ latestUpdateMsg }}
-                <svg
-                    class="arrow_to_changelog"
-                    width="12"
-                    height="17"
-                    viewBox="0 0 12 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M2 15L9.87752 9.31068C10.4302 8.91152 10.4302 8.08848 9.87752 7.68932L2 2"
-                        stroke-width="3"
-                        stroke-linecap="round"
-                    />
-                </svg>
-            </router-link>
         </section>
         <section class="media_container">
             <div class="footer_first_block">
@@ -58,7 +41,6 @@
 <script setup>
 import { ref } from "vue";
 
-const latestUpdateMsg = ref("Last updated on September 3, 2024");
 const localTime = ref();
 
 const updateLocalTime = async () => {
@@ -87,7 +69,7 @@ setInterval(updateLocalTime, 60000);
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 100px;
+    gap: 50px;
 }
 
 .changelog_button_container {
@@ -97,43 +79,6 @@ setInterval(updateLocalTime, 60000);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.routerToChangelog {
-    transition: 0.2s;
-    padding: 6px 12px;
-    border-radius: 100px;
-    background: $button_default;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-
-    font-size: 20px;
-    font-weight: 400;
-    color: $third_gray;
-
-    &:hover {
-        gap: 10px;
-        color: $primary_white;
-        background: $button_hover;
-    }
-
-    &:active {
-        background: $button_active;
-    }
-}
-
-.arrow_to_changelog {
-    fill: none;
-    transition: 0.2s;
-    stroke: $third_gray;
-    will-change: margin-left;
-}
-
-.routerToChangelog:hover .arrow_to_changelog {
-    stroke: $primary_white;
 }
 
 .media_container {
