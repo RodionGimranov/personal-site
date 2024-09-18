@@ -114,9 +114,9 @@ export const updateDataList = [
     {
         id: 12,
         version: "2.0.2",
-        date: "16.09.2024",
+        date: "18.09.2024",
         description: [
-            { text: "Introduced ActionMenu to enhance site interaction" },
+            { text: "Introduced Action Menu to enhance site interaction" },
             { text: "Moved Changelog to a modal window for streamlined access" },
             { text: "Optimized the logic and functionality of modal window operations" },
         ],
