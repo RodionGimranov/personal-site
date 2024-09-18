@@ -3,7 +3,7 @@
         <div class="home_projects_list">
             <div
                 class="home_project_card"
-                @click="selectedProject(project)"
+                @click="selectProject(project)"
                 v-for="project in displayedProjects"
                 :key="project.id"
             >
@@ -72,11 +72,9 @@ updateDisplayedProjects();
 const viewAllProject = () => {
     emitter.emit("viewAllProject");
 };
-
-const emit = defineEmits(["selectedProject"]);
-
-const selectedProject = (project) => {
-    emit("selectedProject", project);
+        
+const selectProject = (project) => {
+    emitter.emit('show-project-modal', project);
 };
 </script>
 
