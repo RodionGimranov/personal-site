@@ -8,7 +8,7 @@
             <p class="song_title">{{ currentSong.song_name }}</p>
             <img
                 class="explicit_icon"
-                src="../../assets/images/svg/musicPlayer-icons/explicit-icon.svg"
+                src="../../../assets/images/svg/musicPlayer-icons/explicit-icon.svg"    
                 alt="Explicit content icon"
                 v-show="currentSong.explicit_content === true"
             />
