@@ -25,12 +25,15 @@
             </router-link>
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
+        <ActionMenu />  
     </header>
 </template>
 
 <script setup>
 import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+
+import ActionMenu from "./ActionMenu.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -74,15 +77,18 @@ watch(route, (newRoute) => {
 
     z-index: 9999;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 
 .header_menu {
+    position: absolute;
+    left: 50%;
     padding: 4px;
     border-radius: 100px;
-    backdrop-filter: blur(20px);
     background: $header_bg;
+    transform: translateX(-50%);
+    backdrop-filter: blur(20px);
 
     display: flex;
     flex-direction: row;
