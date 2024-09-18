@@ -13,7 +13,7 @@
         <p class="code_text line_2">
             {
             <span :style="{ color: '#9CDCFE' }">number_of_lines_code:</span>
-            <span :style="{ color: '#CE9178' }">4455"</span>
+            <span :style="{ color: '#CE9178' }">4470"</span>
             <span>}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
@@ -21,7 +21,7 @@
         <p class="code_text line_3">
             {
             <span :style="{ color: '#9CDCFE' }">number_of_folders:</span>
-            <span :style="{ color: '#CE9178' }">"703"</span>
+            <span :style="{ color: '#CE9178' }">"27"</span>
             <span clsss="">}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
@@ -29,7 +29,7 @@
         <p class="code_text line_4">
             {
             <span :style="{ color: '#9CDCFE' }">number_of_files:</span>
-            <span :style="{ color: '#CE9178' }">"3333"</span>
+            <span :style="{ color: '#CE9178' }">"109"</span>
             <span clsss="">}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
@@ -37,7 +37,7 @@
         <p class="code_text line_5">
             {
             <span :style="{ color: '#9CDCFE' }">project_size:</span>
-            <span :style="{ color: '#CE9178' }">"329 MB"</span>
+            <span :style="{ color: '#CE9178' }">"48,01 MB"</span>
             <span clsss="">}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
