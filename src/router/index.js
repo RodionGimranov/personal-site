@@ -3,7 +3,6 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import HomePage from "../views/HomePage.vue";
 import AboutPage from "../views/AboutPage.vue";
 import ProjectsPage from "../views/ProjectsPage.vue";
-import ChangelogPage from "../views/ChangelogPage.vue";
 
 const routes = [
     { path: "/", redirect: "/Home" },
@@ -24,12 +23,6 @@ const routes = [
         name: "projectsPage",
         component: ProjectsPage,
         meta: { title: "Projects" },
-    },
-    {
-        path: "/Changelog",
-        name: "changelogPage",
-        component: ChangelogPage,
-        meta: { title: "Changelog", hideHeader: true, title: "Changelog", hideFooter: true },
     },
 ];
 
