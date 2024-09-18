@@ -10,67 +10,26 @@
         </section>
         <section class="home_section">
             <p class="home_section_title">Projects</p>
-            <ProjectsBlock @selectedProject="openProjectModal" />
+            <ProjectsBlock />
         </section>
         <section class="home_section">
             <OutroTextBlock />
         </section>
     </main>
-    <ProjectModal
-        v-show="isCommonCardOpen"
-        :project="selectedProject"
-        @closeCommonCard="closeCommonCard"
-    />
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watchEffect } from "vue";
-
 import IntroTextBlock from "../components/homePageComponents/IntroTextBlock.vue";
 import BioTextBlock from "../components/homePageComponents/BioTextBlock.vue";
 import SkillsBlock from "../components/homePageComponents/SkillsBlock.vue";
 import ProjectsBlock from "../components/homePageComponents/ProjectsBlock.vue";
 import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue";
-import ProjectModal from "../components/ProjectModal.vue";
-
-const isCommonCardOpen = ref(false);
-const selectedProject = ref(null);
-
-const openProjectModal = (project) => {
-    selectedProject.value = project;
-    isCommonCardOpen.value = true;
-};
-
-const closeCommonCard = () => {
-    isCommonCardOpen.value = false;
-};
-
-const handleKeydown = (event) => {
-    if (event.key === "Escape") {
-        closeCommonCard();
-    }
-};
-
-onMounted(() => {
-    window.addEventListener("keydown", handleKeydown);
-});
-
-onUnmounted(() => {
-    window.removeEventListener("keydown", handleKeydown);
-});
-
-watchEffect(() => {
-    if (isCommonCardOpen.value) {
-        document.body.style.overflowY = "hidden";
-    } else {
-        document.body.style.overflowY = "scroll";
-    }
-});
 </script>
 
 <style lang="scss">
 .home_page_container {
     width: 1200px;
+    overflow: hidden;
     margin-bottom: 150px;
 
     display: flex;

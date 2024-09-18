@@ -28,7 +28,7 @@
         <div class="projects_list">
             <div
                 class="project_card"
-                @click="selectedProject(project)"
+                @click="selectProject(project)"
                 v-for="project in displayedProjects"
                 :key="project.id"
             >
@@ -57,57 +57,17 @@
             </div>
         </div>
     </main>
-    <ProjectModal
-        v-show="isCommonCardOpen"
-        :project="selectedProjectData"
-        @closeCommonCard="closeCommonCard"
-    />
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watchEffect } from "vue";
-
 import { projectDataList } from "../data/projectDataList.js";
 import { useSort } from "../composablse/useSort.js";
 
-import ProjectModal from "../components/ProjectModal.vue";
+import emitter from "../eventBus.js";
 
-const isCommonCardOpen = ref(false);
-const selectedProjectData = ref(null);
-
-const emit = defineEmits(["selectedProject"]);
-
-const selectedProject = (project) => {
-    selectedProjectData.value = project;
-    isCommonCardOpen.value = true;
-    emit("selectedProject", project);
+const selectProject = (project) => {
+    emitter.emit('show-project-modal', project);
 };
-
-const closeCommonCard = () => {
-    isCommonCardOpen.value = false;
-};
-
-const handleKeydown = (event) => {
-    if (event.key === "Escape") {
-        closeCommonCard();
-    }
-};
-
-onMounted(() => {
-    window.addEventListener("keydown", handleKeydown);
-});
-
-onUnmounted(() => {
-    window.removeEventListener("keydown", handleKeydown);
-});
-
-watchEffect(() => {
-    if (isCommonCardOpen.value) {
-        document.body.style.overflowY = "hidden";
-    } else {
-        document.body.style.overflowY = "scroll";
-    }
-});
 
 const {
     isOldSortActive,
