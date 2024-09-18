@@ -4,7 +4,6 @@
         .home_page_container,
         .about_page_container,
         .projects_page_container,
-        .changelog_page_container,
         .footer_container {
             width: calc(100vw - 40px);
         }
@@ -27,7 +26,7 @@
         .physical_icons_container {
             width: 100%;
         }
-        // MODAL PROJECT CARD
+        // PROJECT MODAL
         .modal_card_project {
             width: 600px;
         }
@@ -169,7 +168,18 @@
             opacity: 1;
             background: none;
         }
-        // MODAL PROJECT CARD
+        // CHANGELOG MODAL
+        .changelog_modal {
+            width: calc( 100% - 40px );
+        }
+        .update_version {
+            font-size: 20px;
+        }
+        .update_description,
+        .update_date {
+            font-size: 16px;
+        }
+        // PROJECT MODAL
         .modal_project_card_container {
             width: 100dvw;
             height: 100dvh;
@@ -197,19 +207,6 @@
         .page_title {
             margin-bottom: 20px;
         }
-        // CHANGELOG
-        .close_changelog_container {
-            margin-bottom: 15vh;
-        }
-        .update_info_card {
-            padding: 20px 15px;
-        }
-        .update_version {
-            font-size: 22px;
-        }
-        .update_date {
-            font-size: 18px;
-        }
         // FOOTER
         .footer_container {
             gap: 50px;
@@ -232,11 +229,21 @@
 }
 @media (max-width: 440px) {
     body {
+        // HEADER
+        .header_container {
+            width: 100%;
+            justify-content: space-between;
+        }
+        .header_menu {
+            position: relative;
+            left: 0;
+            transform: translateX(0);
+        }
         // HOME 
         .home_about_me_text span {
             color: #fff;
         }
-        // MODAL PROJECT CARD
+        // PROJECT MODAL
         .tech_name {
             font-size: 16px;
         }
@@ -246,10 +253,6 @@
         }
         .project_btn {
             width: 100%;
-        }
-        // CHANGELOG
-        .update_description {
-            font-size: 18px;
         }
     }
 }
@@ -261,7 +264,6 @@
         .home_skills_block,
         .about_page_container,
         .projects_page_container,
-        .changelog_page_container,
         .footer_container {
             width: calc(100vw - 30px);
         }
@@ -284,20 +286,13 @@
         .code_text {
             font-size: 12px;
         }
-        // MODAL PROJECT CARD
+        // PROJECT MODAL
         .modal_project_card_name {
             font-size: 28px;
         }
         .project_btn {
             padding: 6px 22px;
             font-size: 20px;
-        }
-        // CHANGELOG
-        .update_version {
-            font-size: 20px;
-        }
-        .update_description {
-            font-size: 16px;
         }
     }
 }
