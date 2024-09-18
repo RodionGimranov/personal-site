@@ -24,17 +24,6 @@ export const playlistDataList = [
     {
         id: 2,
         album_image: new URL(
-            "../assets/images/webp/album-images/Actors-Acts-of-Worship.webp",
-            import.meta.url
-        ).href,
-        explicit_content: false,
-        song_name: "Like Suicide",
-        artist_name: "Actors",
-        song_url: new URL("../assets/songs/Like-Suicide.mp3", import.meta.url).href,
-    },
-    {
-        id: 3,
-        album_image: new URL(
             "../assets/images/webp/album-images/Paul-Jones-My-Way-(Rarities).webp",
             import.meta.url
         ).href,
@@ -44,7 +33,7 @@ export const playlistDataList = [
         song_url: new URL("../assets/songs/Free-Me.mp3", import.meta.url).href,
     },
     {
-        id: 4,
+        id: 3,
         album_image: new URL(
             "../assets/images/webp/album-images/Raleigh-Ritchie-Andy-(2020).webp",
             import.meta.url
