@@ -1,7 +1,6 @@
 <template>
     <div class="code_text_container">
-        <p class="code_text comment">// Here are the project metadata</p>
-
+        <p class="code_text comment_line">// Here are the project metadata</p>
         <p class="code_text line_1">
             export
             <span :style="{ color: '#569CD6' }">const</span>
@@ -9,39 +8,13 @@
             <span :style="{ color: '#D4D4D4' }">=</span>
             <span :style="{ color: '#FFD700' }">[</span>
         </p>
-
-        <p class="code_text line_2">
+        <p v-for="(line, index) in codeLines" :key="index" class="code_text code_lines">
             {
-            <span :style="{ color: '#9CDCFE' }">number_of_lines_code:</span>
-            <span :style="{ color: '#CE9178' }">4470"</span>
+            <span :style="{ color: '#9CDCFE' }">{{ line.key }}</span>
+            <span :style="{ color: '#CE9178' }">{{ line.value }}</span>
             <span>}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
-
-        <p class="code_text line_3">
-            {
-            <span :style="{ color: '#9CDCFE' }">number_of_folders:</span>
-            <span :style="{ color: '#CE9178' }">"27"</span>
-            <span clsss="">}</span>
-            <span :style="{ color: '#D4D4D4' }">,</span>
-        </p>
-
-        <p class="code_text line_4">
-            {
-            <span :style="{ color: '#9CDCFE' }">number_of_files:</span>
-            <span :style="{ color: '#CE9178' }">"109"</span>
-            <span clsss="">}</span>
-            <span :style="{ color: '#D4D4D4' }">,</span>
-        </p>
-
-        <p class="code_text line_5">
-            {
-            <span :style="{ color: '#9CDCFE' }">project_size:</span>
-            <span :style="{ color: '#CE9178' }">"48,01 MB"</span>
-            <span clsss="">}</span>
-            <span :style="{ color: '#D4D4D4' }">,</span>
-        </p>
-
         <p class="code_text line_6">
             ]
             <span :style="{ color: '#D4D4D4' }">;</span>
@@ -49,7 +22,14 @@
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+const codeLines = [
+    { key: "number_of_lines_code:", value: "4470" },
+    { key: "number_of_folders:", value: "27" },
+    { key: "number_of_files:", value: "109" },
+    { key: "project_size:", value: "48,01 MB" },
+];
+</script>
 
 <style lang="scss">
 .code_text_container {
@@ -64,7 +44,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    word-wrap: break-word;
     color: $primary_white;
 
     display: flex;
@@ -72,7 +51,7 @@
     align-items: flex-start;
 }
 
-.comment {
+.comment_line {
     color: $comment_code;
 }
 
@@ -81,11 +60,7 @@
     gap: 10px;
 }
 
-.line_2,
-.line_3,
-.line_4,
-.line_5 {
-    display: flex;
+.code_lines {
     color: $pink_code_text;
     margin-left: 10px;
 
