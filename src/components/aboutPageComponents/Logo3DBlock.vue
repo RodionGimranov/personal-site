@@ -1,6 +1,7 @@
 <template>
-    <span ref="logo_effect" class="logo_tilt_effect" data-tilt-glare data-tilt-max-glare="0.3"
-        >RG
+    <span ref="logo_effect" class="logo_tilt_effect"
+        data-tilt-glare data-tilt-max-glare="0.3">
+        RG
     </span>
 </template>
 

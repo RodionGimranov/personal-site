@@ -1,6 +1,6 @@
 <template>
     <div class="image_block_container">
-        <img class="image" :src="currentItem.gallery_image" alt="Gallery image" />
+        <img class="gallery_image_item" :src="currentItem.gallery_image" alt="Gallery image" />
         <div class="slider_wrapper">
             <SliderIndicators :numberOfDots="5" :currentIndex="currentIndex" />
         </div>
@@ -30,7 +30,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     align-items: center;
 }
 
-.image {
+.gallery_image_item {
     width: 100%;
     height: 100%;
 }

@@ -1,60 +1,20 @@
 <template>
     <div class="controls_btn_container">
-        <button class="control_btn playlist">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Playlist-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn previous" @click="playPreviousSong">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Previous-song-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn play" v-show="!isPlaying" @click="playSong">
-            <img
-                class="button_control_icon play_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Play-song-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn stop" v-show="isPlaying" @click="stopSong">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Stop-song-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn next" @click="playNextSong">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Next-song-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn volume_on" v-show="isVolumeOn" @click="muteVolume">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Volume-on-icon.svg"
-                alt="Button Icon"
-            />
-        </button>
-        <button class="control_btn volume_off" v-show="!isVolumeOn" @click="unmuteVolume">
-            <img
-                class="button_control_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/Volume-off-icon.svg"
-                alt="Button Icon"
-            />
+        <button
+            v-for="(button, index) in buttons"
+            :key="index"
+            class="control_btn"
+            :class="button.class"
+            @click="button.click"
+            v-show="button.show === undefined || button.show">
+            <img class="button_control_icon" :src="button.icon" alt="Button Icon" />
         </button>
     </div>
     <audio ref="audioPlayer" :src="currentSong.song_url" @ended="handleEnded"></audio>
 </template>
 
 <script setup>
-import { ref, inject } from "vue";
+import { ref, inject, computed } from "vue";
 
 const isPlaying = ref(false);
 const isVolumeOn = ref(true);
@@ -134,12 +94,53 @@ const changeSong = async () => {
         }
     }
 };
+
+const buttons = computed(() => [
+    {
+        class: "playlist_song",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Playlist-icon.svg", import.meta.url).href,
+    },
+    {
+        class: "previous_song",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Previous-song-icon.svg", import.meta.url).href,
+        click: playPreviousSong,
+    },
+    {
+        class: "play_song",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Play-song-icon.svg", import.meta.url).href,
+        click: playSong,
+        show: !isPlaying.value,
+    },
+    {
+        class: "stop_song",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Stop-song-icon.svg", import.meta.url).href,
+        click: stopSong,
+        show: isPlaying.value,
+    },
+    {
+        class: "next_song",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Next-song-icon.svg", import.meta.url).href,
+        click: playNextSong,
+    },
+    {
+        class: "song_volume_on",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Volume-on-icon.svg", import.meta.url).href,
+        click: muteVolume,
+        show: isVolumeOn.value,
+    },
+    {
+        class: "song_volume_off",
+        icon: new URL("../../../assets/images/svg/musicPlayer-icons/Volume-off-icon.svg", import.meta.url).href,
+        click: unmuteVolume,
+        show: !isVolumeOn.value,
+    },
+]);
 </script>
 
 <style lang="scss">
 .controls_btn_container {
     width: 100%;
-    padding: 3px 0px;
+    padding: 3px;
     border-radius: 100px;
     border: 1px solid $primary_white;
 
@@ -172,9 +173,5 @@ const changeSong = async () => {
 .button_control_icon {
     transition: 0.2s;
     transform: scale(1.1);
-}
-
-.play_icon {
-    margin-left: 2px;
 }
 </style>

@@ -67,8 +67,8 @@ watch(currentSongIndex, () => {
     width: 150px;
     height: 150px;
 
-    background: $third_bg;
     border-radius: 20px;
+    background: $third_bg;
 }
 
 .song_title_container {

@@ -17,12 +17,15 @@
 .text_content_container {
     width: 326px;
     height: 326px;
+    gap: 20px;
+}
 
+.text_content_container,
+.message_block {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
 }
 
 .message_block {
@@ -32,11 +35,6 @@
     padding: 20px;
     border-radius: 30px;
     background: $secondary_bg;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     gap: 10px;
 }
 

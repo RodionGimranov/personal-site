@@ -1,9 +1,10 @@
 <template>
     <div class="code_editor">
         <div class="menu_bar">
-            <span class="close_btn menu_btn"></span>
-            <span class="minimize_btn menu_btn"></span>
-            <span class="fullscreen_btn menu_btn"></span>
+            <span v-for="(color, index) in colors"
+            :key="index" class="menu_btn"
+            :style="{ background: color }">
+        </span>
         </div>
         <div class="title_bar">
             <div class="file_tab">
@@ -20,26 +21,8 @@
                 />
             </div>
             <div class="toolbar">
-                <button class="toolbar_btn">
-                    <img
-                        class="toolbar_icon"
-                        src="../../../assets/images/svg/metadata-icons/source-control-icon.svg"
-                        alt="Toollbat icon"
-                    />
-                </button>
-                <button class="toolbar_btn">
-                    <img
-                        class="toolbar_icon"
-                        src="../../../assets/images/svg/metadata-icons/split-editor-icon.svg"
-                        alt="Toollbat icon"
-                    />
-                </button>
-                <button class="toolbar_btn">
-                    <img
-                        class="toolbar_icon"
-                        src="../../../assets/images/svg/metadata-icons/more-actions-icon.svg"
-                        alt="Toollbat icon"
-                    />
+                <button v-for="(icon, index) in toolbarIcons" :key="index" class="toolbar_btn">
+                    <img class="toolbar_icon" :src="icon" alt="Toolbar icon" />
                 </button>
             </div>
         </div>
@@ -57,6 +40,14 @@
 
 <script setup>
 import CodeTextContainer from "./CodeTextContainer.vue";
+
+const colors = [ '#ED6A5E', '#F5BD50', '#61C454' ];
+
+const toolbarIcons = [
+    new URL ("../../../assets/images/svg/metadata-icons/source-control-icon.svg", import.meta.url).href,
+    new URL ("../../../assets/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url).href,
+    new URL ("../../../assets/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url).href,
+];
 </script>
 
 <style lang="scss">
@@ -99,18 +90,6 @@ import CodeTextContainer from "./CodeTextContainer.vue";
     border-radius: 100px;
 }
 
-.close_btn {
-    background: $mac_close_btn;
-}
-
-.minimize_btn {
-    background: $mac_minimize_btn;
-}
-
-.fullscreen_btn {
-    background: $max_fullscreen_btn;
-}
-
 .title_bar {
     width: 100%;
     cursor: pointer;
@@ -126,11 +105,6 @@ import CodeTextContainer from "./CodeTextContainer.vue";
     height: 35px;
     background: $secondary_bg;
     padding: 0px 10px 0px 20px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 4px;
 }
 
 .file_name {
@@ -140,6 +114,7 @@ import CodeTextContainer from "./CodeTextContainer.vue";
     color: $primary_white;
 }
 
+.file_tab,
 .toolbar {
     display: flex;
     justify-content: flex-start;
@@ -210,7 +185,6 @@ import CodeTextContainer from "./CodeTextContainer.vue";
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
-    word-wrap: break-word;
     color: $line_number;
     text-align: right;
 }
