@@ -1,7 +1,5 @@
 <template>
     <footer class="footer_container">
-        <section class="changelog_button_container">
-        </section>
         <section class="media_container">
             <div class="footer_first_block">
                 <p class="footer_copyright footer_text">
@@ -13,23 +11,11 @@
             </div>
             <div class="footer_second_block">
                 <div class="footer_social_container">
-                    <a
-                        href="https://github.com/RodionGimranov"
+                    <a v-for="(social, index) in social_info" :key="index"
+                        :href="social.link"
                         class="social_link footer_text"
-                        target="_blank"
-                        >GitHub
-                    </a>
-                    <a
-                        href="https://t.me/RodionGimranov"
-                        class="social_link footer_text"
-                        target="_blank"
-                        >Telegram
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/rodiongimranov/"
-                        class="social_link footer_text"
-                        target="_blank"
-                        >LinkedIn
+                        target="_blank">
+                        {{ social.name }}
                     </a>
                 </div>
                 <p class="local_time footer_text">Local time: {{ localTime }}</p>
@@ -42,6 +28,12 @@
 import { ref } from "vue";
 
 const localTime = ref();
+
+const social_info = [
+    { name: "GitHub", link: "https://github.com/RodionGimranov" },
+    { name: "Telegram", link: "https://t.me/RodionGimranov" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/rodiongimranov/" },
+];
 
 const updateLocalTime = async () => {
     const timeZone = "Europe/Moscow";
@@ -58,18 +50,15 @@ updateLocalTime();
 setInterval(updateLocalTime, 60000);
 </script>
 
-<script script></script>
-
 <style lang="scss">
 .footer_container {
     width: 1200px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px;
 }
 
 .changelog_button_container {

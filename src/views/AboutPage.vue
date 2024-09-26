@@ -48,24 +48,4 @@ import QuotesBlock from "../components/aboutPageComponents/QuotesBlock.vue";
 .block1 {
     flex-wrap: wrap;
 }
-
-.block1 > :nth-child(1) {
-    order: 1;
-}
-
-.block1 > :nth-child(2) {
-    order: 2;
-}
-
-.block1 > :nth-child(3) {
-    order: 3;
-}
-
-.block1 > :nth-child(4) {
-    order: 4;
-}
-
-.block1 > :nth-child(5) {
-    order: 5;
-}
 </style>

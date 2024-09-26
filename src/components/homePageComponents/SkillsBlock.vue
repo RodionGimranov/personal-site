@@ -5,7 +5,7 @@
                 v-for="(skill, index) in main_skills_stack"
                 :key="index"
                 class="skills_card"
-                :style="{ '--drop-shadow-color': skill.skill_drop_shadow }"
+                :style="{ '--drop-shadow-color': skill.skill_color }"
             >
                 <p class="skill_title" :style="{ color: skill.skill_color }">
                     {{ skill.skill_title }}
@@ -36,27 +36,23 @@ const main_skills_stack = [
         skill_description:
             "Reactivity, props & emits, computed properties, lifecycle hooks, directives, composables.",
         skill_color: "#3DD68C",
-        skill_drop_shadow: "#3DD68C",
     },
     {
         skill_title: "JavaScript",
         skill_description:
             "Asynchrony, algorithms and data structures, DOM & BOM, events, HTTP Requests.",
         skill_color: "#F1E05A",
-        skill_drop_shadow: "#F1E05A",
     },
     {
         skill_title: "SCSS",
         skill_description:
             "Flexbox, animations, media queries, inheritance, nesting, mixins, directives, functions, modules",
         skill_color: "#C4538C",
-        skill_drop_shadow: "#C4538C",
     },
     {
         skill_title: "HTML",
         skill_description: "Semantic, cross-browser, responsive, and pixel perfect layout.",
         skill_color: "#E34C26",
-        skill_drop_shadow: "#E34C26",
     },
 ];
 

@@ -74,8 +74,8 @@ watch(route, (newRoute) => {
     position: sticky;
     top: 20px;
     width: 1200px;
-
     z-index: 9999;
+    
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;

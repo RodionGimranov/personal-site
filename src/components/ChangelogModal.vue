@@ -4,7 +4,7 @@
             <div class="changelog_modal">
                 <div ref="changelog_modal_ref"   class="changelog_scroller_container">
                     <div class="changelog_modal_header">
-                        <p class="changelog_modal_title" ref="change_text_size">Changelog</p>
+                        <p class="changelog_modal_title">Changelog</p>
                         <button class="close_changelog_modal_btn" @click="closeChangelogModal">
                             <img
                                 class="close_icon"
@@ -33,16 +33,12 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from "vue";
+import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
-
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { updateDataList } from "../data/updateDataList.js";
 
 const changelog_modal_ref = ref(null);
-// const change_text_size = ref(null);
 
 updateDataList.reverse();
 
@@ -55,23 +51,6 @@ const closeChangelogModal = () => {
 onClickOutside(changelog_modal_ref, () => {
     closeChangelogModal();
 });
-
-// onMounted(() => {
-//     gsap.registerPlugin(ScrollTrigger);
-
-//     gsap.to(change_text_size.value, {
-//         scrollTrigger: {
-//             trigger: change_text_size.value,
-//             scroller: changelog_modal_ref.value,
-//             start: "top top",
-//             end: "bottom bottom",
-//             scrub: true,
-//         },
-//         fontSize: "26px",
-//         color: "#949494",
-//         ease: "power2.out",
-//     });
-// });
 </script>
 
 <style lang="scss">

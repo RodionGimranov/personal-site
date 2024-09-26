@@ -1,10 +1,9 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import sassDts from "vite-plugin-sass-dts";
 
 export default defineConfig({
     base: '/personal-site/',
-    plugins: [vue(), sassDts()],
+    plugins: [vue()],
     css: {
         preprocessorOptions: {
             scss: {
