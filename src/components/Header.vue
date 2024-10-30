@@ -25,7 +25,7 @@
             </router-link>
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
-        <ActionMenu />  
+        <ActionMenu />
     </header>
 </template>
 
@@ -75,7 +75,7 @@ watch(route, (newRoute) => {
     top: 20px;
     width: 1200px;
     z-index: 9999;
-    
+
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;

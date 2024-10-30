@@ -11,10 +11,13 @@
             </div>
             <div class="footer_second_block">
                 <div class="footer_social_container">
-                    <a v-for="(social, index) in social_info" :key="index"
+                    <a
+                        v-for="(social, index) in social_info"
+                        :key="index"
                         :href="social.link"
                         class="social_link footer_text"
-                        target="_blank">
+                        target="_blank"
+                    >
                         {{ social.name }}
                     </a>
                 </div>
