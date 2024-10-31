@@ -1,7 +1,6 @@
 <template>
-    <span ref="logo_effect" class="logo_tilt_effect"
-        data-tilt-glare data-tilt-max-glare="0.3">
-        RG
+    <span ref="logo_effect" class="logo_tilt_effect" data-tilt-glare data-tilt-max-glare="0.3">
+        <img class="logo_image" src="../../assets/images/svg/logo-tilt.svg" alt="Logo image" />
     </span>
 </template>
 
@@ -22,7 +21,7 @@ onMounted(() => {
     width: 250px;
     height: 250px;
 
-    padding: 20px;
+    overflow: hidden;
     border-radius: 30px;
     background: $secondary_bg;
 
@@ -32,5 +31,10 @@ onMounted(() => {
 
     font-size: 150px;
     font-weight: 700;
+
+    .logo_image {
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>
