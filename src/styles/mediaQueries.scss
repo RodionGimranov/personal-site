@@ -1,10 +1,12 @@
 @media (max-width: 1240px) {
     body {
         // COMMON
-        .home_page_container,
         .about_page_container,
         .projects_page_container,
-        .footer_container {
+        .footer_container,
+        .home_filling_text_section,
+        .home_section,
+        .changelog_page_container {
             width: calc(100vw - 40px);
         }
         // HEADER
@@ -109,6 +111,14 @@
         }
     }
 }
+@media (max-width: 815px) {
+    body {
+        // HOME
+        .projects_list {
+            justify-content: center;
+        }
+    }
+}
 @media (max-width: 740px) {
     body {
         // ABOUT
@@ -122,11 +132,11 @@
         .block1 > :nth-child(1) {
             order: 2;
         }
-        
+
         .block1 > :nth-child(2) {
             order: 1;
         }
-        
+
         .block1 > :nth-child(3) {
             order: 3;
         }
@@ -168,17 +178,6 @@
             opacity: 1;
             background: none;
         }
-        // CHANGELOG MODAL
-        .changelog_modal {
-            width: calc( 100% - 40px );
-        }
-        .update_version {
-            font-size: 20px;
-        }
-        .update_description,
-        .update_date {
-            font-size: 16px;
-        }
         // PROJECT MODAL
         .project_modal_container {
             width: 100dvw;
@@ -204,6 +203,17 @@
         }
         .page_title {
             margin-bottom: 20px;
+        }
+        // CHANGELOG
+        .changelog_page_title_container {
+            padding: 20px 0px;
+            top: -1px;
+        }
+        .changelog_page_title {
+            font-size: 24px;
+        }
+        .changelog_card_container {
+            padding: 0px 20px 20px 20px;
         }
         // FOOTER
         .footer_container {
@@ -237,7 +247,7 @@
             left: 0;
             transform: translateX(0);
         }
-        // HOME 
+        // HOME
         .home_about_me_text span {
             color: #fff;
         }
@@ -258,11 +268,13 @@
     body {
         padding: 15px !important;
         // COMMON
-        .home_page_container,
         .home_skills_block,
         .about_page_container,
         .projects_page_container,
-        .footer_container {
+        .footer_container,
+        .home_filling_text_section,
+        .home_section,
+        .changelog_page_container {
             width: calc(100vw - 30px);
         }
         // ABOUT
