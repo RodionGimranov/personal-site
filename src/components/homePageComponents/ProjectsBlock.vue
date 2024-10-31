@@ -1,36 +1,6 @@
 <template>
     <div class="home_projects_block">
-        <div class="home_projects_list">
-            <div
-                class="home_project_card"
-                @click="selectProject(project)"
-                v-for="project in displayedProjects"
-                :key="project.id"
-            >
-                <video
-                    class="video_cover"
-                    preload="metadata"
-                    autoplay
-                    loop
-                    muted
-                    playsinline
-                    loading="lazy"
-                >
-                    <source :src="project.small_project_cover" type="video/mp4" />
-                    Your browser does not support the video :(
-                </video>
-                <div class="home_project_card_info">
-                    <p class="home_project_name">{{ project.name }}</p>
-                    <div class="card_viewing_sign_container">
-                        <img
-                            class="card_viewing_sign"
-                            src="../../assets/images/svg/viewing-sign-icon.svg"
-                            alt="Viewing Sign"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ProjectCard />
         <div class="view_all_btn_container">
             <router-link to="/Projects" class="view_all_project_btn" @click="viewAllProject"
                 >View All
@@ -53,28 +23,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import emitter from "../../eventBus.js";
-
-import { projectDataList } from "../../data/projectDataList.js";
-
-const selectedProjectIds = [3, 4, 5];
-const displayedProjects = ref([]);
-
-const updateDisplayedProjects = () => {
-    displayedProjects.value = selectedProjectIds
-        .map((id) => projectDataList.find((project) => project.id === id))
-        .filter(Boolean);
-};
-
-updateDisplayedProjects();
+import ProjectCard from "../ProjectCard.vue";
 
 const viewAllProject = () => {
     emitter.emit("viewAllProject");
-};
-        
-const selectProject = (project) => {
-    emitter.emit('show-project-modal', project);
 };
 </script>
 
@@ -85,86 +38,6 @@ const selectProject = (project) => {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
-
-.home_projects_list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    row-gap: 50px;
-    column-gap: 75px;
-}
-
-.home_project_card {
-    position: relative;
-    width: 350px;
-    height: 230px;
-
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 30px;
-    background: $third_bg;
-    border: 1px solid $card_border;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video_cover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.home_project_card_info {
-    width: 100%;
-    height: 100%;
-
-    opacity: 0;
-    z-index: 100;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.home_project_card:hover .home_project_card_info {
-    opacity: 1;
-}
-
-.home_project_name {
-    padding: 4px 12px;
-    border-radius: 100px;
-    backdrop-filter: blur(20px);
-    background: $content_bg;
-
-    font-size: 18px;
-    font-weight: 400;
-    color: $primary_white;
-}
-
-.card_viewing_sign_container {
-    width: 30px;
-    height: 30px;
-
-    border-radius: 100px;
-    backdrop-filter: blur(20px);
-    background: $content_bg;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_viewing_sign {
-    width: 20px;
-    height: 20px;
 }
 
 .view_all_btn_container {
