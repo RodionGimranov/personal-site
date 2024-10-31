@@ -1,29 +1,28 @@
 <template>
-    <Header />
+    <Header v-if="!$route.meta.hideHeader" />
     <router-view />
-    <ChangelogModal v-show="showChangelogModal" @closeChangelogModal="closeChangelogModal" />
     <ProjectModal
         v-show="showProjectModal"
         :project="selectedProjectData"
         @closeProjectModal="closeProjectModal"
     />
-    <Footer />
+    <Footer v-if="!$route.meta.hideFooter" />
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted, watchEffect } from "vue";
 import { RouterView } from "vue-router";
+
 import emitter from "./eventBus.js";
 
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 
-import ChangelogModal from "./components/ChangelogModal.vue";
 import ProjectModal from "./components/ProjectModal.vue";
 
 const showChangelogModal = ref(false);
 const showProjectModal = ref(false);
-const selectedProjectData = ref(null);;
+const selectedProjectData = ref(null);
 
 const closeChangelogModal = () => {
     showChangelogModal.value = false;

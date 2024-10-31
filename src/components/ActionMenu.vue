@@ -4,16 +4,13 @@
             <span class="dot_menu" v-for="dots in 3" :key="dots"></span>
         </div>
         <div v-if="dropDownOpen" class="dropdown_menu_container">
-            <span class="action_item_btn" @click="openChangelog">
-                Changelog
-            </span>
+            <router-link to="/ChangelogPage" class="action_item_btn">Changelog</router-link>
         </div>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import emitter from "../eventBus.js";
 
 const dropDownOpen = ref(false);
 const isActive = ref(false);
@@ -27,13 +24,6 @@ const showDropDown = () => {
 const closeDropDown = () => {
     dropDownOpen.value = false;
     isActive.value = false;
-};
-
-const openChangelog = () => {
-    dropDownOpen.value = false;
-    isActive.value = false;
-
-    emitter.emit('show-changelog-modal');
 };
 
 const handleKeydown = (event) => {
@@ -79,7 +69,7 @@ onMounted(() => {
 
 onUnmounted(() => {
     window.removeEventListener("keydown", handleKeydown);
-    window.removeEventListener("click", handleClickOutside);    
+    window.removeEventListener("click", handleClickOutside);
 });
 </script>
 
@@ -156,6 +146,7 @@ onUnmounted(() => {
 
 .dropdown_menu_container {
     position: absolute;
+    width: 150px;
     top: 53px;
     padding: 6px;
     border-radius: 20px;

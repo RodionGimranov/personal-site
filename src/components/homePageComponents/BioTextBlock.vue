@@ -23,7 +23,7 @@ onMounted(() => {
 
 <style lang="scss">
 .home_filling_text_section {
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;

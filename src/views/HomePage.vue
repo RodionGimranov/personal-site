@@ -28,14 +28,11 @@ import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue"
 
 <style lang="scss">
 .home_page_container {
-    width: 1200px;
-    overflow: hidden;
     margin-bottom: 150px;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     gap: 200px;
 }
 
@@ -50,7 +47,7 @@ import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue"
 }
 
 .home_section {
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
