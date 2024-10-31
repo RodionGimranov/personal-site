@@ -44,14 +44,9 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="info_project_btn">
-                            <a :href="project.link_to_github" class="project_btn" target="_blank"
-                                >GitHub</a
-                            >
-                            <a :href="project.link_to_deploy" class="project_btn" target="_blank"
-                                >Live View</a
-                            >
-                        </div>
+                        <a :href="project.link_to_deploy" class="project_btn" target="_blank"
+                            >Live Demo</a
+                        >
                     </div>
                 </div>
             </div>
@@ -215,13 +210,6 @@ onClickOutside(projectModalRef, () => {
     color: $primary_bg;
 }
 
-.info_project_btn {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 10px;
-}
-
 .project_btn {
     transition: 0.2s;
     padding: 6px 24px;
@@ -229,7 +217,7 @@ onClickOutside(projectModalRef, () => {
     background: $button_default;
 
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     color: $primary_white;
     text-align: center;
 
