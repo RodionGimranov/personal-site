@@ -5,8 +5,7 @@
         .projects_page_container,
         .footer_container,
         .home_filling_text_section,
-        .home_section,
-        .changelog_page_container {
+        .home_section {
             width: calc(100vw - 40px);
         }
         // HEADER
@@ -28,7 +27,7 @@
         .physical_icons_container {
             width: 100%;
         }
-        // PROJECT MODAL
+        // MODALS
         .project_modal {
             width: 600px;
         }
@@ -178,8 +177,8 @@
             opacity: 1;
             background: none;
         }
-        // PROJECT MODAL
-        .project_modal_container {
+        // MODALS
+        .modal_container {
             width: 100dvw;
             height: 100dvh;
         }
@@ -203,17 +202,6 @@
         }
         .page_title {
             margin-bottom: 20px;
-        }
-        // CHANGELOG
-        .changelog_page_title_container {
-            padding: 20px 0px;
-            top: -1px;
-        }
-        .changelog_page_title {
-            font-size: 24px;
-        }
-        .changelog_card_container {
-            padding: 0px 20px 20px 20px;
         }
         // FOOTER
         .footer_container {
@@ -251,7 +239,7 @@
         .home_about_me_text span {
             color: #fff;
         }
-        // PROJECT MODAL
+        // MODALS
         .tech_name {
             font-size: 16px;
         }
@@ -273,8 +261,7 @@
         .projects_page_container,
         .footer_container,
         .home_filling_text_section,
-        .home_section,
-        .changelog_page_container {
+        .home_section {
             width: calc(100vw - 30px);
         }
         // ABOUT
@@ -296,7 +283,7 @@
         .code_text {
             font-size: 12px;
         }
-        // PROJECT MODAL
+        // MODALS
         .project_modal_card_name {
             font-size: 28px;
         }

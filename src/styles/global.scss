@@ -39,7 +39,6 @@ button {
     cursor: default;
     user-select: none;
 }
-.close_changelog_btn_icon,
 .card_viewing_sign,
 .folder_icon,
 .close_icon,
@@ -52,6 +51,15 @@ button {
 .tool_icon {
     user-select: none;
 }
+.image_block_container,
+.text_content_container,
+.music_block_container,
+.code_editor,
+.logo_tilt_effect,
+.tool_block_container,
+.quotes_block_container {
+    overflow: hidden;
+}
 .page_title {
     margin-bottom: 30px;
     font-size: 40px;
@@ -63,12 +71,18 @@ button {
     align-items: center;
     gap: 10px;
 }
-.image_block_container,
-.text_content_container,
-.music_block_container,
-.code_editor,
-.logo_tilt_effect,
-.tool_block_container,
-.quotes_block_container {
-    overflow: hidden;
+.modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+    background: rgba(46, 46, 46, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
