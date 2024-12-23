@@ -1,9 +1,8 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 import HomePage from "../views/HomePage.vue";
 import AboutPage from "../views/AboutPage.vue";
 import ProjectsPage from "../views/ProjectsPage.vue";
-import ChangelogPage from "../views/ChangelogPage.vue";
 
 const routes = [
     { path: "/", redirect: "/Home" },
@@ -25,16 +24,10 @@ const routes = [
         component: ProjectsPage,
         meta: { title: "Projects" },
     },
-    {
-        path: "/ChangelogPage",
-        name: "changelogPage",
-        component: ChangelogPage,
-        meta: { title: "Changelog", hideHeader: true, hideFooter: true },
-    },
 ];
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory("/personal-site/"),
     routes,
 });
 
