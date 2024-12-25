@@ -38,7 +38,6 @@ const props = defineProps({
 .slider_dot {
     width: 10px;
     height: 10px;
-
     transition: 0.5s;
     border-radius: 100px;
     background: $slider_dot_bg;

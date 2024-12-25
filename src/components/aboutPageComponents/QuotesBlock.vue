@@ -24,7 +24,6 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
 .quotes_block_container {
     width: 100%;
     height: 247px;
-
     padding: 20px;
     border-radius: 30px;
     background: $secondary_bg;

@@ -21,7 +21,6 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     position: relative;
     width: 326px;
     min-height: 326px;
-
     border-radius: 30px;
     background: $secondary_bg;
 
@@ -39,7 +38,6 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
     position: absolute;
     width: 100%;
     height: 100%;
-
     z-index: 100;
     margin-bottom: 20px;
 

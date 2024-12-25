@@ -31,7 +31,6 @@
 .message_block {
     width: 100%;
     height: 100%;
-
     padding: 20px;
     border-radius: 30px;
     background: $secondary_bg;
@@ -53,7 +52,6 @@
 .future_content_block {
     width: 100%;
     height: 100%;
-
     border-radius: 30px;
     border: 2px #2f2f2f dashed;
 
