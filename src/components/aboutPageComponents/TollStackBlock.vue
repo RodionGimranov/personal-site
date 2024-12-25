@@ -76,13 +76,13 @@ const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];
 .move_left {
     flex-direction: row-reverse;
     transform: translateX(35%);
-    animation: scroll-left 45s linear infinite;
+    animation: scroll-left 55s linear infinite;
 }
 
 .move_right {
     flex-direction: row;
     transform: translateX(-35%);
-    animation: scroll-right 45s linear infinite;
+    animation: scroll-right 55s linear infinite;
 }
 
 @keyframes scroll-left {
