@@ -1,6 +1,7 @@
 <template>
-    <Header v-if="!$route.meta.hideHeader" />
+    <Header />
     <router-view />
+    <ChangelogModal v-show="showChangelogModal" @closeChangelogModal="closeChangelogModal" />
     <ProjectModal
         v-show="showProjectModal"
         :project="selectedProjectData"
@@ -15,10 +16,10 @@ import { RouterView } from "vue-router";
 
 import emitter from "./eventBus.js";
 
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-
-import ProjectModal from "./components/ProjectModal.vue";
+import Header from "./components/layout/Header.vue";
+import ChangelogModal from "./components/modals/ChangelogModal.vue";
+import ProjectModal from "./components/modals/ProjectModal.vue";
+import Footer from "./components/layout/Footer.vue";
 
 const showChangelogModal = ref(false);
 const showProjectModal = ref(false);
@@ -53,11 +54,13 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
+    emitter.off("show-changelog-modal");
+    emitter.off("show-project-modal");
     window.removeEventListener("keydown", handleKeydown);
 });
 
 watchEffect(() => {
-    if (showChangelogModal.value || showProjectModal.value) {
+    if (showProjectModal.value || showChangelogModal.value) {
         document.body.style.overflowY = "hidden";
     } else {
         document.body.style.overflowY = "scroll";
@@ -77,9 +80,9 @@ body {
     background: $primary_bg;
 
     font-size: 16px;
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
     color: $primary_white;
+    font-family: "Roboto", sans-serif;
 
     display: flex;
     flex-direction: column;
