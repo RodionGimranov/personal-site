@@ -93,7 +93,7 @@ onClickOutside(changelogModalRef, () => {
 }
 
 .update_card {
-    width: calc(100% - 30px);
+    width: 100%;
     border-bottom: 1px solid $menu_bar_bg;
 
     display: flex;
