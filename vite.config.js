@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
-    base: '/personal-site/',
+    base: "/personal-site/",
     plugins: [vue()],
     css: {
         preprocessorOptions: {
@@ -16,6 +16,8 @@ export default defineConfig({
         },
     },
     server: {
-        historyApiFallback: true,
+        historyApiFallback: {
+            rewrites: [{ from: /^\/personal-site\/.*$/, to: "/personal-site/index.html" }],
+        },
     },
 });
