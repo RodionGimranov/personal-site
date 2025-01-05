@@ -33,19 +33,21 @@ file_paths = [
     "./src/components/aboutPageComponents/TextMessageBlock.vue",
     "./src/components/aboutPageComponents/TollStackBlock.vue",
 
-    "./src/components/ChangelogPageComponents/UpdateCard.vue",
-
     "./src/components/homePageComponents/BioTextBlock.vue",
     "./src/components/homePageComponents/IntroTextBlock.vue",
     "./src/components/homePageComponents/OutroTextBlock.vue",
     "./src/components/homePageComponents/ProjectsBlock.vue",
     "./src/components/homePageComponents/SkillsBlock.vue",
 
-    "./src/components/ActionMenu.vue",
-    "./src/components/Footer.vue",
-    "./src/components/Header.vue",
+    "./src/components/layout/Footer.vue",
+    "./src/components/layout/Header.vue",
+
+    "./src/components/modals/ProjectModal.vue",
+    "./src/components/modals/ChangelogModal.vue",
+
+    "./src/components/ui/CloseModalBtn.vue",
+
     "./src/components/ProjectCard.vue",
-    "./src/components/ProjectModal.vue",
 
     "./src/composablse/useSwitch.js",
 
@@ -66,7 +68,6 @@ file_paths = [
     './src/styles/variables.scss',
 
     './src/views/AboutPage.vue',
-    "./src/views/ChangelogPage.vue",
     './src/views/HomePage.vue',
     './src/views/ProjectsPage.vue',
 
