@@ -137,7 +137,6 @@ onUnmounted(() => {
     .music_wave {
         width: 3px;
         min-height: 3px;
-
         transition: height 0.2s ease-out;
         border-radius: 100px;
         background: $secondary_red;

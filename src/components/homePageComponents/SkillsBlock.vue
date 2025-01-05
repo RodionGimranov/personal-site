@@ -90,7 +90,6 @@ onMounted(() => {
 .skills_card {
     width: 280px;
     height: 170px;
-
     padding: 10px;
     border-radius: 30px;
     will-change: filter;

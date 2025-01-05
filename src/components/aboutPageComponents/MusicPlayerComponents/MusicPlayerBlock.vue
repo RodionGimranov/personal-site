@@ -43,7 +43,6 @@ watch(currentSongIndex, () => {
 .music_block_container {
     width: 326px;
     height: 326px;
-
     padding: 20px;
     border-radius: 30px;
     background: $secondary_bg;
@@ -66,7 +65,6 @@ watch(currentSongIndex, () => {
 .album_art_image {
     width: 150px;
     height: 150px;
-
     border-radius: 20px;
     background: $third_bg;
 }

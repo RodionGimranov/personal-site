@@ -21,11 +21,7 @@
             <div class="project_card_info">
                 <p class="project_name">{{ project.name }}</p>
                 <div class="card_viewing_sign_container">
-                    <img
-                        class="card_viewing_sign"
-                        src="../assets/images/svg/viewing-sign-icon.svg"
-                        alt="Viewing Sign"
-                    />
+                    <img class="card_viewing_sign" :src="viewing_sign" alt="Viewing Sign" />
                 </div>
             </div>
         </div>
@@ -37,6 +33,8 @@ import { ref } from "vue";
 import { projectDataList } from "../data/projectDataList.js";
 
 import emitter from "../eventBus.js";
+
+import viewing_sign from "../assets/images/svg/viewing-sign-icon.svg";
 
 const displayedProjects = ref(projectDataList);
 
@@ -60,7 +58,6 @@ const selectProject = (project) => {
     position: relative;
     width: 350px;
     height: 230px;
-
     cursor: pointer;
     transition: 0.2s;
     overflow: hidden;
@@ -83,7 +80,6 @@ const selectProject = (project) => {
 .project_card_info {
     width: 100%;
     height: 100%;
-
     opacity: 0;
     z-index: 100;
     padding: 10px;
@@ -112,7 +108,6 @@ const selectProject = (project) => {
 .card_viewing_sign_container {
     width: 30px;
     height: 30px;
-
     border-radius: 100px;
     backdrop-filter: blur(20px);
     background: $content_bg;

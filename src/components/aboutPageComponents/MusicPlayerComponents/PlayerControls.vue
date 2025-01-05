@@ -153,7 +153,6 @@ const buttons = computed(() => [
 .control_btn {
     width: 36px;
     height: 36px;
-
     transition: 0.2s;
     border-radius: 100px;
 

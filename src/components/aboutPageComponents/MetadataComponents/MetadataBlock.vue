@@ -1,24 +1,19 @@
 <template>
     <div class="code_editor">
         <div class="menu_bar">
-            <span v-for="(color, index) in colors"
-            :key="index" class="menu_btn"
-            :style="{ background: color }">
-        </span>
+            <span
+                v-for="(color, index) in colors"
+                :key="index"
+                class="menu_btn"
+                :style="{ background: color }"
+            >
+            </span>
         </div>
         <div class="title_bar">
             <div class="file_tab">
-                <img
-                    class="lang_icon"
-                    src="../../../assets/images/svg/metadata-icons/small-js-icon.svg"
-                    alt="JavaScript icon"
-                />
+                <img class="lang_icon" :src="js_lang_icon" alt="JavaScript icon" />
                 <p class="file_name">projectData.js</p>
-                <img
-                    class="close_file_icon"
-                    src="../../../assets/images/svg/metadata-icons/close-file-icon.svg"
-                    alt="Cross icon"
-                />
+                <img class="close_file_icon" :src="close_file_icon" alt="Cross icon" />
             </div>
             <div class="toolbar">
                 <button v-for="(icon, index) in toolbarIcons" :key="index" class="toolbar_btn">
@@ -41,12 +36,18 @@
 <script setup>
 import CodeTextContainer from "./CodeTextContainer.vue";
 
-const colors = [ '#ED6A5E', '#F5BD50', '#61C454' ];
+import js_lang_icon from "../../../assets/images/svg/metadata-icons/small-js-icon.svg";
+import close_file_icon from "../../../assets/images/svg/metadata-icons/close-file-icon.svg";
+
+const colors = ["#ED6A5E", "#F5BD50", "#61C454"];
 
 const toolbarIcons = [
-    new URL ("../../../assets/images/svg/metadata-icons/source-control-icon.svg", import.meta.url).href,
-    new URL ("../../../assets/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url).href,
-    new URL ("../../../assets/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url).href,
+    new URL("../../../assets/images/svg/metadata-icons/source-control-icon.svg", import.meta.url)
+        .href,
+    new URL("../../../assets/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url)
+        .href,
+    new URL("../../../assets/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url)
+        .href,
 ];
 </script>
 
@@ -61,7 +62,6 @@ const toolbarIcons = [
 .code_editor {
     width: 748px;
     height: 250px;
-
     cursor: text;
     border-radius: 30px;
     background: $secondary_bg;
@@ -125,7 +125,6 @@ const toolbarIcons = [
 .toolbar_btn {
     width: 22px;
     height: 22px;
-
     transition: 0.1s;
     border-radius: 4px;
 
@@ -167,7 +166,6 @@ const toolbarIcons = [
 .code_breakpoint {
     width: 10px;
     height: 10px;
-
     opacity: 0;
     cursor: pointer;
     transition: 0.1s;
