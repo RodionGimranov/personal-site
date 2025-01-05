@@ -1,50 +1,102 @@
 export const updateDataList = [
     {
-        id: 1,
-        version: "#14",
-        date: "November 1, 2024",
+        id: 9,
+        version: "2.0.2",
+        date: "05.01.2025",
         description: [
             {
-                title: "new changelog design",
-                text: [
-                    "After some time, I decided to move away from using a popup for the changelog. Now, the changelog is back on a dedicated page with a refined design and more detailed update descriptions - sometimes even including photos and videos.",
-                ],
-            },
-            {
-                title: "bug fixes and improvements",
-                text: [
-                    "- fixed minor technical and visual bugs",
-                    "- fixed issues with the drop-shadow display when hovering over skill cards",
-                    "- the logic for displaying project cards has been consolidated into a single component",
-                ],
-            },
-            {
-                title: "other updates",
-                text: ["- updated the site’s favicon", "- updated videos for project cards"],
+                text: "Visually, there are few changes, but a lot of work has been done under the hood to optimize the site’s performance",
             },
         ],
     },
     {
-        id: 0,
-        version: "#13",
-        date: "August 1, 2024",
+        id: 8,
+        version: "2.0.1",
+        date: "01.11.2024",
         description: [
+            { text: "Optimized modal window logic and functionality." },
             {
-                title: "new features and components",
-                text: [
-                    "- added a 'New Project' indicator in the site header",
-                    "- introduced an Action Menu to improve site interactions",
-                    "- enhanced project cards: clicking now opens a detailed project info window",
-                ],
+                text: "The logic for displaying project cards has been consolidated into a single component.",
+            },
+            { text: "Fixed issues with the drop-shadow display when hovering over skill cards." },
+        ],
+    },
+    {
+        id: 7,
+        version: "2.0.0",
+        date: "01.08.2024",
+        description: [
+            { text: "Significant improvements to UX/UI." },
+            { text: "New project indicator added to the site heade." },
+            {
+                text: "Complete rebuild of the website using Vue.js for enhanced performance and scalability.",
             },
             {
-                title: "performance and UX/UI improvements",
-                text: [
-                    "- complete rebuild of the website using Vue.js for better performance and scalability",
-                    "- significant improvements to UX/UI across the site",
-                    "- optimized modal window logic and functionality",
-                ],
+                text: "Enhanced project cards; clicking on them now opens a window with detailed project information.",
             },
         ],
     },
+    {
+        id: 6,
+        version: "1.2.0",
+        date: "10.07.2024",
+        description: [
+            { text: "Updated the website logo." },
+            { text: "Added a sound wave visualizer to the music player." },
+            { text: "Bug fixes and minor improvements." },
+        ],
+    },
+    {
+        id: 5,
+        version: "1.1.2",
+        date: "10.07.2024",
+        description: [
+            { text: "Updated descriptions for project cards." },
+            { text: "Bug fixes and minor improvements." },
+        ],
+    },
+    {
+        id: 4,
+        version: "1.1.1",
+        date: "10.06.2024",
+        description: [
+            { text: "Added video covers for project cards." },
+            { text: "Fixed music player bug." },
+        ],
+    },
+    {
+        id: 3,
+        version: "1.1.0",
+        date: "03.05.2024",
+        description: [
+            { text: "Completely redesigned the 'About Me' page." },
+            { text: "Added various new features like a music player and other blocks." },
+        ],
+    },
+    {
+        id: 2,
+        version: "1.0.2",
+        date: "04.03.2024",
+        description: [
+            { text: "Added tooltips for physical icons." },
+            { text: "Bug fixes and minor improvements." },
+        ],
+    },
+    {
+        id: 1,
+        version: "1.0.1",
+        date: "20.02.2024",
+        description: [
+            { text: "Updated site header design." },
+            { text: "Bug fixes and minor improvements." },
+        ],
+    },
+    {
+        id: 0,
+        version: "1.0.0",
+        date: "18.01.2024",
+        description: [{ text: "Official release of the website." }],
+    },
 ];
+
+export default updateDataList;
