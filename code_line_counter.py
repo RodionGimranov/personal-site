@@ -27,7 +27,7 @@ file_paths = [
     "./src/components/aboutPageComponents/MusicPlayerComponents/PlayerControls.vue",
     
     "./src/components/aboutPageComponents/GalleryBlock.vue",
-    "./src/components/aboutPageComponents/Logo3DBlock.vue",
+    "./src/components/aboutPageComponents/LocationBlock.vue",
     "./src/components/aboutPageComponents/QuotesBlock.vue",
     "./src/components/aboutPageComponents/SliderIndicators.vue",
     "./src/components/aboutPageComponents/TextMessageBlock.vue",
