@@ -4,8 +4,9 @@ export const updateDataList = [
         version: "2.0.2",
         date: "05.01.2025",
         description: [
+            { text: "Bug fixes and minor improvements." },
             {
-                text: "Visually, there are few changes, but a lot of work has been done under the hood to optimize the site’s performance",
+                text: "A new block has appeared on the “About Me” page, displaying information about my location, as well as the date and weather.",
             },
         ],
     },
@@ -32,7 +33,7 @@ export const updateDataList = [
                 text: "Complete rebuild of the website using Vue.js for enhanced performance and scalability.",
             },
             {
-                text: "Enhanced project cards; clicking on them now opens a window with detailed project information.",
+                text: "Enhanced project cards: clicking on them now opens a window with detailed project information.",
             },
         ],
     },
