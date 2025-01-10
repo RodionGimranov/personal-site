@@ -4,26 +4,34 @@
             <IntroTextBlock />
         </section>
         <BioTextBlock />
-        <section class="home_section">
+        <section class="home_section anim_section">
             <p class="home_section_title">Skills</p>
             <SkillsBlock />
         </section>
-        <section class="home_section">
+        <section class="home_section anim_section">
             <p class="home_section_title">Projects</p>
             <ProjectsBlock />
         </section>
-        <section class="home_section">
+        <section class="home_section anim_section">
             <OutroTextBlock />
         </section>
     </main>
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+
+import { ScrollAnim } from "../libs/gsap-js/ScrollAnim.js";
+
 import IntroTextBlock from "../components/homePageComponents/IntroTextBlock.vue";
 import BioTextBlock from "../components/homePageComponents/BioTextBlock.vue";
 import SkillsBlock from "../components/homePageComponents/SkillsBlock.vue";
 import ProjectsBlock from "../components/homePageComponents/ProjectsBlock.vue";
 import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue";
+
+onMounted(() => {
+    ScrollAnim();
+});
 </script>
 
 <style lang="scss">
@@ -56,7 +64,7 @@ import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue"
 
 .home_section_title {
     margin-bottom: 20px;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 500;
     color: $primary_white;
 }
