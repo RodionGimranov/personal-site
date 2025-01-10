@@ -15,8 +15,10 @@ export const projectDataList = [
             { name: "Vue Lottie", color: "#51B8AE" },
             { name: "Vite", color: "#646CFF" },
         ],
-        small_project_cover: "",
-        large_project_cover: "",
+        project_cover: new URL(
+            "../assets/videos/Screencast-Password-Generator.mp4",
+            import.meta.url
+        ).href,
         link_to_deploy: "https://rodiongimranov.github.io/password-generator/",
     },
     {
@@ -24,7 +26,7 @@ export const projectDataList = [
         name: "Personal Website",
         description:
             "My main personal website is a platform where users can learn about me as a Frontend Vue.js developer.",
-        title: "Frontend Developer, Web Designer",
+        role: "Frontend Developer, Web Designer",
         technologies: [
             { name: "HTML", color: "#E34C26" },
             { name: "SCSS", color: "#C4538C" },
@@ -33,13 +35,12 @@ export const projectDataList = [
             { name: "Vue Router", color: "#3DD68C" },
             { name: "Python", color: "#4A9BDD" },
             { name: "Matter.js", color: "#82D1BE" },
-            { name: "Vanilla-tilt.js", color: "#F3E5AB" },
             { name: "GSAP", color: "#0AE448" },
             { name: "Vite", color: "#646CFF" },
         ],
         role: "Frontend Developer, Web Designer",
-        small_project_cover: "",
-        large_project_cover: "",
-        link_to_deploy: "https://rodiongimranov.github.io/personal-site/#/Home",
+        project_cover: new URL("../assets/videos/Screencast-Personal-Website.mp4", import.meta.url)
+            .href,
+        link_to_deploy: "https://rodiongimranov.github.io/personal-site/Home",
     },
 ];
