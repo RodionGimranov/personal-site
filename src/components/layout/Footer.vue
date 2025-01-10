@@ -5,9 +5,6 @@
                 <p class="footer_credits footer_text">
                     Made with love and countless cups of coffee.
                 </p>
-                <p class="footer_copyright footer_text">
-                    © 2024 Rodion Gimranov. All Rights Reserved.
-                </p>
             </div>
             <div class="footer_second_block">
                 <div class="footer_social_container">
@@ -21,36 +18,17 @@
                         {{ social.name }}
                     </a>
                 </div>
-                <p class="local_time footer_text">Local time: {{ localTime }}</p>
             </div>
         </section>
     </footer>
 </template>
 
 <script setup>
-import { ref } from "vue";
-
-const localTime = ref();
-
 const social_info = [
     { name: "GitHub", link: "https://github.com/RodionGimranov" },
     { name: "Telegram", link: "https://t.me/RodionGimranov" },
     { name: "LinkedIn", link: "https://www.linkedin.com/in/rodiongimranov/" },
 ];
-
-const updateLocalTime = async () => {
-    const timeZone = "Europe/Moscow";
-    const options = {
-        timeZone: timeZone,
-        hour12: false,
-        hour: "numeric",
-        minute: "2-digit",
-    };
-    localTime.value = new Date().toLocaleTimeString("ru-RU", options);
-};
-
-updateLocalTime();
-setInterval(updateLocalTime, 60000);
 </script>
 
 <style lang="scss">

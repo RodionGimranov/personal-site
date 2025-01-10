@@ -24,7 +24,7 @@ const props = defineProps({
 
 <style lang="scss">
 .slider_indicators {
-    padding: 5px 10px;
+    padding: 9px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
     background: $content_bg;

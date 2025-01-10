@@ -15,7 +15,7 @@
                 playsinline
                 loading="lazy"
             >
-                <source :src="project.small_project_cover" type="video/mp4" />
+                <source :src="project.project_cover" type="video/mp4" />
                 Your browser does not support the video :(
             </video>
             <div class="project_card_info">
@@ -61,7 +61,7 @@ const selectProject = (project) => {
     cursor: pointer;
     transition: 0.2s;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 40px;
     background: $third_bg;
     border: 1px solid $card_border;
 
@@ -82,7 +82,7 @@ const selectProject = (project) => {
     height: 100%;
     opacity: 0;
     z-index: 100;
-    padding: 10px;
+    padding: 12px;
     background: rgba(0, 0, 0, 0.3);
 
     display: flex;

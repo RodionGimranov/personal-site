@@ -90,8 +90,8 @@ onMounted(() => {
 .skills_card {
     width: 280px;
     height: 170px;
-    padding: 10px;
-    border-radius: 30px;
+    padding: 12px;
+    border-radius: 40px;
     will-change: filter;
     background: $secondary_bg;
     transition: all 0.2s linear;
@@ -142,7 +142,7 @@ onMounted(() => {
 .physical_icons_wrapper {
     cursor: grab;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 40px;
     background: $secondary_bg;
 
     display: flex;

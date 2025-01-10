@@ -18,7 +18,7 @@
                         <p class="update_date update_text">{{ update.date }}</p>
                         <div class="update_descripton update_text">
                             <p v-for="(desc, index) in update.description" :key="index">
-                                {{ desc.text }}
+                                • {{ desc.text }}
                             </p>
                         </div>
                     </div>

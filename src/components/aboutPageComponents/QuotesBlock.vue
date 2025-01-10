@@ -5,9 +5,6 @@
             <p class="quote_text">{{ currentItem.quote }}</p>
             <p class="author_of_the_quote">- {{ currentItem.author }}</p>
         </div>
-        <div class="controls_container">
-            <SliderIndicators :numberOfDots="5" :currentIndex="currentIndex" />
-        </div>
     </div>
 </template>
 
@@ -15,9 +12,7 @@
 import { useSwitch } from "../../composablse/useSwitch.js";
 import { quotesDataList } from "../../data/quotesDataList.js";
 
-import SliderIndicators from "../aboutPageComponents/SliderIndicators.vue";
-
-const { currentIndex, currentItem } = useSwitch(quotesDataList);
+const { currentItem } = useSwitch(quotesDataList);
 </script>
 
 <style lang="scss">
@@ -25,20 +20,13 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
     width: 100%;
     height: 247px;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 40px;
     background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-}
-
-.block_title {
-    margin-bottom: 15px;
-    font-size: 25px;
-    font-weight: 500;
-    color: $primary_white;
 }
 
 .quote_container {
@@ -64,16 +52,7 @@ const { currentIndex, currentItem } = useSwitch(quotesDataList);
     justify-content: flex-end;
 
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: $third_gray;
-}
-
-.controls_container {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 </style>

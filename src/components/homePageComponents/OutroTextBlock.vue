@@ -32,17 +32,7 @@ const colors = [
     "#F3E5AB",
 ];
 
-const borderRadius = [
-    "0px 35px 35px 35px",
-    "5px",
-    "30px",
-    "10px",
-    "35px 0px",
-    "0px 35px",
-    "50px",
-    "15px",
-    "0px",
-];
+const borderRadius = ["35px", "5px", "30px", "10px", "50px", "15px", "0px"];
 
 let index = 0;
 setInterval(() => {
@@ -57,6 +47,7 @@ setInterval(() => {
 
 .outro_text_container {
     width: 100%;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,5 +80,9 @@ setInterval(() => {
 
     font-size: 55px;
     color: $primary_black;
+
+    &:active {
+        transform: scale(0.95);
+    }
 }
 </style>

@@ -8,7 +8,7 @@
                 </div>
                 <div class="project_modal_content">
                     <video
-                        :key="project.large_project_cover"
+                        :key="project.project_cover"    
                         class="project_large_video"
                         preload="metadata"
                         autoplay
@@ -17,7 +17,7 @@
                         playsinline
                         loading="lazy"
                     >
-                        <source :src="project.large_project_cover" type="video/mp4" />
+                        <source :src="project.project_cover" type="video/mp4" />
                         Your browser does not support the video :(
                     </video>
                     <div class="modal_project_info">

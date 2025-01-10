@@ -21,6 +21,6 @@ import ProjectCard from "../components/ProjectCard.vue";
 }
 
 .projects_page_title {
-    margin-top: 20vh;
+    margin-top: 200px;
 }
 </style>

@@ -2,10 +2,10 @@
     <main class="about_page_container">
         <div class="blocks_row block1">
             <GalleryBlock />
-            <TextMessageBlock />
+            <LocationBlock />
             <MusicPlayerBlock />
             <MetadataBlock />
-            <Logo3DBlock />
+            <!-- <TextMessageBlock /> -->
         </div>
         <div class="blocks_row block2">
             <TollStackBlock />
@@ -16,10 +16,10 @@
 
 <script setup>
 import GalleryBlock from "../components/aboutPageComponents/GalleryBlock.vue";
-import TextMessageBlock from "../components/aboutPageComponents/TextMessageBlock.vue";
+import LocationBlock from "../components/aboutPageComponents/LocationBlock.vue";
+// import TextMessageBlock from "../components/aboutPageComponents/TextMessageBlock.vue";
 import MusicPlayerBlock from "../components/aboutPageComponents/MusicPlayerComponents/MusicPlayerBlock.vue";
 import MetadataBlock from "../components/aboutPageComponents/MetadataComponents/MetadataBlock.vue";
-import Logo3DBlock from "../components/aboutPageComponents/Logo3DBlock.vue";
 import TollStackBlock from "../components/aboutPageComponents/TollStackBlock.vue";
 import QuotesBlock from "../components/aboutPageComponents/QuotesBlock.vue";
 </script>
@@ -27,7 +27,7 @@ import QuotesBlock from "../components/aboutPageComponents/QuotesBlock.vue";
 <style lang="scss">
 .about_page_container {
     max-width: 1200px;
-    margin-top: 20vh;
+    margin-top: 200px;
     margin-bottom: 150px;
 
     display: flex;

@@ -26,12 +26,12 @@
 
 <script setup>
 const toolImages = [
+    new URL("../../assets/images/svg/toolStack-icons/Chrome-icon.svg", import.meta.url).href,
     new URL("../../assets/images/svg/toolStack-icons/Figma-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/toolStack-icons/GitHub-icon.svg", import.meta.url).href,
+    new URL("../../assets/images/svg/toolStack-icons/ChatGPT-icon.svg", import.meta.url).href,
     new URL("../../assets/images/svg/toolStack-icons/VSCode-icon.svg", import.meta.url).href,
     new URL("../../assets/images/svg/toolStack-icons/Notion-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/toolStack-icons/Chrome-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/toolStack-icons/ChatGPT-icon.svg", import.meta.url).href,
+    new URL("../../assets/images/svg/toolStack-icons/GitHub-icon.svg", import.meta.url).href,
 ];
 
 const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];
@@ -41,10 +41,9 @@ const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];
 .tool_block_container {
     width: 100%;
     height: 247px;
-
-    background: $secondary_bg;
-    border-radius: 30px;
     padding: 20px 0px;
+    border-radius: 40px;
+    background: $secondary_bg;
 
     display: flex;
     flex-direction: column;
@@ -104,7 +103,8 @@ const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];
 }
 
 .tool_icon {
-    width: 70px;
-    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 16px;
 }
 </style>

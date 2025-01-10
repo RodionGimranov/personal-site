@@ -2,18 +2,18 @@
     <div class="music_block_container">
         <div class="music_block_header">
             <img class="album_art_image" :src="currentSong.album_image" alt="Album Art" />
-            <MusicVisualizer :audioElement="audioPlayer"/>
+            <MusicVisualizer :audioElement="audioPlayer" />
         </div>
         <div class="song_title_container">
             <p class="song_title">{{ currentSong.song_name }}</p>
             <img
                 class="explicit_icon"
-                src="../../../assets/images/svg/musicPlayer-icons/explicit-icon.svg"    
+                :src="explicit_icon"
                 alt="Explicit content icon"
                 v-show="currentSong.explicit_content === true"
             />
         </div>
-        <p class="artist_name">{{ currentSong.artist_name }}</p>    
+        <p class="artist_name">{{ currentSong.artist_name }}</p>
         <PlayerControls />
     </div>
 </template>
@@ -24,6 +24,8 @@ import { playlistDataList } from "../../../data/playlistDataList.js";
 
 import MusicVisualizer from "./MusicVisualizer.vue";
 import PlayerControls from "./PlayerControls.vue";
+
+import explicit_icon from "../../../assets/images/svg/musicPlayer-icons/explicit-icon.svg";
 
 const currentSongIndex = ref(0);
 const currentSong = ref(playlistDataList[currentSongIndex.value]);
@@ -41,10 +43,11 @@ watch(currentSongIndex, () => {
 
 <style lang="scss">
 .music_block_container {
+    position: relative;
     width: 326px;
     height: 326px;
-    padding: 20px;
-    border-radius: 30px;
+    padding: 12px;
+    border-radius: 40px;
     background: $secondary_bg;
 
     display: flex;
@@ -65,7 +68,7 @@ watch(currentSongIndex, () => {
 .album_art_image {
     width: 150px;
     height: 150px;
-    border-radius: 20px;
+    border-radius: 26px;
     background: $third_bg;
 }
 
