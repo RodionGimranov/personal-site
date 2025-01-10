@@ -58,4 +58,39 @@ export const galleryDataList = [
             import.meta.url
         ).href,
     },
+    {
+        id: 11,
+        gallery_image: new URL(
+            "../assets/images/webp/gallery-images/image_12.webp",
+            import.meta.url
+        ).href,
+    },
+    {
+        id: 12,
+        gallery_image: new URL(
+            "../assets/images/webp/gallery-images/image_13.webp",
+            import.meta.url
+        ).href,
+    },
+    {
+        id: 13,
+        gallery_image: new URL(
+            "../assets/images/webp/gallery-images/image_14.webp",
+            import.meta.url
+        ).href,
+    },
+    {
+        id: 14,
+        gallery_image: new URL(
+            "../assets/images/webp/gallery-images/image_15.webp",
+            import.meta.url
+        ).href,
+    },
+    {
+        id: 15,
+        gallery_image: new URL(
+            "../assets/images/webp/gallery-images/image_11.webp",
+            import.meta.url
+        ).href,
+    },
 ];
