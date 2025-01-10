@@ -89,15 +89,10 @@
         .block1 > :nth-child(5) {
             order: 4;
         }
-        .text_content_container {
+
+        .message_block {
             width: 60%;
-            height: auto;
-            .message_block {
-                height: 250px;
-            }
-            .future_content_block {
-                display: none;
-            }
+            height: 250px;
         }
         .block2 {
             flex-direction: column;
@@ -139,17 +134,9 @@
         .block1 > :nth-child(3) {
             order: 3;
         }
-        .text_content_container {
+        .message_block {
             width: 100%;
-            .message_block {
-                height: auto;
-            }
-        }
-        .future_content_block {
-            display: none;
-        }
-        .logo_tilt_effect {
-            display: none;
+            height: auto;
         }
         .code_text {
             font-size: 13px;
