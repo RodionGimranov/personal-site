@@ -16,8 +16,6 @@ export default defineConfig({
         },
     },
     server: {
-        historyApiFallback: {
-            rewrites: [{ from: /^\/personal-site\/.*$/, to: "/personal-site/index.html" }],
-        },
+        historyApiFallback: true,
     },
 });
