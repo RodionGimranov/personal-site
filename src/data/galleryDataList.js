@@ -79,18 +79,4 @@ export const galleryDataList = [
             import.meta.url
         ).href,
     },
-    {
-        id: 14,
-        gallery_image: new URL(
-            "../assets/images/webp/gallery-images/image_15.webp",
-            import.meta.url
-        ).href,
-    },
-    {
-        id: 15,
-        gallery_image: new URL(
-            "../assets/images/webp/gallery-images/image_11.webp",
-            import.meta.url
-        ).href,
-    },
 ];
