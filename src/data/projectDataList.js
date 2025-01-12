@@ -34,6 +34,7 @@ export const projectDataList = [
             { name: "Vue.js", color: "#3DD68C" },
             { name: "Vue Router", color: "#3DD68C" },
             { name: "Python", color: "#4A9BDD" },
+            { name: "Axios", color: "#6C40E8" },
             { name: "Matter.js", color: "#82D1BE" },
             { name: "GSAP", color: "#0AE448" },
             { name: "Vite", color: "#646CFF" },
@@ -41,6 +42,6 @@ export const projectDataList = [
         role: "Frontend Developer, Web Designer",
         project_cover: new URL("../assets/videos/Screencast-Personal-Website.mp4", import.meta.url)
             .href,
-        link_to_deploy: "https://rodiongimranov.github.io/personal-site/Home",
+        link_to_deploy: "https://rodiongimranov.github.io/personal-site/#/Home",
     },
 ];
