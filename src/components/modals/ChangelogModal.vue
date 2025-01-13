@@ -53,9 +53,9 @@ onClickOutside(changelogModalRef, () => {
 .changelog_modal {
     max-width: 500px;
     max-height: 400px;
-    padding: 15px 15px 30px 0px;
     border-radius: 30px;
     background: $secondary_bg;
+    padding: 15px 15px 30px 0px;
 
     display: flex;
     flex-direction: column;
@@ -118,12 +118,12 @@ onClickOutside(changelogModalRef, () => {
 }
 
 .update_descripton {
-    color: $third_gray;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 5px;
+    color: $third_gray;
 
     &:last-child {
         margin-bottom: 15px;

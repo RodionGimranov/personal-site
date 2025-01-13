@@ -41,9 +41,9 @@ onMounted(() => {
     color: hsl(0 0% 100% / 0.2);
 
     background-clip: text;
-    background-repeat: no-repeat;
     background-size: 0% 100%;
-    background-image: linear-gradient(90deg, $primary_white, $primary_white);
     will-change: background-size;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(90deg, $primary_white, $primary_white);
 }
 </style>

@@ -73,20 +73,19 @@ body {
     width: 100vw;
     height: 100vh;
     min-width: 320px;
-
     padding: 20px;
     overflow-x: hidden;
     overflow-y: scroll;
     background: $primary_bg;
 
-    font-size: 16px;
-    font-weight: 400;
-    color: $primary_white;
-    font-family: "Roboto", sans-serif;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: $primary_white;
+    font-family: "Roboto", sans-serif;
 }
 </style>

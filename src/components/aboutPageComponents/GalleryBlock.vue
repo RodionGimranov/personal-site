@@ -20,8 +20,7 @@ const { currentIndex, currentItem } = useSwitch(galleryDataList);
 .image_block_container {
     position: relative;
     width: 326px;
-    min-height: 326px;
-    max-height: 326px;
+    height: 326px;
     overflow: hidden;
     border-radius: 40px;
     background: $secondary_bg;

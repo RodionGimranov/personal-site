@@ -60,7 +60,6 @@ const toolbarIcons = [
 }
 
 .code_editor {
-    // width: 672px;
     width: 100%;
     height: 250px;
     cursor: text;

@@ -80,9 +80,5 @@ setInterval(() => {
 
     font-size: 55px;
     color: $primary_black;
-
-    &:active {
-        transform: scale(0.95);
-    }
 }
 </style>

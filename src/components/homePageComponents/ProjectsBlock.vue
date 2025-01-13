@@ -51,10 +51,6 @@ const viewAllProject = () => {
 }
 
 .view_all_project_btn {
-    font-size: 22px;
-    font-weight: 500;
-    color: $third_gray;
-
     transition: 0.2s;
     padding: 6px 12px;
     border-radius: 100px;
@@ -62,6 +58,10 @@ const viewAllProject = () => {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    font-size: 22px;
+    font-weight: 500;
+    color: $third_gray;
 
     &:hover {
         color: $primary_white;

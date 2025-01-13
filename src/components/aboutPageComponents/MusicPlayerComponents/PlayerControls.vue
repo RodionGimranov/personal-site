@@ -184,11 +184,9 @@ const buttons = computed(() => [
     justify-content: center;
     align-items: center;
 
-    &:active {
-        background: $button_active;
-
+    &:hover {
         .button_control_icon {
-            transform: scale(0.8);
+            transform: scale(1.3);
         }
     }
 }
