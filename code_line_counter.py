@@ -30,7 +30,7 @@ file_paths = [
     "./src/components/aboutPageComponents/LocationBlock.vue",
     "./src/components/aboutPageComponents/QuotesBlock.vue",
     "./src/components/aboutPageComponents/SliderIndicators.vue",
-    "./src/components/aboutPageComponents/TextMessageBlock.vue",
+    # "./src/components/aboutPageComponents/TextMessageBlock.vue",
     "./src/components/aboutPageComponents/TollStackBlock.vue",
 
     "./src/components/homePageComponents/BioTextBlock.vue",
@@ -59,6 +59,8 @@ file_paths = [
 
     './src/libs/gsap-js/BioTextAnim.js',
     './src/libs/gsap-js/IntroTextAnim.js',
+    './src/libs/gsap-js/ScrollAnim.js',
+
     './src/libs/matter-js/phycalsIcons.js',
 
     './src/router/index.js',
