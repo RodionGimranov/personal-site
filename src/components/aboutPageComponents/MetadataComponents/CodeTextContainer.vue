@@ -24,9 +24,9 @@
 
 <script setup>
 const codeLines = [
-    { key: "number_of_lines_code:", value: "3879" },
+    { key: "number_of_lines_code:", value: "3861" },
     { key: "number_of_folders:", value: "31" },
-    { key: "number_of_files:", value: "153" },
+    { key: "number_of_files:", value: "154" },
     { key: "project_size:", value: "127 MB" },
 ];
 </script>
