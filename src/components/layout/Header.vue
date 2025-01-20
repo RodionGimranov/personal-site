@@ -22,18 +22,13 @@
 import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-import updateDataList from "../../data/updateDataList.js";
-
 import emitter from "../../eventBus";
+
+const latestVersion = ref("2.0.6");
 
 const openChangelogModal = () => {
     emitter.emit("show-changelog-modal");
 };
-
-const latestVersion = computed(() => {
-    if (updateDataList.length === 0) return "N/A";
-    return updateDataList[0].version;
-});
 
 const router_links = [
     { path: "/Home", label: "Home" },
