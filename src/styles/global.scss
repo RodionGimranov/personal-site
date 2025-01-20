@@ -85,3 +85,17 @@ button {
     font-weight: 500;
     color: #949494;
 }
+.show-modal-enter-active,
+.show-modal-leave-active {
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.show-modal-enter-from,
+.show-modal-leave-to {
+    opacity: 0;
+}
+
+.show-modal-enter-to,
+.show-modal-leave-from {
+    opacity: 1;
+}
