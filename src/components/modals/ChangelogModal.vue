@@ -1,5 +1,5 @@
 <template>
-    <transition name="show-changelog-modal">
+    <transition name="show-modal">
         <section class="modal_container changelog_modal_container">
             <div ref="changelogModalRef" class="changelog_modal">
                 <div class="changelog_modal_header">
@@ -128,20 +128,5 @@ onClickOutside(changelogModalRef, () => {
     &:last-child {
         margin-bottom: 15px;
     }
-}
-
-.show-changelog-modal-enter-active,
-.show-changelog-modal-leave-active {
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.show-changelog-modal-enter-from,
-.show-changelog-modal-leave-to {
-    opacity: 0;
-}
-
-.show-changelog-modal-enter-to,
-.show-changelog-modal-leave-from {
-    opacity: 1;
 }
 </style>

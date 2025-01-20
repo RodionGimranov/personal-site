@@ -1,5 +1,5 @@
 <template>
-    <transition name="show-project-modal">
+    <transition name="show-modal">
         <section v-if="project" class="modal_container project_modal_container">
             <div ref="projectModalRef" class="project_modal">
                 <div class="project_modal_header">
@@ -8,7 +8,7 @@
                 </div>
                 <div class="project_modal_content">
                     <video
-                        :key="project.project_cover"    
+                        :key="project.project_cover"
                         class="project_large_video"
                         preload="metadata"
                         autoplay
@@ -160,7 +160,7 @@ onClickOutside(projectModalRef, () => {
 
     font-size: 18px;
     font-weight: 500;
-    color: $primary_bg;
+    color: $primary_black;
 }
 
 .project_btn {
@@ -181,20 +181,5 @@ onClickOutside(projectModalRef, () => {
     &:active {
         background: $button_active;
     }
-}
-
-.show-project-modal-enter-active,
-.show-project-modal-leave-active {
-    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.show-project-modal-enter-from,
-.show-project-modal-leave-to {
-    opacity: 0;
-}
-
-.show-project-modal-enter-to,
-.show-project-modal-leave-from {
-    opacity: 1;
 }
 </style>
