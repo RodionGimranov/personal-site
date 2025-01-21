@@ -24,7 +24,7 @@ import { useRoute, useRouter } from "vue-router";
 
 import emitter from "../../eventBus";
 
-const latestVersion = ref("2.0.6");
+const latestVersion = ref("2.0.7");
 
 const openChangelogModal = () => {
     emitter.emit("show-changelog-modal");
