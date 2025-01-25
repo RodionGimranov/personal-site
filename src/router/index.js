@@ -22,7 +22,7 @@ const routes = [
         path: "/Projects",
         name: "projectsPage",
         component: ProjectsPage,
-        meta: { title: "Projects" },
+        meta: { title: "Projects", hideFooter: true },
     },
 ];
 
