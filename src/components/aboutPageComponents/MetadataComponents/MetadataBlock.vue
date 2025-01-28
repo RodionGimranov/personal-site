@@ -88,6 +88,10 @@ const toolbarIcons = [
     width: 14px;
     height: 14px;
     border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title_bar {
