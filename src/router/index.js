@@ -1,27 +1,23 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import HomePage from "../views/HomePage.vue";
-import AboutPage from "../views/AboutPage.vue";
-import ProjectsPage from "../views/ProjectsPage.vue";
-
 const routes = [
     { path: "/", redirect: "/Home" },
     {
         path: "/Home",
         name: "homePage",
-        component: HomePage,
+        component: () => import("../views/HomePage.vue"),
         meta: { title: "Rodion Gimranov" },
     },
     {
         path: "/About",
         name: "aboutPage",
-        component: AboutPage,
+        component: () => import("../views/AboutPage.vue"),
         meta: { title: "About" },
     },
     {
         path: "/Projects",
         name: "projectsPage",
-        component: ProjectsPage,
+        component: () => import("../views/ProjectsPage.vue"),
         meta: { title: "Projects", hideFooter: true },
     },
 ];
