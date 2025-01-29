@@ -33,6 +33,7 @@ export const projectDataList = [
             { name: "JavaScript", color: "#F7DF1E" },
             { name: "Vue.js", color: "#3DD68C" },
             { name: "Vue Router", color: "#3DD68C" },
+            { name: "VueUse", color: "#51B8AE" },
             { name: "Python", color: "#4A9BDD" },
             { name: "Axios", color: "#6C40E8" },
             { name: "Matter.js", color: "#82D1BE" },
