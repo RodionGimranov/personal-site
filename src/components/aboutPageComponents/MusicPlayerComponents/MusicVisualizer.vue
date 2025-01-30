@@ -138,8 +138,8 @@ onUnmounted(() => {
         width: 3px;
         min-height: 3px;
         border-radius: 100px;
-        transition: height 0.2s ease-out;
         background: $secondary_red;
+        transition: height 0.2s ease-out;
     }
 }
 </style>

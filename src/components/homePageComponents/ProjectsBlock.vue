@@ -76,12 +76,12 @@ const viewAllProject = () => {
 .navigation_arrow {
     fill: none;
     transition: 0.2s;
-    stroke: #949494;
     margin-left: 10px;
+    stroke: $third_gray;
 }
 
 .view_all_project_btn:hover .navigation_arrow {
-    stroke: $primary_white;
     margin-left: 15px;
+    stroke: $primary_white;
 }
 </style>
