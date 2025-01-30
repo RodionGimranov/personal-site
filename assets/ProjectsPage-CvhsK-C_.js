@@ -1,0 +1,1 @@
+import{_ as e}from"./ProjectCard-CZE_l77d.js";import{b as t,c as s,i as a,d as c}from"./index-Bg0oqmYd.js";const o={class:"projects_page_container"},_=c("p",{class:"page_title projects_page_title"},"Projects",-1),l={__name:"ProjectsPage",setup(r){return(n,p)=>(t(),s("main",o,[_,a(e)]))}};export{l as default};
