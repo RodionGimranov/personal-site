@@ -97,8 +97,8 @@ const selectProject = (project) => {
 .project_name {
     padding: 4px 12px;
     border-radius: 100px;
-    backdrop-filter: blur(20px);
     background: $content_bg;
+    backdrop-filter: blur(20px);
 
     font-size: 18px;
     font-weight: 400;
@@ -109,8 +109,8 @@ const selectProject = (project) => {
     width: 30px;
     height: 30px;
     border-radius: 100px;
-    backdrop-filter: blur(20px);
     background: $content_bg;
+    backdrop-filter: blur(20px);
 
     display: flex;
     justify-content: center;

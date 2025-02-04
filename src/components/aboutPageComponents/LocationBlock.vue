@@ -142,8 +142,8 @@ onMounted(() => {
     bottom: 12px;
     width: calc(100% - 12px);
     height: 60px;
-    padding: 9px 12px;
     margin-left: 6px;
+    padding: 9px 12px;
     border-radius: 100px;
     backdrop-filter: blur(20px);
     background: $location_panel_bg;

@@ -16,7 +16,6 @@
         <div class="physical_icons_container">
             <p class="action_prompt">pull icons...</p>
             <div
-                class="physical_icons_wrapper"
                 id="phycalsIcons"
                 @mouseup="handleGrab"
                 @mousedown="handleGrabbing"
@@ -139,7 +138,7 @@ onMounted(() => {
     color: $third_gray;
 }
 
-.physical_icons_wrapper {
+#phycalsIcons {
     cursor: grab;
     overflow: hidden;
     border-radius: 40px;

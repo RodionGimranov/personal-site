@@ -26,8 +26,8 @@ const props = defineProps({
 .slider_indicators {
     padding: 9px;
     border-radius: 100px;
-    backdrop-filter: blur(20px);
     background: $content_bg;
+    backdrop-filter: blur(20px);
 
     display: flex;
     justify-content: flex-start;

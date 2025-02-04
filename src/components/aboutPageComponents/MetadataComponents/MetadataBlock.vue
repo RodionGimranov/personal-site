@@ -75,8 +75,8 @@ const toolbarIcons = [
 .menu_bar {
     width: 100%;
     cursor: default;
-    padding: 15px 20px 10px 20px;
     background: $third_bg;
+    padding: 15px 20px 10px 20px;
 
     display: flex;
     justify-content: flex-start;
