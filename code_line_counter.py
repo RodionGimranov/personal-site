@@ -12,7 +12,7 @@ def count_lines_in_files(file_paths):
                 lines = sum(1 for _ in f)
                 total_lines += lines
                 file_name = os.path.basename(file_path) 
-                print(f"{index}. {file_name} - строк кода - {lines}")  
+                print(f"{index}. {file_name} - строк - {lines}")  
         except Exception as e:
             print(f"Не удалось прочитать файл {file_path}: {e}")
     
@@ -85,4 +85,4 @@ file_paths = [
 ]
 
 total_code_lines = count_lines_in_files(file_paths)
-print("Общее количество строк кода в указанных файлах:", total_code_lines)
+print("Общее количество строк в указанных файлах:", total_code_lines)
