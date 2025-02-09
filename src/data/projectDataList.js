@@ -36,7 +36,7 @@ export const projectDataList = [
             { name: "VueUse", color: "#51B8AE" },
             { name: "Python", color: "#4A9BDD" },
             { name: "Axios", color: "#6C40E8" },
-            { name: "Matter.js", color: "#82D1BE" },
+            { name: "Matter.js", color: "#F55F5F" },
             { name: "GSAP", color: "#0AE448" },
             { name: "Vite", color: "#646CFF" },
         ],
