@@ -45,7 +45,8 @@ file_paths = [
     "./src/components/modals/ProjectModal.vue",
     "./src/components/modals/ChangelogModal.vue",
 
-    "./src/components/ui/CloseModalBtn.vue",
+    "./src/components/ui/Button.vue",
+    "./src/components/ui/RoundButton.vue",
 
     "./src/components/ProjectCard.vue",
 
@@ -59,7 +60,6 @@ file_paths = [
 
     './src/libs/gsap-js/BioTextAnim.js',
     './src/libs/gsap-js/IntroTextAnim.js',
-    './src/libs/gsap-js/ScrollAnim.js',
 
     './src/libs/matter-js/phycalsIcons.js',
 
