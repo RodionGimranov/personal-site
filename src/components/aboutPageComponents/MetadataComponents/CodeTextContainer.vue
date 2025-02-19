@@ -1,21 +1,21 @@
 <template>
     <div class="code_text_container">
-        <p class="code_text comment_line">// Here are the project metadata</p>
-        <p class="code_text line_1">
+        <p class="code_text comment_line menlo_font">// Here are the project metadata</p>
+        <p class="code_text line_1 menlo_font">
             export
             <span :style="{ color: '#569CD6' }">const</span>
             <span :style="{ color: '#4FC1FF' }">projectMetaData</span>
             <span :style="{ color: '#D4D4D4' }">=</span>
             <span :style="{ color: '#FFD700' }">[</span>
         </p>
-        <p v-for="(line, index) in codeLines" :key="index" class="code_text code_lines">
+        <p v-for="(line, index) in codeLines" :key="index" class="code_text code_lines menlo_font">
             {
             <span :style="{ color: '#9CDCFE' }">{{ line.key }}</span>
             <span :style="{ color: '#CE9178' }">{{ line.value }}</span>
             <span>}</span>
             <span :style="{ color: '#D4D4D4' }">,</span>
         </p>
-        <p class="code_text line_6">
+        <p class="code_text line_6 menlo_font">
             ]
             <span :style="{ color: '#D4D4D4' }">;</span>
         </p>
@@ -24,9 +24,9 @@
 
 <script setup>
 const codeLines = [
-    { key: "number_of_lines_code:", value: "3867" },
+    { key: "number_of_lines_code:", value: "3805" },
     { key: "number_of_folders:", value: "31" },
-    { key: "number_of_files:", value: "156" },
+    { key: "number_of_files:", value: "154" },
     { key: "project_size:", value: "127 MB" },
 ];
 </script>
@@ -40,7 +40,6 @@ const codeLines = [
 }
 
 .code_text {
-    font-family: "Menlo";
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
