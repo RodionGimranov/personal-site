@@ -4,7 +4,7 @@
             <div ref="changelogModalRef" class="changelog_modal">
                 <div class="changelog_modal_header">
                     <p class="changelog_title">What's new?</p>
-                    <CloseModalBtn
+                    <RoundButton
                         :closeModalWidth="'32px'"
                         :closeModalHeight="'32px'"
                         :crossIconWidth="'14px'"
@@ -32,7 +32,7 @@
 import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
-import CloseModalBtn from "../ui/CloseModalBtn.vue";
+import RoundButton from "../ui/RoundButton.vue";
 
 import updateDataList from "../../data/updateDataList.js";
 

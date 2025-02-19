@@ -24,6 +24,7 @@
 
 <script setup>
 import emitter from "../../eventBus.js";
+
 import ProjectCard from "../ProjectCard.vue";
 
 const viewAllProject = () => {

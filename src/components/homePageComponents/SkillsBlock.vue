@@ -27,6 +27,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
+
 import { phycalsIcons } from "../../libs/matter-js/phycalsIcons.js";
 
 const main_skills_stack = [

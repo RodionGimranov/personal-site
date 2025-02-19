@@ -20,6 +20,7 @@
 
 <script setup>
 import { ref, provide, watch } from "vue";
+
 import { playlistDataList } from "../../../data/playlistDataList.js";
 
 import MusicVisualizer from "./MusicVisualizer.vue";

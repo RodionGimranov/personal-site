@@ -19,19 +19,11 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
-
-import { ScrollAnim } from "../libs/gsap-js/ScrollAnim.js";
-
 import IntroTextBlock from "../components/homePageComponents/IntroTextBlock.vue";
 import BioTextBlock from "../components/homePageComponents/BioTextBlock.vue";
 import SkillsBlock from "../components/homePageComponents/SkillsBlock.vue";
 import ProjectsBlock from "../components/homePageComponents/ProjectsBlock.vue";
 import OutroTextBlock from "../components/homePageComponents/OutroTextBlock.vue";
-
-onMounted(() => {
-    ScrollAnim();
-});
 </script>
 
 <style lang="scss">

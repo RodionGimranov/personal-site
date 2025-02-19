@@ -12,7 +12,7 @@
         <div class="title_bar">
             <div class="file_tab">
                 <img class="lang_icon" :src="js_lang_icon" alt="JavaScript icon" />
-                <p class="file_name">projectData.js</p>
+                <p class="file_name menlo_font">projectData.js</p>
                 <img class="close_file_icon" :src="close_file_icon" alt="Cross icon" />
             </div>
             <div class="toolbar">
@@ -26,7 +26,7 @@
                 <div class="сode_breakpoint_container">
                     <span class="code_breakpoint" v-for="breakpoint in 7"></span>
                 </div>
-                <p class="line_number">1<br />2<br />3<br />4<br />5<br />6<br />7</p>
+                <p class="line_number menlo_font">1<br />2<br />3<br />4<br />5<br />6<br />7</p>
             </div>
             <CodeTextContainer />
         </div>
@@ -52,13 +52,6 @@ const toolbarIcons = [
 </script>
 
 <style lang="scss">
-@font-face {
-    font-family: "Menlo";
-    font-weight: 400;
-    font-style: normal;
-    src: url("../../assets/fonts/Menlo-Regular.ttf") format("ttf");
-}
-
 .code_editor {
     width: 100%;
     height: 250px;
@@ -112,7 +105,6 @@ const toolbarIcons = [
 }
 
 .file_name {
-    font-family: "Menlo";
     font-size: 12px;
     font-weight: 400;
     color: $primary_white;
@@ -183,7 +175,6 @@ const toolbarIcons = [
 
 .line_number {
     cursor: default;
-    font-family: "Menlo";
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;

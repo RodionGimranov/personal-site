@@ -2,9 +2,9 @@
     <div class="home_intro_text_container">
         <p class="home_intro_text_animation">I enjoy creating</p>
         <div class="color_text">
-            <p class="web_title letter_W">w</p>
-            <p class="web_title letter_e">e</p>
-            <p class="web_title letter_b">b</p>
+            <p class="web_title letter_W courgette_font">w</p>
+            <p class="web_title letter_e courgette_font">e</p>
+            <p class="web_title letter_b courgette_font">b</p>
             <p ref="typingText" class="typing_text"></p>
         </div>
     </div>
@@ -12,6 +12,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
+
 import { IntroTextAnim } from "../../libs/gsap-js/IntroTextAnim.js";
 
 const typingText = ref(null);
@@ -118,10 +119,6 @@ onBeforeUnmount(() => {
 
 .web_title {
     font-size: 120px;
-    font-weight: 400;
-    font-family: "Courgette", cursive;
-    font-style: normal;
-    line-height: normal;
 }
 
 .letter_W {

@@ -4,7 +4,7 @@
             <div ref="projectModalRef" class="project_modal">
                 <div class="project_modal_header">
                     <p class="project_modal_card_name">{{ project.name }}</p>
-                    <CloseModalBtn @click="closeProjectModal" />
+                    <RoundButton @click="closeProjectModal" />
                 </div>
                 <div class="project_modal_content">
                     <video
@@ -52,7 +52,7 @@
 import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
-import CloseModalBtn from "../ui/CloseModalBtn.vue";
+import RoundButton from "../ui/RoundButton.vue";
 
 const projectModalRef = ref(null);
 
@@ -170,7 +170,7 @@ onClickOutside(projectModalRef, () => {
     background: $button_default;
 
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     color: $primary_white;
     text-align: center;
 

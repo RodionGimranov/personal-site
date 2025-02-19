@@ -20,10 +20,10 @@ import { ref, inject, computed } from "vue";
 const isPlaying = ref(false);
 const isVolumeOn = ref(true);
 
-const currentSongIndex = inject("currentSongIndex");
-const playlistDataList = inject("playlistDataList");
 const audioPlayer = inject("audioPlayer");
 const currentSong = inject("currentSong");
+const currentSongIndex = inject("currentSongIndex");
+const playlistDataList = inject("playlistDataList");
 
 const stopSong = () => {
     if (audioPlayer.value) {

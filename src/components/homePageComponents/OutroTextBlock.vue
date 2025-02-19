@@ -1,6 +1,8 @@
 <template>
     <div class="outro_text_container">
-        <p class="outro_text"><span class="word_change">Frontend</span> is more than</p>
+        <p class="outro_text">
+            <span class="word_change courgette_font">Frontend</span> is more than
+        </p>
         <p class="outro_text">
             just changing
             <span
@@ -39,12 +41,10 @@ setInterval(() => {
     buttonBackground.value = colors[index % colors.length];
     buttonBorderRadius.value = borderRadius[index % borderRadius.length];
     index++;
-}, 500);
+}, 800);
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
-
 .outro_text_container {
     width: 100%;
     height: 35vh;
@@ -67,15 +67,11 @@ setInterval(() => {
 
 .word_change {
     font-size: 70px;
-    font-weight: 400;
-    font-family: "Courgette", cursive;
-    font-style: normal;
-    line-height: normal;
 }
 
 .button_color {
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.4s;
     padding: 0px 24px;
 
     font-size: 55px;

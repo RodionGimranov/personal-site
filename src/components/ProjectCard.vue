@@ -30,6 +30,7 @@
 
 <script setup>
 import { ref } from "vue";
+
 import { projectDataList } from "../data/projectDataList.js";
 
 import emitter from "../eventBus.js";
@@ -83,6 +84,7 @@ const selectProject = (project) => {
     opacity: 0;
     z-index: 100;
     padding: 12px;
+    transition: 0.2s;
     background: rgba(0, 0, 0, 0.3);
 
     display: flex;
@@ -115,10 +117,5 @@ const selectProject = (project) => {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.card_viewing_sign {
-    width: 20px;
-    height: 20px;
 }
 </style>
