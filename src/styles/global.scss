@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Menlo";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../assets/fonts/Menlo-Regular.ttf") format("ttf");
+}
 * {
     margin: 0;
     padding: 0;
@@ -27,16 +33,6 @@ button {
     border: none;
     cursor: pointer;
     background: none;
-}
-.home_intro_text_animation,
-.outro_text_container,
-.home_about_me_text,
-.action_prompt,
-.typing_text,
-.skills_card,
-.web_title {
-    cursor: default;
-    user-select: none;
 }
 .card_viewing_sign,
 .folder_icon,
@@ -84,6 +80,15 @@ button {
     font-size: 24px;
     font-weight: 500;
     color: #949494;
+}
+.courgette_font {
+    font-weight: 400;
+    font-family: "Courgette", cursive;
+    font-style: normal;
+    line-height: normal;
+}
+.menlo_font {
+    font-family: "Menlo";
 }
 .show-modal-enter-active,
 .show-modal-leave-active {
