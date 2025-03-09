@@ -2,22 +2,16 @@
     <div class="home_projects_block">
         <ProjectCard />
         <div class="view_all_btn_container">
-            <router-link to="/Projects" class="view_all_project_btn" @click="viewAllProject"
-                >View All
-                <svg
-                    class="navigation_arrow"
-                    width="9"
-                    height="13"
-                    viewBox="0 0 9 13"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M1.04199 12L7.04122 7.28632C7.5508 6.88594 7.55079 6.11406 7.04122 5.71368L1.04199 1"
-                        stroke-width="2.5"
-                        stroke-linecap="round"
-                    />
-                </svg>
-            </router-link>
+            <Button
+                buttonType="router-link"
+                :to="'/Projects'"
+                buttonTitle="View All"
+                padding="6px 12px"
+                fontSize="22px"
+                fontWeight="500"
+                withIcon="true"
+                @click="viewAllProject"
+            />
         </div>
     </div>
 </template>
@@ -26,6 +20,7 @@
 import emitter from "../../eventBus.js";
 
 import ProjectCard from "../ProjectCard.vue";
+import Button from "../ui/Button.vue";
 
 const viewAllProject = () => {
     emitter.emit("viewAllProject");
@@ -48,41 +43,5 @@ const viewAllProject = () => {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 5px;
-}
-
-.view_all_project_btn {
-    transition: 0.2s;
-    padding: 6px 12px;
-    border-radius: 100px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    font-size: 22px;
-    font-weight: 500;
-    color: $third_gray;
-
-    &:hover {
-        color: $primary_white;
-        background: $button_hover;
-    }
-
-    &:active {
-        background: $button_active;
-    }
-}
-
-.navigation_arrow {
-    fill: none;
-    transition: 0.2s;
-    margin-left: 10px;
-    stroke: $third_gray;
-}
-
-.view_all_project_btn:hover .navigation_arrow {
-    margin-left: 15px;
-    stroke: $primary_white;
 }
 </style>
