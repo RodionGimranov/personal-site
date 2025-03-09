@@ -1,0 +1,36 @@
+{
+    "playlistDataList": [
+        {
+            "id": 0,
+            "album_image": "/personal-site/images/webp/album-images/Tyler-the-Creator-Flower-Boy.webp",
+            "explicit_content": true,
+            "song_name": "See You Again",
+            "artist_name": "Tyler, the Creator",
+            "song_url": "/personal-site/songs/See-You-Again.mp3"
+        },
+        {
+            "id": 1,
+            "album_image": "/personal-site/images/webp/album-images/Bo-Burnham-Inside.webp",
+            "explicit_content": true,
+            "song_name": "All Eyes On Me",
+            "artist_name": "Bo Burnham",
+            "song_url": "/personal-site/songs/All-Eyes-On-Me.mp3"
+        },
+        {
+            "id": 2,
+            "album_image": "/personal-site/images/webp/album-images/Paul-Jones-My-Way-(Rarities).webp",
+            "explicit_content": false,
+            "song_name": "Free Me",
+            "artist_name": "Paul Jones",
+            "song_url": "/personal-site/songs/Free-Me.mp3"
+        },
+        {
+            "id": 3,
+            "album_image": "/personal-site/images/webp/album-images/Raleigh-Ritchie-Andy-(2020).webp",
+            "explicit_content": true,
+            "song_name": "Big & Scared",
+            "artist_name": "Raleigh Ritchie",
+            "song_url": "/personal-site/songs/Big&Scared.mp3"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "galleryDataList": [
+        {
+            "id": 0,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_1.webp"
+        },
+        {
+            "id": 1,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_2.webp"
+        },
+        {
+            "id": 2,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_3.webp"
+        },
+        {
+            "id": 3,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_4.webp"
+        },
+        {
+            "id": 4,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_5.webp"
+        },
+        {
+            "id": 5,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_6.webp"
+        },
+        {
+            "id": 6,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_7.webp"
+        },
+        {
+            "id": 7,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_8.webp"
+        },
+        {
+            "id": 8,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_9.webp"
+        },
+        {
+            "id": 9,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_10.webp"
+        },
+        {
+            "id": 10,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_11.webp"
+        },
+        {
+            "id": 11,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_12.webp"
+        },
+        {
+            "id": 12,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_13.webp"
+        },
+        {
+            "id": 13,
+            "gallery_image": "/personal-site/images/webp/gallery-images/image_14.webp"
+        }
+    ]
+}
