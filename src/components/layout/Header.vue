@@ -14,7 +14,14 @@
             </router-link>
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
-        <button class="version_button" @click="openChangelogModal">{{ latestVersion }}</button>
+        <Buttom
+            buttonTitle="2.1.0"
+            padding="8px"
+            buttonBackdropFilter="blur(20px)"
+            fontSize="14px"
+            fontWeight="500"
+            @click="openChangelogModal"
+        />
     </header>
 </template>
 
@@ -22,7 +29,9 @@
 import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
-import emitter from "../../eventBus";
+import emitter from "../../eventBus.js";
+
+import Buttom from "../ui/Button.vue";
 
 const latestVersion = ref("2.0.12");
 
@@ -135,26 +144,5 @@ watch(route, (newRoute) => {
     transition:
         width 0.3s,
         transform 0.3s;
-}
-
-.version_button {
-    padding: 8px;
-    transition: 0.2s;
-    border-radius: 100px;
-    background: $header_bg;
-    backdrop-filter: blur(20px);
-
-    font-size: 14px;
-    font-weight: 500;
-    color: $text_header;
-
-    &:hover {
-        background: $button_hover;
-        color: $primary_white;
-    }
-
-    &:active {
-        background: $button_active;
-    }
 }
 </style>

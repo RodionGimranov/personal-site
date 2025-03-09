@@ -38,9 +38,14 @@
                                 </span>
                             </div>
                         </div>
-                        <a :href="project.link_to_deploy" class="project_btn" target="_blank"
-                            >Live Demo</a
-                        >
+                        <Button
+                            buttonType="a"
+                            :href="project.link_to_deploy"
+                            buttonTitle="Live Demo"
+                            padding="6px 18px"
+                            fontSize="24px"
+                            fontWeight="500"
+                        />
                     </div>
                 </div>
             </div>
@@ -53,6 +58,7 @@ import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
 import RoundButton from "../ui/RoundButton.vue";
+import Button from "../ui/Button.vue";
 
 const projectModalRef = ref(null);
 
@@ -161,25 +167,5 @@ onClickOutside(projectModalRef, () => {
     font-size: 18px;
     font-weight: 500;
     color: $primary_black;
-}
-
-.project_btn {
-    transition: 0.2s;
-    padding: 8px 18px;
-    border-radius: 100px;
-    background: $button_default;
-
-    font-size: 24px;
-    font-weight: 500;
-    color: $primary_white;
-    text-align: center;
-
-    &:hover {
-        background: $button_hover;
-    }
-
-    &:active {
-        background: $button_active;
-    }
 }
 </style>
