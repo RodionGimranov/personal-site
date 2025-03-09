@@ -3,7 +3,7 @@
     "short_name": "Rodion",
     "icons": [
         {
-            "src": "./public/web-app-icon-180x180.png",
+            "src": "/images/png/web-app-icon-180x180.png",
             "sizes": "180x180",
             "type": "image/png"
         }
