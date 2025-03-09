@@ -1,1 +1,0 @@
-import{_ as e}from"./ProjectCard-DlEOHWNB.js";import{c as t,h as s,d as a,b as c}from"./index-C57pKmS4.js";const o={class:"projects_page_container"},_=a("p",{class:"page_title projects_page_title"},"Projects",-1),l={__name:"ProjectsPage",setup(r){return(n,p)=>(c(),t("main",o,[_,s(e)]))}};export{l as default};
