@@ -26,7 +26,7 @@ import { playlistDataList } from "../../../data/playlistDataList.js";
 import MusicVisualizer from "./MusicVisualizer.vue";
 import PlayerControls from "./PlayerControls.vue";
 
-import explicit_icon from "../../../assets/images/svg/musicPlayer-icons/explicit-icon.svg";
+import explicit_icon from "/images/svg/musicPlayer-icons/explicit-icon.svg";
 
 const currentSongIndex = ref(0);
 const currentSong = ref(playlistDataList[currentSongIndex.value]);

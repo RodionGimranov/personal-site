@@ -36,18 +36,15 @@
 <script setup>
 import CodeTextContainer from "./CodeTextContainer.vue";
 
-import js_lang_icon from "../../../assets/images/svg/metadata-icons/small-js-icon.svg";
-import close_file_icon from "../../../assets/images/svg/metadata-icons/close-file-icon.svg";
+import js_lang_icon from "/images/svg/metadata-icons/small-js-icon.svg";
+import close_file_icon from "/images/svg/metadata-icons/close-file-icon.svg";
 
 const colors = ["#ED6A5E", "#F5BD50", "#61C454"];
 
 const toolbarIcons = [
-    new URL("../../../assets/images/svg/metadata-icons/source-control-icon.svg", import.meta.url)
-        .href,
-    new URL("../../../assets/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url)
-        .href,
-    new URL("../../../assets/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url)
-        .href,
+    new URL("/images/svg/metadata-icons/source-control-icon.svg", import.meta.url).href,
+    new URL("/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url).href,
+    new URL("/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url).href,
 ];
 </script>
 

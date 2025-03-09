@@ -35,7 +35,7 @@ import { projectDataList } from "../data/projectDataList.js";
 
 import emitter from "../eventBus.js";
 
-import viewing_sign from "../assets/images/svg/viewing-sign-icon.svg";
+import viewing_sign from "/images/svg/viewing-sign-icon.svg";
 
 const displayedProjects = ref(projectDataList);
 

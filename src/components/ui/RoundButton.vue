@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import close_icon from "../../assets/images/svg/cross-icon.svg";
+import close_icon from "/images/svg/cross-icon.svg";
 
 const props = defineProps({
     roundButtonWidth: { type: String, default: "38px" },

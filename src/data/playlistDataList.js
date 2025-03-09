@@ -2,7 +2,7 @@ export const playlistDataList = [
     {
         id: 0,
         album_image: new URL(
-            "../assets/images/webp/album-images/Tyler-the-Creator-Flower-Boy.webp",
+            "/images/webp/album-images/Tyler-the-Creator-Flower-Boy.webp",
             import.meta.url
         ).href,
         explicit_content: true,
@@ -13,7 +13,7 @@ export const playlistDataList = [
     {
         id: 1,
         album_image: new URL(
-            "../assets/images/webp/album-images/Bo-Burnham-Inside.webp",
+            "/images/webp/album-images/Bo-Burnham-Inside.webp",
             import.meta.url
         ).href,
         explicit_content: true,
@@ -24,7 +24,7 @@ export const playlistDataList = [
     {
         id: 2,
         album_image: new URL(
-            "../assets/images/webp/album-images/Paul-Jones-My-Way-(Rarities).webp",
+            "/images/webp/album-images/Paul-Jones-My-Way-(Rarities).webp",
             import.meta.url
         ).href,
         explicit_content: false,
@@ -35,7 +35,7 @@ export const playlistDataList = [
     {
         id: 3,
         album_image: new URL(
-            "../assets/images/webp/album-images/Raleigh-Ritchie-Andy-(2020).webp",
+            "/images/webp/album-images/Raleigh-Ritchie-Andy-(2020).webp",
             import.meta.url
         ).href,
         explicit_content: true,

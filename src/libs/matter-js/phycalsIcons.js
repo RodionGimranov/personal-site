@@ -30,10 +30,7 @@ export function phycalsIcons() {
                     startShowIcons();
                 }
             };
-            img.src = new URL(
-                `../../assets/images/svg/physical-icons/${texture}.svg`,
-                import.meta.url
-            ).href;
+            img.src = `${import.meta.env.BASE_URL}images/svg/physical-icons/${texture}.svg`;
         });
     }
 
@@ -48,7 +45,6 @@ export function phycalsIcons() {
             MouseConstraint = Matter.MouseConstraint;
 
         let engine = Engine.create();
-
         let physicalIconBlock = document.querySelector("#phycalsIcons");
 
         let render = Render.create({
@@ -90,10 +86,7 @@ export function phycalsIcons() {
                 restitution: 0.2,
                 render: {
                     sprite: {
-                        texture: new URL(
-                            `../../assets/images/svg/physical-icons/${texture}.svg`,
-                            import.meta.url
-                        ).href,
+                        texture: `${import.meta.env.BASE_URL}images/svg/physical-icons/${texture}.svg`,
                         xScale: 1,
                         yScale: 1,
                     },

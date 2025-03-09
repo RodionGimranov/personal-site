@@ -26,14 +26,14 @@
 
 <script setup>
 const toolImages = [
-    new URL("../../assets/images/svg/tool-icons/Chrome-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/Figma-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/ChatGPT-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/VSCode-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/Notion-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/GitHub-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/Postman-icon.svg", import.meta.url).href,
-    new URL("../../assets/images/svg/tool-icons/Cloudinary-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/Chrome-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/Figma-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/ChatGPT-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/VSCode-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/Notion-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/GitHub-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/Postman-icon.svg", import.meta.url).href,
+    new URL("/images/svg/tool-icons/Cloudinary-icon.svg", import.meta.url).href,
 ];
 
 const duplicatedToolImages = [...toolImages, ...toolImages, ...toolImages];

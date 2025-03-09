@@ -47,7 +47,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import axios from "axios";
 
-import kazanMap from "../../assets/images/webp/map-of-Kazan.webp";
+import kazanMap from "/images/webp/map-of-Kazan.webp";
 
 const temp = ref(null);
 const formattedDate = ref("");
