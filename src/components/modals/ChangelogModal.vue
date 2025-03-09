@@ -5,8 +5,8 @@
                 <div class="changelog_modal_header">
                     <p class="changelog_title">What's new?</p>
                     <RoundButton
-                        :closeModalWidth="'32px'"
-                        :closeModalHeight="'32px'"
+                        :roundButtonWidth="'32px'"
+                        :roundButtonHeight="'32px'"
                         :crossIconWidth="'14px'"
                         :crossIconHeight="'14px'"
                         @click="closeChangelogModal"

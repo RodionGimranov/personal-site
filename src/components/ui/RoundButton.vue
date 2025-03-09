@@ -1,5 +1,5 @@
 <template>
-    <button class="close_modal_btn" :style="{ width: closeModalWidth, height: closeModalHeight }">
+    <button class="round_button" :style="{ width: roundButtonWidth, height: roundButtonHeight }">
         <img
             class="cross_icon"
             :src="close_icon"
@@ -13,15 +13,15 @@
 import close_icon from "../../assets/images/svg/cross-icon.svg";
 
 const props = defineProps({
-    closeModalWidth: { type: String, default: "38px" },
-    closeModalHeight: { type: String, default: "38px" },
+    roundButtonWidth: { type: String, default: "38px" },
+    roundButtonHeight: { type: String, default: "38px" },
     crossIconWidth: { type: String, default: "18px" },
     crossIconHeight: { type: String, default: "18px" },
 });
 </script>
 
 <style lang="scss">
-.close_modal_btn {
+.round_button {
     transition: 0.2s;
     border-radius: 100px;
     background: $button_default;
