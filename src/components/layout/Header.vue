@@ -15,7 +15,7 @@
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
         <Buttom
-            buttonTitle="2.1.0"
+            buttonTitle="2.2.0"
             padding="8px"
             buttonBackdropFilter="blur(20px)"
             fontSize="14px"
