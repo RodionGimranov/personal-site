@@ -10,9 +10,9 @@
 
 <script setup>
 import { useSwitch } from "../../composablse/useSwitch.js";
-import { quotesDataList } from "../../data/quotesDataList.js";
+import quotesDataList from "../../data/quotesDataList.json";
 
-const { currentItem } = useSwitch(quotesDataList);
+const { currentItem } = useSwitch(quotesDataList.quotesDataList);
 </script>
 
 <style lang="scss">

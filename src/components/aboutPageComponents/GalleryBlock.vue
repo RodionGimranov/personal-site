@@ -9,11 +9,12 @@
 
 <script setup>
 import { useSwitch } from "../../composablse/useSwitch.js";
-import { galleryDataList } from "../../data/galleryDataList.js";
+
+import galleryDataList from "../../data/galleryDataList.json";
 
 import SliderIndicators from "../aboutPageComponents/SliderIndicators.vue";
 
-const { currentIndex, currentItem } = useSwitch(galleryDataList);
+const { currentIndex, currentItem } = useSwitch(galleryDataList.galleryDataList);
 </script>
 
 <style lang="scss">

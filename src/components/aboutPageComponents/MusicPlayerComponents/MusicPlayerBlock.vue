@@ -21,7 +21,7 @@
 <script setup>
 import { ref, provide, watch } from "vue";
 
-import { playlistDataList } from "../../../data/playlistDataList.js";
+import { playlistDataList } from "../../../data/playlistDataList.json";
 
 import MusicVisualizer from "./MusicVisualizer.vue";
 import PlayerControls from "./PlayerControls.vue";

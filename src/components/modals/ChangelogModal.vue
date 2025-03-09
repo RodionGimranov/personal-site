@@ -13,7 +13,11 @@
                     />
                 </div>
                 <div class="update_list">
-                    <div v-for="update in updateDataList" :key="update.id" class="update_card">
+                    <div
+                        v-for="update in updateDataList.updateDataList"
+                        :key="update.id"
+                        class="update_card"
+                    >
                         <p class="update_version update_text">{{ update.version }}</p>
                         <p class="update_date update_text">{{ update.date }}</p>
                         <div class="update_descripton update_text">
@@ -34,7 +38,7 @@ import { onClickOutside } from "@vueuse/core";
 
 import RoundButton from "../ui/RoundButton.vue";
 
-import updateDataList from "../../data/updateDataList.js";
+import updateDataList from "../../data/updateDataList.json";
 
 const changelogModalRef = ref(null);
 

@@ -31,7 +31,7 @@
 <script setup>
 import { ref } from "vue";
 
-import { projectDataList } from "../data/projectDataList.js";
+import { projectDataList } from "../data/projectDataList.json";
 
 import emitter from "../eventBus.js";
 
