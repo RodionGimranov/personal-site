@@ -30,7 +30,6 @@ file_paths = [
     "./src/components/aboutPageComponents/LocationBlock.vue",
     "./src/components/aboutPageComponents/QuotesBlock.vue",
     "./src/components/aboutPageComponents/SliderIndicators.vue",
-    # "./src/components/aboutPageComponents/TextMessageBlock.vue",
     "./src/components/aboutPageComponents/TollStackBlock.vue",
 
     "./src/components/homePageComponents/BioTextBlock.vue",
@@ -52,11 +51,11 @@ file_paths = [
 
     "./src/composablse/useSwitch.js",
 
-    "./src/data/galleryDataList.js",
-    "./src/data/playlistDataList.js",
-    "./src/data/projectDataList.js",
-    "./src/data/quotesDataList.js",
-    './src/data/updateDataList.js',
+    "./src/data/galleryDataList.json",
+    "./src/data/playlistDataList.json",
+    "./src/data/projectDataList.json",
+    "./src/data/quotesDataList.json",
+    './src/data/updateDataList.json',
 
     './src/libs/gsap-js/BioTextAnim.js',
     './src/libs/gsap-js/IntroTextAnim.js',
