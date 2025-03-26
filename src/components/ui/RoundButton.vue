@@ -1,17 +1,12 @@
 <template>
     <button class="round_button" :style="{ width: roundButtonWidth, height: roundButtonHeight }">
-        <img
-            class="cross_icon"
-            :src="close_icon"
-            :style="{ width: crossIconWidth, height: crossIconHeight }"
-            alt="Cross icon"
-        />
+        <svg class="cross_icon" :width="crossIconWidth" :height="crossIconHeight">
+            <use xlink:href="/images/svg/sprite.svg#cross-icon"></use>
+        </svg>
     </button>
 </template>
 
 <script setup>
-import close_icon from "/images/svg/cross-icon.svg";
-
 const props = defineProps({
     roundButtonWidth: { type: String, default: "38px" },
     roundButtonHeight: { type: String, default: "38px" },

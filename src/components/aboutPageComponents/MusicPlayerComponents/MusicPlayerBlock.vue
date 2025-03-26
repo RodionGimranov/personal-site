@@ -6,12 +6,14 @@
         </div>
         <div class="song_title_container">
             <p class="song_title">{{ currentSong.song_name }}</p>
-            <img
+            <svg
                 class="explicit_icon"
-                :src="explicit_icon"
-                alt="Explicit content icon"
+                width="12"
+                height="12"
                 v-show="currentSong.explicit_content === true"
-            />
+            >
+                <use xlink:href="/images/svg/sprite.svg#explicit-icon"></use>
+            </svg>
         </div>
         <p class="artist_name">{{ currentSong.artist_name }}</p>
         <PlayerControls />
@@ -25,8 +27,6 @@ import { playlistDataList } from "../../../data/playlistDataList.json";
 
 import MusicVisualizer from "./MusicVisualizer.vue";
 import PlayerControls from "./PlayerControls.vue";
-
-import explicit_icon from "/images/svg/musicPlayer-icons/explicit-icon.svg";
 
 const currentSongIndex = ref(0);
 const currentSong = ref(playlistDataList[currentSongIndex.value]);

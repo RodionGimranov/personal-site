@@ -21,7 +21,11 @@
             <div class="project_card_info">
                 <p class="project_name">{{ project.name }}</p>
                 <div class="card_viewing_sign_container">
-                    <img class="card_viewing_sign" :src="viewing_sign" alt="Viewing Sign" />
+                    <svg class="card_viewing_sign" width="19" height="15">
+                        <use
+                            xlink:href="/images/svg/sprite.svg#viewing-sign-icon"
+                        ></use>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -34,8 +38,6 @@ import { ref } from "vue";
 import { projectDataList } from "../data/projectDataList.json";
 
 import emitter from "../eventBus.js";
-
-import viewing_sign from "/images/svg/viewing-sign-icon.svg";
 
 const displayedProjects = ref(projectDataList);
 

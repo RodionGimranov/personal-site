@@ -11,13 +11,19 @@
         </div>
         <div class="title_bar">
             <div class="file_tab">
-                <img class="lang_icon" :src="js_lang_icon" alt="JavaScript icon" />
+                <svg class="lang_icon" width="16" height="16">
+                    <use xlink:href="/images/svg/sprite.svg#small-js-icon"></use>
+                </svg>
                 <p class="file_name menlo_font">projectData.js</p>
-                <img class="close_file_icon" :src="close_file_icon" alt="Cross icon" />
+                <svg class="close_file_icon" width="10" height="10">
+                    <use xlink:href="/images/svg/sprite.svg#close-file-icon"></use>
+                </svg>
             </div>
             <div class="toolbar">
                 <button v-for="(icon, index) in toolbarIcons" :key="index" class="toolbar_btn">
-                    <img class="toolbar_icon" :src="icon" alt="Toolbar icon" />
+                    <svg class="toolbar_icon" :width="icon.width" :height="icon.height">
+                        <use :xlink:href="icon.src"></use>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -36,22 +42,31 @@
 <script setup>
 import CodeTextContainer from "./CodeTextContainer.vue";
 
-import js_lang_icon from "/images/svg/metadata-icons/small-js-icon.svg";
-import close_file_icon from "/images/svg/metadata-icons/close-file-icon.svg";
-
 const colors = ["#ED6A5E", "#F5BD50", "#61C454"];
 
 const toolbarIcons = [
-    new URL("/images/svg/metadata-icons/source-control-icon.svg", import.meta.url).href,
-    new URL("/images/svg/metadata-icons/split-editor-icon.svg", import.meta.url).href,
-    new URL("/images/svg/metadata-icons/more-actions-icon.svg", import.meta.url).href,
+    {
+        src: "/personal-site/images/svg/sprite.svg#source-control-icon",
+        width: 16,
+        height: 17,
+    },
+    {
+        src: "/personal-site/images/svg/sprite.svg#split-editor-icon",
+        width: 16,
+        height: 16,
+    },
+    {
+        src: "/personal-site/images/svg/sprite.svg#more-actions-icon",
+        width: 16,
+        height: 16,
+    },
 ];
 </script>
 
 <style lang="scss">
 .code_editor {
     width: 100%;
-    height: 250px;
+    height: 262px;
     cursor: text;
     border-radius: 30px;
     background: $secondary_bg;

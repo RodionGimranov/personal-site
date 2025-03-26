@@ -8,7 +8,9 @@
             @click="button.click"
             v-show="button.show === undefined || button.show"
         >
-            <img class="button_control_icon" :src="button.icon" alt="Button Icon" />
+            <svg class="button_control_icon" :width="button.width" :height="button.height">
+                <use :xlink:href="button.icon"></use>
+            </svg>
         </button>
     </div>
     <audio ref="audioPlayer" :src="currentSong.song_url" @ended="handleEnded"></audio>
@@ -99,39 +101,53 @@ const changeSong = async () => {
 const buttons = computed(() => [
     {
         class: "playlist_song",
-        icon: new URL("/images/svg/musicPlayer-icons/Playlist-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Playlist-icon",
+        width: 18,
+        height: 18,
     },
     {
         class: "previous_song",
-        icon: new URL("/images/svg/musicPlayer-icons/Previous-song-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Previous-song-icon",
+        width: 16,
+        height: 12,
         click: playPreviousSong,
     },
     {
         class: "play_song",
-        icon: new URL("/images/svg/musicPlayer-icons/Play-song-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Play-song-icon",
+        width: 18,
+        height: 18,
         click: playSong,
         show: !isPlaying.value,
     },
     {
         class: "stop_song",
-        icon: new URL("/images/svg/musicPlayer-icons/Stop-song-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Stop-song-icon",
+        width: 18,
+        height: 20,
         click: stopSong,
         show: isPlaying.value,
     },
     {
         class: "next_song",
-        icon: new URL("/images/svg/musicPlayer-icons/Next-song-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Next-song-icon",
+        width: 16,
+        height: 12,
         click: playNextSong,
     },
     {
         class: "song_volume_on",
-        icon: new URL("/images/svg/musicPlayer-icons/Volume-on-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Volume-on-icon",
+        width: 18,
+        height: 14,
         click: muteVolume,
         show: isVolumeOn.value,
     },
     {
         class: "song_volume_off",
-        icon: new URL("/images/svg/musicPlayer-icons/Volume-off-icon.svg", import.meta.url).href,
+        icon: "/personal-site/images/svg/sprite.svg#Volume-off-icon",
+        width: 18,
+        height: 14,
         click: unmuteVolume,
         show: !isVolumeOn.value,
     },
@@ -157,7 +173,6 @@ const buttons = computed(() => [
     width: 36px;
     height: 36px;
     transition: 0.2s;
-    border-radius: 100px;
 
     display: flex;
     justify-content: center;
