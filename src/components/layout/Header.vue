@@ -15,7 +15,7 @@
             <span class="header_btn_bg" :style="bgStyle"></span>
         </nav>
         <Buttom
-            buttonTitle="2.2.0"
+            buttonTitle="2.3.0"
             padding="8px"
             buttonBackdropFilter="blur(20px)"
             fontSize="14px"
@@ -32,8 +32,6 @@ import { useRoute, useRouter } from "vue-router";
 import emitter from "../../eventBus.js";
 
 import Buttom from "../ui/Button.vue";
-
-const latestVersion = ref("2.0.12");
 
 const openChangelogModal = () => {
     emitter.emit("show-changelog-modal");
