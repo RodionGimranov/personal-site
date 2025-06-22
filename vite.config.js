@@ -1,0 +1,24 @@
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+
+export default defineConfig({
+    base: "/personal-site/",
+    plugins: [vue({})],
+    resolve: {
+        alias: {
+            "@": "/src",
+        },
+    },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: `
+                    @use "@/styles/global" as *;
+                    @use "@/styles/variables" as *;
+                    @use "@/styles/transition" as *;
+                    @use "@/styles/mediaQueries" as *;
+                `,
+            },
+        },
+    },
+});
