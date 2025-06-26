@@ -6,7 +6,7 @@ const routes = [
         path: "/Home",
         name: "homePage",
         component: () => import("@/views/HomePage.vue"),
-        meta: { title: "Home" },
+        meta: { title: "Rodion Gimranov" },
     },
     {
         path: "/AboutMe",
