@@ -15,19 +15,11 @@ button {
     line-height: 20px;
     font-family: "Inter", sans-serif;
 }
-body {
-    width: 100vw;
-    height: 100vh;
-    min-width: 320px;
-    padding: 24px 60px;
-    background: #f8f9ff;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    font-size: 16px;
-    font-weight: 400;
-    color: #111111;
+p {
+    line-height: 20px;
+}
+.common_page_wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+    padding: 0px 60px;
 }
