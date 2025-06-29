@@ -1,0 +1,13 @@
+// Header dropdown Transition
+.show-dropdown-menu-enter-active,
+.show-dropdown-menu-leave-active {
+    transition: all 0.1s ease-out;
+}
+.show-dropdown-menu-enter-from,
+.show-dropdown-menu-leave-to {
+    opacity: 0;
+}
+.show-dropdown-menu-enter-to,
+.show-dropdown-menu-leave-from {
+    opacity: 1;
+}
