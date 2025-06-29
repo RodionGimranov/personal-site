@@ -23,9 +23,22 @@ def count_lines_in_files(file_paths):
     return total_lines
 
 file_paths = [
-    "./src/components/layout/Header/Header.vue",
+    "./src/components/layout/Header.vue",
+    "./src/components/layout/Footer.vue",
+
+    "./src/components/ui/Button/Button.vue",
+    "./src/components/ui/Button/HomeButton.vue",
+    "./src/components/ui/Button/RoundButton.vue",
+
+    "./src/components/ui/HeaderDropdown.vue",
+    "./src/components/ui/ToggleTab.vue",
+
+    "./src/composables/useEscapeKey.js",
+    "./src/composables/useScrollLock.js",
 
     "./src/router/index.js",
+
+    "./src/store/store.js",
 
     "./src/styles/global.scss",
     "./src/styles/mediaQueries.scss",
