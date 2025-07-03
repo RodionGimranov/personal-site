@@ -3,23 +3,23 @@
         <div class="footer_first_row">
             <div class="footer_logo_block">
                 <HomeButton variant="dark" />
-                <p class="footer_text">Сделано с любовью и большим количеством кофе.</p>
+                <p class="footer_text">{{ $t("message.footer_madeWithLove_text") }}</p>
             </div>
-            <p class="footer_text">© Родион Гимранов 2025. Все права защищены.</p>
+            <p class="footer_text">{{ $t("message.footer_copyright_text") }}</p>
         </div>
         <div class="footer_second_row">
             <div class="link_block" v-for="(section, index) in linkSections" :key="index">
-                <p class="link_text link_block_title">{{ section.title }}</p>
+                <p class="link_text link_block_title">{{ $t(section.title) }}</p>
                 <template v-for="(link, i) in section.items" :key="i">
                     <RouterLink v-if="link.path" :to="link.path" class="link_text link_block_item">
-                        {{ link.name }}
+                        {{ $t(link.name) }}
                     </RouterLink>
                     <button
                         v-else-if="link.action"
                         @click="handleAction(link.action)"
                         class="link_text link_block_item"
                     >
-                        {{ link.name }}
+                        {{ $t(link.name) }}
                     </button>
                     <a
                         v-else-if="link.url"
@@ -41,17 +41,16 @@ import HomeButton from "@/components/ui/Button/HomeButton.vue";
 
 const linkSections = [
     {
-        title: "Навигация",
+        title: "message.navigation_footer_section_title",
         items: [
-            { name: "Главная", path: "/Home" },
-            { name: "Обо Мне", path: "/AboutMe" },
-            { name: "Проекты", path: "/Prolects" },
-            { name: "Обратная связь", action: "openFeedbackModal" },
-            { name: "Журнал изменений", action: "openChangelogModal" },
+            { name: "message.home_btn_title", path: "/Home" },
+            { name: "message.about_btn_title", path: "/About" },
+            { name: "message.projects_btn_title", path: "/Prolects" },
+            { name: "message.changelog_btn_title", action: "openChangelogModal" },
         ],
     },
     {
-        title: "Соцсети",
+        title: "message.social_footer_section_title",
         items: [
             { name: "GitHub", url: "https://github.com/RodionGimranov" },
             { name: "LinkedIn", url: "https://www.linkedin.com/in/rodiongimranov/" },
@@ -62,9 +61,7 @@ const linkSections = [
 ];
 
 function handleAction(action) {
-    if (action === "logout") {
-        console.log("Выход из аккаунта...");
-    }
+    console.log("For test");
 }
 </script>
 

@@ -1,0 +1,34 @@
+{
+    "ru": {
+        "message": {
+            "home_btn_title": "Главная",
+            "about_btn_title": "Обо Мне",
+            "projects_btn_title": "Проекты",
+            "changelog_btn_title": "Журнал изменений",
+
+            "user_language_title": "Язык",
+            "user_theme_title": "Тема",
+
+            "navigation_footer_section_title": "Навигация",
+            "social_footer_section_title": "Соцсети",
+            "footer_madeWithLove_text": "Сделано с любовью и большим количеством кофе.",
+            "footer_copyright_text": "© Родион Гимранов 2025. Все права защищены."
+        }
+    },
+    "en": {
+        "message": {
+            "home_btn_title": "Home",
+            "about_btn_title": "About",
+            "projects_btn_title": "Projects",
+            "changelog_btn_title": "Changelog",
+
+            "user_language_title": "Language",
+            "user_theme_title": "Theme",
+
+            "navigation_footer_section_title": "Navigation",
+            "social_footer_section_title": "Social",
+            "footer_madeWithLove_text": "Made with love and lots of coffee.",
+            "footer_copyright_text": "© Rodion Gimranov 2025. All rights reserved."
+        }
+    }
+}
