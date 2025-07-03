@@ -34,7 +34,12 @@ file_paths = [
     "./src/components/ui/ToggleTab.vue",
 
     "./src/composables/useEscapeKey.js",
+    "./src/composables/useLanguageSwitcher.js",
     "./src/composables/useScrollLock.js",
+
+    "./src/libs/vue-i18n/vue-i18n.js",
+
+    "./src/locales/global.json",
 
     "./src/router/index.js",
 
@@ -45,7 +50,7 @@ file_paths = [
     "./src/styles/transition.scss",
     "./src/styles/variables.scss",
 
-    "./src/views/AboutMePage.vue",
+    "./src/views/AboutPage.vue",
     "./src/views/HomePage.vue",
     "./src/views/ProjectsPage.vue",
 
