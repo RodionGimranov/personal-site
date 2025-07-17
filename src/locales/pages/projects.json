@@ -1,0 +1,12 @@
+{
+    "ru": {
+        "message": {
+            "project_video_text": "Ваш браузер не поддерживает видео :("
+        }
+    },
+    "en": {
+        "message": {
+            "project_video_text": "Your browser does not support the video :("
+        }
+    }
+}
