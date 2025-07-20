@@ -25,6 +25,27 @@
             </div>
             <div class="site_settings_container">
                 <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p>
+                <div class="site_settings_wrapper">
+                    <p class="site_settings_subtitle">
+                        {{ $t("message.language_settings_title") }}
+                    </p>
+                    <ToggleTab
+                        storageKey="language-tab"
+                        :useToggleIcon="true"
+                        :useToggleText="true"
+                        :textOptions="['message.selected_lang_ru', 'message.selected_lang_en']"
+                        @update:activeIndex="onActiveIndexChanged"
+                    />
+                </div>
+                <div class="site_settings_wrapper">
+                    <p class="site_settings_subtitle">{{ $t("message.theme_settings_title") }}</p>
+                    <ToggleTab
+                        storageKey="theme-tab"
+                        :useToggleText="false"
+                        :useToggleIcon="true"
+                        :iconOptions="['light-theme-icon', 'dark-theme-icon', 'system-theme-icon']"
+                    />
+                </div>
             </div>
             <div class="download_btn_container">
                 <button class="side_bar_btn" @click="downloadCV">
@@ -37,12 +58,15 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { ref, computed } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
+import { useLanguageSwitcher } from "@/composables/useLanguageSwitcher.js";
+
 import UserInfoPanel from "@/components/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/SvgIcon.vue";
+import ToggleTab from "@/components/ui/ToggleTab.vue";
 
 import myProfileImage from "@/assets/images/webp/my-profile-image.webp";
 
@@ -59,6 +83,15 @@ const navLinks = [
     { name: "message.projects_btn_title", icon: "projects-icon", path: "/Projects" },
     { name: "message.gallery_btn_title", icon: "gallery-icon", path: "/Gallery" },
 ];
+
+const activeIndex = ref(0);
+const textOptions = ["Ru", "En"];
+const { switchLanguageByTab } = useLanguageSwitcher();
+
+function onActiveIndexChanged(index) {
+    activeIndex.value = index;
+    switchLanguageByTab(textOptions, index);
+}
 </script>
 
 <style lang="scss">
@@ -144,6 +177,19 @@ const navLinks = [
 
 .site_settings_title {
     font-size: 16px;
+    font-weight: 500;
+    color: $primary_dark;
+}
+
+.site_settings_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site_settings_subtitle {
+    font-size: 14px;
     font-weight: 500;
     color: $primary_dark;
 }
