@@ -1,9 +1,7 @@
 import { createStore } from "vuex";
 
-// import collections from "./modules/collections.js";
-
-const version = "0.1.11";
-const linesOfCode = 1107;
+const version = "0.1.18";
+const linesOfCode = 1470;
 
 export default createStore({
     state() {
@@ -15,8 +13,5 @@ export default createStore({
     getters: {
         appVersion: (state) => state.version,
         linesOfCode: (state) => state.linesOfCode,
-    },
-    modules: {
-        // collections,
     },
 });
