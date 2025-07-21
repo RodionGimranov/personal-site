@@ -32,9 +32,15 @@ file_paths = [
 
     "./src/components/projectsComponents/ProjectCard.vue",
 
+    "./src/components/ui/BlurMask.vue",
     "./src/components/ui/SvgIcon.vue",
+    "./src/components/ui/ToggleTab.vue",
 
     "./src/components/UserInfoPanel.vue",
+
+    "./src/composables/useEscapeKey.js",
+    "./src/composables/useLanguageSwitcher.js",
+    "./src/composables/useScrollLock.js",
 
     "./src/data/projectsData.json",
 
@@ -54,6 +60,7 @@ file_paths = [
     "./src/styles/global.scss",
     "./src/styles/variables.scss",
 
+    "./src/utils/eventBus.js",
     "./src/utils/formatters.js",
 
     "./src/views/AboutPage.vue",
