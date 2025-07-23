@@ -1,0 +1,13 @@
+// Modal Transition
+.show-modal-enter-active,
+.show-modal-leave-active {
+    transition: all 0.2s ease-in-out;
+}
+.show-modal-enter-from,
+.show-modal-leave-to {
+    opacity: 0;
+}
+.show-modal-enter-to,
+.show-modal-leave-from {
+    opacity: 1;
+}
