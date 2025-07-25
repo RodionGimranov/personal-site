@@ -42,7 +42,6 @@ file_paths = [
 
     "./src/composables/useEscapeKey.js",
     "./src/composables/useLanguageSwitcher.js",
-    "./src/composables/useScrollLock.js",
 
     "./src/data/changelogData.json",
     "./src/data/projectsData.json",
@@ -62,6 +61,7 @@ file_paths = [
     "./src/router/index.js",
 
     "./src/store/modules/modals.js",
+    "./src/store/modules/theme.js",
     "./src/store/store.js",
 
     "./src/styles/global.scss",
