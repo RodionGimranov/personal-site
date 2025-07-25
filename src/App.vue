@@ -8,15 +8,24 @@
                 <BlurMask />
             </div>
         </section>
+        <transition name="show-modal">
+            <ChangelogModal v-if="isChangelogModalOpen" />
+        </transition>
     </main>
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { useStore } from "vuex";
 import { RouterView } from "vue-router";
 
 import SideBar from "@/components/layout/SideBar.vue";
 import Footer from "@/components/layout/Footer.vue";
 import BlurMask from "@/components/ui/BlurMask.vue";
+import ChangelogModal from "@/components/ui/modal/ChangelogModal.vue";
+
+const store = useStore();
+const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalOpen);
 </script>
 
 <style lang="scss">
