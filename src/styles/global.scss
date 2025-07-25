@@ -54,3 +54,12 @@ p {
     justify-content: center;
     align-items: center;
 }
+.common_modal_style {
+    overflow: hidden;
+    border-radius: 30px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
