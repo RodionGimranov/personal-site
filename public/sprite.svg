@@ -71,5 +71,9 @@
   <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2M10 18V2" 
         stroke="currentColor" stroke-width="2"/>
 </symbol>
-
+<!-- cross-icon -->
+<symbol id="cross-icon" viewBox="0 0 20 20" fill="none">
+  <path d="M3.70703 3.70703L16.2963 16.2963M16.2963 3.70703L3.70703 16.2963" 
+        stroke="#747474" stroke-width="2"/>
+</symbol>
 </svg>
