@@ -1,9 +1,16 @@
 import { createStore } from "vuex";
 
-const version = "0.1.18";
-const linesOfCode = 1470;
+import modals from "@/store/modules/modals.js";
+import theme from "@/store/modules/theme.js";
+
+const version = "0.2.4";
+const linesOfCode = 1866;
 
 export default createStore({
+    modules: {
+        modals,
+        theme,
+    },
     state() {
         return {
             version,

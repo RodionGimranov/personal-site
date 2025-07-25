@@ -44,6 +44,7 @@
                         :useToggleText="false"
                         :useToggleIcon="true"
                         :iconOptions="['light-theme-icon', 'dark-theme-icon', 'system-theme-icon']"
+                        @update:activeIndex="onThemeIndexChanged"
                     />
                 </div>
             </div>
@@ -53,7 +54,7 @@
                 </button>
             </div>
         </div>
-        <p class="version_number">v{{ appVersion }}-{{ $t("message.beta_version_title") }}</p>
+        <p class="version_number">v{{ appVersion }}{{ $t("message.beta_version_title") }}</p>
     </section>
 </template>
 
@@ -95,6 +96,19 @@ function onActiveIndexChanged(index) {
 
 function openChangelogModal() {
     store.commit("modals/OPEN_CHANGELOG_MODAL");
+}
+
+function onThemeIndexChanged(index) {
+    const themeMap = {
+        0: "light",
+        1: "dark",
+        2: "system",
+    };
+
+    const selectedTheme = themeMap[index];
+    if (selectedTheme) {
+        store.commit("SET_THEME", selectedTheme);
+    }
 }
 
 defineExpose({ openChangelogModal });
