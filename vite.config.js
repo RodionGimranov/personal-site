@@ -16,8 +16,8 @@ export default defineConfig({
                 additionalData: `
                     @use "@/styles/global" as *;
                     @use "@/styles/variables" as *;
-                    // @use "@/styles/transition" as *;
-                    // @use "@/styles/mediaQueries" as *;
+                    @use "@/styles/transition" as *;
+                    @use "@/styles/mediaQueries" as *;
                 `,
             },
         },
