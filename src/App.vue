@@ -29,6 +29,10 @@ const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalO
 </script>
 
 <style lang="scss">
+body {
+    background: var(--primary-white-bg);
+}
+
 main {
     height: 100%;
     display: flex;

@@ -69,7 +69,7 @@ footer {
     width: 100%;
     padding: 36px 64px 84px 64px;
     background: $primary_white;
-    border-top: 3px solid $primary_white_bg;
+    border-top: 3px solid var(--primary-white-bg);
 
     display: flex;
     justify-content: space-between;
