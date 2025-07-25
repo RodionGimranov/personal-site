@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, defineExpose } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
@@ -92,6 +92,12 @@ function onActiveIndexChanged(index) {
     activeIndex.value = index;
     switchLanguageByTab(textOptions, index);
 }
+
+function openChangelogModal() {
+    store.commit("modals/OPEN_CHANGELOG_MODAL");
+}
+
+defineExpose({ openChangelogModal });
 </script>
 
 <style lang="scss">

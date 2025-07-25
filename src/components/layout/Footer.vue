@@ -14,7 +14,13 @@
                     class="footer_link"
                     >{{ $t(link.name) }}</RouterLink
                 >
-                <button class="footer_link">{{ $t("message.changelog_btn_title") }}</button>
+            </div>
+            <div class="footer_social_links_container">
+                <p class="footer_title link_title">{{ $t("message.footer_info_links_title") }}</p>
+                <button class="footer_link">{{ $t("message.download_btn_title") }}</button>
+                <button class="footer_link" @click="openChangelogModal">
+                    {{ $t("message.changelog_btn_title") }}
+                </button>
             </div>
             <div class="footer_social_links_container">
                 <p class="footer_title link_title">{{ $t("message.footer_social_links_title") }}</p>
@@ -32,6 +38,15 @@
 </template>
 
 <script setup>
+import { defineExpose } from "vue";
+import { useStore } from "vuex";
+
+function openChangelogModal() {
+    store.commit("modals/OPEN_CHANGELOG_MODAL");
+}
+
+const store = useStore();
+
 const navLinks = [
     { name: "message.home_btn_title", path: "/Home" },
     { name: "message.about_btn_title", path: "/About" },
@@ -45,13 +60,14 @@ const socialLinks = [
     { name: "message.telegram_title", url: "https://t.me/RodionGimranov" },
     { name: "message.instagram_title", url: "https://www.instagram.com/esta_laowai/" },
 ];
+
+defineExpose({ openChangelogModal });
 </script>
 
 <style lang="scss">
 footer {
     width: 100%;
-    height: 239px;
-    padding: 36px 64px;
+    padding: 36px 64px 84px 64px;
     background: $primary_white;
     border-top: 3px solid $primary_white_bg;
 
@@ -62,7 +78,7 @@ footer {
 }
 
 .footer_left_side_content {
-    height: 100%;
+    height: 128px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -85,7 +101,7 @@ footer {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 100px;
+    gap: 70px;
 }
 
 .footer_nav_links_container,
@@ -94,7 +110,6 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
 }
 
 .link_title {
@@ -105,6 +120,7 @@ footer {
     font-size: 14px;
     font-weight: 500;
     color: $third_gray;
+    line-height: 26px;
 
     &:hover {
         color: $primary_dark;
