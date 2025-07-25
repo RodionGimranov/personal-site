@@ -28,7 +28,8 @@
             "telegram_title": "Telegram",
             "instagram_title": "Instagram",
 
-            "beta_version_title": "бета"
+            "beta_version_title": " бета",
+            "changelog_modal_title": "Что нового?"
         }
     },
     "en": {
@@ -60,7 +61,8 @@
             "telegram_title": "Telegram",
             "instagram_title": "Instagram",
 
-            "beta_version_title": "beta"
+            "beta_version_title": " beta",
+            "changelog_modal_title": "What's new?"
         }
     }
 }
