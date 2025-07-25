@@ -32,6 +32,8 @@ file_paths = [
 
     "./src/components/projectsComponents/ProjectCard.vue",
 
+    "./src/components/ui/button/CloseButton.vue",
+    "./src/components/ui/modal/ChangelogModal.vue",
     "./src/components/ui/BlurMask.vue",
     "./src/components/ui/SvgIcon.vue",
     "./src/components/ui/ToggleTab.vue",
@@ -42,6 +44,7 @@ file_paths = [
     "./src/composables/useLanguageSwitcher.js",
     "./src/composables/useScrollLock.js",
 
+    "./src/data/changelogData.json",
     "./src/data/projectsData.json",
 
     "./src/libs/gsap/animateHeroText.js",
@@ -52,9 +55,13 @@ file_paths = [
     "./src/locales/pages/projects.json",
 
     "./src/locales/global.json",
+    "./src/styles/mediaQueries.scss",
+    "./src/styles/transition.scss",
+    "./src/styles/variables.scss",
 
     "./src/router/index.js",
 
+    "./src/store/modules/modals.js",
     "./src/store/store.js",
 
     "./src/styles/global.scss",
