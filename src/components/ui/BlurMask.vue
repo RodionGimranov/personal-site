@@ -15,15 +15,8 @@
 
 <style lang="scss">
 .blur-mask-container {
-    position: fixed;
-    bottom: 16px;
     width: 100%;
-    max-width: calc(100% - 320px);
-    height: 156px;
-    z-index: 2;
-    overflow: hidden;
-    border-radius: 16px;
-    pointer-events: none;
+    height: 100%;
     flex: none;
 }
 
