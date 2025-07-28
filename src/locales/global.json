@@ -1,0 +1,68 @@
+{
+    "ru": {
+        "message": {
+            "my_name_title": "Родион Гимранов",
+            "my_role_title": "Frontend разработчик",
+
+            "home_btn_title": "Главная",
+            "about_btn_title": "Обо мне",
+            "projects_btn_title": "Проекты",
+            "gallery_btn_title": "Галерея",
+            "changelog_btn_title": "Журнал изменений",
+            "download_btn_title": "Скачать резюме",
+
+            "site_settings_title": "Язык и тема",
+            "language_settings_title": "Язык",
+            "theme_settings_title": "Тема",
+            "selected_lang_ru": "Ru",
+            "selected_lang_en": "En",
+
+            "footer_router_links_title": "Навигация",
+            "footer_info_links_title": "Информация",
+            "footer_social_links_title": "Контакты",
+            "footer_fun_text": "Сделано с любовью и большим количеством кофе.",
+            "footer_copyright_text": "© Родион Гимранов 2025. Все права защищены.",
+
+            "github_title": "GitHub",
+            "linkedin_title": "LinkedIn",
+            "telegram_title": "Telegram",
+            "instagram_title": "Instagram",
+
+            "beta_version_title": " бета",
+            "changelog_modal_title": "Что нового?"
+        }
+    },
+    "en": {
+        "message": {
+            "my_name_title": "Rodion Gimranov",
+            "my_role_title": "Frontend Developer",
+
+            "home_btn_title": "Home",
+            "about_btn_title": "About",
+            "projects_btn_title": "Projects",
+            "gallery_btn_title": "Gallery",
+            "changelog_btn_title": "Changelog",
+            "download_btn_title": "Download CV",
+
+            "site_settings_title": "Language & Theme",
+            "language_settings_title": "Language",
+            "theme_settings_title": "Theme",
+            "selected_lang_ru": "Ru",
+            "selected_lang_en": "En",
+
+            "footer_router_links_title": "Navigation",
+            "footer_info_links_title": "Information",
+            "footer_social_links_title": "Contacts",
+            "footer_fun_text": "Made with love and way too much coffee.",
+            "footer_copyright_text": "© Rodion Gimranov 2025. All rights reserved.",
+
+            "github_title": "GitHub",
+            "linkedin_title": "LinkedIn",
+            "telegram_title": "Telegram",
+            "instagram_title": "Instagram",
+
+            "beta_version_title": " beta",
+            "changelog_modal_title": "What's new?"
+        }
+    }
+}

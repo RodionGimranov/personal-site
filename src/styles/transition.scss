@@ -1,0 +1,26 @@
+// Modal Transition
+.show-modal-enter-active,
+.show-modal-leave-active {
+    transition: all 0.2s ease-in-out;
+}
+.show-modal-enter-from,
+.show-modal-leave-to {
+    opacity: 0;
+}
+.show-modal-enter-to,
+.show-modal-leave-from {
+    opacity: 1;
+}
+// Arrow Transition
+.show-arrow-btn-enter-active,
+.show-arrow-btn-leave-active {
+    transition: 0.2s;
+}
+.show-arrow-btn-enter-from,
+.show-arrow-btn-leave-to {
+    opacity: 0;
+}
+.show-arrow-btn-enter-to,
+.show-arrow-btn-from {
+    opacity: 1;
+}

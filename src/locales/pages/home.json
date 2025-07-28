@@ -1,0 +1,12 @@
+{
+    "ru": {
+        "message": {
+            "hero_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях."
+        }
+    },
+    "en": {
+        "message": {
+            "hero_text": "Frontend developer crafting clean and thoughtful\n interfaces. I specialize in building web solutions\n with a focus on design details, code quality,\n and modern web technologies."
+        }
+    }
+}
