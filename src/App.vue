@@ -2,7 +2,7 @@
     <main>
         <SideBar />
         <section class="main_content common_layout_style">
-            <div class="scrolled_content">
+            <div ref="scrolledContent" class="scrolled_content">
                 <router-view />
                 <Footer v-if="!$route.meta.hideFooter" />
             </div>
@@ -14,13 +14,13 @@
             <ChangelogModal v-if="isChangelogModalOpen" />
         </transition>
         <transition name="show-arrow-btn">
-            <TopButton v-show="isScrolledEnough" @click="scrollToTop" />
+            <TopButton v-show="isScrolledEnough && !isChangelogModalOpen" @click="scrollToTop" />
         </transition>
     </main>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useStore } from "vuex";
 import { RouterView } from "vue-router";
 
@@ -33,11 +33,29 @@ import TopButton from "./components/ui/button/TopButton.vue";
 const store = useStore();
 
 const isScrolledEnough = ref(false);
-// const -here will be name for scrolled_content tag- = ref(null);
+const scrolledContent = ref(null);
 
 const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalOpen);
 
+function handleScroll() {
+    if (scrolledContent.value) {
+        isScrolledEnough.value = scrolledContent.value.scrollTop > 300;
+    }
+}
 
+function scrollToTop() {
+    if (scrolledContent.value) {
+        scrolledContent.value.scrollTo({ top: 0, behavior: "smooth" });
+    }
+}
+
+onMounted(() => {
+    scrolledContent.value?.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+    scrolledContent.value?.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <style lang="scss">
@@ -61,6 +79,12 @@ main {
     overflow: hidden;
 }
 
+.scrolled_content {
+    position: relative;
+    width: 100%;
+    overflow-y: auto;
+}
+
 .blur_mask_wrapprer {
     position: absolute;
     bottom: 0;
@@ -71,10 +95,5 @@ main {
     overflow: hidden;
     border-radius: 16px;
     pointer-events: none;
-}
-
-.scrolled_content {
-    position: relative;
-    width: 100%;
 }
 </style>
