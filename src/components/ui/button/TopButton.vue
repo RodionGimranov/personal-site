@@ -11,8 +11,8 @@ import SvgIcon from "@/components/ui/SvgIcon.vue";
 <style lang="scss">
 .top_btn {
     position: fixed;
-    top: calc(100% - 80px);
-    right: 36px;
+    top: calc(100% - 76px);
+    right: 32px;
     width: 44px;
     height: 44px;
     z-index: 9998;
