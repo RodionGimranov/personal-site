@@ -19,7 +19,7 @@ const i18n = createI18n({
                 ...home.ru.message,
                 ...projects.ru.message,
                 ...changelogData.ru.message,
-                // ...projectsData.ru.message,
+                ...projectsData.ru.message,
             },
         },
         en: {
@@ -28,7 +28,7 @@ const i18n = createI18n({
                 ...home.en.message,
                 ...projects.en.message,
                 ...changelogData.en.message,
-                // ...projectsData.en.message,
+                ...projectsData.en.message,
             },
         },
     },
