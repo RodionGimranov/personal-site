@@ -81,5 +81,11 @@
   <path d="M3.35715 11.4531C7.02749 7.97391 9.08532 6.02326 12.7557 2.54403L22.1543 11.4531" 
         stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+<!-- left-arrow-icon -->
+<symbol id="left-arrow-icon" viewBox="0 0 20 20" fill="none">
+  <path d="M12.5 15L7.5 10L12.5 5" 
+        stroke="currentColor" stroke-width="2" 
+        stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 
 </svg>
