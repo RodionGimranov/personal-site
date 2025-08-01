@@ -1,12 +1,26 @@
 {
     "ru": {
         "message": {
-            "project_video_text": "Ваш браузер не поддерживает видео :("
+            "back_btn": "Назад",
+            "visit_btn": "Посетить",
+            "source_code_btn": "Исходный код",
+
+            "project_video_text": "Ваш браузер не поддерживает видео :(",
+            "description_title": "Описание",
+            "technologies_title": "Технологии",
+            "my_role_title": "Моя роль"
         }
     },
     "en": {
         "message": {
-            "project_video_text": "Your browser does not support the video :("
+            "back_btn": "Back",
+            "visit_btn": "Visit",
+            "source_code_btn": "Source Code",
+
+            "project_video_text": "Your browser does not support the video :(",
+            "description_title": "Description",
+            "technologies_title": "Technologies",
+            "my_role_title": "My Role"
         }
     }
 }
