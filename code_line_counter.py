@@ -32,6 +32,7 @@ file_paths = [
 
     "./src/components/projectsComponents/ProjectCard.vue",
 
+    "./src/components/ui/button/Button.vue",
     "./src/components/ui/button/CloseButton.vue",
     "./src/components/ui/button/TopButton.vue",
     "./src/components/ui/modal/ChangelogModal.vue",
