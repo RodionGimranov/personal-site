@@ -40,6 +40,10 @@ p {
     border-radius: 16px;
     background: #ffffff;
 }
+.common_page_wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
 .commnon_modal_container {
     position: fixed;
     top: 0px;
