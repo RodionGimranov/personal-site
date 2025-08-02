@@ -1,5 +1,5 @@
 <template>
-    <RouterLink to="/AboutProject" class="project_card_container">
+    <RouterLink :to="`/About-Project/${project.id}`" class="project_card_container">
         <video
             class="video_cover"
             preload="metadata"
@@ -9,18 +9,25 @@
             playsinline
             loading="lazy"
         >
-            <source src="" type="video/mp4" />
+            <source :src="project.project_cover" type="video/mp4" />
             {{ $t("message.project_video_text") }}
         </video>
         <div class="project_name_container">
             <SvgIcon name="eye-icon" />
-            <p class="project_name_text"></p>
+            <p class="project_name_text">{{ project.name }}</p>
         </div>
     </RouterLink>
 </template>
 
 <script setup>
 import SvgIcon from "@/components/ui/SvgIcon.vue";
+
+defineProps({
+    project: {
+        type: Object,
+        required: true,
+    },
+});
 </script>
 
 <style lang="scss">
@@ -67,7 +74,7 @@ import SvgIcon from "@/components/ui/SvgIcon.vue";
 }
 
 .project_name_text {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: $primary_white;
 }
