@@ -29,15 +29,15 @@ file_paths = [
 
     "./src/components/layout/Footer.vue",
     "./src/components/layout/SideBar.vue",
-
+    
     "./src/components/projectsComponents/ProjectCard.vue",
 
-    "./src/components/ui/button/Button.vue",
-    "./src/components/ui/button/CloseButton.vue",
-    "./src/components/ui/button/TopButton.vue",
-    "./src/components/ui/modal/ChangelogModal.vue",
+    "./src/components/ui/Buttons/Button.vue",
+    "./src/components/ui/Buttons/CloseButton.vue",
+    "./src/components/ui/Buttons/TopButton.vue",
+    "./src/components/ui/Modals/ChangelogModal.vue",
     "./src/components/ui/BlurMask.vue",
-    "./src/components/ui/SvgIcon.vue",
+    "./src/components/ui/Icons/SvgIcon.vue",
     "./src/components/ui/ToggleTab.vue",
 
     "./src/components/UserInfoPanel.vue",
@@ -52,6 +52,7 @@ file_paths = [
 
     "./src/libs/vue-i18n/vue-i18n.js",
 
+    "./src/locales/pages/about.json",
     "./src/locales/pages/home.json",
     "./src/locales/pages/projects.json",
 
