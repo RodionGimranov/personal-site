@@ -1,4 +1,4 @@
-import { createApp } from "vue";
+import { createApp, watch } from "vue";
 import { formatText } from "@/utils/formatters.js";
 
 import App from "@/App.vue";
@@ -11,6 +11,29 @@ const app = createApp(App);
 app.config.globalProperties.$filters = {
     formatText,
 };
+
+router.beforeEach((to, from, next) => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    const titleKey = to.meta.titleKey;
+    if (titleKey) {
+        document.title = i18n.global.t(titleKey);
+    } else {
+        document.title = "Rodion Gimranov";
+    }
+
+    next();
+});
+
+watch(
+    () => i18n.global.locale.value,
+    () => {
+        const titleKey = router.currentRoute.value.meta.titleKey;
+        if (titleKey) {
+            document.title = i18n.global.t(titleKey);
+        }
+    },
+);
 
 app.use(router).use(store).use(i18n);
 
