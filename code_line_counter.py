@@ -25,6 +25,8 @@ def count_lines_in_files(file_paths):
 file_paths = [
     "./public/sprite.svg",
 
+    "./src/components/aboutComponents/LocationCard.vue",
+
     "./src/components/homeComponents/HeroText.vue",
 
     "./src/components/layout/Footer.vue",
@@ -35,9 +37,9 @@ file_paths = [
     "./src/components/ui/Buttons/Button.vue",
     "./src/components/ui/Buttons/CloseButton.vue",
     "./src/components/ui/Buttons/TopButton.vue",
+    "./src/components/ui/Icons/SvgIcon.vue",
     "./src/components/ui/Modals/ChangelogModal.vue",
     "./src/components/ui/BlurMask.vue",
-    "./src/components/ui/Icons/SvgIcon.vue",
     "./src/components/ui/ToggleTab.vue",
 
     "./src/components/UserInfoPanel.vue",
@@ -55,11 +57,7 @@ file_paths = [
     "./src/locales/pages/about.json",
     "./src/locales/pages/home.json",
     "./src/locales/pages/projects.json",
-
     "./src/locales/global.json",
-    "./src/styles/mediaQueries.scss",
-    "./src/styles/transition.scss",
-    "./src/styles/variables.scss",
 
     "./src/router/index.js",
 
@@ -68,6 +66,8 @@ file_paths = [
     "./src/store/store.js",
 
     "./src/styles/global.scss",
+    "./src/styles/mediaQueries.scss",
+    "./src/styles/transition.scss",
     "./src/styles/variables.scss",
 
     "./src/utils/eventBus.js",
@@ -81,7 +81,6 @@ file_paths = [
 
     "./src/App.vue",
     "./src/main.js",
-
     "./code_line_counter.py",
     "./index.html",
     "./package.json",
