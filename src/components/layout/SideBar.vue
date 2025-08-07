@@ -66,7 +66,7 @@ import { useRoute } from "vue-router";
 import { useLanguageSwitcher } from "@/composables/useLanguageSwitcher.js";
 
 import UserInfoPanel from "@/components/UserInfoPanel.vue";
-import SvgIcon from "@/components/ui/SvgIcon.vue";
+import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
 import ToggleTab from "@/components/ui/ToggleTab.vue";
 
 import myProfileImage from "@/assets/images/webp/my-profile-image.webp";
