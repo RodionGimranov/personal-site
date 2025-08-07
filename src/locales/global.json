@@ -29,7 +29,13 @@
             "instagram_title": "Instagram",
 
             "beta_version_title": " бета",
-            "changelog_modal_title": "Что нового?"
+            "changelog_modal_title": "Что нового?",
+
+            "home_tab_title": "Главная",
+            "about_tab_title": "Обо мне",
+            "projects_tab_title": "Проекты",
+            "about_project_tab_title": "О проекте",
+            "gallery_tab_title": "Галерея"
         }
     },
     "en": {
@@ -62,7 +68,13 @@
             "instagram_title": "Instagram",
 
             "beta_version_title": " beta",
-            "changelog_modal_title": "What's new?"
+            "changelog_modal_title": "What's new?",
+
+            "home_tab_title": "Home",
+            "about_tab_title": "About",
+            "projects_tab_title": "Projects",
+            "about_project_tab_title": "About Project",
+            "gallery_tab_title": "Gallery"
         }
     }
 }
