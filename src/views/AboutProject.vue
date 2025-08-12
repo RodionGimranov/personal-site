@@ -23,7 +23,7 @@
             </div>
         </div>
         <video
-            class="large_video_cover"
+            class="large_video_cover common_width_size"
             preload="metadata"
             autoplay
             loop
@@ -36,11 +36,11 @@
         </video>
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.description_title") }}</p>
-            <p class="about_project_info_subtitle">{{ project.description }}</p>
+            <p class="about_project_info_subtitle common_width_size">{{ project.description }}</p>
         </div>
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
-            <div class="technologies_list">
+            <div class="technologies_list common_width_size">
                 <span
                     v-for="(tech, index) in project.technologies"
                     :key="index"
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="about_project_info_container">
-            <p class="about_project_info_title">{{ $t("message.my_role_title") }}</p>
+            <p class="about_project_info_title">{{ $t("message.role_title") }}</p>
             <p class="about_project_info_subtitle">{{ project.role }}</p>
         </div>
     </div>
@@ -62,8 +62,8 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 
-import SvgIcon from "@/components/ui/SvgIcon.vue";
-import Button from "@/components/ui/button/Button.vue";
+import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
+import Button from "@/components/ui/Buttons/Button.vue";
 
 import projectsData from "@/data/projectsData.json";
 
@@ -78,7 +78,8 @@ const project = computed(() => {
 
 <style lang="scss">
 .about_project_page_wrapper {
-    padding: 36px 64px;
+    position: relative;
+    padding: 0px 64px 36px 64px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -86,7 +87,13 @@ const project = computed(() => {
 }
 
 .back_to_projects_list_btn_container {
-    margin-bottom: 24px;
+    position: sticky;
+    top: -16px;
+    width: 100%;
+    z-index: 99;
+    background: $primary_white;
+    padding: 36px 0px 24px 0px;
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -132,7 +139,6 @@ const project = computed(() => {
 }
 
 .large_video_cover {
-    width: 560px;
     height: 315px;
     overflow: hidden;
     object-fit: cover;
@@ -142,7 +148,6 @@ const project = computed(() => {
 }
 
 .technologies_list {
-    width: 560px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -189,5 +194,9 @@ const project = computed(() => {
     font-size: 16px;
     font-weight: 400;
     color: $primary_dark;
+}
+
+.common_width_size {
+    width: 560px;
 }
 </style>
