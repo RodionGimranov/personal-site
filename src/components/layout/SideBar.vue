@@ -69,7 +69,7 @@ import UserInfoPanel from "@/components/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
 import ToggleTab from "@/components/ui/ToggleTab.vue";
 
-import myProfileImage from "@/assets/images/webp/my-profile-image.webp";
+import myProfileImage from "@/assets/images/my-profile-image.webp";
 
 const store = useStore();
 const route = useRoute();
