@@ -6,31 +6,31 @@ const routes = [
         path: "/Home",
         name: "homePage",
         component: () => import("@/views/HomePage.vue"),
-        meta: { title: "Rodion Gimranov" },
+        meta: { titleKey: "message.home_tab_title" },
     },
     {
         path: "/About",
         name: "aboutPage",
         component: () => import("@/views/AboutPage.vue"),
-        meta: { title: "About" },
+        meta: { titleKey: "message.about_tab_title" },
     },
     {
         path: "/Projects",
         name: "projectsPage",
         component: () => import("@/views/ProjectsPage.vue"),
-        meta: { title: "Projects" },
+        meta: { titleKey: "message.projects_tab_title" },
     },
     {
         path: "/About-Project/:id",
         name: "aboutProjectPage",
         component: () => import("@/views/AboutProject.vue"),
-        meta: { title: "About" },
+        meta: { titleKey: "message.about_project_tab_title" },
     },
     {
         path: "/Gallery",
         name: "galleryPage",
         component: () => import("@/views/GalleryPage.vue"),
-        meta: { title: "Gallery", hideFooter: true },
+        meta: { titleKey: "message.gallery_tab_title", hideFooter: true },
     },
 ];
 
@@ -39,14 +39,11 @@ const router = createRouter({
     routes,
 });
 
-router.beforeEach((to, from, next) => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-
-    const nearestWithTitle = to.matched.find((route) => route.meta && route.meta.title);
-
-    document.title = nearestWithTitle ? nearestWithTitle.meta.title : "Rodion Gimranov";
-
-    next();
+router.afterEach(() => {
+    requestAnimationFrame(() => {
+        const el = document.querySelector(".scrolled_content");
+        if (el) el.scrollTo({ top: 0, behavior: "auto" });
+    });
 });
 
 export default router;
