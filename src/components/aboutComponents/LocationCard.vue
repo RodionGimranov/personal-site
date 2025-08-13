@@ -1,6 +1,6 @@
 <template>
     <div class="location_card_container commom_card_style">
-        <img class="map_of_city" src="" alt="Map of city" />
+        <img class="map_of_city" :src="mapSrc" alt="Map of city" />
         <div class="location_data_container">
             <div class="city_date_container">
                 <p class="city_weather_title">{{ $t("message.kazan_city_name") }}</p>
@@ -22,6 +22,10 @@ const LAT = 55.7963;
 const LON = 49.1088;
 
 const temperature = ref(null);
+
+const mapSrc = computed(() => {
+    return `/personal-site-beta/images/maps/kazan-map-${locale.value}.webp`;
+});
 
 async function fetchWeather() {
     try {
