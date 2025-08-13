@@ -1,7 +1,7 @@
 <template>
     <main>
         <SideBar />
-        <section class="main_content common_layout_style">
+        <section class="main_content_container common_layout_style">
             <div ref="scrolledContent" class="scrolled_content">
                 <router-view />
                 <Footer v-if="!$route.meta.hideFooter" />
@@ -27,8 +27,8 @@ import { RouterView } from "vue-router";
 import SideBar from "@/components/layout/SideBar.vue";
 import Footer from "@/components/layout/Footer.vue";
 import BlurMask from "@/components/ui/BlurMask.vue";
-import ChangelogModal from "@/components/ui/modal/ChangelogModal.vue";
-import TopButton from "./components/ui/button/TopButton.vue";
+import ChangelogModal from "@/components/ui/Modals/ChangelogModal.vue";
+import TopButton from "./components/ui/Buttons/TopButton.vue";
 
 const store = useStore();
 
@@ -72,7 +72,7 @@ main {
     gap: 16px;
 }
 
-.main_content {
+.main_content_container {
     position: relative;
     display: flex;
     flex: 1 0 0px;

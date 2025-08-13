@@ -13,6 +13,7 @@ import ProjectCard from "@/components/projectsComponents/ProjectCard.vue";
 import projectsData from "@/data/projectsData.json";
 
 const { locale } = useI18n();
+
 const projects = computed(() => {
     return [...(projectsData[locale.value] || [])].sort((a, b) => b.id - a.id);
 });

@@ -1,12 +1,20 @@
 <template>
-    <div class="about_page_wrapper"></div>
+    <div class="about_page_wrapper common_page_wrapper">
+        <LocationCard />
+    </div>
 </template>
 
-<script setup></script>
+<script setup>
+import LocationCard from "../components/aboutComponents/LocationCard.vue";
+</script>
 
 <style lang="scss">
 .about_page_wrapper {
-    width: 100%;
-    height: 100vh;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
 }
 </style>
