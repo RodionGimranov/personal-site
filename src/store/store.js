@@ -3,8 +3,8 @@ import { createStore } from "vuex";
 import modals from "@/store/modules/modals.js";
 import theme from "@/store/modules/theme.js";
 
-const version = "0.3.27";
-const linesOfCode = 2573;
+const version = "0.3.30";
+const linesOfCode = 2608;
 
 export default createStore({
     modules: {
