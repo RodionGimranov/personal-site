@@ -26,7 +26,7 @@ import { useI18n } from "vue-i18n";
 
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 
-import CloseButton from "@/components/ui/Buttons/CloseButton.vue";
+import CloseButton from "@/components/ui/buttons/CloseButton.vue";
 
 import changelogData from "@/data/changelogData.json";
 

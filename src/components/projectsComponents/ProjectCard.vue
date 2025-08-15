@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
 defineProps({
     project: {

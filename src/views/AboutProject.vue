@@ -62,8 +62,8 @@ import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 
-import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
-import Button from "@/components/ui/Buttons/Button.vue";
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import Button from "@/components/ui/buttons/Button.vue";
 
 import projectsData from "@/data/projectsData.json";
 

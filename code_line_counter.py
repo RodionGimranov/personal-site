@@ -34,11 +34,11 @@ file_paths = [
     
     "./src/components/projectsComponents/ProjectCard.vue",
 
-    "./src/components/ui/Buttons/Button.vue",
-    "./src/components/ui/Buttons/CloseButton.vue",
-    "./src/components/ui/Buttons/TopButton.vue",
-    "./src/components/ui/Icons/SvgIcon.vue",
-    "./src/components/ui/Modals/ChangelogModal.vue",
+    "./src/components/ui/buttons/Button.vue",
+    "./src/components/ui/buttons/CloseButton.vue",
+    "./src/components/ui/buttons/TopButton.vue",
+    "./src/components/ui/SvgIcon/SvgIcon.vue",
+    "./src/components/ui/ChangelogModal/ChangelogModal.vue",
     "./src/components/ui/BlurMask.vue",
     "./src/components/ui/ToggleTab.vue",
 

@@ -32,7 +32,7 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from "vue";
 
-import SvgIcon from "@/components/ui/Icons/SvgIcon.vue";
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
 const props = defineProps({
     useToggleIcon: { type: Boolean, default: false },
