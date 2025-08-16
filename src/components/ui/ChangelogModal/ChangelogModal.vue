@@ -1,6 +1,6 @@
 <template>
     <section class="commnon_modal_container">
-        <div class="common_modal_style changelog_modal_style" ref="modalRef">
+        <div class="changelog_modal_style" ref="modalRef">
             <div class="changelog_modal_header">
                 <p class="modal_header_title">{{ $t("message.changelog_modal_title") }}</p>
                 <CloseButton :action="closeChangelogModal" />
@@ -51,9 +51,32 @@ useEscapeKeyClose(() => {
 </script>
 
 <style lang="scss">
+.commnon_modal_container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .changelog_modal_style {
     width: 600px;
     height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: $primary_white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .changelog_modal_header {
