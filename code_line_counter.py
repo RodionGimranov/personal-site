@@ -74,7 +74,7 @@ file_paths = [
     "./src/utils/formatters.js",
 
     "./src/views/AboutPage.vue",
-    "./src/views/AboutProject.vue",
+    "./src/views/AboutProjectPage.vue",
     "./src/views/GalleryPage.vue",
     "./src/views/HomePage.vue",
     "./src/views/ProjectsPage.vue",
