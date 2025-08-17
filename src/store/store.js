@@ -3,8 +3,11 @@ import { createStore } from "vuex";
 import modals from "@/store/modules/modals.js";
 import theme from "@/store/modules/theme.js";
 
-const version = "0.3.30";
-const linesOfCode = 2608;
+const appVersion = "0.3.40";
+const linesOfCode = 2975;
+const fileCount = 50;
+const folderCount = 22;
+const projectSizeMB = "87.49 mb";
 
 export default createStore({
     modules: {
@@ -13,12 +16,18 @@ export default createStore({
     },
     state() {
         return {
-            version,
+            appVersion,
             linesOfCode,
+            fileCount,
+            folderCount,
+            projectSizeMB,
         };
     },
     getters: {
-        appVersion: (state) => state.version,
-        linesOfCode: (state) => state.linesOfCode,
+        getAppVersion: (state) => state.appVersion,
+        getLinesOfCode: (state) => state.linesOfCode,
+        getFileCount: (state) => state.fileCount,
+        getFolderCount: (state) => state.folderCount,
+        getProjectSizeMB: (state) => state.projectSizeMB,
     },
 });
