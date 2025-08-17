@@ -23,7 +23,7 @@ const routes = [
     {
         path: "/About-Project/:id",
         name: "aboutProjectPage",
-        component: () => import("@/views/AboutProject.vue"),
+        component: () => import("@/views/AboutProjectPage.vue"),
         meta: { titleKey: "message.about_project_tab_title" },
     },
     {
