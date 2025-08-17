@@ -74,7 +74,7 @@ import myProfileImage from "@/assets/images/my-profile-image.webp";
 const store = useStore();
 const route = useRoute();
 
-const appVersion = computed(() => store.getters.appVersion);
+const appVersion = computed(() => store.getters.getAppVersion);
 
 const isActive = (path) => route.path === path;
 
