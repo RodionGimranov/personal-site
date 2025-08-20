@@ -1,11 +1,14 @@
 <template>
     <div class="about_page_wrapper common_page_wrapper">
         <LocationCard />
+        <ProjectStatsCard />
     </div>
 </template>
 
 <script setup>
 import LocationCard from "../components/aboutComponents/LocationCard.vue";
+
+import ProjectStatsCard from "../components/aboutComponents/ProjectStatsCard/ProjectStatsCard.vue";
 </script>
 
 <style lang="scss">
