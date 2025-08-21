@@ -12,13 +12,8 @@
                 <span class="brace">{</span>
             </p>
             <p v-for="(value, key, index) in projectData" :key="key">
-                <span class="key margin_left_12">{{ key }}</span>
-                <span class="literal">
-                    {{ value
-                    }}<span class="punctuator" v-if="index < Object.keys(projectData).length - 1"
-                        >,
-                    </span>
-                </span>
+                <span class="key margin_left_34">{{ key }}</span>
+                <span class="literal"> {{ value }}<span class="punctuator">,</span></span>
             </p>
             <p><span class="brace">}</span><span class="punctuator">;</span></p>
         </div>
@@ -131,7 +126,7 @@ const projectData = computed(() => ({
     color: #ffd602;
 }
 
-.margin_left_12 {
-    margin-left: 12px;
+.margin_left_34 {
+    margin-left: 34px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="top_bar_container">
         <div class="file_tab">
-            <SvgIcon name="js-lang-icon" width="16" height="16" />
+            <SvgIcon name="js-lang-icon" width="14" height="14" />
             <p class="file_name">projectData.js</p>
             <button class="top_bar_btn">
                 <SvgIcon name="close-file-tab-icon" width="10.18" height="10.18" />
@@ -52,6 +52,7 @@ const toolbarButtons = [
 }
 
 .file_name {
+    margin-left: 4px;
     font-size: 12.21px;
     font-weight: 400;
     color: $primary_white;
