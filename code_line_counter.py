@@ -51,8 +51,14 @@ file_paths = [
     "./public/sprite.svg",
 
     "./src/components/aboutComponents/LocationCard.vue",
+    "./src/components/aboutComponents/MusicPlayerCard.vue",
+    "./src/components/aboutComponents/ProjectStatsCard.vue",
+
+    "./src/components/aboutComponents/MusicPlayerCard/MediaHeader.vue",
+    "./src/components/aboutComponents/MusicPlayerCard/PlayerControls.vue",
+    "./src/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue",
+
     "./src/components/aboutComponents/ProjectStatsCard/CodeEditor.vue",
-    "./src/components/aboutComponents/ProjectStatsCard/ProjectStatsCard.vue",
     "./src/components/aboutComponents/ProjectStatsCard/TabBar.vue",
     "./src/components/aboutComponents/ProjectStatsCard/WindowControls.vue",
 
