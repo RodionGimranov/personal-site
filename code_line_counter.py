@@ -2,11 +2,11 @@ import os
 import time
 
 def human_readable_size(size_in_bytes):
-    for unit in ['Б', 'КБ', 'МБ', 'ГБ', 'ТБ']:
+    for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
         if size_in_bytes < 1024:
             return f"{size_in_bytes:.2f} {unit}"
         size_in_bytes /= 1024
-    return f"{size_in_bytes:.2f} ТБ"
+    return f"{size_in_bytes:.2f} TB"
 
 def count_lines_in_file_list(file_paths):
     total_lines = 0
@@ -15,7 +15,7 @@ def count_lines_in_file_list(file_paths):
 
     for index, file_path in enumerate(file_paths, start=1): 
         if not os.path.isfile(file_path):
-            print(f"Файл не найден: {file_path}")
+            print(f"File not found: {file_path}")
             time.sleep(0.02)
             continue
         
@@ -27,9 +27,9 @@ def count_lines_in_file_list(file_paths):
                 lines = sum(1 for _ in f)
                 total_lines += lines
                 file_name = os.path.basename(file_path) 
-                print(f"{index}. {file_name} - {lines} строк")
+                print(f"{index}. {file_name} - {lines} lines")
         except Exception as e:
-            print(f"Не удалось прочитать файл {file_path}: {e}")
+            print(f"Failed to read file {file_path}: {e}")
         
         time.sleep(0.02)
 
@@ -123,15 +123,15 @@ file_paths = [
     "./vite.config.js",
 ]
 
-print("📑 Подсчёт по указанным файлам:\n")
+print("📑 Count for the specified files:\n")
 lines_list, files_list, dirs_list = count_lines_in_file_list(file_paths)
 
-print("\nИТОГО по списку:")
-print("📜 Строк:", lines_list)
-print("📄 Файлов:", files_list)
-print("📂 Папок:", dirs_list)
+print("\nTOTAL for the list:")
+print("📜 Lines:", lines_list)
+print("📄 Files:", files_list)
+print("📂 Folders:", dirs_list)
 
 project_path = "."
 project_size = get_project_size(project_path)
 
-print("\n💾 Общий размер проекта (personal-site-beta):", human_readable_size(project_size))
+print("\n💾 Total project size (personal-site-beta):", human_readable_size(project_size))
