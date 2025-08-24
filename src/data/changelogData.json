@@ -2,17 +2,43 @@
     "ru": [
         {
             "id": 0,
-            "version": "",
-            "date": "",
-            "description": ""
+            "version": "v0.3.30 бета",
+            "date": "13 августа 2025",
+            "descriptions": [
+                "Добавлена карточка LocationCard на странице 'Обо мне' - показывает город проживания, дату и погоду.",
+                "Улучшена производительность сайта.",
+                "Исправлены ошибки для стабильной работы."
+            ]
+        },
+        {
+            "id": 1,
+            "version": "v0.3.40 бета",
+            "date": "17 августа 2025",
+            "descriptions": [
+                "Добавлена карточка ProjectStatsCard на странице 'Обо мне' - стилизованный интерфейс IDE, отображающий мета-информацию сайта.",
+                "В 'Галерею' добавлены новые фотографии."
+            ]
         }
     ],
     "en": [
         {
             "id": 0,
-            "version": "",
-            "date": "",
-            "description": ""
+            "version": "v0.3.30 beta",
+            "date": "August 13, 2025",
+            "descriptions": [
+                "Added LocationCard to the 'About Me' page - displays the city of residence, current date, and weather.",
+                "Improved site performance.",
+                "Fixed bugs for more stable operation."
+            ]
+        },
+        {
+            "id": 1,
+            "version": "v0.3.40 beta",
+            "date": "August 17, 2025",
+            "descriptions": [
+                "Added ProjectStatsCard to the 'About Me' page - a stylized IDE-like interface displaying site meta information.",
+                "Added new photos to the 'Gallery'."
+            ]
         }
     ]
 }
