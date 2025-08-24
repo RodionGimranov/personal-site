@@ -11,7 +11,11 @@
                         <p class="update_date">{{ update.version }}</p>
                         <p class="update_number">{{ update.date }}</p>
                     </div>
-                    <p class="update_description">{{ update.description }}</p>
+                    <ul class="update_description_list">
+                        <p v-for="(desc, index) in update.descriptions" :key="index">
+                            - {{ desc }}
+                        </p>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -39,7 +43,10 @@ function closeChangelogModal() {
     store.commit("modals/CLOSE_CHANGELOG_MODAL");
 }
 
-const updates = computed(() => changelogData[locale.value] || []);
+const updates = computed(() => {
+    const list = changelogData[locale.value] || [];
+    return [...list].sort((a, b) => b.id - a.id);
+});
 
 onMounted(() => {
     onClickOutside(modalRef, closeChangelogModal);
@@ -118,7 +125,7 @@ useEscapeKeyClose(() => {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 20px;
+    gap: 12px;
 }
 
 .changelog_version_header {
@@ -126,11 +133,11 @@ useEscapeKeyClose(() => {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 4px;
 }
 
 .update_date {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: $primary_dark;
 }
