@@ -126,6 +126,11 @@ useEscapeKeyClose(() => {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 12px;
+
+    &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
 }
 
 .changelog_version_header {
