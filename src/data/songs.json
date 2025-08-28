@@ -1,0 +1,12 @@
+{
+    "songs": [
+        {
+            "id": 0,
+            "album_image": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1755964006/IMG_6454_qu7meu.jpg",
+            "explicit_content": true,
+            "song_name": "See You Again",
+            "artist_name": "Tyler, the Creator",
+            "song_url": "/personal-site/songs/See-You-Again.mp3"
+        }
+    ]
+}
