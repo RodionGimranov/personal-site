@@ -50,17 +50,17 @@ def get_project_size(root_path):
 file_paths = [
     "./public/sprite.svg",
 
-    "./src/components/aboutComponents/LocationCard.vue",
-    "./src/components/aboutComponents/MusicPlayerCard.vue",
-    "./src/components/aboutComponents/ProjectStatsCard.vue",
-
-    "./src/components/aboutComponents/MusicPlayerCard/MediaHeader.vue",
     "./src/components/aboutComponents/MusicPlayerCard/PlayerControls.vue",
     "./src/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue",
 
     "./src/components/aboutComponents/ProjectStatsCard/CodeEditor.vue",
     "./src/components/aboutComponents/ProjectStatsCard/TabBar.vue",
     "./src/components/aboutComponents/ProjectStatsCard/WindowControls.vue",
+
+    "./src/components/aboutComponents/EducationCard.vue",
+    "./src/components/aboutComponents/LocationCard.vue",
+    "./src/components/aboutComponents/MusicPlayerCard.vue",
+    "./src/components/aboutComponents/ProjectStatsCard.vue",
 
     "./src/components/homeComponents/HeroText.vue",
 
@@ -84,6 +84,7 @@ file_paths = [
 
     "./src/data/changelogData.json",
     "./src/data/projectsData.json",
+    "./src/data/songs.json",
 
     "./src/libs/gsap/animateHeroText.js",
 
