@@ -18,7 +18,7 @@ import CodeEditor from "@/components/aboutComponents/ProjectStatsCard/CodeEditor
     height: 250px;
     overflow: hidden;
     border-radius: 30px;
-    background: $fifth_dark;
+    background: $third_dark;
 
     display: flex;
     flex-direction: column;

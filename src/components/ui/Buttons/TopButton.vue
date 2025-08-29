@@ -28,7 +28,7 @@ import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
     color: $primary_white;
 
     &:hover {
-        background: $third_dark;
+        background: $secondary_dark;
     }
 }
 </style>
