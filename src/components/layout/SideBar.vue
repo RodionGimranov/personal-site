@@ -49,9 +49,13 @@
                 </div>
             </div>
             <div class="download_btn_container">
-                <button class="side_bar_btn" @click="downloadCV">
+                <a
+                    href="https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?usp=sharing"
+                    class="side_bar_btn"
+                    target="_blank"
+                >
                     <SvgIcon name="download-icon" /> {{ $t("message.download_btn_title") }}
-                </button>
+                </a>
             </div>
         </div>
         <p class="version_number">v{{ appVersion }}{{ $t("message.beta_version_title") }}</p>
