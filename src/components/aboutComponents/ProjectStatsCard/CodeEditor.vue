@@ -7,7 +7,7 @@
             <p>
                 <span class="kw_export">export</span>
                 <span class="kw_const">const</span>
-                <span class="variable">projectData</span>
+                <span class="variable">projectStats</span>
                 <span class="punctuator">=</span>
                 <span class="brace">{</span>
             </p>

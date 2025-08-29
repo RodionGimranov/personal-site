@@ -2,7 +2,7 @@
     <div class="top_bar_container">
         <div class="file_tab">
             <SvgIcon name="js-lang-icon" width="14" height="14" />
-            <p class="file_name">projectData.js</p>
+            <p class="file_name">projectStats.js</p>
             <button class="top_bar_btn">
                 <SvgIcon name="close-file-tab-icon" width="10.18" height="10.18" />
             </button>
