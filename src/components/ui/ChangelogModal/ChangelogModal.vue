@@ -32,7 +32,7 @@ import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 
 import CloseButton from "@/components/ui/buttons/CloseButton.vue";
 
-import changelogData from "@/data/changelogData.json";
+import changelogs from "@/data/changelogs.json";
 
 const store = useStore();
 const { locale } = useI18n();
@@ -44,7 +44,7 @@ function closeChangelogModal() {
 }
 
 const updates = computed(() => {
-    const list = changelogData[locale.value] || [];
+    const list = changelogs[locale.value] || [];
     return [...list].sort((a, b) => b.id - a.id);
 });
 

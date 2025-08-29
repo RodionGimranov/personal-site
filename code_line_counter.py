@@ -82,8 +82,8 @@ file_paths = [
     "./src/composables/useEscapeKey.js",
     "./src/composables/useLanguageSwitcher.js",
 
-    "./src/data/changelogData.json",
-    "./src/data/projectsData.json",
+    "./src/data/changelogs.json",
+    "./src/data/projects.json",
     "./src/data/songs.json",
 
     "./src/libs/gsap/animateHeroText.js",
@@ -92,7 +92,7 @@ file_paths = [
 
     "./src/locales/pages/about.json",
     "./src/locales/pages/home.json",
-    "./src/locales/pages/projects.json",
+    "./src/locales/pages/projectsLocale.json",
     "./src/locales/global.json",
 
     "./src/router/index.js",

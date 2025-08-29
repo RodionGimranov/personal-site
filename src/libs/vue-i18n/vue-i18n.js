@@ -2,11 +2,11 @@ import { createI18n } from "vue-i18n";
 
 import global from "@/locales/global.json";
 import home from "@/locales/pages/home.json";
-import projects from "@/locales/pages/projects.json";
+import projectsLocale from "@/locales/pages/projectsLocale.json";
 import about from "@/locales/pages/about.json";
 
-import changelogData from "@/data/changelogData.json";
-import projectsData from "@/data/projectsData.json";
+import changelogs from "@/data/changelogs.json";
+import projects from "@/data/projects.json";
 
 const i18n = createI18n({
     legacy: false,
@@ -18,20 +18,20 @@ const i18n = createI18n({
             message: {
                 ...global.ru.message,
                 ...home.ru.message,
-                ...projects.ru.message,
+                ...projectsLocale.ru.message,
                 ...about.ru.message,
-                ...changelogData.ru.message,
-                ...projectsData.ru.message,
+                ...changelogs.ru.message,
+                ...projects.ru.message,
             },
         },
         en: {
             message: {
                 ...global.en.message,
                 ...home.en.message,
-                ...projects.en.message,
+                ...projectsLocale.en.message,
                 ...about.en.message,
-                ...changelogData.en.message,
-                ...projectsData.en.message,
+                ...changelogs.en.message,
+                ...projects.en.message,
             },
         },
     },

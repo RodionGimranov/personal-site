@@ -1,6 +1,6 @@
 <template>
     <div class="projects_page_wrapper common_page_wrapper">
-        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+        <ProjectCard v-for="project in project" :key="project.id" :project="project" />
     </div>
 </template>
 
@@ -10,12 +10,12 @@ import { useI18n } from "vue-i18n";
 
 import ProjectCard from "@/components/projectsComponents/ProjectCard.vue";
 
-import projectsData from "@/data/projectsData.json";
+import projects from "@/data/projects.json";
 
 const { locale } = useI18n();
 
-const projects = computed(() => {
-    return [...(projectsData[locale.value] || [])].sort((a, b) => b.id - a.id);
+const project = computed(() => {
+    return [...(projects[locale.value] || [])].sort((a, b) => b.id - a.id);
 });
 </script>
 

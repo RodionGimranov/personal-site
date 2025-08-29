@@ -65,14 +65,14 @@ import { useI18n } from "vue-i18n";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import Button from "@/components/ui/buttons/Button.vue";
 
-import projectsData from "@/data/projectsData.json";
+import projects from "@/data/projects.json";
 
 const route = useRoute();
 const { locale } = useI18n();
 
 const project = computed(() => {
     const id = Number(route.params.id);
-    return projectsData[locale.value].find((p) => p.id === id) || {};
+    return projects[locale.value].find((p) => p.id === id) || {};
 });
 </script>
 
