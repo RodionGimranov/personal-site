@@ -17,6 +17,7 @@ import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
     height: 44px;
     z-index: 9998;
     transition: 0.2s;
+    padding: 15px 10px;
     border-radius: 100px;
     background: $primary_dark;
 

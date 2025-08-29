@@ -60,8 +60,8 @@ defineProps({
     transition: 0.2s;
     border-radius: 100px;
     padding: 4px 12px 4px 6px;
-    background: $secondary_dark;
     backdrop-filter: blur(44px);
+    background: $primary_translucent_dark;
 
     display: flex;
     justify-content: flex-start;

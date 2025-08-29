@@ -77,8 +77,8 @@ onMounted(() => {
     width: 100%;
     padding: 8px 16px;
     border-radius: 100px;
-    background: $fourth_dark;
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(44px);
+    background: $secondary_translucent_dark;
 
     display: flex;
     justify-content: space-between;
