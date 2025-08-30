@@ -1,0 +1,28 @@
+{
+    "ru": [
+        {
+            "placeName": "КФУ, ИВМиИТ",
+            "placeAndTime": "Россия, Казань · 2021–2025",
+            "degree": "Бакалавр, Информационные системы и технологии",
+            "website": "https://kpfu.ru/computing-technology"
+        },
+        {
+            "placeName": "IT Лицей №9",
+            "placeAndTime": "Казахстан, Шымкент · 2009–2020",
+            "degree": "Физико-математический профиль"
+        }
+    ],
+    "en": [
+        {
+            "placeName": "KFU, Institute of Computational Mathematics and IT",
+            "placeAndTime": "Russia, Kazan · 2021–2025",
+            "degree": "Bachelor's Degree, Information Systems and Technologies",
+            "website": "https://kpfu.ru/eng/academic-units/physics-mathematics-and-it/institute-of-computer-mathematics-and-information"
+        },
+        {
+            "placeName": "IT Lyceum No. 9",
+            "placeAndTime": "Kazakhstan, Shymkent · 2009–2020",
+            "degree": "Physics and Mathematics Track"
+        }
+    ]
+}
