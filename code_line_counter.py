@@ -58,6 +58,7 @@ file_paths = [
     "./src/components/aboutComponents/ProjectStatsCard/WindowControls.vue",
 
     "./src/components/aboutComponents/EducationCard.vue",
+    "./src/components/aboutComponents/GreetingCard.vue",
     "./src/components/aboutComponents/LocationCard.vue",
     "./src/components/aboutComponents/MusicPlayerCard.vue",
     "./src/components/aboutComponents/ProjectStatsCard.vue",
@@ -72,8 +73,13 @@ file_paths = [
     "./src/components/ui/buttons/Button.vue",
     "./src/components/ui/buttons/CloseButton.vue",
     "./src/components/ui/buttons/TopButton.vue",
+
+    "./src/components/ui/cards/ImageCard.vue",
+
     "./src/components/ui/SvgIcon/SvgIcon.vue",
+
     "./src/components/ui/ChangelogModal/ChangelogModal.vue",
+
     "./src/components/ui/BlurMask.vue",
     "./src/components/ui/ToggleTab.vue",
 
@@ -83,6 +89,8 @@ file_paths = [
     "./src/composables/useLanguageSwitcher.js",
 
     "./src/data/changelogs.json",
+    "./src/data/education.json",
+    "./src/data/photos.json",
     "./src/data/projects.json",
     "./src/data/songs.json",
 
