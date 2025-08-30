@@ -4,3 +4,10 @@ export function formatText(value) {
     }
     return value;
 }
+
+export function formatBoldText(value) {
+    if (typeof value === "string") {
+        return value.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+    }
+    return value;
+}
