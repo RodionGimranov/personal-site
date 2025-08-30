@@ -5,9 +5,8 @@
             "version": "v0.3.30 бета",
             "date": "13 августа 2025",
             "descriptions": [
-                "Добавлена карточка LocationCard на странице 'Обо мне' - показывает город проживания, дату и погоду.",
-                "Улучшена производительность сайта.",
-                "Исправлены ошибки для стабильной работы."
+                "**LocationCard** на странице Обо мне - отображает город проживания, текущую дату и погоду. Теперь вы сразу видите, где я нахожусь и какая погода сегодня.",
+                "**Оптимизация и исправления** – улучшена производительность сайта и устранены мелкие баги для более плавного и стабильного опыта."
             ]
         },
         {
@@ -15,8 +14,16 @@
             "version": "v0.3.40 бета",
             "date": "17 августа 2025",
             "descriptions": [
-                "Добавлена карточка ProjectStatsCard на странице 'Обо мне' - стилизованный интерфейс IDE, отображающий мета-информацию сайта.",
-                "В 'Галерею' добавлены новые фотографии."
+                "**ProjectStatsCard** на странице Обо мне – новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали."
+            ]
+        },
+        {
+            "id": 2,
+            "version": "v0.3.83 бета",
+            "date": "29 августа 2025",
+            "descriptions": [
+                "**Интерактивная галерея** - теперь фотографии ожили! Нажав на любое фото, вы сможете увидеть краткое описание на его обратной стороне.",
+                "**EducationCard** на странице Обо мне - новая карточка, которая отображает информацию об образовании. Теперь раздел стал более информативным и помогает лучше понять мой профессиональный бэкграунд."
             ]
         }
     ],
@@ -26,9 +33,8 @@
             "version": "v0.3.30 beta",
             "date": "August 13, 2025",
             "descriptions": [
-                "Added LocationCard to the 'About Me' page - displays the city of residence, current date, and weather.",
-                "Improved site performance.",
-                "Fixed bugs for more stable operation."
+                "**LocationCard** on the About Me page - shows the city of residence, current date, and weather. Now you can instantly see where I am and what the weather is like today.",
+                "**Optimization and fixes** – improved site performance and fixed minor bugs for a smoother and more stable experience."
             ]
         },
         {
@@ -36,8 +42,16 @@
             "version": "v0.3.40 beta",
             "date": "August 17, 2025",
             "descriptions": [
-                "Added ProjectStatsCard to the 'About Me' page - a stylized IDE-like interface displaying site meta information.",
-                "Added new photos to the 'Gallery'."
+                "**ProjectStatsCard** on the About Me page – a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details."
+            ]
+        },
+        {
+            "id": 2,
+            "version": "v0.3.83 beta",
+            "date": "August 29, 2025",
+            "descriptions": [
+                "**Interactive Gallery** - photos have come to life! By clicking on any picture, you can now see a short description on its back side.",
+                "**EducationCard** on the About Me page - a new card that displays my education background. This makes the section more informative and helps visitors better understand my professional journey."
             ]
         }
     ]
