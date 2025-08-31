@@ -8,7 +8,7 @@
 import { computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import ProjectCard from "@/components/projectsComponents/ProjectCard.vue";
+import ProjectCard from "@/components/ui/cards/ProjectCard.vue";
 
 import projects from "@/data/projects.json";
 
