@@ -126,4 +126,15 @@
   <rect x="11" y="7" width="5" height="22" rx="1" fill="white"/>
   <rect x="20" y="7" width="5" height="22" rx="1" fill="white"/>
 </symbol>
+<!-- external-link-icon -->
+<symbol id="external-link-icon" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip-external-link)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3034 4.69671C15.4597 4.85298 15.5475 5.06497 15.5475 5.28596L15.5475 13.5355C15.5475 13.9958 15.1744 14.3689 14.7141 14.3689C14.2539 14.3689 13.8808 13.9958 13.8808 13.5355L13.8808 7.29781L5.87531 15.3033C5.54987 15.6288 5.02225 15.6288 4.6968 15.3033C4.37135 14.9779 4.37135 14.4502 4.6968 14.1248L12.7023 6.1193L6.46457 6.1193C6.00435 6.11928 5.63125 5.74619 5.63124 5.28596C5.63122 4.82574 6.00434 4.45262 6.46456 4.45264L14.7142 4.45264C14.9351 4.45262 15.1471 4.54044 15.3034 4.69671Z" fill="currentColor"/>
+  </g>
+  <defs>
+    <clipPath id="clip-external-link">
+      <rect width="20" height="20"/>
+    </clipPath>
+  </defs>
+</symbol>
 </svg>
