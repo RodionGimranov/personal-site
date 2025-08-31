@@ -1,12 +1,42 @@
 {
     "ru": {
         "message": {
-            "hero_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях."
+            "bio_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях.",
+            "intro_text": "Мне нравится создавать",
+            "letter_w": "в",
+            "letter_e": "е",
+            "letter_b": "б",
+            "typing_word_1": "страницы",
+            "typing_word_2": "дизайн",
+            "typing_word_3": "графику",
+            "typing_word_4": "интерфейсы",
+            "typing_word_5": "элементы",
+            "typing_word_6": "стили",
+            "typing_word_7": "контент",
+            "typing_word_8": "приложения",
+            "typing_word_9": "компоненты",
+            "typing_word_10": "анимации",
+            "typing_word_11": "продукты"
         }
     },
     "en": {
         "message": {
-            "hero_text": "Frontend developer crafting clean and thoughtful\n interfaces. I specialize in building web solutions\n with a focus on design details, code quality,\n and modern web technologies."
+            "bio_text": "Frontend developer crafting clean and thoughtful\n interfaces. I specialize in building web solutions\n with a focus on design details, code quality,\n and modern web technologies.",
+            "intro_text": "I enjoy creating",
+            "letter_w": "w",
+            "letter_e": "e",
+            "letter_b": "b",
+            "typing_word_1": "pages",
+            "typing_word_2": "design",
+            "typing_word_3": "graphics",
+            "typing_word_4": "interfaces",
+            "typing_word_5": "elements",
+            "typing_word_6": "styles",
+            "typing_word_7": "content",
+            "typing_word_8": "Apps",
+            "typing_word_9": "components",
+            "typing_word_10": "animations",
+            "typing_word_11": "product"
         }
     }
 }
