@@ -7,7 +7,7 @@
                 <Footer v-if="!$route.meta.hideFooter" />
             </div>
         </section>
-        <div class="blur_mask_wrapprer">
+        <div class="blur_mask_wrapprer" v-show="!isAtBottom">
             <BlurMask />
         </div>
         <transition name="show-modal">
@@ -33,13 +33,18 @@ import TopButton from "./components/ui/buttons/TopButton.vue";
 const store = useStore();
 
 const isScrolledEnough = ref(false);
+const isAtBottom = ref(false);
 const scrolledContent = ref(null);
 
 const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalOpen);
 
 function handleScroll() {
     if (scrolledContent.value) {
-        isScrolledEnough.value = scrolledContent.value.scrollTop > 300;
+        const el = scrolledContent.value;
+        const scrollBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+
+        isScrolledEnough.value = el.scrollTop > 300;
+        isAtBottom.value = scrollBottom <= 20;
     }
 }
 
@@ -51,6 +56,7 @@ function scrollToTop() {
 
 onMounted(() => {
     scrolledContent.value?.addEventListener("scroll", handleScroll);
+    handleScroll();
 });
 
 onBeforeUnmount(() => {
