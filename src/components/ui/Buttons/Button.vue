@@ -45,6 +45,11 @@ const variants = {
         hoverBackgroundColor: "#4487FF",
         textColor: "#ffffff",
     },
+    "dark-v1": {
+        backgroundColor: "#111111",
+        hoverBackgroundColor: "#2E2E2E",
+        textColor: "#ffffff",
+    },
 };
 
 const buttonStyle = computed(() => {
