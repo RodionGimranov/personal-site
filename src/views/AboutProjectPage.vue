@@ -58,8 +58,8 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute } from "vue-router";
+import { computed, watchEffect } from "vue";
+import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
@@ -68,11 +68,18 @@ import Button from "@/components/ui/buttons/Button.vue";
 import projects from "@/data/projects.json";
 
 const route = useRoute();
+const router = useRouter();
 const { locale } = useI18n();
 
 const project = computed(() => {
     const id = Number(route.params.id);
-    return projects[locale.value].find((p) => p.id === id) || {};
+    return projects[locale.value].find((p) => p.id === id) || null;
+});
+
+watchEffect(() => {
+    if (project.value === null) {
+        router.replace("/Error");
+    }
 });
 </script>
 
