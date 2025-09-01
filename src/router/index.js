@@ -32,6 +32,16 @@ const routes = [
         component: () => import("@/views/GalleryPage.vue"),
         meta: { titleKey: "message.gallery_tab_title", hideFooter: true },
     },
+    {
+        path: "/Error",
+        name: "errorPage",
+        component: () => import("@/views/ErrorPage.vue"),
+        meta: { titleKey: "message.error_tab_title", hideFooter: true },
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        redirect: "/Error",
+    },
 ];
 
 const router = createRouter({
