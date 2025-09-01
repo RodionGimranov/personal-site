@@ -11,11 +11,14 @@
                         <p class="update_date">{{ update.version }}</p>
                         <p class="update_number">{{ update.date }}</p>
                     </div>
-                    <ul class="update_description_list">
-                        <p v-for="(desc, index) in update.descriptions" :key="index">
-                            - {{ desc }}
-                        </p>
-                    </ul>
+                    <div class="update_description_list">
+                        <p
+                            class="update_description"
+                            v-for="(desc, index) in update.descriptions"
+                            :key="index"
+                            v-html="formatBoldText(desc)"
+                        ></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -29,6 +32,7 @@ import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
+import { formatBoldText } from "@/utils/formatters.js";
 
 import CloseButton from "@/components/ui/buttons/CloseButton.vue";
 
@@ -153,9 +157,17 @@ useEscapeKeyClose(() => {
     color: $third_gray;
 }
 
+.update_description_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
 .update_description {
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: $primary_dark;
 }
