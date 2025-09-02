@@ -49,11 +49,7 @@
                 </div>
             </div>
             <div class="download_btn_container">
-                <a
-                    href="https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?usp=sharing"
-                    class="side_bar_btn"
-                    target="_blank"
-                >
+                <a :href="resumeLink" class="side_bar_btn" target="_blank">
                     <SvgIcon name="download-icon" /> {{ $t("message.download_btn_title") }}
                 </a>
             </div>
@@ -79,6 +75,7 @@ const store = useStore();
 const route = useRoute();
 
 const appVersion = computed(() => store.getters.getAppVersion);
+const resumeLink = computed(() => store.getters.getResumeLink);
 
 const isActive = (path) => route.path === path;
 
@@ -168,7 +165,7 @@ function onThemeIndexChanged(index) {
     gap: 6px;
 
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     color: $third_gray;
 
     &:hover {

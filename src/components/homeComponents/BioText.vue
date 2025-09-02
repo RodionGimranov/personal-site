@@ -10,7 +10,6 @@
     font-size: 36px;
     font-weight: 600;
     color: $primary_dark;
-    text-align: center;
     line-height: 44px;
 }
 </style>

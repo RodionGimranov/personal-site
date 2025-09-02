@@ -89,7 +89,7 @@ footer {
 
 .footer_title {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: $primary_dark;
 }
 
@@ -120,7 +120,7 @@ footer {
 
 .footer_link {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: $third_gray;
     line-height: 26px;
 

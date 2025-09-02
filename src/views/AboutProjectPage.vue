@@ -115,7 +115,7 @@ watchEffect(() => {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 
     &:hover {
         color: $primary_dark;
@@ -128,7 +128,7 @@ watchEffect(() => {
 
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     gap: 100px;
 }
 
