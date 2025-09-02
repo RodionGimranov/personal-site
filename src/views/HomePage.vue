@@ -1,9 +1,11 @@
 <template>
-    <div class="home_page_wrapper common_page_wrapper"><HeroText /></div>
+    <div class="home_page_wrapper common_page_wrapper">
+        <BioText />
+    </div>
 </template>
 
 <script setup>
-import HeroText from "@/components/homeComponents/HeroText.vue";
+import BioText from "@/components/homeComponents/BioText.vue";
 </script>
 
 <style lang="scss">
@@ -13,5 +15,6 @@ import HeroText from "@/components/homeComponents/HeroText.vue";
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 150px;
 }
 </style>
