@@ -6,7 +6,7 @@ const routes = [
         path: "/Home",
         name: "homePage",
         component: () => import("@/views/HomePage.vue"),
-        meta: { titleKey: "message.home_tab_title" },
+        meta: { titleKey: "message.my_name_title" },
     },
     {
         path: "/About",
