@@ -48,6 +48,7 @@ def get_project_size(root_path):
 
 
 file_paths = [
+    "./public/manifest.json",
     "./public/sprite.svg",
 
     "./src/components/aboutComponents/MusicPlayerCard/PlayerControls.vue",
@@ -63,18 +64,22 @@ file_paths = [
     "./src/components/aboutComponents/MusicPlayerCard.vue",
     "./src/components/aboutComponents/ProjectStatsCard.vue",
 
-    "./src/components/homeComponents/HeroText.vue",
+    "./src/components/homeComponents/BioText.vue",
+    "./src/components/homeComponents/MyApproach.vue",
+    "./src/components/homeComponents/SelectedProjects.vue",
+    "./src/components/homeComponents/TechStack.vue",
 
     "./src/components/layout/Footer.vue",
     "./src/components/layout/SideBar.vue",
-    
-    "./src/components/projectsComponents/ProjectCard.vue",
 
     "./src/components/ui/buttons/Button.vue",
     "./src/components/ui/buttons/CloseButton.vue",
     "./src/components/ui/buttons/TopButton.vue",
 
     "./src/components/ui/cards/ImageCard.vue",
+    "./src/components/ui/cards/ProjectCard.vue",
+
+    "./src/components/ui/Skeleton/Skeleton.vue",
 
     "./src/components/ui/SvgIcon/SvgIcon.vue",
 
@@ -93,8 +98,6 @@ file_paths = [
     "./src/data/photos.json",
     "./src/data/projects.json",
     "./src/data/songs.json",
-
-    "./src/libs/gsap/animateHeroText.js",
 
     "./src/libs/vue-i18n/vue-i18n.js",
 
@@ -119,6 +122,7 @@ file_paths = [
 
     "./src/views/AboutPage.vue",
     "./src/views/AboutProjectPage.vue",
+    "./src/views/ErrorPage.vue",
     "./src/views/GalleryPage.vue",
     "./src/views/HomePage.vue",
     "./src/views/ProjectsPage.vue",
