@@ -49,3 +49,16 @@ p {
     border-radius: 30px;
     background: #f0f0f0;
 }
+.common_home_section_style {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.common_home_section_title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111111;
+}
