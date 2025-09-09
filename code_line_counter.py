@@ -68,6 +68,8 @@ file_paths = [
     "./src/components/homeComponents/MyApproach.vue",
     "./src/components/homeComponents/SelectedProjects.vue",
     "./src/components/homeComponents/TechStack.vue",
+    "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
+    "./src/components/homeComponents/TechStack/VueEcosystem.vue",
 
     "./src/components/layout/Footer.vue",
     "./src/components/layout/SideBar.vue",
@@ -79,11 +81,13 @@ file_paths = [
     "./src/components/ui/cards/ImageCard.vue",
     "./src/components/ui/cards/ProjectCard.vue",
 
+    "./src/components/ui/ChangelogModal/ChangelogModal.vue",
+
     "./src/components/ui/Skeleton/Skeleton.vue",
 
     "./src/components/ui/SvgIcon/SvgIcon.vue",
 
-    "./src/components/ui/ChangelogModal/ChangelogModal.vue",
+    "./src/components/ui/TechnologyTag/TechnologyTag.vue",
 
     "./src/components/ui/BlurMask.vue",
     "./src/components/ui/ToggleTab.vue",
@@ -98,6 +102,8 @@ file_paths = [
     "./src/data/photos.json",
     "./src/data/projects.json",
     "./src/data/songs.json",
+
+    "./src/libs/gsap/StackingCards.js",
 
     "./src/libs/vue-i18n/vue-i18n.js",
 
