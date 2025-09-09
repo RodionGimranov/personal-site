@@ -2,41 +2,45 @@
     "ru": {
         "message": {
             "bio_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях.",
-            "intro_text": "Мне нравится создавать",
-            "letter_w": "в",
-            "letter_e": "е",
-            "letter_b": "б",
-            "typing_word_1": "страницы",
-            "typing_word_2": "дизайн",
-            "typing_word_3": "графику",
-            "typing_word_4": "интерфейсы",
-            "typing_word_5": "элементы",
-            "typing_word_6": "стили",
-            "typing_word_7": "контент",
-            "typing_word_8": "приложения",
-            "typing_word_9": "компоненты",
-            "typing_word_10": "анимации",
-            "typing_word_11": "продукты"
+
+            "approach_home_section_title": "Мой подход к разработке ",
+
+            "clean_code_title": "Чистый код",
+            "clean_code_subtitle": "Пишу код так, чтобы его было легко читать и поддерживать. Использую лучшие практики, уделяю внимание структуре и стараюсь оставлять проект в том виде, в котором приятно работать и другим.",
+
+            "ux_ui_attention_title": "UX/UI внимание",
+            "ux_ui_attention_subtitle": "Думаю не только о логике, но и о том, как продукт ощущает пользователь. Продумываю интерфейсы, уделяю внимание деталям и стараюсь делать взаимодействие простым и удобным.",
+
+            "learning_title": "Рост через обучение",
+            "learning_subtitle": "Постоянно осваиваю новые инструменты и подходы, чтобы развиваться как разработчик. Верю, что обучение - ключ к качественным решениям и долгосрочному росту.",
+
+            "tech_stack_home_section_title": "Технический стек",
+            "tech_stack_card_title_1": "Экосистема Vue ",
+            "tech_stack_card_subtitle_1": "Опыт работы с Vue, а также с ключевыми инструментами экосистемы: Vuex, Vue Router, Vue i18n, VueUse и Nuxt. Использую их для создания современных SPA и универсальных приложений.",
+            "tech_stack_card_title_2": "JS/TS Среда",
+            "tech_stack_card_subtitle_2": "Современные решения на JavaScript и TypeScript, а также более 20 библиотек и инструментов, которые я активно применял на практике для разработки и реализации различных фронтенд-задач. "
         }
     },
     "en": {
         "message": {
             "bio_text": "Frontend developer crafting clean and thoughtful\n interfaces. I specialize in building web solutions\n with a focus on design details, code quality,\n and modern web technologies.",
-            "intro_text": "I enjoy creating",
-            "letter_w": "w",
-            "letter_e": "e",
-            "letter_b": "b",
-            "typing_word_1": "pages",
-            "typing_word_2": "design",
-            "typing_word_3": "graphics",
-            "typing_word_4": "interfaces",
-            "typing_word_5": "elements",
-            "typing_word_6": "styles",
-            "typing_word_7": "content",
-            "typing_word_8": "Apps",
-            "typing_word_9": "components",
-            "typing_word_10": "animations",
-            "typing_word_11": "product"
+
+            "approach_home_section_title": "My Approach to Development",
+
+            "clean_code_title": "Clean Code",
+            "clean_code_subtitle": "I write code in a way that is easy to read and maintain. I follow best practices, pay attention to structure, and aim to leave the project in a state that is pleasant for others to work with.",
+
+            "ux_ui_attention_title": "UX/UI Focus",
+            "ux_ui_attention_subtitle": "I consider not only the logic but also how the product feels to the user. I design interfaces thoughtfully, pay attention to details, and strive to make interactions simple and intuitive.",
+
+            "learning_title": "Learning-Driven Growth",
+            "learning_subtitle": "I constantly learn new tools and approaches to grow as a developer. I believe that learning is key to quality solutions and long-term development.",
+
+            "tech_stack_home_section_title": "Tech Stack",
+            "tech_stack_card_title_1": "Vue Ecosystem",
+            "tech_stack_card_subtitle_1": "Experience working with Vue, as well as key ecosystem tools: Vuex, Vue Router, Vue i18n, VueUse, and Nuxt. I use them to create modern SPAs and universal applications.",
+            "tech_stack_card_title_2": "JS/TS Environment",
+            "tech_stack_card_subtitle_2": "Modern solutions in JavaScript and TypeScript, along with over 20 libraries and tools that I have actively applied in practice to develop and implement various frontend tasks."
         }
     }
 }
