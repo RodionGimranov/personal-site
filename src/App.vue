@@ -7,7 +7,7 @@
                 <Footer v-if="!$route.meta.hideFooter" />
             </div>
         </section>
-        <div class="blur_mask_wrapprer" v-show="!isAtBottom">
+        <div class="blur_mask_wrapper" v-show="!isAtBottom">
             <BlurMask />
         </div>
         <transition name="show-modal">
@@ -91,7 +91,7 @@ main {
     overflow-y: auto;
 }
 
-.blur_mask_wrapprer {
+.blur_mask_wrapper {
     position: absolute;
     bottom: 0;
     right: 0;
