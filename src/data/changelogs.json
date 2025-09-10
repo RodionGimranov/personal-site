@@ -6,24 +6,34 @@
             "date": "13 августа 2025",
             "descriptions": [
                 "**LocationCard** на странице Обо мне - отображает город проживания, текущую дату и погоду. Теперь вы сразу видите, где я нахожусь и какая погода сегодня.",
-                "**Оптимизация и исправления** – улучшена производительность сайта и устранены мелкие баги для более плавного и стабильного опыта."
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
         {
             "id": 1,
-            "version": "v0.3.40 бета",
+            "version": "v0.4.40 бета",
             "date": "17 августа 2025",
             "descriptions": [
-                "**ProjectStatsCard** на странице Обо мне – новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали."
+                "**ProjectStatsCard** на странице Обо мне – новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали.",
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
         {
             "id": 2,
-            "version": "v0.3.83 бета",
+            "version": "v0.5.83 бета",
             "date": "29 августа 2025",
             "descriptions": [
                 "**Интерактивная галерея** - теперь фотографии ожили! Нажав на любое фото, вы сможете увидеть краткое описание на его обратной стороне.",
                 "**EducationCard** на странице Обо мне - новая карточка, которая отображает информацию об образовании. Теперь раздел стал более информативным и помогает лучше понять мой профессиональный бэкграунд."
+            ]
+        },
+        {
+            "id": 3,
+            "version": "v0.5.153 бета",
+            "date": "10 сентября 2025",
+            "descriptions": [
+                "**Новые секции** на странице Главная – добавлены блоки Мой подход к разработке и Технический стек. Теперь главная страница стала более информативной и отражает мой стиль работы.",
+                "**Оптимизация и исправления** – улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         }
     ],
@@ -39,19 +49,29 @@
         },
         {
             "id": 1,
-            "version": "v0.3.40 beta",
+            "version": "v0.4.40 beta",
             "date": "August 17, 2025",
             "descriptions": [
-                "**ProjectStatsCard** on the About Me page – a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details."
+                "**ProjectStatsCard** on the About Me page – a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details.",
+                "**Optimization and fixes** – improved site performance and fixed minor bugs for a smoother and more stable experience."
             ]
         },
         {
             "id": 2,
-            "version": "v0.3.83 beta",
+            "version": "v0.5.83 beta",
             "date": "August 29, 2025",
             "descriptions": [
                 "**Interactive Gallery** - photos have come to life! By clicking on any picture, you can now see a short description on its back side.",
                 "**EducationCard** on the About Me page - a new card that displays my education background. This makes the section more informative and helps visitors better understand my professional journey."
+            ]
+        },
+        {
+            "id": 3,
+            "version": "v0.5.153 beta",
+            "date": "September 10, 2025",
+            "descriptions": [
+                "**New sections** on the Home page – added blocks My Development Approach and Tech Stack. The home page is now more informative and better reflects my working style.",
+                "**Optimization and fixes** – improved site performance and resolved minor bugs for a smoother and more stable experience."
             ]
         }
     ]
