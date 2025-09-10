@@ -3,11 +3,14 @@ import { createStore } from "vuex";
 import modals from "@/store/modules/modals.js";
 import theme from "@/store/modules/theme.js";
 
-const appVersion = "0.3.70";
-const linesOfCode = 3428;
-const fileCount = 58;
-const folderCount = 26;
-const projectSizeMB = 87.42;
+const appVersion = "0.5.153";
+const linesOfCode = 4340;
+// +9
+const fileCount = 78;
+const folderCount = 29;
+const projectSizeMB = 88.05;
+
+const resumeLink = "https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?";
 
 export default createStore({
     modules: {
@@ -21,6 +24,7 @@ export default createStore({
             fileCount,
             folderCount,
             projectSizeMB,
+            resumeLink,
         };
     },
     getters: {
@@ -29,5 +33,6 @@ export default createStore({
         getFileCount: (state) => state.fileCount,
         getFolderCount: (state) => state.folderCount,
         getProjectSizeMB: (state) => state.projectSizeMB,
+        getResumeLink: (state) => state.resumeLink,
     },
 });
