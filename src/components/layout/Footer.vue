@@ -69,7 +69,7 @@ const socialLinks = [
 <style lang="scss">
 footer {
     width: 100%;
-    padding: 36px 64px;
+    padding: 36px 64px 24px 64px;
     background: $primary_white;
     border-top: 3px solid var(--primary-white-bg);
 
