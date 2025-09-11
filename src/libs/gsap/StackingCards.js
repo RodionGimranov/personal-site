@@ -6,7 +6,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function useStackingCards() {
     const techSection = ref(null);
-    const card1 = ref(null);
     const card2 = ref(null);
 
     onMounted(() => {
@@ -39,5 +38,5 @@ export function useStackingCards() {
         });
     });
 
-    return { techSection, card1, card2 };
+    return { techSection, card2 };
 }
