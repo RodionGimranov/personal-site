@@ -1,8 +1,10 @@
 <template>
     <section class="common_home_section_style tech_stack_section" ref="techSection">
-        <p class="common_home_section_title">{{ $t("message.tech_stack_home_section_title") }}</p>
+        <p class="common_home_section_title">
+            {{ $t("message.tech_stack_home_section_title") }}
+        </p>
         <div class="tech_stack_card_wrapper">
-            <div class="tech_stack_card" ref="card1">
+            <div class="tech_stack_card">
                 <VueEcosystem />
             </div>
             <div class="tech_stack_card" ref="card2">
@@ -18,7 +20,7 @@ import JsTsEnvironment from "@/components/homeComponents/TechStack/JsTsEnvironme
 
 import { useStackingCards } from "@/libs/gsap/StackingCards.js";
 
-const { techSection, card1, card2 } = useStackingCards();
+const { techSection, card2 } = useStackingCards();
 </script>
 
 <style lang="scss">
