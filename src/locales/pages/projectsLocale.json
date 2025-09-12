@@ -8,7 +8,7 @@
             "project_video_text": "Ваш браузер не поддерживает видео :(",
             "description_title": "Описание",
             "technologies_title": "Технологии",
-            "role_title": "Моя роль"
+            "role_title": "Роль"
         }
     },
     "en": {
@@ -20,7 +20,7 @@
             "project_video_text": "Your browser does not support the video :(",
             "description_title": "Description",
             "technologies_title": "Technologies",
-            "role_title": "My Role"
+            "role_title": "Role"
         }
     }
 }

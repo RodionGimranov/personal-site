@@ -40,7 +40,9 @@
 
             "error_page_title": "Ой! Кажется, вы попали не туда.",
             "error_page_subtitle": "Страница, которую вы ищете, не существует.",
-            "error_page_btn_title": "Вернуться на главную"
+            "error_page_btn_title": "Вернуться на главную",
+
+            "gallery_page_message": "Скоро будет больше..."
         }
     },
     "en": {
@@ -84,7 +86,9 @@
 
             "error_page_title": "Oops! Looks like you’ve come to the wrong place.",
             "error_page_subtitle": "The page you’re looking for doesn’t exist.",
-            "error_page_btn_title": "Back to Home"
+            "error_page_btn_title": "Back to Home",
+
+            "gallery_page_message": "More to come soon..."
         }
     }
 }
