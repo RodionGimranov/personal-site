@@ -19,6 +19,7 @@
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
 const toolbarButtons = [
+    { name: "claude-ai-icon", width: 14, height: 14 },
     { name: "split-editor-icon", width: 13, height: 13 },
     { name: "more-actions-icon", width: 12, height: 12 },
 ];
