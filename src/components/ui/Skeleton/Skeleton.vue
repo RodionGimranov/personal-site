@@ -1,0 +1,29 @@
+<template>
+    <div class="skeleton_loader" :style="{ width, height, borderRadius: radius }"></div>
+</template>
+
+<script setup>
+const props = defineProps({
+    width: { type: String, default: "50px" },
+    height: { type: String, default: "50px" },
+    radius: { type: String, default: "0px" },
+});
+</script>
+
+<style lang="scss">
+.skeleton_loader {
+    display: inline-block;
+    background: linear-gradient(90deg, $fourth_gray 0px, $primary_white 40px, $fourth_gray 80px);
+    background-size: 200% 100%;
+    animation: shimmer 2.3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+</style>
