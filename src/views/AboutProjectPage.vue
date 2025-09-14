@@ -22,37 +22,38 @@
                 />
             </div>
         </div>
-        <video
-            class="large_video_cover common_width_size"
-            preload="metadata"
-            autoplay
-            loop
-            muted
-            playsinline
-            loading="lazy"
-        >
-            <source :src="project.project_cover" type="video/mp4" />
-            {{ $t("message.project_video_text") }}
-        </video>
+        <div class="large_video_cover_container">
+            <video
+                v-if="project.project_cover"
+                class="large_video_cover"
+                preload="metadata"
+                autoplay
+                loop
+                muted
+                playsinline
+            >
+                <source :src="project.project_cover" type="video/mp4" />
+                {{ $t("message.project_video_text") }}
+            </video>
+            <Skeleton v-else width="100%" height="100%" />
+        </div>
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.description_title") }}</p>
             <p class="about_project_info_subtitle common_width_size">{{ project.description }}</p>
         </div>
         <div class="about_project_info_container">
-            <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
-            <div class="technologies_list common_width_size">
-                <span
-                    v-for="(tech, index) in project.technologies"
-                    :key="index"
-                    class="technology_item"
-                >
-                    {{ tech.name }}
-                </span>
-            </div>
-        </div>
-        <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.role_title") }}</p>
             <p class="about_project_info_subtitle">{{ project.role }}</p>
+        </div>
+        <div class="about_project_info_container">
+            <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
+            <div class="technologies_list common_width_size">
+                <TechnologyTag
+                    v-for="(tech, index) in project.technologies"
+                    :key="index"
+                    :name="tech.name"
+                />
+            </div>
         </div>
     </div>
 </template>
@@ -64,6 +65,8 @@ import { useI18n } from "vue-i18n";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import Button from "@/components/ui/buttons/Button.vue";
+import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
+import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
 
 import projects from "@/data/projects.json";
 
@@ -145,7 +148,8 @@ watchEffect(() => {
     gap: 10px;
 }
 
-.large_video_cover {
+.large_video_cover_container {
+    width: 560px;
     height: 315px;
     overflow: hidden;
     object-fit: cover;
@@ -154,26 +158,17 @@ watchEffect(() => {
     background: $fourth_gray;
 }
 
+.large_video_cover {
+    width: 100%;
+    height: 100%;
+}
+
 .technologies_list {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 6px;
-}
-
-.technology_item {
-    padding: 4px 8px;
-    border-radius: 100px;
-    background: $secondary_blue;
-
-    font-size: 14px;
-    font-weight: 500;
-    color: $primary_blue;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .about_project_info_container {

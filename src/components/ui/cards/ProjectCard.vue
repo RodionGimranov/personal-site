@@ -1,17 +1,18 @@
 <template>
     <RouterLink :to="`/About-Project/${project.id}`" class="project_card_container">
         <video
+            v-if="project.project_cover"
             class="video_cover"
             preload="metadata"
             autoplay
             loop
             muted
             playsinline
-            loading="lazy"
         >
             <source :src="project.project_cover" type="video/mp4" />
             {{ $t("message.project_video_text") }}
         </video>
+        <Skeleton v-else width="100%" height="100%" />
         <div class="project_name_container">
             <SvgIcon name="eye-icon" />
             <p class="project_name_text">{{ project.name }}</p>
@@ -20,6 +21,7 @@
 </template>
 
 <script setup>
+import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
 defineProps({
