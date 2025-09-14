@@ -1,5 +1,5 @@
 <template>
-    <section class="commnon_modal_container">
+    <div class="commnon_modal_container">
         <div class="changelog_modal_style" ref="modalRef">
             <div class="changelog_modal_header">
                 <p class="modal_header_title">{{ $t("message.changelog_modal_title") }}</p>
@@ -22,7 +22,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script setup>
