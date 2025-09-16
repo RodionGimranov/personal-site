@@ -65,7 +65,7 @@ const secondLineIcons = [
     width: 514px;
     height: 348px;
     padding: 22px;
-    box-shadow: 0px 0px 44px $secondary_translucent_dark;
+    box-shadow: 0px 0px 24px $secondary_translucent_dark;
 
     display: flex;
     flex-direction: column;
