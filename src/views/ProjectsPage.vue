@@ -21,7 +21,7 @@ const project = computed(() => {
 
 <style lang="scss">
 .projects_page_wrapper {
-    padding: 36px;
+    padding: 26px 36px 0px 36px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

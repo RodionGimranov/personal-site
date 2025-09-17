@@ -91,6 +91,8 @@ main {
     position: relative;
     width: 100%;
     overflow-y: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .blur_mask_wrapper {

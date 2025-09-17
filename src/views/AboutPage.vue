@@ -6,8 +6,11 @@
             <MusicPlayerCard />
         </div>
         <div class="row_cards">
-            <ProjectStatsCard />
+            <EmptyCard />
             <EducationCard />
+        </div>
+        <div class="row_cards">
+            <ProjectStatsCard />
         </div>
     </div>
 </template>
@@ -17,12 +20,13 @@ import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
 import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard.vue";
+import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
 import EducationCard from "@/components/aboutComponents/EducationCard.vue";
 </script>
 
 <style lang="scss">
 .about_page_wrapper {
-    padding: 36px;
+    padding: 26px 36px 0px 36px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
