@@ -22,7 +22,7 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useStore } from "vuex";
-import { RouterView } from "vue-router";
+import { RouterView, useRouter } from "vue-router";
 
 import SideBar from "@/components/layout/SideBar.vue";
 import Footer from "@/components/layout/Footer.vue";
@@ -31,6 +31,7 @@ import ChangelogModal from "@/components/ui/ChangelogModal/ChangelogModal.vue";
 import TopButton from "./components/ui/buttons/TopButton.vue";
 
 const store = useStore();
+const router = useRouter();
 
 const isScrolledEnough = ref(false);
 const isAtBottom = ref(false);
@@ -54,8 +55,9 @@ function scrollToTop() {
     }
 }
 
-onMounted(() => {
+onMounted(async () => {
     scrolledContent.value?.addEventListener("scroll", handleScroll);
+    await router.isReady();
     handleScroll();
 });
 
