@@ -26,7 +26,7 @@ import EducationCard from "@/components/aboutComponents/EducationCard.vue";
 
 <style lang="scss">
 .about_page_wrapper {
-    padding: 26px 36px 0px 36px;
+    padding: 14px 36px 0px 36px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
