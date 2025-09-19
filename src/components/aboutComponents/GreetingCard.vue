@@ -12,9 +12,9 @@ const greetingKeys = ["greeting_text_1", "greeting_text_2", "greeting_text_3", "
 
 <style lang="scss">
 .greeting_card_container {
-    width: 368px;
-    height: 326px;
-    padding: 32px 16px;
+    width: 520px;
+    height: 250px;
+    padding: 16px;
 
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ const greetingKeys = ["greeting_text_1", "greeting_text_2", "greeting_text_3", "
     gap: 14px;
 
     p {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         color: $primary_dark;
     }
