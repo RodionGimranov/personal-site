@@ -108,9 +108,8 @@ provide("player", {
 
 <style lang="scss">
 .music_player_container {
-    width: 326px;
-    height: 326px;
-    padding: 6px;
+    width: 250px;
+    height: 250px;
 
     display: flex;
     justify-content: flex-start;
@@ -120,8 +119,7 @@ provide("player", {
 .music_cover_container {
     width: 100%;
     height: 100%;
-    padding: 6px;
-    border-radius: 24px;
+    padding: 8px;
 
     display: flex;
     flex-direction: column;

@@ -43,8 +43,6 @@ const buttons = computed(() => [
 <style lang="scss">
 .player_controlls_container {
     width: 100%;
-    margin-bottom: 8px;
-
     display: flex;
     justify-content: center;
     align-items: center;
