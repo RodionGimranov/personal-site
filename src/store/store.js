@@ -3,12 +3,13 @@ import { createStore } from "vuex";
 import modals from "@/store/modules/modals.js";
 import theme from "@/store/modules/theme.js";
 
-const appVersion = "0.5.153";
-const linesOfCode = 4340;
-// +9
-const fileCount = 78;
-const folderCount = 29;
-const projectSizeMB = 88.05;
+const appVersion = "0.7.66";
+const linesOfCode = 4626;
+// +8
+const fileCount = 80;
+// +5
+const folderCount = 35;
+const projectSizeMB = 160.2;
 
 const resumeLink = "https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?";
 
