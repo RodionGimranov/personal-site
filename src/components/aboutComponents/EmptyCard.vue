@@ -1,19 +1,29 @@
 <template>
-    <div class="empty_card_container commom_card_style">
+    <div
+        class="empty_card_container common_bento_card_style"
+        :style="{ width: width + 'px', height: height + 'px' }"
+    >
         <div class="empty_card_title">
             <p>{{ $t("message.empty_card_title") }}</p>
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+defineProps({
+    width: {
+        type: Number,
+        default: 250,
+    },
+    height: {
+        type: Number,
+        default: 250,
+    },
+});
+</script>
 
 <style lang="scss">
 .empty_card_container {
-    width: 520px;
-    height: 250px;
-    padding: 16px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,8 +32,8 @@
 .empty_card_title {
     width: 100%;
     height: 100%;
-    border-radius: 16px;
-    border: 1px dashed $secondary_gray;
+    border-radius: 22px;
+    border: 2px dashed $secondary_gray;
 
     display: flex;
     justify-content: center;
