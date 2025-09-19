@@ -5,7 +5,7 @@
             "version": "v0.3.30 бета",
             "date": "13 августа 2025",
             "descriptions": [
-                "**LocationCard** на странице Обо мне - отображает город проживания, текущую дату и погоду. Теперь вы сразу видите, где я нахожусь и какая погода сегодня.",
+                "**Карточка местоположения** на странице «Обо мне» - показывает моё текущее местоположение на карте. Можно масштабировать от локального вида до глобуса.",
                 "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
@@ -14,7 +14,7 @@
             "version": "v0.4.40 бета",
             "date": "17 августа 2025",
             "descriptions": [
-                "**ProjectStatsCard** на странице Обо мне – новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали.",
+                "**Карточка метаданных проекта** на странице «Обо мне» - новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали.",
                 "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
@@ -24,7 +24,7 @@
             "date": "29 августа 2025",
             "descriptions": [
                 "**Интерактивная галерея** - теперь фотографии ожили! Нажав на любое фото, вы сможете увидеть краткое описание на его обратной стороне.",
-                "**EducationCard** на странице Обо мне - новая карточка, которая отображает информацию об образовании. Теперь раздел стал более информативным и помогает лучше понять мой профессиональный бэкграунд."
+                "**Карточка образования** на странице «Обо мне» - новая интерактивная карточка, которая показывает информацию об образовании. Чтобы увидеть детали, нужно нажать на карточку. Теперь раздел стал более информативным и помогает лучше понять мой профессиональный бэкграунд."
             ]
         },
         {
@@ -32,8 +32,17 @@
             "version": "v0.5.153 бета",
             "date": "10 сентября 2025",
             "descriptions": [
-                "**Новые секции** на странице Главная – добавлены блоки Мой подход к разработке и Технический стек. Теперь главная страница стала более информативной и отражает мой стиль работы.",
-                "**Оптимизация и исправления** – улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+                "**Новые секции** на странице «Главная» - добавлены блоки «Мой подход к разработке» и «Технический стек». Теперь главная страница стала более информативной и отражает мой стиль работы.",
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+            ]
+        },
+        {
+            "id": 4,
+            "version": "v0.6.42 бета",
+            "date": "16 сентября 2025",
+            "descriptions": [
+                "**Музыкальный плеер** на странице «Обо мне» - теперь вы можете послушать одни из моих любимых треков.",
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         }
     ],
@@ -43,8 +52,8 @@
             "version": "v0.3.30 beta",
             "date": "August 13, 2025",
             "descriptions": [
-                "**LocationCard** on the About Me page - shows the city of residence, current date, and weather. Now you can instantly see where I am and what the weather is like today.",
-                "**Optimization and fixes** – improved site performance and fixed minor bugs for a smoother and more stable experience."
+                "**The location card** on the 'About Me' page shows my current location on the map. You can zoom from a local view all the way out to the globe.",
+                "**Optimization and fixes** - improved site performance and fixed minor bugs for a smoother and more stable experience."
             ]
         },
         {
@@ -52,8 +61,8 @@
             "version": "v0.4.40 beta",
             "date": "August 17, 2025",
             "descriptions": [
-                "**ProjectStatsCard** on the About Me page – a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details.",
-                "**Optimization and fixes** – improved site performance and fixed minor bugs for a smoother and more stable experience."
+                "**Project Metadata Card** on the 'About Me' page - a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details.",
+                "**Optimization and fixes** - improved site performance and fixed minor bugs for a smoother and more stable experience."
             ]
         },
         {
@@ -62,7 +71,7 @@
             "date": "August 29, 2025",
             "descriptions": [
                 "**Interactive Gallery** - photos have come to life! By clicking on any picture, you can now see a short description on its back side.",
-                "**EducationCard** on the About Me page - a new card that displays my education background. This makes the section more informative and helps visitors better understand my professional journey."
+                "**Education Card** on the 'About Me' page is a new interactive card that displays information about my education. Click on the card to see the details. This makes the section more informative and helps better understand my professional background."
             ]
         },
         {
@@ -70,8 +79,17 @@
             "version": "v0.5.153 beta",
             "date": "September 10, 2025",
             "descriptions": [
-                "**New sections** on the Home page – added blocks My Development Approach and Tech Stack. The home page is now more informative and better reflects my working style.",
-                "**Optimization and fixes** – improved site performance and resolved minor bugs for a smoother and more stable experience."
+                "**New sections** on the 'Home' page - added blocks 'My Development Approach' and 'Tech Stack'. The home page is now more informative and better reflects my working style.",
+                "**Optimization and fixes** - improved site performance and resolved minor bugs for a smoother and more stable experience."
+            ]
+        },
+        {
+            "id": 4,
+            "version": "v0.6.42 beta",
+            "date": "September 16, 2025",
+            "descriptions": [
+                "**Music player** on the 'About Me' page  now you can listen to some of my favorite tracks.",
+                "**Optimization and fixes** - improved site performance and resolved minor bugs for a smoother and more stable experience."
             ]
         }
     ]
