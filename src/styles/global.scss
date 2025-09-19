@@ -33,6 +33,7 @@ button {
 p {
     line-height: 20px;
 }
+//
 .common_layout_style {
     height: calc(100vh - 32px);
     overflow-y: auto;
@@ -61,4 +62,10 @@ p {
     font-size: 28px;
     font-weight: 600;
     color: #111111;
+}
+.common_bento_card_style {
+    padding: 8px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: #f0f0f0;
 }
