@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "Личный сайт",
-            "description": "Мой личный сайт - это место, где вы можете познакомиться со мной как с Frontend Vue.js разработчиком. Здесь вы найдёте моё портфолио, информацию о профессиональных навыках и используемых технологиях, а также сможете лучше понять мой подход к разработке. Сайт создан с упором на удобство, современный дизайн и адаптивность, чтобы каждый посетитель мог легко и приятно изучить мои проекты.",
+            "description": "Мой личный сайт - это место, где вы можете познакомиться со мной как с Frontend-разработчиком. Здесь вы найдёте моё портфолио, информацию о профессиональных навыках и используемых технологиях, а также сможете лучше понять мой подход к разработке. Сайт создан с упором на удобство, современный дизайн и адаптивность, чтобы каждый посетитель мог легко и приятно изучить мои проекты.",
             "role": "Frontend-разработчик, UX/UI‑дизайнер",
             "technologies": [
                 { "name": "HTML" },
@@ -13,9 +13,11 @@
                 { "name": "VueX" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
+                { "name": "VueUse" },
                 { "name": "Vite" },
                 { "name": "GSAP" },
-                { "name": "Axios" },
+                { "name": "Mapbox GL" },
+                { "name": "Matter.js" },
                 { "name": "Cloudinary" },
                 { "name": "GitHub Pages" }
             ],
@@ -28,7 +30,7 @@
         {
             "id": 0,
             "name": "Personal Site",
-            "description": "My personal website is a place where you can get to know me as a Frontend Vue.js developer. Here, you’ll find my portfolio, details about my professional skills and the technologies I use, as well as insights into my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, making it easy and enjoyable for visitors to explore my work.",
+            "description": "My personal website is a place where you can get to know me as a Frontend Developer. Here, you’ll find my portfolio, details about my professional skills and the technologies I use, as well as insights into my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, making it easy and enjoyable for visitors to explore my work.",
             "role": "Frontend Developer, UX/UI Designer",
             "technologies": [
                 { "name": "HTML" },
@@ -38,9 +40,11 @@
                 { "name": "VueX" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
+                { "name": "VueUse" },
                 { "name": "Vite" },
                 { "name": "GSAP" },
-                { "name": "Axios" },
+                { "name": "Mapbox GL" },
+                { "name": "Matter.js" },
                 { "name": "Cloudinary" },
                 { "name": "GitHub Pages" }
             ],
