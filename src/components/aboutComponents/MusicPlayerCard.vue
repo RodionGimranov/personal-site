@@ -1,31 +1,30 @@
 <template>
-    <div class="music_player_container commom_card_style" v-if="currentSong">
-        <div
-            class="music_cover_container"
-            :style="{
-                backgroundImage: `url(${currentSong.album_cover})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-            }"
-        >
-            <div class="music_player_header">
-                <div class="song_name_and_artist">
-                    <div class="song_name_container">
-                        <p class="song_name">{{ currentSong.song_name }}</p>
-                        <SvgIcon
-                            v-if="currentSong.explicit_content"
-                            name="explicit-icon"
-                            width="12"
-                            height="12"
-                            :style="{ opacity: 0.7 }"
-                        />
-                    </div>
-                    <p class="artist_name">{{ currentSong.artist_name }}</p>
+    <div
+        v-if="currentSong"
+        class="music_cover_container common_bento_card_style"
+        :style="{
+            backgroundImage: `url(${currentSong.album_cover})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+        }"
+    >
+        <div class="music_player_header">
+            <div class="song_name_and_artist">
+                <div class="song_name_container">
+                    <p class="song_name">{{ currentSong.song_name }}</p>
+                    <SvgIcon
+                        v-if="currentSong.explicit_content"
+                        name="explicit-icon"
+                        width="12"
+                        height="12"
+                        :style="{ opacity: 0.7 }"
+                    />
                 </div>
-                <SoundWaveIndicator :audioElement="playerState.audio" />
+                <p class="artist_name">{{ currentSong.artist_name }}</p>
             </div>
-            <PlayerControls />
+            <SoundWaveIndicator :audioElement="playerState.audio" />
         </div>
+        <PlayerControls />
     </div>
 </template>
 
@@ -107,19 +106,9 @@ provide("player", {
 </script>
 
 <style lang="scss">
-.music_player_container {
+.music_cover_container {
     width: 250px;
     height: 250px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.music_cover_container {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
 
     display: flex;
     flex-direction: column;
@@ -132,10 +121,10 @@ provide("player", {
 }
 
 .music_player_header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
 }
 
 .song_name_and_artist {
