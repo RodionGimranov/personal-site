@@ -1,8 +1,5 @@
 <template>
-    <div
-        class="empty_card_container common_bento_card_style"
-        :style="{ width: width + 'px', height: height + 'px' }"
-    >
+    <div class="empty_card_container common_bento_card_style" :style="{ width, height }">
         <div class="empty_card_title">
             <p>{{ $t("message.empty_card_title") }}</p>
         </div>
@@ -11,14 +8,8 @@
 
 <script setup>
 defineProps({
-    width: {
-        type: Number,
-        default: 250,
-    },
-    height: {
-        type: Number,
-        default: 250,
-    },
+    width: { type: String, default: "250px" },
+    height: { type: String, default: "250px" },
 });
 </script>
 
