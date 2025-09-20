@@ -1,108 +1,200 @@
 <template>
-    <div class="location_card_container commom_card_style">
-        <img class="map_of_city" :src="mapSrc" alt="Map of city" />
+    <div class="location_card_container common_bento_card_style">
+        <div ref="mapContainer" class="map_of_city"></div>
+        <div class="reset_location_container">
+            <button class="reset_location_btn" @click="reserLocation">
+                <SvgIcon name="reset-location-icon" width="21" height="21" />
+            </button>
+        </div>
         <div class="location_data_container">
-            <div class="city_date_container">
-                <p class="city_weather_title">{{ $t("message.kazan_city_name") }}</p>
-                <p class="date_title">{{ formattedDate }}</p>
-            </div>
-            <p class="city_weather_title">{{ temperature }}°</p>
+            <p class="city_name">{{ $t("message.kazan_city_name") }}</p>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import { useI18n } from "vue-i18n";
+import { ref, onMounted } from "vue";
+import mapboxgl from "mapbox-gl";
 
-const { locale } = useI18n();
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
-const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
-const LAT = 55.7963;
-const LON = 49.1088;
+import "mapbox-gl/dist/mapbox-gl.css";
 
-const temperature = ref(null);
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
-const mapSrc = computed(() => {
-    return `/personal-site-beta/images/maps/kazan-map-${locale.value}.webp`;
-});
+const mapContainer = ref(null);
+const mapInstance = ref(null);
 
-async function fetchWeather() {
-    try {
-        const res = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&appid=${API_KEY}&lang=${locale.value}`,
-        );
-        const data = await res.json();
-        temperature.value = Math.round(data.main.temp);
-    } catch (error) {
-        console.error("Ошибка загрузки погоды:", error);
+const coords = [49.122315, 55.792355];
+const zoom_to = 10.5;
+
+const reserLocation = () => {
+    if (mapInstance.value) {
+        mapInstance.value.flyTo({
+            center: coords,
+            zoom: zoom_to,
+            essential: true,
+        });
     }
-}
-
-const formattedDate = computed(() => {
-    const now = new Date();
-    return new Intl.DateTimeFormat(locale.value, {
-        day: "numeric",
-        month: "long",
-    }).format(now);
-});
+};
 
 onMounted(() => {
-    fetchWeather();
+    const map = new mapboxgl.Map({
+        container: mapContainer.value,
+        style: import.meta.env.VITE_MAPBOX_STYLE,
+        center: coords,
+        zoom: zoom_to,
+        projection: "globe",
+        attributionControl: false,
+    });
+
+    mapInstance.value = map;
+
+    map.on("style.load", () => {
+        map.setLight({
+            anchor: "viewport",
+            intensity: 0.5,
+        });
+    });
+
+    const markerEl = document.createElement("div");
+    markerEl.className = "custom_marker_wrapper";
+
+    const markerAnimation = document.createElement("div");
+    markerAnimation.className = "custom_marker_animation";
+    markerEl.appendChild(markerAnimation);
+
+    const outer = document.createElement("div");
+    outer.className = "custom_marker_outer";
+    const inner = document.createElement("span");
+    inner.className = "custom_marker_inner";
+    outer.appendChild(inner);
+    markerEl.appendChild(outer);
+
+    new mapboxgl.Marker(markerEl).setLngLat(coords).addTo(map);
 });
 </script>
 
 <style lang="scss">
 .location_card_container {
     position: relative;
-    width: 326px;
-    height: 326px;
-    padding: 8px;
+    width: 250px;
+    height: 250px;
 
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.map_of_city {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.reset_location_container {
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
-.location_data_container {
-    width: 100%;
-    padding: 8px 16px;
+.reset_location_btn {
+    width: 32px;
+    height: 32px;
     border-radius: 100px;
     backdrop-filter: blur(44px);
     background: $secondary_translucent_dark;
 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-.city_date_container {
+.map_of_city {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.location_data_container {
+    padding: 6px 12px;
+    border-radius: 100px;
+    backdrop-filter: blur(44px);
+    background: $secondary_translucent_dark;
+
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.city_weather_title {
-    font-size: 18px;
+.city_name {
+    font-size: 16px;
     font-weight: 400;
     color: $primary_white;
 }
 
-.date_title {
-    font-size: 12px;
-    font-weight: 400;
-    color: $primary_white;
-    line-height: 14px;
-    opacity: 60;
+.custom_marker_wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_marker_animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    border-radius: 100px;
+    background: $fourth_blue;
+    transform: translate(-50%, -50%) scale(1);
+    animation: marker_pulse 4s ease-out infinite;
+}
+
+@keyframes marker_pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+    }
+    35% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+.custom_marker_outer {
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 100px;
+    background: $primary_white;
+    box-shadow:
+        0 16px 31px rgba(0, 0, 0, 0.13),
+        0 6px 10px rgba(0, 0, 0, 0.1),
+        0 1px 3px rgba(0, 0, 0, 0.08),
+        0 10px 18px rgba(0, 0, 0, 0.099),
+        0 6px 3px rgba(0, 0, 0, 0.065);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom_marker_inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background: $fourth_blue;
+}
+// Hiding the Mapbox logo and feedback button
+.map_of_city .mapboxgl-ctrl-logo,
+.map_of_city .mapboxgl-ctrl-attrib {
+    display: none !important;
+}
+.map_of_city .mapboxgl-ctrl-bottom-right {
+    display: none !important;
 }
 </style>
