@@ -23,9 +23,10 @@
 
 <script setup>
 import { computed } from "vue";
+
 import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
 
-const technology_list_left = [
+const row1 = [
     "Vue",
     "Vuex",
     "Vue Router",
@@ -36,19 +37,22 @@ const technology_list_left = [
     "HTML",
     "CSS",
     "SCSS",
+];
+
+const row2 = [
     "JavaScript",
     "TypeScript",
     "Nest",
     "Storybook",
     "Pinia",
-];
-
-const technology_list_right = [
-    "Prisma",
+    "PrismaORM",
     "Python",
     "C++",
     "C#",
     "Vite",
+];
+
+const row3 = [
     "GSAP",
     "Axios",
     "Matter.js",
@@ -58,15 +62,25 @@ const technology_list_right = [
     "ldrsx",
     "Highcharts",
     "Node.js",
+    "Mapbox GL",
 ];
 
-const technology_rows = computed(() => [
-    technology_list_left,
-    technology_list_right,
-    technology_list_left,
-    technology_list_right,
-    technology_list_left,
-]);
+const row4 = [
+    "GitHub Pages",
+    "SQL",
+    "PostgreSQL",
+    "Postman",
+    "GitHub",
+    "Express",
+    "Git",
+    "Prettier",
+    "Cloudinary",
+    "Telegram Mini Apps",
+];
+
+const row5 = ["Webpack", "REST API", "MongoDB", "Three.js", "ESLint", "Docker", "Stylelint", "PHP"];
+
+const technology_rows = computed(() => [row1, row2, row3, row4, row5]);
 
 const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row, ...row]));
 </script>
