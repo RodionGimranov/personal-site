@@ -1,5 +1,5 @@
 <template>
-    <div class="greeting_card_container commom_card_style">
+    <div class="greeting_card_container common_bento_card_style">
         <p v-for="key in greetingKeys" :key="key">
             {{ $t(`message.${key}`) }}
         </p>
@@ -14,7 +14,7 @@ const greetingKeys = ["greeting_text_1", "greeting_text_2", "greeting_text_3", "
 .greeting_card_container {
     width: 520px;
     height: 250px;
-    padding: 16px;
+    padding: 16px !important;
 
     display: flex;
     flex-direction: column;
