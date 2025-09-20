@@ -27,7 +27,7 @@ import { RouterView, useRouter } from "vue-router";
 import SideBar from "@/components/layout/SideBar.vue";
 import Footer from "@/components/layout/Footer.vue";
 import BlurMask from "@/components/ui/BlurMask.vue";
-import ChangelogModal from "@/components/ui/ChangelogModal/ChangelogModal.vue";
+import ChangelogModal from "@/components/ui/modals/ChangelogModal.vue";
 import TopButton from "./components/ui/buttons/TopButton.vue";
 
 const store = useStore();
