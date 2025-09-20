@@ -130,7 +130,7 @@
 <symbol id="external-link-icon" viewBox="0 0 20 20">
   <path d="M14.3349 13.3301V6.60645L5.47065 15.4707C5.21095 15.7304 4.78895 15.7304 4.52925 15.4707C4.26955 15.211 4.26955 14.789 4.52925 14.5293L13.3935 5.66504H6.66011C6.29284 5.66504 5.99507 5.36727 5.99507 5C5.99507 4.63273 6.29284 4.33496 6.66011 4.33496H14.9999L15.1337 4.34863C15.4369 4.41057 15.665 4.67857 15.665 5V13.3301C15.6649 13.6973 15.3672 13.9951 14.9999 13.9951C14.6327 13.9951 14.335 13.6973 14.3349 13.3301Z" fill="currentColor"/>
 </symbol>
-<!--  -->
+<!-- claude-ai-icon -->
 <symbol id="claude-ai-icon" viewBox="0 0 12 12">
   <g clip-path="url(#clip0_386_169)">
   <path d="M11.52 4.75247L11.94 4.9901V5.16831L11.82 5.58416L6.72 6.77227L6.24048 5.59257L11.52 4.75247Z" fill="#D97757"/>
@@ -151,5 +151,14 @@
   <rect width="12" height="12" fill="white"/>
   </clipPath>
   </defs>
-</sumbol>
+</symbol>
+<!-- reset-location-icon -->
+<symbol id="reset-location-icon" viewBox="0 0 24 24" fill="none">
+  <path d="M12 14.625C13.4497 14.625 14.625 13.4497 14.625 12C14.625 10.5503 13.4497 9.375 12 9.375C10.5503 9.375 9.375 10.5503 9.375 12C9.375 13.4497 10.5503 14.625 12 14.625Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 19.875C16.3492 19.875 19.875 16.3492 19.875 12C19.875 7.65076 16.3492 4.125 12 4.125C7.65076 4.125 4.125 7.65076 4.125 12C4.125 16.3492 7.65076 19.875 12 19.875Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 4.125V1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.875 12H22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 19.875V22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M4.125 12H1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </svg>
