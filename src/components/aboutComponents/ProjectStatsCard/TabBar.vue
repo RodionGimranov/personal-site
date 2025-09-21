@@ -29,6 +29,7 @@ const toolbarButtons = [
 .top_bar_container {
     width: 100%;
     height: 36px;
+    cursor: pointer;
     border-top: 0.47px solid $fifth_gray;
     border-bottom: 0.47px solid $fifth_gray;
 
@@ -39,7 +40,6 @@ const toolbarButtons = [
 
 .file_tab {
     height: 100%;
-    cursor: pointer;
     padding: 10px 4px 10px 6px;
     border-top: 0.47px solid $third_blue;
     border-bottom: 0.47px solid $fifth_gray;

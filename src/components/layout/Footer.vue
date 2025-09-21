@@ -71,7 +71,7 @@ footer {
     width: 100%;
     margin-top: 100px;
     background: $primary_white;
-    padding: 36px 64px 24px 64px;
+    padding: 36px 64px 14px 64px;
     border-top: 3px solid var(--primary-white-bg);
 
     display: flex;
