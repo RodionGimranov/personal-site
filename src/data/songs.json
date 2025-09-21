@@ -2,11 +2,19 @@
     "songs": [
         {
             "id": 0,
-            "album_image": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1755964006/IMG_6454_qu7meu.jpg",
+            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758040119/800x800_z8p9on.jpg",
             "explicit_content": true,
             "song_name": "See You Again",
             "artist_name": "Tyler, the Creator",
-            "song_url": "/personal-site/songs/See-You-Again.mp3"
+            "song_url": "/personal-site-beta/audio/Tyler_The_Creator-See_You_Again.mp3"
+        },
+        {
+            "id": 1,
+            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758383352/800x800_l9i7ss.jpg",
+            "explicit_content": false,
+            "song_name": "Sculptures Of Anything Goes",
+            "artist_name": "Arctic Monkeys",
+            "song_url": "/personal-site-beta/audio/Arctic_Monkeys-Sculptures_Of_Anything_Goes.mp3"
         }
     ]
 }
