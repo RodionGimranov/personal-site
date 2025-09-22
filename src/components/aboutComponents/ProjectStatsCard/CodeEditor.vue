@@ -37,7 +37,7 @@ const projectData = computed(() => ({
 <style lang="scss">
 .code_editor_container {
     width: 100%;
-    padding: 0px 0px 0px 20px;
+    padding: 0 0 0 20px;
 
     display: flex;
     justify-content: flex-start;
@@ -71,7 +71,7 @@ const projectData = computed(() => ({
     width: 100%;
     height: 100%;
     cursor: text;
-    padding: 10px 0px 0px 0px;
+    padding: 10px 0 0 0;
 
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ const projectData = computed(() => ({
         font-style: normal;
 
         &:last-child {
-            gap: 0px;
+            gap: 0;
         }
     }
 }

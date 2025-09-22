@@ -13,7 +13,7 @@ const props = defineProps({
 <style lang="scss">
 .skeleton_loader {
     display: inline-block;
-    background: linear-gradient(90deg, $fourth_gray 0px, $primary_white 40px, $fourth_gray 80px);
+    background: linear-gradient(90deg, $fourth_gray 0, $primary_white 40px, $fourth_gray 80px);
     background-size: 200% 100%;
     animation: shimmer 2.3s infinite;
 }

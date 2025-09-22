@@ -1,32 +1,44 @@
 <template>
     <div class="about_page_wrapper common_page_wrapper">
-        <div class="row_cards">
+        <div class="row_cards_1">
             <GreetingCard />
-            <LocationCard />
+            <!-- <LocationCard /> -->
+            <EmptyCard />
             <MusicPlayerCard />
         </div>
-        <div class="row_cards">
-            <EmptyCard />
-            <EducationCard />
-        </div>
-        <div class="row_cards">
-            <ProjectStatsCard />
+        <div class="large_block_card_wrapper">
+            <div class="large_block_card_1">
+                <div class="large_row_cards_1">
+                    <BackgroundCard />
+                    <EmptyCard />
+                </div>
+                <ProjectStatsCard />
+            </div>
+            <div class="large_block_card_2">
+                <div class="row_cards_2">
+                    <EmptyCard />
+                    <FigmaCard />
+                </div>
+                <PhysicsCard />
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
-import LocationCard from "@/components/aboutComponents/LocationCard.vue";
+// import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard.vue";
+import BackgroundCard from "@/components/aboutComponents/BackgroundCard.vue";
+import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard.vue";
+import PhysicsCard from "@/components/aboutComponents/PhysicsCard.vue";
 import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
-import EducationCard from "@/components/aboutComponents/EducationCard.vue";
 </script>
 
 <style lang="scss">
 .about_page_wrapper {
-    padding: 14px 36px 0px 36px;
+    padding: 14px 36px 0 36px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,8 +46,20 @@ import EducationCard from "@/components/aboutComponents/EducationCard.vue";
     gap: 20px;
 }
 
-.row_cards {
+.row_cards_1,
+.large_row_cards_1,
+.large_block_card_2,
+.large_block_card_wrapper {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.large_block_card_1,
+.row_cards_2 {
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;

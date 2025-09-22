@@ -99,8 +99,8 @@ watch(
 .toggle_tab_btn {
     z-index: 2;
     cursor: pointer;
-    padding: 4px 12px;
     transition: 0.2s;
+    padding: 4px 12px;
     border-radius: 100px;
 
     font-size: 14px;
@@ -127,7 +127,7 @@ watch(
     height: 28px;
     z-index: 1;
     border-radius: 100px;
-    background: $primary_white;
     transition: 0.2s ease;
+    background: $primary_white;
 }
 </style>

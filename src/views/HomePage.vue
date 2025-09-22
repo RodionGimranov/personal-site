@@ -14,7 +14,7 @@ import TechStack from "@/components/homeComponents/TechStack.vue";
 
 <style lang="scss">
 .home_page_wrapper {
-    padding: 14px 64px 0px 64px;
+    padding: 14px 64px 0 64px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

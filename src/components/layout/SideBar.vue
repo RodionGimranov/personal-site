@@ -116,8 +116,8 @@ function onThemeIndexChanged(index) {
 <style lang="scss">
 .side_bar_container {
     width: 260px;
+    padding: 24px 0;
     overflow: hidden;
-    padding: 24px 0px;
 
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@ function onThemeIndexChanged(index) {
 
 .user_info_panel_wrapper {
     width: 100%;
-    padding: 0px 18px;
+    padding: 0 18px;
 
     display: flex;
     justify-content: flex-start;
@@ -145,7 +145,7 @@ function onThemeIndexChanged(index) {
 .side_bar_btn_container {
     width: 100%;
     margin-top: 28px;
-    padding: 0px 18px;
+    padding: 0 18px;
 
     display: flex;
     flex-direction: column;
@@ -215,7 +215,7 @@ function onThemeIndexChanged(index) {
 
 .download_btn_container {
     width: 100%;
-    padding: 0px 18px;
+    padding: 0 18px;
 }
 
 .version_number {

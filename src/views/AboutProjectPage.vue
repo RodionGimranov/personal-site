@@ -89,7 +89,7 @@ watchEffect(() => {
 <style lang="scss">
 .about_project_page_wrapper {
     position: relative;
-    padding: 0px 64px;
+    padding: 0 64px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -102,7 +102,7 @@ watchEffect(() => {
     width: 100%;
     z-index: 99;
     background: $primary_white;
-    padding: 26px 0px 24px 0px;
+    padding: 26px 0 24px 0px;
 
     display: flex;
     justify-content: flex-start;
