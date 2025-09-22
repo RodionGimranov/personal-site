@@ -15,17 +15,17 @@
         <Button
             variant="blue-v1"
             buttonType="a"
-            href="#"
+            :href="figmaDesignLink"
             :buttonText="$t('message.visit_btn')"
             buttonWidth="100%"
         />
         <transition name="fade-scale">
             <div
                 v-show="isHovered"
-                class="figma_cursor_text_container"
+                class="figma_bubble_wrapper"
                 :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
             >
-                <p>{{ $t("message.figma_cursor_text") }}</p>
+                <p>{{ $t("message.figma_bubble_text") }}</p>
             </div>
         </transition>
     </div>
@@ -33,8 +33,13 @@
 
 <script setup>
 import { ref, computed } from "vue";
+import { useStore } from "vuex";
 
 import Button from "@/components/ui/buttons/Button.vue";
+
+const store = useStore();
+
+const figmaDesignLink = computed(() => store.getters.getFigmaDesignLink);
 
 const cursorX = ref(0);
 const cursorY = ref(0);
@@ -81,21 +86,28 @@ function onMouseMove(event) {
     }
 }
 
-.figma_cursor_text_container {
+.figma_bubble_wrapper {
     position: absolute;
     z-index: 9;
+    padding: 8px 16px;
     pointer-events: none;
     outline-offset: -2px;
     background: $primary_green;
-    padding: 8px 20px 8px 16px;
     border-radius: 2px 24px 24px 24px;
     outline: 2px solid $secondary_green;
-    box-shadow: 4px 4px 10px $secondary_translucent_green;
+    box-shadow:
+        0 20px 18px rgba(0, 0, 0, 0.05),
+        0 12.963px 10.5417px rgba(0, 0, 0, 0.038),
+        0 7.7037px 5.73333px rgba(0, 0, 0, 0.03),
+        0 4px 2.925px rgba(0, 0, 0, 0.025),
+        0 1.62963px 1.46667px rgba(0, 0, 0, 0.02),
+        0 0.37037px 0.708333px rgba(0, 0, 0, 0.012);
 
     p {
         font-size: 16px;
         font-weight: 400;
         color: $primary_white;
+        line-height: 17px;
         white-space: nowrap;
     }
 }
