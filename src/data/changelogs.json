@@ -2,94 +2,126 @@
     "ru": [
         {
             "id": 0,
-            "version": "v0.3.30 бета",
-            "date": "13 августа 2025",
-            "descriptions": [
-                "**Карточка местоположения** на странице «Обо мне» - показывает моё текущее местоположение на карте. Можно масштабировать от локального вида до глобуса.",
-                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
-            ]
+            "version": "v0.0.1 бета",
+            "date": "28 Июля 2025",
+            "descriptions": ["Здравствуй, мир!"]
         },
         {
             "id": 1,
-            "version": "v0.4.40 бета",
-            "date": "17 августа 2025",
+            "version": "v0.3.30 бета",
+            "date": "13 августа 2025",
             "descriptions": [
-                "**Карточка метаданных проекта** на странице «Обо мне» - новая карточка в стиле IDE, которая показывает мета-информацию о сайте: количество строк кода, размер проекта и другие детали.",
+                "Добавлена интерактивная карта на страницу «Обо мне» - теперь можно увидеть мое местоположение и даже отдалить карту настолько, чтобы посмотреть на нашу планету из космоса.",
                 "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
         {
             "id": 2,
-            "version": "v0.5.83 бета",
-            "date": "29 августа 2025",
+            "version": "v0.4.40 бета",
+            "date": "17 августа 2025",
             "descriptions": [
-                "**Интерактивная галерея** - теперь фотографии ожили! Нажав на любое фото, вы сможете увидеть краткое описание на его обратной стороне.",
-                "**Карточка образования** на странице «Обо мне» - новая интерактивная карточка, которая показывает информацию об образовании. Чтобы увидеть детали, нужно нажать на карточку. Теперь раздел стал более информативным и помогает лучше понять мой профессиональный бэкграунд."
+                "Добавлена карточка метаданных проекта на страницу «Обо мне» в стиле редактора кода, отображающая статистику проекта: количество строк кода, файлов, папок и общий размер проекта.",
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
             ]
         },
         {
             "id": 3,
-            "version": "v0.5.153 бета",
-            "date": "10 сентября 2025",
+            "version": "v0.5.83 бета",
+            "date": "29 августа 2025",
             "descriptions": [
-                "**Новые секции** на странице «Главная» - добавлены блоки «Мой подход к разработке» и «Технический стек». Теперь главная страница стала более информативной и отражает мой стиль работы.",
-                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+                "Фотографии в галерее стали интерактивными - теперь можно нажать на любую фотографию и увидеть краткую информацию на её обратной стороне.",
+                "Добавлена интерактивная карточка «Образование» на страницу «Обо мне» - при нажатии открывается модальное окно с подробной информацией об учебных заведениях в которых я учился."
             ]
         },
         {
             "id": 4,
+            "version": "v0.5.153 бета",
+            "date": "10 сентября 2025",
+            "descriptions": [
+                "Добавлены две новые секции на главную страницу: «Мой подход к разработке» и «Технический стек» - теперь можно лучше понять мою философию работы и используемые технологии.",
+                "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+            ]
+        },
+        {
+            "id": 5,
             "version": "v0.6.42 бета",
             "date": "16 сентября 2025",
             "descriptions": [
-                "**Музыкальный плеер** на странице «Обо мне» - теперь вы можете послушать одни из моих любимых треков.",
+                "Добавлена карточка с музыкальным плеером на страницу «Обо мне» - теперь можно послушать одни из моих любымих песен.",
                 "**Оптимизация и исправления** - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+            ]
+        },
+        {
+            "id": 6,
+            "version": "v0.7.92 бета",
+            "date": "22 сентября 2025",
+            "descriptions": [
+                "Переработан дизайн карточек на странице «Обо мне» для улучшения визуальной гармонии и удобства восприятия.",
+                "Добавлена интерактивная карточка с UI-китом сайта, включая имитацию поведения курсора из Figma.",
+                "Появилась новая карточка с иконками, которые можно перетаскивать мышкой - просто для fun'а и интерактива."
             ]
         }
     ],
     "en": [
         {
             "id": 0,
-            "version": "v0.3.30 beta",
-            "date": "August 13, 2025",
-            "descriptions": [
-                "**The location card** on the 'About Me' page shows my current location on the map. You can zoom from a local view all the way out to the globe.",
-                "**Optimization and fixes** - improved site performance and fixed minor bugs for a smoother and more stable experience."
-            ]
+            "version": "v0.0.1 beta",
+            "date": "July 28, 2025",
+            "descriptions": ["Hello, world!"]
         },
         {
             "id": 1,
-            "version": "v0.4.40 beta",
-            "date": "August 17, 2025",
+            "version": "v0.3.30 beta",
+            "date": "August 13, 2025",
             "descriptions": [
-                "**Project Metadata Card** on the 'About Me' page - a new IDE-style card that displays meta information about the website: number of lines of code, project size, and other details.",
-                "**Optimization and fixes** - improved site performance and fixed minor bugs for a smoother and more stable experience."
+                "An interactive map was added to the 'About Me' page – now you can see my location and even zoom out far enough to view our planet from space.",
+                "**Optimization & fixes** – improved site performance and resolved minor bugs for smoother and more stable operation."
             ]
         },
         {
             "id": 2,
-            "version": "v0.5.83 beta",
-            "date": "August 29, 2025",
+            "version": "v0.4.40 beta",
+            "date": "August 17, 2025",
             "descriptions": [
-                "**Interactive Gallery** - photos have come to life! By clicking on any picture, you can now see a short description on its back side.",
-                "**Education Card** on the 'About Me' page is a new interactive card that displays information about my education. Click on the card to see the details. This makes the section more informative and helps better understand my professional background."
+                "Added a project metadata card to the 'About Me' page styled like a code editor, showing project statistics: number of lines of code, files, folders, and total project size.",
+                "**Optimization & fixes** – improved site performance and resolved minor bugs for smoother and more stable operation."
             ]
         },
         {
             "id": 3,
-            "version": "v0.5.153 beta",
-            "date": "September 10, 2025",
+            "version": "v0.5.83 beta",
+            "date": "August 29, 2025",
             "descriptions": [
-                "**New sections** on the 'Home' page - added blocks 'My Development Approach' and 'Tech Stack'. The home page is now more informative and better reflects my working style.",
-                "**Optimization and fixes** - improved site performance and resolved minor bugs for a smoother and more stable experience."
+                "Photos in the gallery are now interactive – click on any photo to see short information on its back side.",
+                "Added an interactive 'Education' card to the 'About Me' page – clicking it opens a modal with detailed information about the schools I studied at."
             ]
         },
         {
             "id": 4,
+            "version": "v0.5.153 beta",
+            "date": "September 10, 2025",
+            "descriptions": [
+                "Two new sections were added to the homepage: 'My Approach to Development' and 'Tech Stack' – giving better insight into my work philosophy and the technologies I use.",
+                "**Optimization & fixes** – improved site performance and resolved minor bugs for smoother and more stable operation."
+            ]
+        },
+        {
+            "id": 5,
             "version": "v0.6.42 beta",
             "date": "September 16, 2025",
             "descriptions": [
-                "**Music player** on the 'About Me' page  now you can listen to some of my favorite tracks.",
-                "**Optimization and fixes** - improved site performance and resolved minor bugs for a smoother and more stable experience."
+                "Added a card with a music player to the 'About Me' page – now you can listen to some of my favorite songs.",
+                "**Optimization & fixes** – improved site performance and resolved minor bugs for smoother and more stable operation."
+            ]
+        },
+        {
+            "id": 6,
+            "version": "v0.7.92 beta",
+            "date": "September 22, 2025",
+            "descriptions": [
+                "Redesigned the cards on the 'About Me' page for better visual harmony and readability.",
+                "Added an interactive card with the website’s UI kit, including cursor behavior imitation from Figma.",
+                "Introduced a new card with draggable icons – just for fun and interactivity."
             ]
         }
     ]
