@@ -83,7 +83,7 @@ main {
 .main_content_container {
     position: relative;
     display: flex;
-    flex: 1 0 0px;
+    flex: 1 0 0%;
     overflow: hidden;
 }
 

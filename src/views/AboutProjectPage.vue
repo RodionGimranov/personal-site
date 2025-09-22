@@ -101,8 +101,8 @@ watchEffect(() => {
     top: -16px;
     width: 100%;
     z-index: 99;
+    padding: 26px 0 24px 0;
     background: $primary_white;
-    padding: 26px 0 24px 0px;
 
     display: flex;
     justify-content: flex-start;
