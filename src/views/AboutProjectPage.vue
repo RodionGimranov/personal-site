@@ -11,14 +11,14 @@
             <div class="link_to_prject_container">
                 <Button
                     buttonType="a"
-                    :href="project.link_to_deploy"
-                    :buttonText="$t('message.visit_btn')"
+                    :href="project.link_to_code"
+                    :buttonText="$t('message.source_code_btn')"
                 />
                 <Button
                     variant="blue-v1"
                     buttonType="a"
-                    :href="project.link_to_code"
-                    :buttonText="$t('message.source_code_btn')"
+                    :href="project.link_to_deploy"
+                    :buttonText="$t('message.visit_btn')"
                 />
             </div>
         </div>
@@ -90,6 +90,7 @@ watchEffect(() => {
 .about_project_page_wrapper {
     position: relative;
     padding: 0 64px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -126,8 +127,8 @@ watchEffect(() => {
 }
 
 .about_project_header {
-    min-width: 560px !important;
     margin-bottom: 32px;
+    min-width: 560px !important;
 
     display: flex;
     justify-content: space-between;
