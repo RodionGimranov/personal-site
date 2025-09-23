@@ -1,6 +1,6 @@
 <template>
     <button class="top_btn" @click="$emit('click')">
-        <SvgIcon name="arrow-icon" width="24px" height="14px" />
+        <SvgIcon name="arrow-icon" width="24" height="14" />
     </button>
 </template>
 
