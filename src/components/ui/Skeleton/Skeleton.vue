@@ -4,9 +4,9 @@
 
 <script setup>
 const props = defineProps({
-    width: { type: String, default: "50px" },
-    height: { type: String, default: "50px" },
-    radius: { type: String, default: "0px" },
+    width: { type: [String, Number], default: 50 },
+    height: { type: [String, Number], default: 50 },
+    radius: { type: [String, Number], default: 0 },
 });
 </script>
 

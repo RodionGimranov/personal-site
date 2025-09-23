@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
     name: { type: String, required: true },
     width: { type: [String, Number], default: 20 },
     height: { type: [String, Number], default: 20 },
