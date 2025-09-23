@@ -69,3 +69,8 @@ p {
     border-radius: 30px;
     background: #f0f0f0;
 }
+//
+._glass_effect {
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.35);
+}

@@ -9,7 +9,7 @@
         }"
     >
         <div class="music_player_header">
-            <div class="song_name_and_artist">
+            <div class="song_name_and_artist _glass_effect">
                 <div class="song_name_container">
                     <p class="song_name">{{ currentSong.song_name }}</p>
                     <SvgIcon
@@ -133,8 +133,6 @@ provide("player", {
     overflow: hidden;
     padding: 4px 12px;
     border-radius: 100px;
-    backdrop-filter: blur(44px);
-    background: $secondary_translucent_dark;
 
     display: flex;
     flex-direction: column;

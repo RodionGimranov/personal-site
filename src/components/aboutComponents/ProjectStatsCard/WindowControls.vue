@@ -1,12 +1,12 @@
 <template>
     <div class="window_controls_container">
         <div class="window_controls_btn">
-            <button
+            <div
                 v-for="(color, index) in colors"
                 :key="index"
                 class="controls_btn"
                 :style="{ backgroundColor: color }"
-            ></button>
+            ></div>
         </div>
     </div>
 </template>
@@ -36,7 +36,6 @@ const colors = ["#FF6057", "#FFBB30", "#28C840"];
 .controls_btn {
     width: 12px;
     height: 12px;
-    cursor: pointer;
     border-radius: 100px;
 }
 </style>

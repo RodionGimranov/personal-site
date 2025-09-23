@@ -3,7 +3,7 @@
         <button
             v-for="(button, index) in buttons"
             :key="index"
-            class="player_controll_btn"
+            class="player_controll_btn _glass_effect"
             @click="button.action"
             v-show="button.show === undefined || button.show"
         >
@@ -54,8 +54,6 @@ const buttons = computed(() => [
     height: 46px;
     transition: 0.2s;
     border-radius: 100px;
-    backdrop-filter: blur(44px);
-    background: $secondary_translucent_dark;
 
     display: flex;
     justify-content: center;

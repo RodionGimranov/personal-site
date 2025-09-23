@@ -62,7 +62,6 @@ const toolbarButtons = [
 
 .top_bar_btn {
     padding: 4px;
-    transition: 0.2s;
     border-radius: 4px;
 
     display: flex;

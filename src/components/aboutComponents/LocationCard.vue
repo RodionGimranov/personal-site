@@ -2,18 +2,18 @@
     <div class="location_card_container common_bento_card_style">
         <div ref="mapContainer" class="map_of_city"></div>
         <div class="reset_location_container">
-            <button class="reset_location_btn" @click="reserLocation">
-                <SvgIcon name="reset-location-icon" width="21" height="21" />
+            <button class="reset_location_btn _glass_effect" @click="reserLocation">
+                <SvgIcon name="reset-location-icon" width="21px" height="21px" />
             </button>
         </div>
-        <div class="location_data_container">
+        <div class="location_data_container _glass_effect">
             <p class="city_name">{{ $t("message.kazan_city_name") }}</p>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import mapboxgl from "mapbox-gl";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
@@ -73,6 +73,13 @@ onMounted(() => {
 
     new mapboxgl.Marker(markerEl).setLngLat(coords).addTo(map);
 });
+
+onBeforeUnmount(() => {
+    if (mapInstance.value) {
+        mapInstance.value.remove();
+        mapInstance.value = null;
+    }
+});
 </script>
 
 <style lang="scss">
@@ -98,8 +105,6 @@ onMounted(() => {
     width: 32px;
     height: 32px;
     border-radius: 100px;
-    backdrop-filter: blur(44px);
-    background: $secondary_translucent_dark;
 
     display: flex;
     justify-content: center;
@@ -117,8 +122,6 @@ onMounted(() => {
 .location_data_container {
     padding: 6px 12px;
     border-radius: 100px;
-    backdrop-filter: blur(44px);
-    background: $secondary_translucent_dark;
 
     display: flex;
     justify-content: flex-start;
@@ -138,36 +141,10 @@ onMounted(() => {
     align-items: center;
 }
 
-.custom_marker_animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 28px;
-    height: 28px;
-    border-radius: 100px;
-    background: $fourth_blue;
-    transform: translate(-50%, -50%) scale(1);
-    animation: marker_pulse 4s ease-out infinite;
-}
-
-@keyframes marker_pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 0.9;
-    }
-    35% {
-        transform: translate(-50%, -50%) scale(3);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(4);
-        opacity: 0;
-    }
-}
-
 .custom_marker_outer {
     width: 28px;
     height: 28px;
+    z-index: 10;
     padding: 3px;
     border-radius: 100px;
     background: $primary_white;
@@ -188,6 +165,34 @@ onMounted(() => {
     height: 100%;
     border-radius: 100px;
     background: $fourth_blue;
+}
+
+.custom_marker_animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 28px;
+    z-index: 5;
+    border-radius: 100px;
+    background: $fourth_blue;
+    transform: translate(-50%, -50%) scale(1);
+    animation: marker_pulse 4s ease-out infinite;
+}
+
+@keyframes marker_pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+    }
+    35% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
 }
 // Hiding the Mapbox logo and feedback button
 .map_of_city .mapboxgl-ctrl-logo,
