@@ -13,7 +13,7 @@
             {{ $t("message.project_video_text") }}
         </video>
         <Skeleton v-else width="100%" height="100%" />
-        <div class="project_name_container">
+        <div class="project_name_container _glass_effect">
             <SvgIcon name="eye-icon" />
             <p class="project_name_text">{{ project.name }}</p>
         </div>
@@ -62,8 +62,6 @@ defineProps({
     transition: 0.2s;
     border-radius: 100px;
     padding: 4px 12px 4px 6px;
-    backdrop-filter: blur(44px);
-    background: $primary_translucent_dark;
 
     display: flex;
     justify-content: flex-start;

@@ -3,6 +3,7 @@
         <BioText />
         <MyApproach />
         <TechStack />
+        <SelectedProjects />
     </div>
 </template>
 
@@ -10,6 +11,7 @@
 import BioText from "@/components/homeComponents/BioText.vue";
 import MyApproach from "@/components/homeComponents/MyApproach.vue";
 import TechStack from "@/components/homeComponents/TechStack.vue";
+import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
 </script>
 
 <style lang="scss">
@@ -19,6 +21,6 @@ import TechStack from "@/components/homeComponents/TechStack.vue";
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 200px;
+    gap: 150px;
 }
 </style>

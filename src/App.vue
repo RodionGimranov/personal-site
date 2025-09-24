@@ -7,15 +7,15 @@
                 <Footer v-if="!$route.meta.hideFooter" />
             </div>
         </section>
-        <div class="blur_mask_wrapper" v-show="!isAtBottom">
-            <BlurMask />
-        </div>
         <transition name="show-modal">
             <ChangelogModal v-if="isChangelogModalOpen" />
         </transition>
         <transition name="show-arrow-btn">
             <TopButton v-show="isScrolledEnough && !isChangelogModalOpen" @click="scrollToTop" />
         </transition>
+        <div class="blur_mask_wrapper" v-show="!isAtBottom">
+            <BlurMask />
+        </div>
     </main>
 </template>
 
@@ -74,6 +74,7 @@ body {
 main {
     position: relative;
     height: 100%;
+
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -82,15 +83,19 @@ main {
 
 .main_content_container {
     position: relative;
-    display: flex;
-    flex: 1 0 0%;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0%;
 }
 
 .scrolled_content {
     position: relative;
     width: 100%;
-    overflow-y: auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin-top: 10px;
     margin-bottom: 10px;
 }
