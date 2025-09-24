@@ -115,8 +115,8 @@ function onThemeIndexChanged(index) {
 
 <style lang="scss">
 .side_bar_container {
-    width: 260px;
-    padding: 24px 0;
+    width: 256px;
+    padding: 16px;
     overflow: hidden;
 
     display: flex;
@@ -135,8 +135,6 @@ function onThemeIndexChanged(index) {
 
 .user_info_panel_wrapper {
     width: 100%;
-    padding: 0 18px;
-
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -145,7 +143,6 @@ function onThemeIndexChanged(index) {
 .side_bar_btn_container {
     width: 100%;
     margin-top: 28px;
-    padding: 0 18px;
 
     display: flex;
     flex-direction: column;
@@ -181,9 +178,8 @@ function onThemeIndexChanged(index) {
 
 .site_settings_container {
     width: 100%;
-    padding: 8px 18px 8px 28px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0;
+    padding: 8px 0 8px 10px;
     border-top: 1px solid $third_white;
     border-bottom: 1px solid $third_white;
 
@@ -215,11 +211,9 @@ function onThemeIndexChanged(index) {
 
 .download_btn_container {
     width: 100%;
-    padding: 0 18px;
 }
 
 .version_number {
-    margin-left: 18px;
     font-size: 14px;
     font-weight: 400;
     color: $secondary_gray;

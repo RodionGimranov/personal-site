@@ -16,7 +16,7 @@ import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
 
 <style lang="scss">
 .home_page_wrapper {
-    padding: 14px 64px 0 64px;
+    padding: 6px 64px 0 64px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

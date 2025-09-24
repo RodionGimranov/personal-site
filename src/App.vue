@@ -94,17 +94,16 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 10px 0;
     overflow-x: hidden;
     overflow-y: scroll;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .blur_mask_wrapper {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: calc(100% - 276px);
+    width: calc(100% - 272px);
     height: 156px;
     z-index: 2;
     overflow: hidden;

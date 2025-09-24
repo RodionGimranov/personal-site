@@ -38,7 +38,7 @@ import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
 
 <style lang="scss">
 .about_page_wrapper {
-    padding: 14px 36px 0 36px;
+    padding: 6px 36px 0 36px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

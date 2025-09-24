@@ -40,7 +40,7 @@ const randomHeights = Array.from(
 <style lang="scss">
 .gallery_page_wrapper {
     width: 100%;
-    padding: 6px 16px;
+    padding: 6px 16px 0 16px;
 }
 
 .masonry_container {
@@ -50,7 +50,7 @@ const randomHeights = Array.from(
 
 .gallery_page_message {
     width: 100%;
-    padding: 32px 16px 8px 16px;
+    padding: 32px 16px 6px 16px;
 
     display: flex;
     justify-content: center;
