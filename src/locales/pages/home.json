@@ -3,7 +3,7 @@
         "message": {
             "bio_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях.",
 
-            "approach_home_section_title": "Мой подход к разработке ",
+            "approach_home_section_title": "Мой подход к разработке",
 
             "clean_code_title": "Чистый код",
             "clean_code_subtitle": "Пишу код так, чтобы его было легко читать и поддерживать. Использую лучшие практики, уделяю внимание структуре и стараюсь оставлять проект в том виде, в котором приятно работать и другим.",
@@ -23,7 +23,7 @@
     },
     "en": {
         "message": {
-            "bio_text": "Frontend developer crafting clean and thoughtful\n interfaces. I specialize in building web solutions\n with a focus on design details, code quality,\n and modern web technologies.",
+            "bio_text": "Frontend developer crafting clean and thoughtful interfaces.\nI specialize in building web solutions with a focus on design details, code quality, and modern web technologies.",
 
             "approach_home_section_title": "My Approach to Development",
 
@@ -31,10 +31,10 @@
             "clean_code_subtitle": "I write code in a way that is easy to read and maintain. I follow best practices, pay attention to structure, and aim to leave the project in a state that is pleasant for others to work with.",
 
             "ux_ui_attention_title": "UX/UI Focus",
-            "ux_ui_attention_subtitle": "I consider not only the logic but also how the product feels to the user. I design interfaces thoughtfully, pay attention to details, and strive to make interactions simple and intuitive.",
+            "ux_ui_attention_subtitle": "I consider not only the logic but also how the product feels to the user.\nI design interfaces thoughtfully, pay attention to details, and strive to make interactions simple and intuitive.",
 
             "learning_title": "Learning-Driven Growth",
-            "learning_subtitle": "I constantly learn new tools and approaches to grow as a developer. I believe that learning is key to quality solutions and long-term development.",
+            "learning_subtitle": "I constantly learn new tools and approaches to grow as a developer.\nI believe that learning is key to quality solutions and long-term development.",
 
             "tech_stack_home_section_title": "Tech Stack",
             "tech_stack_card_title_1": "Vue Ecosystem",
