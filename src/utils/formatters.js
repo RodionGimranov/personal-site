@@ -1,4 +1,4 @@
-export function formatText(value) {
+export function formatTransferText(value) {
     if (typeof value === "string") {
         return value.replace(/\n/g, "<br />");
     }
