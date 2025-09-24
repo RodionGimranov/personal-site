@@ -4,13 +4,15 @@
         <div class="my_apporoach_card_container">
             <div class="my_apporoach_card" v-for="(item, index) in apporoach_item" :key="index">
                 <p class="my_apporoach_title">{{ $t(item.title) }}</p>
-                <p class="my_apporoach_subtitle">{{ $t(item.subtitle) }}</p>
+                <p class="my_apporoach_subtitle" v-html="formatTransferText($t(item.subtitle))"></p>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import { formatTransferText } from "@/utils/formatters.js";
+
 const apporoach_item = [
     {
         title: "message.clean_code_title",

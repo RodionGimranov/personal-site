@@ -1,13 +1,11 @@
 <template>
     <div class="greeting_card_container common_bento_card_style">
-        <p v-for="key in greetingKeys" :key="key">
-            {{ $t(`message.${key}`) }}
-        </p>
+        <p v-html="formatTransferText($t('message.greeting_text'))"></p>
     </div>
 </template>
 
 <script setup>
-const greetingKeys = ["greeting_text_1", "greeting_text_2", "greeting_text_3", "greeting_text_4"];
+import { formatTransferText } from "@/utils/formatters.js";
 </script>
 
 <style lang="scss">
@@ -15,12 +13,6 @@ const greetingKeys = ["greeting_text_1", "greeting_text_2", "greeting_text_3", "
     width: 520px;
     height: 250px;
     padding: 16px !important;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 14px;
 
     p {
         font-size: 16px;

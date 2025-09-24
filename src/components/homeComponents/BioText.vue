@@ -1,8 +1,10 @@
 <template>
-    <p class="bio_text" v-html="$filters.formatText($t('message.bio_text'))"></p>
+    <p class="bio_text" v-html="formatTransferText($t('message.bio_text'))"></p>
 </template>
 
-<script setup></script>
+<script setup>
+import { formatTransferText } from "@/utils/formatters.js";
+</script>
 
 <style lang="scss">
 .bio_text {
