@@ -4,6 +4,9 @@
             "kazan_city_name": "Казань, Россия",
             "greeting_text": "Если вы читаете это… спасибо!\n\nЯ Frontend-разработчик родом из Казахстана.\n Когда я не программирую, я изучаю UX/UI дизайн, науку и ракетостроение.\n\nЭтот сайт - мой маленький уголок интернета, где я делюсь мыслями, опытом и вещами, которые меня вдохновляют.\n\nРад, что вы здесь!",
 
+            "work_experience_title": "Опыт работы",
+            "education_title": "Образование",
+
             "figma_card_title": "UI-Kit сайта",
             "figma_bubble_text": "поехали 😎",
 
@@ -14,6 +17,9 @@
         "message": {
             "kazan_city_name": "Kazan, Russia",
             "greeting_text": "If you’re reading this… thank you!\n\nI am a frontend developer originally from Kazakhstan.\nWhen I’m not coding, I explore UX/UI design, science, and rocketry.\n\nThis website is my little corner of the internet, where I share my thoughts, experiences, and the things that inspire me.\n\nI’m glad you’re here!",
+
+            "work_experience_title": "Work Experience",
+            "education_title": "Education",
 
             "figma_card_title": "Website UI Kit",
             "figma_bubble_text": "let's gooo 😎",

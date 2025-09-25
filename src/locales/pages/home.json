@@ -6,10 +6,10 @@
             "approach_home_section_title": "Мой подход к разработке",
 
             "clean_code_title": "Чистый код",
-            "clean_code_subtitle": "Пишу код так, чтобы его было легко читать и поддерживать. Использую лучшие практики, уделяю внимание структуре и стараюсь оставлять проект в том виде, в котором приятно работать и другим.",
+            "clean_code_subtitle": "Пишу код так, чтобы его было легко читать и поддерживать. Использую лучшие практики, уделяю внимание структуре и оставляю проект в таком виде, в котором приятно работать и другим.",
 
             "ux_ui_attention_title": "UX/UI внимание",
-            "ux_ui_attention_subtitle": "Думаю не только о логике, но и о том, как продукт ощущает пользователь. Продумываю интерфейсы, уделяю внимание деталям и стараюсь делать взаимодействие простым и удобным.",
+            "ux_ui_attention_subtitle": "Думаю не только о логике,\nно и о том, как продукт ощущает пользователь. Продумываю интерфейсы, уделяю внимание деталям и делаю взаимодействие простым и удобным.",
 
             "learning_title": "Рост через обучение",
             "learning_subtitle": "Постоянно осваиваю новые инструменты и подходы, чтобы развиваться как разработчик. Верю, что обучение - ключ к качественным решениям и долгосрочному росту.",
@@ -28,10 +28,10 @@
             "approach_home_section_title": "My Approach to Development",
 
             "clean_code_title": "Clean Code",
-            "clean_code_subtitle": "I write code in a way that is easy to read and maintain. I follow best practices, pay attention to structure, and aim to leave the project in a state that is pleasant for others to work with.",
+            "clean_code_subtitle": "I write code in a way that is easy to read and maintain. I follow best practices, pay attention to structure, and leave the project in a state that is pleasant for others to work with.",
 
             "ux_ui_attention_title": "UX/UI Focus",
-            "ux_ui_attention_subtitle": "I consider not only the logic but also how the product feels to the user.\nI design interfaces thoughtfully, pay attention to details, and strive to make interactions simple and intuitive.",
+            "ux_ui_attention_subtitle": "I consider not only the logic but also how the product feels to the user.\nI design interfaces thoughtfully, pay attention to details, and make interactions simple and intuitive.",
 
             "learning_title": "Learning-Driven Growth",
             "learning_subtitle": "I constantly learn new tools and approaches to grow as a developer.\nI believe that learning is key to quality solutions and long-term development.",
