@@ -60,6 +60,15 @@
                 "Добавлена интерактивная карточка с UI-китом сайта, включая имитацию поведения курсора из Figma.",
                 "Появилась новая карточка с иконками, которые можно перетаскивать мышкой - просто для fun'а и интерактива."
             ]
+        },
+        {
+            "id": 7,
+            "version": "v0.8.42 бета",
+            "date": "24 сентября 2025",
+            "descriptions": [
+                "Внесены небольшие улучшения в удобство использования и внешний вид сайта - изменения незаметные, но делают навигацию приятнее.",
+                "Улучшена производительность сайта - страницы теперь работают быстрее и отзывчивее."
+            ]
         }
     ],
     "en": [
@@ -122,6 +131,15 @@
                 "Redesigned the cards on the 'About Me' page for better visual harmony and readability.",
                 "Added an interactive card with the website’s UI kit, including cursor behavior imitation from Figma.",
                 "Introduced a new card with draggable icons – just for fun and interactivity."
+            ]
+        },
+        {
+            "id": 7,
+            "version": "v0.8.42 beta",
+            "date": "September 24, 2025",
+            "descriptions": [
+                "Made small improvements to the usability and appearance of the site - changes are subtle but make navigation smoother.",
+                "Improved site performance - pages now load faster and feel more responsive."
             ]
         }
     ]
