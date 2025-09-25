@@ -89,7 +89,7 @@ watchEffect(() => {
 <style lang="scss">
 .about_project_page_wrapper {
     position: relative;
-    padding: 0 64px;
+    padding: 0 36px;
 
     display: flex;
     flex-direction: column;
