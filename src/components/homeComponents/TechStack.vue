@@ -25,7 +25,7 @@ const { techSection, card2 } = useStackingCards();
 
 <style lang="scss">
 .tech_stack_section {
-    padding-top: 100px;
+    padding-top: 150px;
 
     .tech_stack_card_wrapper {
         width: 100%;
