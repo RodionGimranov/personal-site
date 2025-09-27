@@ -30,20 +30,15 @@ import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
 // import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard.vue";
 import BackgroundCard from "@/components/aboutComponents/BackgroundCard.vue";
-import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard.vue";
+import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
 import PhysicsCard from "@/components/aboutComponents/PhysicsCard.vue";
 import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
 </script>
 
 <style lang="scss">
 .about_page_wrapper {
-    padding: 6px 36px 0 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
+    padding: 26px 36px 0 36px;
 }
 
 .row_cards_1,
@@ -56,6 +51,7 @@ import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
     gap: 20px;
 }
 
+.about_page_wrapper,
 .large_block_card_1,
 .row_cards_2 {
     display: flex;
