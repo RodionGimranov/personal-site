@@ -1,0 +1,22 @@
+@media (max-width: 1024px) {
+    body {
+        padding: 0;
+    }
+
+    .common_layout_style {
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .side_bar_container {
+        display: none;
+    }
+
+    header {
+        display: flex;
+    }
+
+    .blur_mask_wrapper {
+        width: 100%;
+    }
+}
