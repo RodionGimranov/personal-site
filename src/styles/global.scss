@@ -74,3 +74,40 @@ p {
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.35);
 }
+//
+.commnon_modal_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.common_modal_style {
+    overflow: hidden;
+    border-radius: 30px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.modal_header {
+    width: 100%;
+    padding: 16px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.modal_header_title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #111111;
+}
