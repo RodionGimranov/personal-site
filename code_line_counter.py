@@ -13,7 +13,7 @@ def count_lines_in_file_list(file_paths):
     unique_dirs = set()
     file_count = 0
 
-    for index, file_path in enumerate(file_paths, start=1): 
+    for index, file_path in enumerate(file_paths, start=1):
         if not os.path.isfile(file_path):
             print(f"File not found: {file_path}")
             time.sleep(0.02)
@@ -48,6 +48,7 @@ def get_project_size(root_path):
 
 
 file_paths = [
+    "./public/favicon.svg",
     "./public/manifest.json",
     "./public/sprite.svg",
 
@@ -58,20 +59,24 @@ file_paths = [
     "./src/components/aboutComponents/ProjectStatsCard/TabBar.vue",
     "./src/components/aboutComponents/ProjectStatsCard/WindowControls.vue",
 
-    "./src/components/aboutComponents/EducationCard.vue",
+    "./src/components/aboutComponents/BackgroundCard.vue",
+    "./src/components/aboutComponents/EmptyCard.vue",
+    "./src/components/aboutComponents/FigmaCard.vue",
     "./src/components/aboutComponents/GreetingCard.vue",
     "./src/components/aboutComponents/LocationCard.vue",
     "./src/components/aboutComponents/MusicPlayerCard.vue",
+    "./src/components/aboutComponents/PhysicsCard.vue",
     "./src/components/aboutComponents/ProjectStatsCard.vue",
 
+    "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
+    "./src/components/homeComponents/TechStack/VueEcosystem.vue",
     "./src/components/homeComponents/BioText.vue",
     "./src/components/homeComponents/MyApproach.vue",
     "./src/components/homeComponents/SelectedProjects.vue",
     "./src/components/homeComponents/TechStack.vue",
-    "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
-    "./src/components/homeComponents/TechStack/VueEcosystem.vue",
 
     "./src/components/layout/Footer.vue",
+    "./src/components/layout/Header.vue",
     "./src/components/layout/SideBar.vue",
 
     "./src/components/ui/buttons/Button.vue",
@@ -81,7 +86,8 @@ file_paths = [
     "./src/components/ui/cards/ImageCard.vue",
     "./src/components/ui/cards/ProjectCard.vue",
 
-    "./src/components/ui/ChangelogModal/ChangelogModal.vue",
+    "./src/components/ui/modals/BackgroundModal.vue",
+    "./src/components/ui/modals/ChangelogModal.vue",
 
     "./src/components/ui/Skeleton/Skeleton.vue",
 
@@ -106,6 +112,8 @@ file_paths = [
 
     "./src/libs/gsap/StackingCards.js",
 
+    "./src/libs/matter-js/phycalsIcons.js",
+
     "./src/libs/vue-i18n/vue-i18n.js",
 
     "./src/locales/pages/about.json",
@@ -126,6 +134,7 @@ file_paths = [
 
     "./src/utils/eventBus.js",
     "./src/utils/formatters.js",
+    "./src/utils/getPageTitle.js",
 
     "./src/views/AboutPage.vue",
     "./src/views/AboutProjectPage.vue",
@@ -154,4 +163,4 @@ print("📂 Folders:", dirs_list)
 project_path = "."
 project_size = get_project_size(project_path)
 
-print("\n💾 Total project size (personal-site-beta):", human_readable_size(project_size))
+print("\n💾 Total project size (personal-site):", human_readable_size(project_size))

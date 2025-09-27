@@ -115,14 +115,13 @@ const currentLocale = computed(() => locale.value);
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
-    background-image: url("/personal-site-beta/images/photopaper.webp");
+    background-image: url("/personal-site/images/photopaper.webp");
 }
 
 .flip_card_back_content {
     position: relative;
     width: 100%;
     z-index: 1;
-    // or delete
     transform: rotate(-25deg);
 
     display: flex;

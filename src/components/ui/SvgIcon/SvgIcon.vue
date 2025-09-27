@@ -1,6 +1,6 @@
 <template>
     <svg class="svg_icon" aria-hidden="true" :width="width" :height="height">
-        <use :href="`/personal-site-beta/sprite.svg#${name}`" />
+        <use :href="`/personal-site/sprite.svg#${name}`" />
     </svg>
 </template>
 
