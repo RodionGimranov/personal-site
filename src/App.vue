@@ -2,6 +2,7 @@
     <main>
         <SideBar />
         <section class="main_content_container common_layout_style">
+            <Header />
             <div ref="scrolledContent" class="scrolled_content">
                 <router-view />
                 <Footer v-if="!$route.meta.hideFooter" />
@@ -9,9 +10,10 @@
         </section>
         <transition name="show-modal">
             <ChangelogModal v-if="isChangelogModalOpen" />
+            <BackgroundModal v-else-if="isBackgroundModalOpen" />
         </transition>
         <transition name="show-arrow-btn">
-            <TopButton v-show="isScrolledEnough && !isChangelogModalOpen" @click="scrollToTop" />
+            <TopButton v-show="showTopButton" @click="scrollToTop" />
         </transition>
         <div class="blur_mask_wrapper" v-show="!isAtBottom">
             <BlurMask />
@@ -25,10 +27,12 @@ import { useStore } from "vuex";
 import { RouterView, useRouter } from "vue-router";
 
 import SideBar from "@/components/layout/SideBar.vue";
+import Header from "@/components/layout/Header.vue";
 import Footer from "@/components/layout/Footer.vue";
-import BlurMask from "@/components/ui/BlurMask.vue";
 import ChangelogModal from "@/components/ui/modals/ChangelogModal.vue";
+import BackgroundModal from "@/components/ui/modals/BackgroundModal.vue";
 import TopButton from "./components/ui/buttons/TopButton.vue";
+import BlurMask from "@/components/ui/BlurMask.vue";
 
 const store = useStore();
 const router = useRouter();
@@ -38,6 +42,11 @@ const isAtBottom = ref(false);
 const scrolledContent = ref(null);
 
 const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalOpen);
+const isBackgroundModalOpen = computed(() => store.state.modals.isBackgroundModalOpen);
+
+const showTopButton = computed(
+    () => (isScrolledEnough.value && !isChangelogModalOpen.value) || isBackgroundModalOpen.value,
+);
 
 function handleScroll() {
     if (scrolledContent.value) {
