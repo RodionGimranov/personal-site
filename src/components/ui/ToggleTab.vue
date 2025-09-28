@@ -82,7 +82,7 @@ watch(
 );
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .toggle_tab_container {
     position: relative;
     padding: 4px;
