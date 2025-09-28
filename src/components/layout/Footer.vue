@@ -44,7 +44,7 @@ import { computed } from "vue";
 import { useStore } from "vuex";
 
 function openChangelogModal() {
-    store.commit("modals/OPEN_CHANGELOG_MODAL");
+    store.commit("layout/OPEN_CHANGELOG_MODAL");
 }
 
 const store = useStore();

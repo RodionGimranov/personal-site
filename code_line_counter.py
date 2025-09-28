@@ -123,7 +123,7 @@ file_paths = [
 
     "./src/router/index.js",
 
-    "./src/store/modules/modals.js",
+    "./src/store/modules/layout.js",
     "./src/store/modules/theme.js",
     "./src/store/store.js",
 
