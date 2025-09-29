@@ -69,6 +69,14 @@
                 "Внесены небольшие улучшения в удобство использования и внешний вид сайта - изменения незаметные, но делают навигацию приятнее.",
                 "Улучшена производительность сайта - страницы теперь работают быстрее и отзывчивее."
             ]
+        },
+        {
+            "id": 8,
+            "version": "v0.9.59 бета",
+            "date": "28 сентября 2025",
+            "descriptions": [
+                "Небольшое обновление страницы «О проекте» для того что бы больше соответствовать «Study Case»: добавлены секции «Зоны ответственности» и «Контекст и цель». Это делает страницу более информативной и помогает лучше понять проект и мою роль в нём."
+            ]
         }
     ],
     "en": [
@@ -140,6 +148,14 @@
             "descriptions": [
                 "Made small improvements to the usability and appearance of the site - changes are subtle but make navigation smoother.",
                 "Improved site performance - pages now load faster and feel more responsive."
+            ]
+        },
+        {
+            "id": 8,
+            "version": "v0.9.59 beta",
+            "date": "September 28, 2025",
+            "descriptions": [
+                "A minor update to the 'About the Project' page to better align it with the 'Study Case' format: added sections 'Areas of Responsibility' and 'Context and Goal'. This makes the page more informative and helps to better understand the project and my role in it."
             ]
         }
     ]
