@@ -169,4 +169,9 @@
 <symbol id="education-icon" viewBox="0 0 40 40" fill="none">
   <path d="M6.66666 31.6667V10.3333C6.66666 8.4665 6.66666 7.53307 7.02998 6.82003C7.34955 6.19282 7.85948 5.68288 8.4867 5.36332C9.19973 5 10.1332 5 12 5H28C29.8668 5 30.8003 5 31.5133 5.36332C32.1405 5.68288 32.6505 6.19282 32.97 6.82003C33.3333 7.53307 33.3333 8.4665 33.3333 10.3333V28.3333H10C8.15905 28.3333 6.66666 29.8257 6.66666 31.6667ZM6.66666 31.6667C6.66666 33.5077 8.15905 35 10 35H33.3333M15 11.6667H25M15 18.3333H25M31.6667 28.3333V35" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+<!-- burger-menu-icon -->
+<symbol id="burger-menu-icon" viewBox="0 0 20 8" fill="none">
+  <rect width="20" height="2" rx="1" fill="currentColor"/>
+  <rect y="6" width="20" height="2" rx="1" fill="currentColor"/>
+</symbol>
 </svg>
