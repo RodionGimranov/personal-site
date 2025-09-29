@@ -1,8 +1,11 @@
 <template>
+    <!-- <Header :class="{ 'header-shifted': isSidebarOpen }" /> -->
+    <Header />
     <main>
-        <SideBar />
+        <transition name="slide-sidebar">
+            <SideBar v-if="isDesktop || isSidebarOpen" class="side_bar_container" />
+        </transition>
         <section class="main_content_container common_layout_style">
-            <Header />
             <div ref="scrolledContent" class="scrolled_content">
                 <router-view />
                 <Footer v-if="!$route.meta.hideFooter" />
@@ -18,6 +21,11 @@
         <div class="blur_mask_wrapper" v-show="!isAtBottom">
             <BlurMask />
         </div>
+        <div
+            v-if="!isDesktop && isSidebarOpen"
+            class="sidebar_overlay"
+            @click="store.commit('layout/CLOSE_SIDEBAR')"
+        ></div>
     </main>
 </template>
 
@@ -41,8 +49,18 @@ const isScrolledEnough = ref(false);
 const isAtBottom = ref(false);
 const scrolledContent = ref(null);
 
-const isChangelogModalOpen = computed(() => store.state.modals.isChangelogModalOpen);
-const isBackgroundModalOpen = computed(() => store.state.modals.isBackgroundModalOpen);
+const isSidebarOpen = computed(() => store.state.layout.isSidebarOpen);
+const isChangelogModalOpen = computed(() => store.state.layout.isChangelogModalOpen);
+const isBackgroundModalOpen = computed(() => store.state.layout.isBackgroundModalOpen);
+
+const isDesktop = ref(window.innerWidth > 1024);
+
+function handleResize() {
+    isDesktop.value = window.innerWidth > 1024;
+    if (isDesktop.value) {
+        store.commit("layout/CLOSE_SIDEBAR");
+    }
+}
 
 const showTopButton = computed(
     () => (isScrolledEnough.value && !isChangelogModalOpen.value) || isBackgroundModalOpen.value,
@@ -66,12 +84,15 @@ function scrollToTop() {
 
 onMounted(async () => {
     scrolledContent.value?.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
     await router.isReady();
     handleScroll();
 });
 
 onBeforeUnmount(() => {
     scrolledContent.value?.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("resize", handleResize);
 });
 </script>
 
@@ -119,4 +140,20 @@ main {
     border-radius: 16px;
     pointer-events: none;
 }
+
+.sidebar_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: 0.3s;
+}
+
+// .header-shifted {
+//     transform: translateX(300px);
+//     transition: transform 0.3s ease;
+// }
 </style>
