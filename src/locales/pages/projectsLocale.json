@@ -7,8 +7,10 @@
 
             "project_video_text": "Ваш браузер не поддерживает видео :(",
             "description_title": "Описание",
-            "technologies_title": "Технологии",
-            "role_title": "Роль"
+            "technologies_title": "Технологии и инструменты",
+            "role_title": "Роль",
+            "areas_of_responsibility_titl": "Зоны ответственности",
+            "context_purpose_title": "Контекст и цель"
         }
     },
     "en": {
@@ -19,8 +21,10 @@
 
             "project_video_text": "Your browser does not support the video :(",
             "description_title": "Description",
-            "technologies_title": "Technologies",
-            "role_title": "Role"
+            "technologies_title": "Technologies and Tools",
+            "role_title": "Role",
+            "areas_of_responsibility_titl": "Areas of responsibility",
+            "context_purpose_title": "Context and purpose"
         }
     }
 }
