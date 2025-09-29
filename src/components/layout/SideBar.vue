@@ -15,6 +15,7 @@
                     :to="link.path"
                     class="side_bar_btn"
                     :class="{ _active: isActive(link.path) }"
+                    @click="closeSidebar"
                 >
                     <SvgIcon :name="link.icon" />
                     {{ $t(link.name) }}
@@ -54,7 +55,7 @@
                 </a>
             </div>
         </div>
-        <p class="version_number">v{{ appVersion }}{{ $t("message.beta_version_title") }}</p>
+        <p class="version_number">v{{ appVersion }}</p>
     </section>
 </template>
 
@@ -96,8 +97,12 @@ function onActiveIndexChanged(index) {
 }
 
 function openChangelogModal() {
-    store.commit("modals/OPEN_CHANGELOG_MODAL");
+    store.commit("layout/OPEN_CHANGELOG_MODAL");
 }
+
+const closeSidebar = () => {
+    store.commit("layout/CLOSE_SIDEBAR");
+};
 
 function onThemeIndexChanged(index) {
     const themeMap = {

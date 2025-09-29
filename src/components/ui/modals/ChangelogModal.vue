@@ -44,7 +44,7 @@ const { locale } = useI18n();
 const modalRef = ref(null);
 
 function closeChangelogModal() {
-    store.commit("modals/CLOSE_CHANGELOG_MODAL");
+    store.commit("layout/CLOSE_CHANGELOG_MODAL");
 }
 
 const updates = computed(() => {
