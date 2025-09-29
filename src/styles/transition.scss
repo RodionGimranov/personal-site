@@ -37,3 +37,14 @@
 .fade-scale-leave-from {
     opacity: 1;
 }
+// Slidebar Transition
+.slide-sidebar-enter-from {
+    transform: translateX(-100%);
+}
+.slide-sidebar-enter-active,
+.slide-sidebar-leave-active {
+    transition: transform 0.3s ease;
+}
+.slide-sidebar-leave-to {
+    transform: translateX(-100%);
+}
