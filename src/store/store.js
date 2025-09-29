@@ -3,13 +3,13 @@ import { createStore } from "vuex";
 import layout from "@/store/modules/layout.js";
 import theme from "@/store/modules/theme.js";
 
-const appVersion = "0.9.59";
-const linesOfCode = 5376;
+const appVersion = "1.0.0";
+const linesOfCode = 5374;
 // +9
 const fileCount = 86;
 // +5
 const folderCount = 35;
-const projectSizeMB = 170.0;
+const projectSizeMB = 170.02;
 
 const resumeLink = "https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?";
 const figmaDesignLink =
