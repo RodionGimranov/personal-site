@@ -9,7 +9,13 @@
     }
 
     .side_bar_container {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px !important;
+        height: 100dvh;
+        z-index: 1000;
+        border-radius: 0 16px 16px 0;
     }
 
     header {
