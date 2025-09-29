@@ -5,6 +5,14 @@
             "name": "Личный сайт",
             "description": "Мой личный сайт - это место, где вы можете познакомиться со мной как с Frontend-разработчиком. Здесь вы найдёте моё портфолио, информацию о профессиональных навыках и используемых технологиях, а также сможете лучше понять мой подход к разработке. Сайт создан с упором на удобство, современный дизайн и адаптивность, чтобы каждый посетитель мог легко и приятно изучить мои проекты.",
             "role": "Frontend-разработчик, UX/UI‑дизайнер",
+            "areas_of_responsibility": [
+                { "area": "Проектирование структуры и навигации" },
+                { "area": "Разработка архитектуры фронтенда" },
+                { "area": "Дизайн интерфейса и UX" },
+                { "area": "Анимации и интерактивные элементы" },
+                { "area": "Настройка деплоя и оптимизация" }
+            ],
+            "context_purpose": "Проект был создан как персональная площадка для презентации портфолио и демонстрации профессиональных навыков. Его цель - показать мой опыт, подход к разработке и дать возможность потенциальным работодателям или клиентам быстро оценить мои компетенции.",
             "technologies": [
                 { "name": "HTML" },
                 { "name": "SCSS" },
@@ -30,9 +38,17 @@
     "en": [
         {
             "id": 0,
-            "name": "Personal Site",
-            "description": "My personal website is a place where you can get to know me as a Frontend Developer. Here, you’ll find my portfolio, details about my professional skills and the technologies I use, as well as insights into my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, making it easy and enjoyable for visitors to explore my work.",
+            "name": "Personal Website",
+            "description": "My personal website is a place where you can get to know me as a Frontend Developer. Here, you will find my portfolio, information about my professional skills and the technologies I use, as well as a clear view of my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, allowing every visitor to explore my projects easily and enjoyably.",
             "role": "Frontend Developer, UX/UI Designer",
+            "areas_of_responsibility": [
+                { "area": "Structuring and navigation design" },
+                { "area": "Frontend architecture development" },
+                { "area": "Interface and UX design" },
+                { "area": "Animations and interactive elements" },
+                { "area": "Deployment setup and optimization" }
+            ],
+            "context_purpose": "The project was created as a personal platform to showcase my portfolio and demonstrate professional skills. Its purpose is to highlight my experience, development approach, and allow potential employers or clients to quickly assess my competencies.",
             "technologies": [
                 { "name": "HTML" },
                 { "name": "SCSS" },
