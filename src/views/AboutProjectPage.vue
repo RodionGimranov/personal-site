@@ -39,15 +39,35 @@
         </div>
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.description_title") }}</p>
-            <p class="about_project_info_subtitle common_width_size">{{ project.description }}</p>
+            <p class="about_project_info_subtitle about_project_common_width_size">
+                {{ project.description }}
+            </p>
         </div>
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.role_title") }}</p>
             <p class="about_project_info_subtitle">{{ project.role }}</p>
         </div>
         <div class="about_project_info_container">
+            <p class="about_project_info_title">{{ $t("message.areas_of_responsibility_titl") }}</p>
+            <ul class="areas_list">
+                <li
+                    class="about_project_info_subtitle"
+                    v-for="(area, index) in project.areas_of_responsibility"
+                    :key="index"
+                >
+                    {{ area.area }}
+                </li>
+            </ul>
+        </div>
+        <div class="about_project_info_container">
+            <p class="about_project_info_title">{{ $t("message.context_purpose_title") }}</p>
+            <p class="about_project_info_subtitle about_project_common_width_size">
+                {{ project.context_purpose }}
+            </p>
+        </div>
+        <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
-            <div class="technologies_list common_width_size">
+            <div class="technologies_list about_project_common_width_size">
                 <TechnologyTag
                     v-for="(tech, index) in project.technologies"
                     :key="index"
@@ -180,7 +200,7 @@ watchEffect(() => {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 12px;
+    gap: 8px;
 
     &:last-child {
         margin-bottom: 0;
@@ -189,8 +209,18 @@ watchEffect(() => {
 
 .about_project_info_title {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: $primary_gray;
+}
+
+.areas_list {
+    margin: 0;
+    padding-left: 26px;
+
+    &li {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .about_project_info_subtitle {
@@ -199,7 +229,7 @@ watchEffect(() => {
     color: $primary_dark;
 }
 
-.common_width_size {
+.about_project_common_width_size {
     width: 560px;
 }
 </style>
