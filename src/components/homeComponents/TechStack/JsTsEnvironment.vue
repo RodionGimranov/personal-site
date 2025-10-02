@@ -26,61 +26,9 @@ import { computed } from "vue";
 
 import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
 
-const row1 = [
-    "Vue",
-    "Vuex",
-    "Vue Router",
-    "Vue i18n",
-    "VueUse",
-    "Vue Lottie",
-    "Nuxt",
-    "HTML",
-    "CSS",
-    "SCSS",
-];
+import technologyRowsData from "@/data/technology.json";
 
-const row2 = [
-    "JavaScript",
-    "TypeScript",
-    "Nest",
-    "Storybook",
-    "Pinia",
-    "PrismaORM",
-    "Python",
-    "C++",
-    "C#",
-    "Vite",
-];
-
-const row3 = [
-    "GSAP",
-    "Axios",
-    "Matter.js",
-    "Day.js",
-    "Vanilla-tilt.js",
-    "ECharts",
-    "ldrsx",
-    "Highcharts",
-    "Node.js",
-    "Mapbox GL",
-];
-
-const row4 = [
-    "GitHub Pages",
-    "SQL",
-    "PostgreSQL",
-    "Postman",
-    "GitHub",
-    "Express",
-    "Git",
-    "Prettier",
-    "Cloudinary",
-    "Telegram Mini Apps",
-];
-
-const row5 = ["Webpack", "REST API", "MongoDB", "Three.js", "ESLint", "Docker", "Stylelint", "PHP"];
-
-const technology_rows = computed(() => [row1, row2, row3, row4, row5]);
+const technology_rows = computed(() => technologyRowsData.rows);
 
 const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row, ...row]));
 </script>
