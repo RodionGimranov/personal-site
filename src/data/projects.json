@@ -2,9 +2,37 @@
     "ru": [
         {
             "id": 0,
+            "name": "Генератор паролей",
+            "description": "Генератор Паролей - это веб-приложение, которое позволяет пользователю быстро создавать безопасные пароли с настраиваемой длиной и набором символов (заглавные и строчные буквы, цифры, символы). Приложение обеспечивает удобный интерфейс с интерактивными настройками и мгновенной генерацией, а также использует современную логику случайного выбора символов и алгоритм Фишера–Йетса для равномерного перемешивания.",
+            "role": "Frontend-разработчик, UX/UI-дизайнер",
+            "areas_of_responsibility": [
+                { "area": "Проектирование структуры и компонентов интерфейса" },
+                { "area": "Разработка архитектуры фронтенда" },
+                { "area": "Дизайн интерфейса и UX" },
+                { "area": "Логика генерации пароля" },
+                { "area": "Анимации и интерактивные элементы" },
+                { "area": "Настройка деплоя и оптимизация" }
+            ],
+            "context_purpose": "Проект создавался для практики работы с Vue 3 и современными подходами к фронтенд-разработке, а также для изучения лучших практик по генерации случайных паролей и безопасности данных. Цель проекта - предоставить простой и удобный инструмент для создания безопасных паролей с возможностью кастомизации по длине и набору символов.",
+            "technologies": [
+                { "name": "HTML" },
+                { "name": "SCSS" },
+                { "name": "JavaScript" },
+                { "name": "Vue" },
+                { "name": "Vue3 Lottie" },
+                { "name": "Vue I18n" },
+                { "name": "Vite" },
+                { "name": "GitHub Pages" }
+            ],
+            "project_video_cover": "",
+            "link_to_deploy": "https://rodiongimranov.github.io/password-generator/",
+            "link_to_code": "https://github.com/RodionGimranov/password-generator"
+        },
+        {
+            "id": 1,
             "name": "Личный сайт",
             "description": "Мой личный сайт - это место, где вы можете познакомиться со мной как с Frontend-разработчиком. Здесь вы найдёте моё портфолио, информацию о профессиональных навыках и используемых технологиях, а также сможете лучше понять мой подход к разработке. Сайт создан с упором на удобство, современный дизайн и адаптивность, чтобы каждый посетитель мог легко и приятно изучить мои проекты.",
-            "role": "Frontend-разработчик, UX/UI‑дизайнер",
+            "role": "Frontend-разработчик, UX/UI-дизайнер",
             "areas_of_responsibility": [
                 { "area": "Проектирование структуры и навигации" },
                 { "area": "Разработка архитектуры фронтенда" },
@@ -18,7 +46,7 @@
                 { "name": "SCSS" },
                 { "name": "JavaScript" },
                 { "name": "Vue" },
-                { "name": "VueX" },
+                { "name": "Vuex" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
                 { "name": "VueUse" },
@@ -30,14 +58,43 @@
                 { "name": "Cloudinary" },
                 { "name": "GitHub Pages" }
             ],
-            "project_cover": "",
+            "project_video_cover": "",
             "link_to_deploy": "",
-            "link_to_code": ""
+            "link_to_code": "https://github.com/RodionGimranov/personal-site"
         }
     ],
     "en": [
         {
             "id": 0,
+            "name": "Password Generator",
+            "description": "Password Generator is a web application that allows users to quickly create secure passwords with customizable length and character sets (uppercase and lowercase letters, numbers, symbols). The app provides a user-friendly interface with interactive settings and instant generation, and uses modern random character selection logic and the Fisher–Yates algorithm for uniform shuffling.",
+            "role": "Frontend Developer, UX/UI Designer",
+            "areas_of_responsibility": [
+                { "area": "Designing the structure and components of the interface" },
+                { "area": "Frontend architecture development" },
+                { "area": "Interface and UX design" },
+                { "area": "Password generation logic" },
+                { "area": "Animations and interactive elements" },
+                { "area": "Deployment setup and optimization" }
+            ],
+            "context_purpose": "The project was created to practice working with Vue 3 and modern frontend development approaches, as well as to explore best practices for random password generation and data security. The goal of the project is to provide a simple and convenient tool for creating secure passwords with customizable length and character sets.",
+            "technologies": [
+                { "name": "HTML" },
+                { "name": "SCSS" },
+                { "name": "JavaScript" },
+                { "name": "Vue" },
+                { "name": "Vue3 Lottie" },
+                { "name": "Vue I18n" },
+                { "name": "Vite" },
+                { "name": "GitHub Pages" }
+            ],
+            "project_video_cover": "",
+            "link_to_deploy": "https://rodiongimranov.github.io/password-generator/",
+            "link_to_code": "https://github.com/RodionGimranov/password-generator"
+        },
+
+        {
+            "id": 1,
             "name": "Personal Website",
             "description": "My personal website is a place where you can get to know me as a Frontend Developer. Here, you will find my portfolio, information about my professional skills and the technologies I use, as well as a clear view of my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, allowing every visitor to explore my projects easily and enjoyably.",
             "role": "Frontend Developer, UX/UI Designer",
@@ -54,7 +111,7 @@
                 { "name": "SCSS" },
                 { "name": "JavaScript" },
                 { "name": "Vue" },
-                { "name": "VueX" },
+                { "name": "Vuex" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
                 { "name": "VueUse" },
@@ -66,9 +123,9 @@
                 { "name": "Cloudinary" },
                 { "name": "GitHub Pages" }
             ],
-            "project_cover": "",
+            "project_video_cover": "",
             "link_to_deploy": "",
-            "link_to_code": ""
+            "link_to_code": "https://github.com/RodionGimranov/personal-site"
         }
     ]
 }
