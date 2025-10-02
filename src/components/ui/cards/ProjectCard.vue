@@ -1,7 +1,7 @@
 <template>
     <RouterLink :to="`/About-Project/${project.id}`" class="project_card_container">
         <video
-            v-if="project.project_cover"
+            v-if="project.project_video_cover"
             class="video_cover"
             preload="metadata"
             autoplay
@@ -9,7 +9,7 @@
             muted
             playsinline
         >
-            <source :src="project.project_cover" type="video/mp4" />
+            <source :src="project.project_video_cover" type="video/mp4" />
             {{ $t("message.project_video_text") }}
         </video>
         <Skeleton v-else width="100%" height="100%" />
