@@ -71,7 +71,7 @@ footer {
     width: 100%;
     margin-top: 100px;
     background: $primary_white;
-    padding: 36px 64px 6px 64px;
+    padding: 36px 64px 30px 64px;
     border-top: 3px solid var(--primary-white-bg);
 
     display: flex;
@@ -124,6 +124,7 @@ footer {
     font-weight: 400;
     color: $third_gray;
     line-height: 26px;
+    text-align: start;
 
     &:hover {
         color: $primary_dark;

@@ -24,7 +24,7 @@
         </div>
         <div class="large_video_cover_container">
             <video
-                v-if="project.project_cover"
+                v-if="project.project_video_cover"
                 class="large_video_cover"
                 preload="metadata"
                 autoplay
@@ -32,7 +32,7 @@
                 muted
                 playsinline
             >
-                <source :src="project.project_cover" type="video/mp4" />
+                <source :src="project.project_video_cover" type="video/mp4" />
                 {{ $t("message.project_video_text") }}
             </video>
             <Skeleton v-else width="100%" height="100%" />
@@ -51,7 +51,7 @@
             <p class="about_project_info_title">{{ $t("message.areas_of_responsibility_titl") }}</p>
             <ul class="areas_list">
                 <li
-                    class="about_project_info_subtitle"
+                    class="about_project_info_subtitle about_project_common_width_size"
                     v-for="(area, index) in project.areas_of_responsibility"
                     :key="index"
                 >
@@ -153,7 +153,6 @@ watchEffect(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
 }
 
 .about_project_large_name {

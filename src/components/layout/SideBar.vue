@@ -25,7 +25,7 @@
                 </button>
             </div>
             <div class="site_settings_container">
-                <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p>
+                <!-- <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p> -->
                 <div class="site_settings_wrapper">
                     <p class="site_settings_subtitle">
                         {{ $t("message.language_settings_title") }}
@@ -38,7 +38,7 @@
                         @update:activeIndex="onActiveIndexChanged"
                     />
                 </div>
-                <div class="site_settings_wrapper">
+                <!-- <div class="site_settings_wrapper">
                     <p class="site_settings_subtitle">{{ $t("message.theme_settings_title") }}</p>
                     <ToggleTab
                         storageKey="theme-tab"
@@ -47,7 +47,7 @@
                         :iconOptions="['light-theme-icon', 'dark-theme-icon', 'system-theme-icon']"
                         @update:activeIndex="onThemeIndexChanged"
                     />
-                </div>
+                </div> -->
             </div>
             <div class="download_btn_container">
                 <a :href="resumeLink" class="side_bar_btn" target="_blank">
@@ -66,7 +66,7 @@ import { useRoute } from "vue-router";
 
 import { useLanguageSwitcher } from "@/composables/useLanguageSwitcher.js";
 
-import UserInfoPanel from "@/components/UserInfoPanel.vue";
+import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import ToggleTab from "@/components/ui/ToggleTab.vue";
 

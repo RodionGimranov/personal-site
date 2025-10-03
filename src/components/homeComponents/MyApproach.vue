@@ -32,14 +32,19 @@ const apporoach_item = [
 <style lang="scss">
 .my_apporoach_card_container {
     width: 100%;
+    overflow: hidden;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 19px;
 }
 
 .my_apporoach_card {
     width: 322px;
     height: 256px;
+    min-height: 214px;
     padding: 42px 22px;
     border-radius: 30px;
     background: $fourth_gray;

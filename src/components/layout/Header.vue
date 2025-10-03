@@ -1,7 +1,7 @@
 <template>
     <header>
         <button @click="openSidebar">
-            <SvgIcon name="burger-menu-icon" width="20" height="8" />
+            <SvgIcon name="burger-menu-icon" width="24" height="24" />
         </button>
     </header>
 </template>
@@ -23,16 +23,18 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px;
     z-index: 999;
+    padding: 0 16px;
+    background: $primary_white;
+    border-bottom: 1px solid $third_white;
 
     display: none;
-    // justify-content: flex-end;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 
     button {
-        width: 48px;
-        height: 48px;
+        height: 100%;
         color: $primary_dark;
 
         display: flex;

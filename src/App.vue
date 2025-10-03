@@ -1,5 +1,4 @@
 <template>
-    <!-- <Header :class="{ 'header-shifted': isSidebarOpen }" /> -->
     <Header />
     <main>
         <transition name="slide-sidebar">
@@ -63,7 +62,7 @@ function handleResize() {
 }
 
 const showTopButton = computed(
-    () => (isScrolledEnough.value && !isChangelogModalOpen.value) || isBackgroundModalOpen.value,
+    () => isScrolledEnough.value && !isChangelogModalOpen.value && !isBackgroundModalOpen.value,
 );
 
 function handleScroll() {
@@ -103,8 +102,6 @@ body {
 
 main {
     position: relative;
-    height: 100%;
-
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -123,7 +120,6 @@ main {
 .scrolled_content {
     position: relative;
     width: 100%;
-    height: 100%;
     margin: 10px 0;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -151,9 +147,4 @@ main {
     z-index: 998;
     transition: 0.3s;
 }
-
-// .header-shifted {
-//     transform: translateX(300px);
-//     transition: transform 0.3s ease;
-// }
 </style>

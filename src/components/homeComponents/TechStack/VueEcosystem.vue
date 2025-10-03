@@ -1,5 +1,5 @@
 <template>
-    <div class="tech_stack_card_container vue_ecosystem_card commom_card_style">
+    <div class="tech_stack_card_container commom_card_style">
         <div class="vue_ecosystem_wrapper">
             <div class="vue_icon_bg"></div>
             <div class="vue_ecosystem_icons">
@@ -61,18 +61,6 @@ const secondLineIcons = [
 </script>
 
 <style lang="scss">
-.tech_stack_card_container {
-    width: 514px;
-    height: 348px;
-    padding: 22px;
-    box-shadow: 0 0 24px $secondary_translucent_dark;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .vue_ecosystem_wrapper {
     position: relative;
     width: 100%;
@@ -138,6 +126,7 @@ const secondLineIcons = [
 .tech_stack_subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: $third_gray;
+    // color: $third_gray;
+    color: $primary_dark;
 }
 </style>

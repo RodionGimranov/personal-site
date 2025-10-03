@@ -1,5 +1,5 @@
 <template>
-    <div class="tech_stack_card_container commom_card_style">
+    <div class="tech_stack_card_container js_ts_environment commom_card_style">
         <div class="technology_list_wrapper">
             <div
                 v-for="(list, index) in duplicatedRows"
@@ -34,17 +34,14 @@ const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row
 </script>
 
 <style lang="scss">
-.tech_stack_card_container {
-    width: 514px;
-    height: 348px;
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.js_ts_environment {
+    justify-content: flex-end !important;
 }
 
 .technology_list_wrapper {
+    position: absolute;
+    top: 22px;
+    left: 22px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -52,7 +49,6 @@ const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row
 }
 
 .technology_list {
-    width: 100%;
     display: flex;
     gap: 6px;
 }
@@ -65,7 +61,6 @@ const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row
         transform: translateX(0%);
     }
 }
-
 @keyframes scroll-left {
     0% {
         transform: translateX(-5%);
@@ -78,7 +73,6 @@ const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row
 .move_right {
     animation: scroll-right 30s linear infinite;
 }
-
 .move_left {
     animation: scroll-left 30s linear infinite;
 }
