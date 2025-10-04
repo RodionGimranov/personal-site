@@ -63,7 +63,7 @@ useEscapeKeyClose(() => {
 
 <style lang="scss">
 .changelog_modal_style {
-    width: 600px;
+    max-width: 600px;
     height: 400px;
 }
 

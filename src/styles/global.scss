@@ -63,6 +63,20 @@ p {
     font-weight: 600;
     color: #111111;
 }
+.tech_stack_card_container {
+    position: relative;
+    width: 100%;
+    max-width: 514px;
+    height: 348px;
+    padding: 22px;
+    overflow: hidden;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
 .common_bento_card_style {
     padding: 8px;
     overflow: hidden;
@@ -82,6 +96,7 @@ p {
     width: 100vw;
     height: 100vh;
     z-index: 9999;
+    padding: 0 16px;
     backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.5);
     display: flex;
