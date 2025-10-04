@@ -75,6 +75,7 @@ file_paths = [
     "./src/components/homeComponents/SelectedProjects.vue",
     "./src/components/homeComponents/TechStack.vue",
 
+    "./src/components/layout/SideBar/UserInfoPanel.vue",
     "./src/components/layout/Footer.vue",
     "./src/components/layout/Header.vue",
     "./src/components/layout/SideBar.vue",
@@ -98,8 +99,6 @@ file_paths = [
     "./src/components/ui/BlurMask.vue",
     "./src/components/ui/ToggleTab.vue",
 
-    "./src/components/UserInfoPanel.vue",
-
     "./src/composables/useEscapeKey.js",
     "./src/composables/useLanguageSwitcher.js",
     "./src/composables/useShuffledPhotos.js",
@@ -109,6 +108,7 @@ file_paths = [
     "./src/data/photos.json",
     "./src/data/projects.json",
     "./src/data/songs.json",
+    "./src/data/technology.json",
 
     "./src/libs/gsap/StackingCards.js",
 
