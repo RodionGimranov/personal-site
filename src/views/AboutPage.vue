@@ -2,8 +2,7 @@
     <div class="about_page_wrapper common_page_wrapper">
         <div class="row_cards_1">
             <GreetingCard />
-            <!-- <LocationCard /> -->
-            <EmptyCard />
+            <LocationCard />
             <MusicPlayerCard />
         </div>
         <div class="large_block_card_wrapper">
@@ -27,7 +26,7 @@
 
 <script setup>
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
-// import LocationCard from "@/components/aboutComponents/LocationCard.vue";
+import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard.vue";
 import BackgroundCard from "@/components/aboutComponents/BackgroundCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard.vue";
