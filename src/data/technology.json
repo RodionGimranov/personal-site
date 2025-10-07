@@ -1,53 +1,63 @@
 {
     "rows": [
         [
+            "HTML",
+            "SCSS",
             "Vue",
             "Vuex",
             "Vue Router",
             "Vue i18n",
             "VueUse",
+            "Vuetify",
             "Vue Lottie",
-            "Nuxt",
-            "HTML",
-            "CSS",
-            "SCSS"
+            "Nuxt"
         ],
         [
             "JavaScript",
             "TypeScript",
-            "Nest",
+            "Vite",
             "Storybook",
             "Pinia",
+            "Nest",
             "PrismaORM",
             "Python",
             "C++",
-            "C#",
-            "Vite"
+            "C#"
         ],
         [
             "GSAP",
-            "Axios",
             "Matter.js",
-            "Day.js",
             "Vanilla-tilt.js",
+            "Day.js",
+            "Axios",
             "ECharts",
-            "ldrsx",
             "Highcharts",
+            "Mapbox GL",
             "Node.js",
-            "Mapbox GL"
+            "ldrsx"
         ],
         [
+            "Git",
+            "GitHub",
             "GitHub Pages",
+            "Prettier",
             "SQL",
             "PostgreSQL",
             "Postman",
-            "GitHub",
             "Express",
-            "Git",
-            "Prettier",
             "Cloudinary",
             "Telegram Mini Apps"
         ],
-        ["Webpack", "REST API", "MongoDB", "Three.js", "ESLint", "Docker", "Stylelint", "PHP"]
+        [
+            "CSS",
+            "PHP",
+            "REST API",
+            "MongoDB",
+            "Three.js",
+            "Webpack",
+            "Docker",
+            "ESLint",
+            "Stylelint"
+        ]
     ]
 }
