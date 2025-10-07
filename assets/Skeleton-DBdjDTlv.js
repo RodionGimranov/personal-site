@@ -1,1 +1,0 @@
-import{c as t,o as r,l as a}from"./index-BzA-8pK1.js";const s={__name:"Skeleton",props:{width:{type:[String,Number],default:50},height:{type:[String,Number],default:50},radius:{type:[String,Number],default:0}},setup(e){return(i,l)=>(r(),t("div",{class:"skeleton_loader",style:a({width:e.width,height:e.height,borderRadius:e.radius})},null,4))}};export{s as _};
