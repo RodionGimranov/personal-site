@@ -15,6 +15,22 @@
             "song_name": "Sculptures Of Anything Goes",
             "artist_name": "Arctic Monkeys",
             "song_url": "/personal-site/audio/Arctic_Monkeys-Sculptures_Of_Anything_Goes.mp3"
+        },
+        {
+            "id": 2,
+            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1759697312/800x800_nlscsb.jpg",
+            "explicit_content": false,
+            "song_name": "Energy",
+            "artist_name": "Sampa The Great, Nadeem Din-Gabisi",
+            "song_url": "/personal-site/audio/Sampa_the_Great&Nadeem_Din-Gabisi-Energy.mp3"
+        },
+        {
+            "id": 3,
+            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1759697663/800x800_ocxdyd.jpg",
+            "explicit_content": false,
+            "song_name": "Recess, Brother",
+            "artist_name": "The New Madness",
+            "song_url": "/personal-site/audio/The_New_Madness-Recess_Brother-.mp3"
         }
     ]
 }
