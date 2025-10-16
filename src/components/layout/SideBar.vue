@@ -2,11 +2,7 @@
     <section class="side_bar_container common_layout_style">
         <div class="side_bar_content_wrapper">
             <div class="user_info_panel_wrapper">
-                <UserInfoPanel
-                    user_name="message.my_name_title"
-                    user_role="message.my_role_title"
-                    :user_image="myProfileImage"
-                />
+                <UserInfoPanel />
             </div>
             <div class="side_bar_btn_container">
                 <RouterLink
@@ -70,8 +66,6 @@ import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import ToggleTab from "@/components/ui/ToggleTab.vue";
 
-import myProfileImage from "@/assets/images/my-profile-image.webp";
-
 const store = useStore();
 const route = useRoute();
 
@@ -81,14 +75,15 @@ const resumeLink = computed(() => store.getters.getResumeLink);
 const isActive = (path) => route.path === path;
 
 const navLinks = [
-    { name: "message.home_btn_title", icon: "home-icon", path: "/Home" },
-    { name: "message.about_btn_title", icon: "profile-card-icon", path: "/About" },
-    { name: "message.projects_btn_title", icon: "projects-icon", path: "/Projects" },
-    { name: "message.gallery_btn_title", icon: "gallery-icon", path: "/Gallery" },
+    { name: "message.home_btn_title", icon: "home-icon", path: "/home" },
+    { name: "message.about_btn_title", icon: "profile-card-icon", path: "/about" },
+    { name: "message.projects_btn_title", icon: "projects-icon", path: "/projects" },
+    { name: "message.gallery_btn_title", icon: "gallery-icon", path: "/gallery" },
 ];
 
 const activeIndex = ref(0);
 const textOptions = ["Ru", "En"];
+
 const { switchLanguageByTab } = useLanguageSwitcher();
 
 function onActiveIndexChanged(index) {
@@ -104,18 +99,18 @@ const closeSidebar = () => {
     store.commit("layout/CLOSE_SIDEBAR");
 };
 
-function onThemeIndexChanged(index) {
-    const themeMap = {
-        0: "light",
-        1: "dark",
-        2: "system",
-    };
+// function onThemeIndexChanged(index) {
+//     const themeMap = {
+//         0: "light",
+//         1: "dark",
+//         2: "system",
+//     };
 
-    const selectedTheme = themeMap[index];
-    if (selectedTheme) {
-        store.commit("SET_THEME", selectedTheme);
-    }
-}
+//     const selectedTheme = themeMap[index];
+//     if (selectedTheme) {
+//         store.commit("SET_THEME", selectedTheme);
+//     }
+// }
 </script>
 
 <style lang="scss">

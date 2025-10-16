@@ -52,10 +52,10 @@ const store = useStore();
 const resumeLink = computed(() => store.getters.getResumeLink);
 
 const navLinks = [
-    { name: "message.home_btn_title", path: "/Home" },
-    { name: "message.about_btn_title", path: "/About" },
-    { name: "message.projects_btn_title", path: "/Projects" },
-    { name: "message.gallery_btn_title", path: "/Gallery" },
+    { name: "message.home_btn_title", path: "/home" },
+    { name: "message.about_btn_title", path: "/about" },
+    { name: "message.projects_btn_title", path: "/projects" },
+    { name: "message.gallery_btn_title", path: "/gallery" },
 ];
 
 const socialLinks = [
