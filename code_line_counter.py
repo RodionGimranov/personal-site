@@ -101,6 +101,7 @@ file_paths = [
 
     "./src/composables/useEscapeKey.js",
     "./src/composables/useLanguageSwitcher.js",
+    "./src/composables/useProjects.js",
     "./src/composables/useShuffledPhotos.js",
 
     "./src/data/changelogs.json",
