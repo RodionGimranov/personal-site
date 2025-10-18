@@ -1,19 +1,15 @@
 <template>
     <div class="user_info_container">
-        <img class="user_image" :src="user_image" alt="user image" />
+        <img class="user_image" :src="myProfileImage" alt="user image" />
         <div class="user_info_text_wrapper">
-            <p class="user_name">{{ $t(user_name) }}</p>
-            <p class="user_role">{{ $t(user_role) }}</p>
+            <p class="user_name">{{ $t("message.my_name_title") }}</p>
+            <p class="user_role">{{ $t("message.my_role_title") }}</p>
         </div>
     </div>
 </template>
 
 <script setup>
-const props = defineProps({
-    user_name: { type: String, default: "User Name" },
-    user_role: { type: String, default: "User Role" },
-    user_image: { type: String, default: "" },
-});
+import myProfileImage from "@/assets/images/my-profile-image.webp";
 </script>
 
 <style lang="scss">
