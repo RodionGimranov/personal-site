@@ -1,5 +1,9 @@
 <template>
-    <RouterLink :to="`/About-Project/${project.id}`" class="project_card_container">
+    <RouterLink
+        :to="`/About-Project/${project.id}`"
+        class="project_card_container"
+        :style="{ width: projectWidth, height: projectHeight }"
+    >
         <video
             v-if="project.project_video_cover"
             class="video_cover"
@@ -15,7 +19,9 @@
         <Skeleton v-else width="100%" height="100%" />
         <div class="project_name_container _glass_effect">
             <SvgIcon name="eye-icon" />
-            <p class="project_name_text">{{ project.name }}</p>
+            <p class="project_name" :style="{ fontSize: projectNameSize }">
+                {{ project.name }}
+            </p>
         </div>
     </RouterLink>
 </template>
@@ -29,14 +35,15 @@ defineProps({
         type: Object,
         required: true,
     },
+    projectWidth: { type: String, default: "515px" },
+    projectHeight: { type: String, default: "325px" },
+    projectNameSize: { type: String, default: "18px" },
 });
 </script>
 
 <style lang="scss">
 .project_card_container {
     position: relative;
-    width: 515px;
-    height: 325px;
     cursor: pointer;
     overflow: hidden;
     border-radius: 30px;
@@ -73,8 +80,7 @@ defineProps({
     opacity: 1;
 }
 
-.project_name_text {
-    font-size: 18px;
+.project_name {
     font-weight: 400;
     color: $primary_white;
 }
