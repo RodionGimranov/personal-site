@@ -1,7 +1,7 @@
 <template>
     <header>
         <button @click="openSidebar">
-            <SvgIcon name="burger-menu-icon" width="24" height="24" />
+            <SvgIcon name="burger-menu-icon" :width="24" :height="24" />
         </button>
     </header>
 </template>

@@ -7,7 +7,7 @@
             :style="{ background: item.background }"
             @click="item.action && item.action()"
         >
-            <SvgIcon :name="item.icon" width="40" height="40" />
+            <SvgIcon :name="item.icon" :width="40" :height="40" />
             <span>{{ $t(item.title) }}</span>
         </button>
     </div>

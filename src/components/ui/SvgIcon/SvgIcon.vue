@@ -7,8 +7,8 @@
 <script setup>
 const props = defineProps({
     name: { type: String, required: true },
-    width: { type: [String, Number], default: 20 },
-    height: { type: [String, Number], default: 20 },
+    width: { type: Number, default: 20 },
+    height: { type: Number, default: 20 },
 });
 </script>
 

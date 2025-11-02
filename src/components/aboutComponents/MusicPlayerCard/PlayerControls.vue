@@ -7,7 +7,7 @@
             @click="button.action"
             v-show="button.show === undefined || button.show"
         >
-            <SvgIcon :name="button.icon" width="36" height="36" />
+            <SvgIcon :name="button.icon" :width="36" :height="36" />
         </button>
     </div>
 </template>

@@ -3,7 +3,7 @@
         <div ref="mapContainer" class="map_of_city"></div>
         <div class="reset_location_container">
             <button class="reset_location_btn _glass_effect" @click="reserLocation">
-                <SvgIcon name="reset-location-icon" width="21" height="21" />
+                <SvgIcon name="reset-location-icon" :width="21" :height="21" />
             </button>
         </div>
         <div class="location_data_container _glass_effect">

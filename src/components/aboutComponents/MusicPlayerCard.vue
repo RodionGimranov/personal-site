@@ -15,8 +15,8 @@
                     <SvgIcon
                         v-if="currentSong.explicit_content"
                         name="explicit-icon"
-                        width="12"
-                        height="12"
+                        :width="12"
+                        :height="12"
                         :style="{ opacity: 0.7 }"
                     />
                 </div>
