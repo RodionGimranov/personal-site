@@ -12,7 +12,7 @@ defineProps({
 .technology_item {
     padding: 4px 8px;
     border-radius: 100px;
-    background: $secondary_blue;
+    background: $blue_20;
 
     font-size: 14px;
     font-weight: 500;

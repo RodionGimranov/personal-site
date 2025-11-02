@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +19,10 @@ body,
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 100px;
-    background: #c8c8c8;
+    background: $seventh_gray;
 
     &:hover {
-        background: #959595;
+        background: $eighth_gray;
     }
 }
 ::-webkit-scrollbar-track {
@@ -30,7 +32,7 @@ body {
     padding: 16px;
     font-size: 16px;
     font-weight: 400;
-    color: #111111;
+    color: $primary_dark;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -53,7 +55,7 @@ p {
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 16px;
-    background: #ffffff;
+    background: $primary_white;
 }
 .common_page_wrapper {
     width: 100%;
@@ -62,7 +64,7 @@ p {
 .commom_card_style {
     overflow: hidden;
     border-radius: 30px;
-    background: #f0f0f0;
+    background: $fourth_gray;
 }
 .common_home_section_style {
     width: 100%;
@@ -84,7 +86,7 @@ p {
     height: 348px;
     padding: 22px;
     overflow: hidden;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 24px $dark_25;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -95,12 +97,12 @@ p {
     padding: 8px;
     overflow: hidden;
     border-radius: 30px;
-    background: #f0f0f0;
+    background: $fourth_gray;
 }
 //
 ._glass_effect {
+    background: $dark_35;
     backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.35);
 }
 //
 .commnon_modal_container {
@@ -111,8 +113,8 @@ p {
     height: 100vh;
     z-index: 9999;
     padding: 0 16px;
+    background: $dark_50;
     backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,7 +122,7 @@ p {
 .common_modal_style {
     overflow: hidden;
     border-radius: 30px;
-    background: #ffffff;
+    background: $primary_white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -129,7 +131,7 @@ p {
 .modal_header {
     width: 100%;
     padding: 16px;
-    background: #ffffff;
+    background: $primary_white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,5 +140,5 @@ p {
 .modal_header_title {
     font-size: 22px;
     font-weight: 500;
-    color: #111111;
+    color: $primary_dark;
 }

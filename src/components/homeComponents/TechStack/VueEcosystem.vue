@@ -79,7 +79,7 @@ const secondLineIcons = [
     height: 70px;
     filter: blur(35px);
     border-radius: 100px;
-    background-color: $primary_translucent_green;
+    background-color: $green_70;
 }
 
 .vue_ecosystem_icons {

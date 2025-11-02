@@ -61,7 +61,7 @@ const currentLocale = computed(() => locale.value);
     perspective: 1000px;
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(0.98);
     }
 }
 
@@ -97,7 +97,7 @@ const currentLocale = computed(() => locale.value);
     left: 0;
     padding: 10px;
     transform: rotateY(180deg);
-    box-shadow: 2px 3px 10px $secondary_translucent_dark;
+    box-shadow: 2px 3px 10px $dark_25;
 
     display: flex;
     align-items: center;
