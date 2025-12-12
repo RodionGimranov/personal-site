@@ -11,7 +11,6 @@
                     :to="link.path"
                     class="side_bar_btn"
                     :class="{ _active: isActive(link.path) }"
-                    @click="closeSidebar"
                 >
                     <SvgIcon :name="link.icon" />
                     {{ $t(link.name) }}
@@ -21,7 +20,7 @@
                 </button>
             </div>
             <div class="site_settings_container">
-                <!-- <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p> -->
+                <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p>
                 <div class="site_settings_wrapper">
                     <p class="site_settings_subtitle">
                         {{ $t("message.language_settings_title") }}
@@ -31,46 +30,38 @@
                         :useToggleIcon="true"
                         :useToggleText="true"
                         :textOptions="['message.selected_lang_ru', 'message.selected_lang_en']"
-                        @update:activeIndex="onActiveIndexChanged"
                     />
                 </div>
-                <!-- <div class="site_settings_wrapper">
+                <div class="site_settings_wrapper">
                     <p class="site_settings_subtitle">{{ $t("message.theme_settings_title") }}</p>
                     <ToggleTab
                         storageKey="theme-tab"
                         :useToggleText="false"
                         :useToggleIcon="true"
                         :iconOptions="['light-theme-icon', 'dark-theme-icon', 'system-theme-icon']"
-                        @update:activeIndex="onThemeIndexChanged"
                     />
-                </div> -->
+                </div>
             </div>
             <div class="download_btn_container">
-                <a :href="resumeLink" class="side_bar_btn" target="_blank">
+                <a :href="RESUME_URL" class="side_bar_btn" target="_blank">
                     <SvgIcon name="download-icon" /> {{ $t("message.download_btn_title") }}
                 </a>
             </div>
         </div>
-        <p class="version_number">v{{ appVersion }}</p>
+        <p class="version_number">v{{ APP_VERSION }}</p>
     </section>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-import { useStore } from "vuex";
 import { useRoute } from "vue-router";
 
-import { useLanguageSwitcher } from "@/composables/useLanguageSwitcher.js";
+import { APP_VERSION, RESUME_URL } from "@/constants/appConstants.js";
 
 import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import ToggleTab from "@/components/ui/ToggleTab.vue";
 
-const store = useStore();
 const route = useRoute();
-
-const appVersion = computed(() => store.getters.getAppVersion);
-const resumeLink = computed(() => store.getters.getResumeLink);
 
 const isActive = (path) => route.path === path;
 
@@ -80,37 +71,6 @@ const navLinks = [
     { name: "message.projects_btn_title", icon: "projects-icon", path: "/projects" },
     { name: "message.gallery_btn_title", icon: "gallery-icon", path: "/gallery" },
 ];
-
-const activeIndex = ref(0);
-const textOptions = ["Ru", "En"];
-
-const { switchLanguageByTab } = useLanguageSwitcher();
-
-function onActiveIndexChanged(index) {
-    activeIndex.value = index;
-    switchLanguageByTab(textOptions, index);
-}
-
-function openChangelogModal() {
-    store.commit("layout/OPEN_CHANGELOG_MODAL");
-}
-
-const closeSidebar = () => {
-    store.commit("layout/CLOSE_SIDEBAR");
-};
-
-// function onThemeIndexChanged(index) {
-//     const themeMap = {
-//         0: "light",
-//         1: "dark",
-//         2: "system",
-//     };
-
-//     const selectedTheme = themeMap[index];
-//     if (selectedTheme) {
-//         store.commit("SET_THEME", selectedTheme);
-//     }
-// }
 </script>
 
 <style lang="scss">

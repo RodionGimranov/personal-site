@@ -7,14 +7,7 @@
 </template>
 
 <script setup>
-import { useStore } from "vuex";
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
-
-const store = useStore();
-
-const openSidebar = () => {
-    store.commit("layout/TOGGLE_SIDEBAR");
-};
 </script>
 
 <style lang="scss">

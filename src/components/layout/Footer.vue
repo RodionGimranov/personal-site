@@ -17,7 +17,7 @@
             </div>
             <div class="footer_social_links_container">
                 <p class="footer_title link_title">{{ $t("message.footer_info_links_title") }}</p>
-                <a :href="resumeLink" class="footer_link" target="_blank">{{
+                <a :href="RESUME_URL" class="footer_link" target="_blank">{{
                     $t("message.download_btn_title")
                 }}</a>
                 <button class="footer_link" @click="openChangelogModal">
@@ -40,16 +40,7 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useStore } from "vuex";
-
-function openChangelogModal() {
-    store.commit("layout/OPEN_CHANGELOG_MODAL");
-}
-
-const store = useStore();
-
-const resumeLink = computed(() => store.getters.getResumeLink);
+import { RESUME_URL } from "@/constants/appConstants.js";
 
 const navLinks = [
     { name: "message.home_btn_title", path: "/home" },

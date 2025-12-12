@@ -27,7 +27,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import { useStore } from "vuex";
+
 import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
@@ -38,14 +38,9 @@ import CloseButton from "@/components/ui/buttons/CloseButton.vue";
 
 import changelogs from "@/data/changelogs.json";
 
-const store = useStore();
 const { locale } = useI18n();
 
 const modalRef = ref(null);
-
-function closeChangelogModal() {
-    store.commit("layout/CLOSE_CHANGELOG_MODAL");
-}
 
 const updates = computed(() => {
     const list = changelogs[locale.value] || [];

@@ -14,6 +14,7 @@
 
 <script setup>
 import { inject, computed } from "vue";
+
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
 const player = inject("player");

@@ -14,19 +14,9 @@
 </template>
 
 <script setup>
-import { useStore } from "vuex";
-
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
-const store = useStore();
 
-function openEducationModal() {
-    store.commit("layout/OPEN_BACKGROUND_MODAL");
-}
-
-function openWorkExperienceModal() {
-    store.commit("layout/OPEN_BACKGROUND_MODAL");
-}
 
 const backgroundData = [
     {

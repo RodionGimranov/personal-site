@@ -5,7 +5,7 @@
         <Button
             buttonType="router-link"
             to="Home"
-            variant="dark-v1"
+            variant="_dark"
             :buttonText="$t('message.error_page_btn_title')"
         />
     </div>

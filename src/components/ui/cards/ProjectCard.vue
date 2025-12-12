@@ -33,7 +33,7 @@ import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 defineProps({
     project: {
         type: Object,
-        required: true,
+        required: false,
     },
     projectWidth: { type: String, default: "515px" },
     projectHeight: { type: String, default: "325px" },

@@ -1,36 +1,29 @@
 <template>
     <Header />
     <main>
-        <transition name="slide-sidebar">
-            <SideBar v-if="isDesktop || isSidebarOpen" class="side_bar_container" />
-        </transition>
+        <SideBar class="side_bar_container" />
         <section class="main_content_container common_layout_style">
             <div ref="scrolledContent" class="scrolled_content">
                 <router-view />
                 <Footer v-if="!$route.meta.hideFooter" />
             </div>
         </section>
-        <transition name="show-modal">
-            <ChangelogModal v-if="isChangelogModalOpen" />
-            <BackgroundModal v-else-if="isBackgroundModalOpen" />
-        </transition>
-        <transition name="show-arrow-btn">
-            <TopButton v-show="showTopButton" @click="scrollToTop" />
-        </transition>
+        <!-- <transition name="show-modal"> -->
+        <!-- <ChangelogModal /> -->
+        <!-- <BackgroundModal  /> -->
+        <!-- </transition> -->
+        <!-- <transition name="show-arrow-btn"> -->
+        <!-- <TopButton  @click="scrollToTop" /> -->
+        <!-- </transition> -->
         <div class="blur_mask_wrapper" v-show="!isAtBottom">
             <BlurMask />
         </div>
-        <div
-            v-if="!isDesktop && isSidebarOpen"
-            class="sidebar_overlay"
-            @click="store.commit('layout/CLOSE_SIDEBAR')"
-        ></div>
+        <!-- <div v-if="!isDesktop && isSidebarOpen" class="sidebar_overlay"></div> -->
     </main>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from "vue";
-import { useStore } from "vuex";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import { RouterView, useRouter } from "vue-router";
 
 import SideBar from "@/components/layout/SideBar.vue";
@@ -41,29 +34,11 @@ import BackgroundModal from "@/components/ui/modals/BackgroundModal.vue";
 import TopButton from "./components/ui/buttons/TopButton.vue";
 import BlurMask from "@/components/ui/BlurMask.vue";
 
-const store = useStore();
 const router = useRouter();
 
 const isScrolledEnough = ref(false);
 const isAtBottom = ref(false);
 const scrolledContent = ref(null);
-
-const isSidebarOpen = computed(() => store.state.layout.isSidebarOpen);
-const isChangelogModalOpen = computed(() => store.state.layout.isChangelogModalOpen);
-const isBackgroundModalOpen = computed(() => store.state.layout.isBackgroundModalOpen);
-
-const isDesktop = ref(window.innerWidth > 1024);
-
-function handleResize() {
-    isDesktop.value = window.innerWidth > 1024;
-    if (isDesktop.value) {
-        store.commit("layout/CLOSE_SIDEBAR");
-    }
-}
-
-const showTopButton = computed(
-    () => isScrolledEnough.value && !isChangelogModalOpen.value && !isBackgroundModalOpen.value,
-);
 
 function handleScroll() {
     if (scrolledContent.value) {
@@ -83,7 +58,6 @@ function scrollToTop() {
 
 onMounted(async () => {
     scrolledContent.value?.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
 
     await router.isReady();
     handleScroll();
@@ -91,7 +65,6 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
     scrolledContent.value?.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", handleResize);
 });
 </script>
 

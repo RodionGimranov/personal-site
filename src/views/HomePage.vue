@@ -1,9 +1,9 @@
 <template>
     <div class="home_page_wrapper common_page_wrapper">
-        <BioText />
-        <MyApproach />
-        <TechStack />
-        <SelectedProjects />
+        <!-- <BioText /> -->
+        <!-- <MyApproach /> -->
+        <!-- <TechStack /> -->
+        <!-- <SelectedProjects /> -->
     </div>
 </template>
 

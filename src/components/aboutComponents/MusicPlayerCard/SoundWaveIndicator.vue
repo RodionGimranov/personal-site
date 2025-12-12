@@ -137,7 +137,6 @@ onUnmounted(() => {
         min-height: 3px;
         border-radius: 100px;
         background: $primary_white;
-        // or use 0.1s - 0.2s
         transition: height ease-out;
     }
 }

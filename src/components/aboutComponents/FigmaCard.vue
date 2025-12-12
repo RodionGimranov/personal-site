@@ -13,9 +13,9 @@
             <p class="figma_card_title">{{ $t("message.figma_card_title") }}</p>
         </div>
         <Button
-            variant="blue-v1"
+            variant="_blue"
             buttonType="a"
-            :href="figmaDesignLink"
+            :href="FIGMA_DESIGN_URL"
             :buttonText="$t('message.visit_btn')"
             buttonWidth="100%"
         />
@@ -33,13 +33,10 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { useStore } from "vuex";
+
+import { FIGMA_DESIGN_URL } from "@/constants/appConstants.js";
 
 import Button from "@/components/ui/buttons/Button.vue";
-
-const store = useStore();
-
-const figmaDesignLink = computed(() => store.getters.getFigmaDesignLink);
 
 const cursorX = ref(0);
 const cursorY = ref(0);

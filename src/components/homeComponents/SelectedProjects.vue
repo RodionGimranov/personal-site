@@ -4,26 +4,13 @@
             {{ $t("message.projects_home_section_title") }}
         </p>
         <div class="selected_projects_container">
-            <ProjectCard
-                v-for="project in selectedProjects"
-                :key="project.id"
-                :project="project"
-                projectWidth="320px"
-                projectHeight="206px"
-                projectNameSize="16px"
-            />
+            <ProjectCard projectWidth="320px" projectHeight="206px" projectNameSize="16px" />
         </div>
     </div>
 </template>
 
 <script setup>
-import { useProjects } from "@/composables/useProjects.js";
-
 import ProjectCard from "@/components/ui/cards/ProjectCard.vue";
-
-const { getProjectsByIds } = useProjects();
-
-const selectedProjects = getProjectsByIds([0, 1]);
 </script>
 
 <style lang="scss">

@@ -8,20 +8,14 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useStore } from "vuex";
+
 import { onClickOutside } from "@vueuse/core";
 
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 
-const store = useStore();
-
 const modalRef = ref(null);
 
 import CloseButton from "@/components/ui/buttons/CloseButton.vue";
-
-function closeBackgroundModal() {
-    store.commit("layout/CLOSE_BACKGROUND_MODAL");
-}
 
 onMounted(() => {
     onClickOutside(modalRef, closeBackgroundModal);

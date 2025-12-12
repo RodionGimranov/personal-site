@@ -13,17 +13,25 @@ const props = defineProps({
 <style lang="scss">
 .skeleton_loader {
     display: inline-block;
-    background: linear-gradient(90deg, $fourth_gray 0, $primary_white 40px, $fourth_gray 80px);
-    background-size: 200% 100%;
-    animation: shimmer 2.3s infinite;
+    background: $fourth_gray;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes shimmer {
-    0% {
-        background-position: 200% 0;
-    }
+.skeleton_loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, $white_50 50%, transparent 100%);
+    animation: flash 1.8s infinite;
+}
+
+@keyframes flash {
     100% {
-        background-position: -200% 0;
+        left: 150%;
     }
 }
 </style>

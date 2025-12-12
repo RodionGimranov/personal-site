@@ -15,7 +15,7 @@
                     :buttonText="$t('message.source_code_btn')"
                 />
                 <Button
-                    variant="blue-v1"
+                    variant="_blue"
                     buttonType="a"
                     :href="project.link_to_deploy"
                     :buttonText="$t('message.visit_btn')"

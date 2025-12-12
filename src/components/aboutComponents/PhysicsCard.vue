@@ -41,6 +41,7 @@ onUnmounted(() => {
 .physics_card_container {
     width: 250px;
     height: 520px;
+    cursor: grab;
     padding: 0 !important;
 
     &._grabbing {

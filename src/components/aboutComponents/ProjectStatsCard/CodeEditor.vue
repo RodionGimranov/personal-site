@@ -22,15 +22,19 @@
 
 <script setup>
 import { computed } from "vue";
-import { useStore } from "vuex";
 
-const store = useStore();
+import {
+    TOTAL_LINES_OF_CODE,
+    TOTAL_FILE_COUNT,
+    TOTAL_FOLDER_COUNT,
+    PROJECT_SIZE_MB,
+} from "@/constants/appConstants.js";
 
 const projectData = computed(() => ({
-    linesOfCode: store.getters.getLinesOfCode,
-    fileCount: store.getters.getFileCount,
-    folderCount: store.getters.getFolderCount,
-    projectSizeMB: store.getters.getProjectSizeMB,
+    linesOfCode: TOTAL_LINES_OF_CODE,
+    fileCount: TOTAL_FILE_COUNT,
+    folderCount: TOTAL_FOLDER_COUNT,
+    projectSizeMB: PROJECT_SIZE_MB,
 }));
 </script>
 

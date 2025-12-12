@@ -1,12 +1,12 @@
 <template>
     <div class="window_controls_container">
         <div class="window_controls_btn">
-            <div
+            <span
                 v-for="(color, index) in colors"
                 :key="index"
                 class="controls_btn"
                 :style="{ backgroundColor: color }"
-            ></div>
+            ></span>
         </div>
     </div>
 </template>

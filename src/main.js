@@ -2,7 +2,6 @@ import { createApp, watch } from "vue";
 
 import App from "@/App.vue";
 import router from "@/router";
-import store from "@/store/store.js";
 import i18n from "@/libs/vue-i18n/vue-i18n.js";
 
 import { getPageTitle } from "@/utils/getPageTitle.js";
@@ -22,6 +21,6 @@ watch(
     },
 );
 
-app.use(router).use(store).use(i18n);
+app.use(router).use(i18n);
 
 app.mount("#app");
