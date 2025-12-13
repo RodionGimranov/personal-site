@@ -2,7 +2,11 @@
     <div class="my_apporoach_section common_home_section_style">
         <p class="common_home_section_title">{{ $t("message.approach_home_section_title") }}</p>
         <div class="my_apporoach_card_container">
-            <div class="my_apporoach_card" v-for="(item, index) in approachItems" :key="index">
+            <div
+                class="my_apporoach_card commom_card_style"
+                v-for="(item, index) in approachItems"
+                :key="index"
+            >
                 <SvgIcon :name="item.icon" :width="24" :height="24" />
                 <div class="my_apporoach_texts">
                     <p class="my_apporoach_title">{{ $t(item.title) }}</p>
@@ -54,12 +58,8 @@ const approachItems = [
 
 .my_apporoach_card {
     width: 340px;
-    // height: 222px;
     min-height: 222px;
     padding: 36px 22px;
-    border-radius: 30px;
-    background: #fcfcfc;
-    border: 1px solid #e6e6e6;
 
     display: flex;
     flex-direction: column;
