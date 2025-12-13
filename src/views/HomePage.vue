@@ -1,8 +1,8 @@
 <template>
     <div class="home_page_wrapper common_page_wrapper">
-        <!-- <BioText /> -->
-        <!-- <MyApproach /> -->
-        <!-- <TechStack /> -->
+        <BioText />
+        <MyApproach />
+        <TechStack />
         <!-- <SelectedProjects /> -->
     </div>
 </template>
@@ -16,7 +16,7 @@ import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
 
 <style lang="scss">
 .home_page_wrapper {
-    padding: 54px 64px 0 64px;
+    padding: 36px 36px 0 36px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

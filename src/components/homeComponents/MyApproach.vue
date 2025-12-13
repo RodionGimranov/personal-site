@@ -2,9 +2,15 @@
     <div class="my_apporoach_section common_home_section_style">
         <p class="common_home_section_title">{{ $t("message.approach_home_section_title") }}</p>
         <div class="my_apporoach_card_container">
-            <div class="my_apporoach_card" v-for="(item, index) in apporoach_item" :key="index">
-                <p class="my_apporoach_title">{{ $t(item.title) }}</p>
-                <p class="my_apporoach_subtitle" v-html="formatTransferText($t(item.subtitle))"></p>
+            <div class="my_apporoach_card" v-for="(item, index) in approachItems" :key="index">
+                <SvgIcon :name="item.icon" :width="24" :height="24" />
+                <div class="my_apporoach_texts">
+                    <p class="my_apporoach_title">{{ $t(item.title) }}</p>
+                    <p
+                        class="my_apporoach_subtitle"
+                        v-html="formatTransferText($t(item.subtitle))"
+                    ></p>
+                </div>
             </div>
         </div>
     </div>
@@ -13,16 +19,21 @@
 <script setup>
 import { formatTransferText } from "@/utils/formatters.js";
 
-const apporoach_item = [
+import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+
+const approachItems = [
     {
+        icon: "clean-code-icon",
         title: "message.clean_code_title",
         subtitle: "message.clean_code_subtitle",
     },
     {
+        icon: "ux-ui-attention-icon",
         title: "message.ux_ui_attention_title",
         subtitle: "message.ux_ui_attention_subtitle",
     },
     {
+        icon: "learning-icon",
         title: "message.learning_title",
         subtitle: "message.learning_subtitle",
     },
@@ -38,26 +49,35 @@ const apporoach_item = [
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 19px;
+    gap: 20px;
 }
 
 .my_apporoach_card {
-    width: 322px;
-    height: 256px;
-    min-height: 214px;
-    padding: 42px 22px;
+    width: 340px;
+    // height: 222px;
+    min-height: 222px;
+    padding: 36px 22px;
     border-radius: 30px;
-    background: $fourth_gray;
+    background: #fcfcfc;
+    border: 1px solid #e6e6e6;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.my_apporoach_texts {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
 }
 
 .my_apporoach_title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
     color: $primary_dark;
 }
