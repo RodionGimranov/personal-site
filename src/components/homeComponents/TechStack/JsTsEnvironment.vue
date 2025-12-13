@@ -25,12 +25,15 @@
 import { computed } from "vue";
 
 import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
+import technologyData from "@/data/technology.json";
 
-import technologyRowsData from "@/data/technology.json";
+import { prepareTechnologyRows } from "@/utils/technologyRows";
 
-const technology_rows = computed(() => technologyRowsData.rows);
+const ROWS_COUNT = 5;
 
-const duplicatedRows = computed(() => technology_rows.value.map((row) => [...row, ...row]));
+const duplicatedRows = computed(() =>
+    prepareTechnologyRows(technologyData.technologies, ROWS_COUNT),
+);
 </script>
 
 <style lang="scss">
