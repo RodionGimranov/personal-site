@@ -1,6 +1,7 @@
 import { createApp, watch } from "vue";
 
 import App from "@/App.vue";
+import { pinia } from "@/plugins/pinia";
 import router from "@/router";
 import i18n from "@/libs/vue-i18n/vue-i18n.js";
 
@@ -21,6 +22,6 @@ watch(
     },
 );
 
-app.use(router).use(i18n);
+app.use(pinia).use(router).use(i18n);
 
 app.mount("#app");
