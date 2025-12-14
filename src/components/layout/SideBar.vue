@@ -15,7 +15,7 @@
                     <SvgIcon :name="link.icon" />
                     {{ $t(link.name) }}
                 </RouterLink>
-                <button class="side_bar_btn" @click="openChangelogModal">
+                <button class="side_bar_btn" @click="openChangelog">
                     <SvgIcon name="changelog-icon" /> {{ $t("message.changelog_btn_title") }}
                 </button>
             </div>
@@ -30,6 +30,7 @@
                         :useToggleIcon="true"
                         :useToggleText="true"
                         :textOptions="['message.selected_lang_ru', 'message.selected_lang_en']"
+                        @update:activeIndex="languageStore.setByIndex"
                     />
                 </div>
                 <div class="site_settings_wrapper">
@@ -55,6 +56,8 @@
 <script setup>
 import { useRoute } from "vue-router";
 
+import { useModalStore } from "@/stores/useModalStore.js";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 import { APP_VERSION, RESUME_URL } from "@/constants/appConstants.js";
 
 import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
@@ -63,7 +66,13 @@ import ToggleTab from "@/components/ui/ToggleTab.vue";
 
 const route = useRoute();
 
+const modalStore = useModalStore();
+const languageStore = useLanguageStore();
 const isActive = (path) => route.path === path;
+
+const openChangelog = () => {
+    modalStore.open("changelog");
+};
 
 const navLinks = [
     { name: "message.home_btn_title", icon: "home-icon", path: "/home" },

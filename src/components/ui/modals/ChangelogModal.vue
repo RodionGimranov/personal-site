@@ -3,7 +3,7 @@
         <div class="changelog_modal_style common_modal_style" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">{{ $t("message.changelog_modal_title") }}</p>
-                <CloseButton :action="closeChangelogModal" />
+                <CloseButton :action="close" />
             </div>
             <div class="version_list_container">
                 <div class="version_item_container" v-for="update in updates" :key="update.id">
@@ -31,6 +31,7 @@ import { ref, computed, onMounted } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import { useI18n } from "vue-i18n";
 
+import { useModalStore } from "@/stores/useModalStore";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 import { formatBoldText } from "@/utils/formatters.js";
 
@@ -38,9 +39,14 @@ import CloseButton from "@/components/ui/buttons/CloseButton.vue";
 
 import changelogs from "@/data/changelogs.json";
 
-const { locale } = useI18n();
+const modalStore = useModalStore();
 
+const { locale } = useI18n();
 const modalRef = ref(null);
+
+const close = () => {
+    modalStore.close("changelog");
+};
 
 const updates = computed(() => {
     const list = changelogs[locale.value] || [];
@@ -48,11 +54,11 @@ const updates = computed(() => {
 });
 
 onMounted(() => {
-    onClickOutside(modalRef, closeChangelogModal);
+    onClickOutside(modalRef, close);
 });
 
 useEscapeKeyClose(() => {
-    closeChangelogModal();
+    close();
 });
 </script>
 

@@ -20,7 +20,7 @@
                 <a :href="RESUME_URL" class="footer_link" target="_blank">{{
                     $t("message.download_btn_title")
                 }}</a>
-                <button class="footer_link" @click="openChangelogModal">
+                <button class="footer_link" @click="openChangelog">
                     {{ $t("message.changelog_btn_title") }}
                 </button>
             </div>
@@ -40,7 +40,14 @@
 </template>
 
 <script setup>
+import { useModalStore } from "@/stores/useModalStore.js";
 import { RESUME_URL } from "@/constants/appConstants.js";
+
+const modalStore = useModalStore();
+
+const openChangelog = () => {
+    modalStore.open("changelog");
+};
 
 const navLinks = [
     { name: "message.home_btn_title", path: "/home" },
@@ -63,7 +70,7 @@ footer {
     margin-top: 100px;
     background: $primary_white;
     padding: 36px 64px 30px 64px;
-    border-top: 3px solid var(--primary-white-bg);
+    border-top: 3px solid $primary_white_bg;
 
     display: flex;
     justify-content: space-between;
@@ -87,7 +94,7 @@ footer {
 
 .copyright_text {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: $third_gray;
 }
 

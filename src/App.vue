@@ -1,101 +1,41 @@
 <template>
-    <Header />
     <main>
-        <SideBar class="side_bar_container" />
-        <section class="main_content_container common_layout_style">
-            <div ref="scrolledContent" class="scrolled_content">
-                <router-view />
-                <Footer v-if="!$route.meta.hideFooter" />
-            </div>
-        </section>
-        <!-- <transition name="show-modal"> -->
-        <!-- <ChangelogModal /> -->
-        <!-- <BackgroundModal  /> -->
-        <!-- </transition> -->
+        <SideBar />
+        <MainContent />
+        <transition name="show-modal">
+            <ChangelogModal v-if="modalStore.isOpen('changelog')" />
+            <!-- <BackgroundModal  /> -->
+        </transition>
         <!-- <transition name="show-arrow-btn"> -->
         <!-- <TopButton  @click="scrollToTop" /> -->
         <!-- </transition> -->
-        <div class="blur_mask_wrapper" v-show="!isAtBottom">
+        <!-- <div class="blur_mask_wrapper">
             <BlurMask />
-        </div>
-        <!-- <div v-if="!isDesktop && isSidebarOpen" class="sidebar_overlay"></div> -->
+        </div> -->
     </main>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
-import { RouterView, useRouter } from "vue-router";
+import { useModalStore } from "@/stores/useModalStore.js";
 
 import SideBar from "@/components/layout/SideBar.vue";
-import Header from "@/components/layout/Header.vue";
-import Footer from "@/components/layout/Footer.vue";
+import MainContent from "@/components/layout//MainContent.vue";
+
 import ChangelogModal from "@/components/ui/modals/ChangelogModal.vue";
-import BackgroundModal from "@/components/ui/modals/BackgroundModal.vue";
-import TopButton from "./components/ui/buttons/TopButton.vue";
-import BlurMask from "@/components/ui/BlurMask.vue";
+// import BackgroundModal from "@/components/ui/modals/BackgroundModal.vue";
+// import TopButton from "./components/ui/buttons/TopButton.vue";
+// import BlurMask from "@/components/ui/BlurMask.vue";
 
-const router = useRouter();
-
-const isScrolledEnough = ref(false);
-const isAtBottom = ref(false);
-const scrolledContent = ref(null);
-
-function handleScroll() {
-    if (scrolledContent.value) {
-        const el = scrolledContent.value;
-        const scrollBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
-
-        isScrolledEnough.value = el.scrollTop > 300;
-        isAtBottom.value = scrollBottom <= 20;
-    }
-}
-
-function scrollToTop() {
-    if (scrolledContent.value) {
-        scrolledContent.value.scrollTo({ top: 0, behavior: "smooth" });
-    }
-}
-
-onMounted(async () => {
-    scrolledContent.value?.addEventListener("scroll", handleScroll);
-
-    await router.isReady();
-    handleScroll();
-});
-
-onBeforeUnmount(() => {
-    scrolledContent.value?.removeEventListener("scroll", handleScroll);
-});
+const modalStore = useModalStore();
 </script>
 
 <style lang="scss">
-body {
-    background: var(--primary-white-bg);
-}
-
 main {
     position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-}
-
-.main_content_container {
-    position: relative;
-    overflow: hidden;
-
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0%;
-}
-
-.scrolled_content {
-    position: relative;
-    width: 100%;
-    margin: 10px 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .blur_mask_wrapper {
@@ -108,16 +48,5 @@ main {
     overflow: hidden;
     border-radius: 16px;
     pointer-events: none;
-}
-
-.sidebar_overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-    transition: 0.3s;
 }
 </style>
