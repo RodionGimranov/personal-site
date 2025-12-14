@@ -1,18 +1,9 @@
-:root {
-    --primary-white-bg: #f0edf3;
-    --primary-dark-bg: #050505;
-}
-
-[data-theme="dark"] {
-    --primary-white-bg: #050505;
-    --primary-dark-bg: #f0edf3;
-}
-
 // === PRIMARY PALETTE ===
 $primary_white: #ffffff;
+$primary_white_bg: #f0edf3;
 $primary_dark: #111111;
 $primary_gray: #281414;
-$primary_blue: #2976ff;
+$primary_blue: #2563eb;
 $primary_green: #12b76a;
 
 // === SECONDARY PALETTE ===
@@ -25,7 +16,7 @@ $secondary_green: #039855;
 // === THIRD PALETTE ===
 $third_white: #e7e7e7;
 $third_dark: #1f1f1f;
-$third_gray: #747474;
+$third_gray: #787878;
 $third_blue: #0078d4;
 
 // === FOURTH PALETTE ===
@@ -34,7 +25,8 @@ $fourth_dark: #181818;
 $fourth_gray: #f0f0f0;
 $fourth_blue: #679bff;
 
-// === FIFTH & SIXTH & SEVENTH & EIGHTH PALETTE ===
+// === FIFTH & SIXTH & SEVENTH & EIGHTH & NINTH PALETTE ===
+$fifth_white: #fcfcfc;
 $fifth_dark: #706f6c;
 $fifth_gray: #454545;
 
@@ -43,6 +35,8 @@ $sixth_gray: #303131;
 $seventh_gray: #c8c8c8;
 
 $eighth_gray: #959595;
+
+$ninth_gray: #e6e6e6;
 
 // ===  RGBA COLOR ===
 $white_50: rgba(255, 255, 255, 0.5);
