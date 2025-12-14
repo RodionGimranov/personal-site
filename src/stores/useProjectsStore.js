@@ -9,7 +9,8 @@ export const useProjectsStore = defineStore("projects", {
 
     getters: {
         projects(state) {
-            return projectsData[state.locale] || [];
+            const list = projectsData[state.locale] || [];
+            return [...list].sort((a, b) => b.id - a.id);
         },
 
         getProjectById: (state) => {
@@ -22,9 +23,11 @@ export const useProjectsStore = defineStore("projects", {
 
         getProjectsByIds: (state) => {
             return (ids = []) => {
-                return (
-                    projectsData[state.locale]?.filter((project) => ids.includes(project.id)) || []
-                );
+                const list = projectsData[state.locale] || [];
+
+                const map = new Map(list.map((project) => [project.id, project]));
+
+                return ids.map((id) => map.get(id)).filter(Boolean);
             };
         },
 
