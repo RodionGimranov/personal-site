@@ -1,9 +1,11 @@
 <template>
     <div class="gallery_page_wrapper">
         <div class="masonry_container">
-            <!-- <ImageCard /> -->
-            <!-- <template>
+            <ImageCard v-if="shuffledPhotos.length" :images="shuffledPhotos" />
+            <template v-else>
                 <Skeleton
+                    v-for="n in 8"
+                    :key="n"
                     :style="{
                         height: `${randomHeights[n - 1]}px`,
                         marginBottom: '16px',
@@ -11,21 +13,25 @@
                     width="100%"
                     radius="16px"
                 />
-            </template> -->
+            </template>
         </div>
     </div>
 </template>
 
 <script setup>
+import { useShuffledPhotos } from "@/composables/useShuffledPhotos.js";
+
 import ImageCard from "@/components/ui/cards/ImageCard.vue";
 import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
 
-// import photos from "@/data/photos.json";
+import photos from "@/data/photos.json";
 
-// const randomHeights = Array.from(
-//     { length: 8 },
-//     () => Math.floor(Math.random() * (470 - 355 + 1)) + 355,
-// );
+const { shuffledPhotos } = useShuffledPhotos(photos.photos);
+
+const randomHeights = Array.from(
+    { length: 8 },
+    () => Math.floor(Math.random() * (470 - 355 + 1)) + 355,
+);
 </script>
 
 <style lang="scss">
