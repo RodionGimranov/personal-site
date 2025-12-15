@@ -1,15 +1,22 @@
 // Modal Transition
 .show-modal-enter-active,
 .show-modal-leave-active {
-    transition: all 0.2s ease-in-out;
+    transition: opacity 0.25s ease;
 }
 .show-modal-enter-from,
 .show-modal-leave-to {
     opacity: 0;
 }
-.show-modal-enter-to,
-.show-modal-leave-from {
-    opacity: 1;
+.show-modal-enter-active .changelog_modal_style,
+.show-modal-leave-active .changelog_modal_style {
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease;
+}
+.show-modal-enter-from .changelog_modal_style,
+.show-modal-leave-to .changelog_modal_style {
+    opacity: 0;
+    transform: scale(0.97);
 }
 // Arrow Transition
 .show-arrow-btn-enter-active,
