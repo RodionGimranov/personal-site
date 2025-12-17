@@ -1,1 +1,0 @@
-import{c as t,o,t as n}from"./index-BU3kFDkV.js";const a={class:"technology_item"},_={__name:"TechnologyTag",props:{name:{type:String,required:!0}},setup(e){return(r,s)=>(o(),t("span",a,n(e.name),1))}};export{_};
