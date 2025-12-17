@@ -13,12 +13,14 @@
                     buttonType="a"
                     :href="project.link_to_code"
                     :buttonText="$t('message.source_code_btn')"
+                    :disabled="isEmptyLink(project.link_to_code)"
                 />
                 <Button
                     variant="_blue"
                     buttonType="a"
                     :href="project.link_to_deploy"
                     :buttonText="$t('message.visit_btn')"
+                    :disabled="isEmptyLink(project.link_to_deploy)"
                 />
             </div>
         </div>
@@ -83,21 +85,33 @@ import { computed, watchEffect } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
+import { useProjectsStore } from "@/stores/useProjectsStore.js";
+
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import Button from "@/components/ui/buttons/Button.vue";
 import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
 import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
 
-import projects from "@/data/projects.json";
-
 const route = useRoute();
 const router = useRouter();
+
+const projectsStore = useProjectsStore();
+
 const { locale } = useI18n();
 
-const project = computed(() => {
-    const id = Number(route.params.id);
-    return projects[locale.value].find((p) => p.id === id) || null;
+function isEmptyLink(link) {
+    return !link || link === "0";
+}
+
+watchEffect(() => {
+    projectsStore.setLocale(locale.value);
 });
+
+watchEffect(() => {
+    projectsStore.selectProjectById(route.params.id);
+});
+
+const project = computed(() => projectsStore.selectedProject);
 
 watchEffect(() => {
     if (project.value === null) {
@@ -175,7 +189,8 @@ watchEffect(() => {
     object-fit: cover;
     margin-bottom: 32px;
     border-radius: 30px;
-    background: $fourth_gray;
+    background: $fifth_white;
+    border: 1px solid $ninth_gray;
 }
 
 .large_video_cover {
