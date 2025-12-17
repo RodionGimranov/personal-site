@@ -6,6 +6,7 @@ import router from "@/router";
 import i18n from "@/libs/vue-i18n/vue-i18n.js";
 
 import { getPageTitle } from "@/utils/getPageTitle.js";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const app = createApp(App);
 
@@ -23,5 +24,8 @@ watch(
 );
 
 app.use(pinia).use(router).use(i18n);
+
+const languageStore = useLanguageStore();
+languageStore.init();
 
 app.mount("#app");
