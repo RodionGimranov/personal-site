@@ -22,7 +22,7 @@ const animationDuration = computed(() => `${props.speed}s`);
     <div
         :class="`text-[#b5b5b5a4] bg-clip-text inline-block ${!props.disabled ? 'animate-shine' : ''} ${props.className}`"
         :style="{
-            backgroundImage: 'linear-gradient(120deg, #989898 40%, #ffffff 50%, #989898 60%)',
+            backgroundImage: 'linear-gradient(120deg, #787878 40%, #ffffff 50%, #787878 60%)',
             backgroundSize: '200% 100%',
             WebkitBackgroundClip: 'text',
             animationDuration: animationDuration,

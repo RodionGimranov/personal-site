@@ -79,7 +79,7 @@ p {
     margin-bottom: 36px;
     font-size: 26px;
     font-weight: 500;
-    color: #111111;
+    color: $primary_dark;
 }
 .tech_stack_card_container {
     position: relative;
@@ -121,8 +121,8 @@ p {
     background: $dark_35;
     backdrop-filter: blur(5px);
 }
-// MODAL WINDOW
-.commnon_modal_container {
+// MODAL OVERLAY
+.commnon_modal_overlay {
     position: fixed;
     top: 0;
     left: 0;

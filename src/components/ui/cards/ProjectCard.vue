@@ -1,7 +1,7 @@
 <template>
     <RouterLink
         :to="`/About-Project/${project.id}`"
-        class="project_card_container"
+        class="project_card_container commom_card_style"
         :style="{ width: projectWidth, height: projectHeight }"
     >
         <video
@@ -45,9 +45,6 @@ defineProps({
 .project_card_container {
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-    border-radius: 30px;
-    background: $fourth_gray;
 
     display: flex;
     justify-content: center;
@@ -83,14 +80,5 @@ defineProps({
 .project_name {
     font-weight: 400;
     color: $primary_white;
-}
-
-.dark_background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.2s;
 }
 </style>
