@@ -35,7 +35,8 @@
         "GitHub",
         "GitHub Pages",
         "Prettier",
-        "SQLPostgreSQL",
+        "SQL",
+        "PostgreSQL",
         "Postman",
         "Express",
         "Cloudinary",
@@ -55,6 +56,8 @@
         "NanoID",
         "qs",
         "Tailwind CSS",
-        "CSS"
+        "CSS",
+        "React",
+        "Zustand"
     ]
 }
