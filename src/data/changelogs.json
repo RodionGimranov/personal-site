@@ -89,6 +89,16 @@
                 "На страницу проектов добавлен новый проект - «Генератор паролей».",
                 "В музыкальном плеере появились новые песни."
             ]
+        },
+        {
+            "id": 10,
+            "version": "v1.1.36",
+            "date": "17 декабря 2025",
+            "descriptions": [
+                "Интерфейс сайта получил визуальные доработки по всему проекту, направленные на повышение целостности, аккуратности и визуальной согласованности.",
+                "Переработан дизайн карточек в секциях «Мой подход к разработке» и «Технический стэк» - улучшена читаемость, структура и визуальная иерархия контента.",
+                "Проведена оптимизация кода: повышена общая стабильность приложения, кодовая база стала более надёжной и удобной для дальнейшего развития."
+            ]
         }
     ],
     "en": [
@@ -180,6 +190,16 @@
                 "The “Education” card has been temporarily hidden - I’m preparing an updated version with improved design.",
                 "A new project has been added to the projects page - “Password Generator.”",
                 "New songs have been added to the music player."
+            ]
+        },
+        {
+            "id": 10,
+            "version": "v1.1.36",
+            "date": "December 17, 2025",
+            "descriptions": [
+                "The website interface received visual refinements across the entire project, aimed at improving visual consistency, coherence, and overall polish.",
+                "Redesigned the cards in the “My Development Approach” and “Tech Stack” sections - improved readability, structure, and visual hierarchy of the content.",
+                "Performed code optimization - improved overall application stability, making the codebase more reliable and easier to maintain."
             ]
         }
     ]
