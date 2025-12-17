@@ -1,7 +1,7 @@
 <template>
     <div
         v-if="currentSong"
-        class="music_cover_container common_bento_card_style"
+        class="music_cover_container common_bento_card_style commom_card_style"
         :style="{
             backgroundImage: `url(${currentSong.album_cover})`,
             backgroundSize: 'cover',

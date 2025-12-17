@@ -4,8 +4,8 @@
             v-for="(button, index) in buttons"
             :key="index"
             class="player_controll_btn _glass_effect"
-            @click="button.action"
             v-show="button.show === undefined || button.show"
+            @click="button.action"
         >
             <SvgIcon :name="button.icon" :width="36" :height="36" />
         </button>

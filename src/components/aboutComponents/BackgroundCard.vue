@@ -1,5 +1,5 @@
 <template>
-    <div class="background_card_container common_bento_card_style">
+    <div class="background_card_container common_bento_card_style commom_card_style">
         <button
             v-for="(item, index) in backgroundData"
             :key="index"
@@ -15,8 +15,6 @@
 
 <script setup>
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
-
-
 
 const backgroundData = [
     {

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="physics_card_container common_bento_card_style"
+        class="physics_card_container common_bento_card_style commom_card_style"
         id="phycalsIcons"
         @mouseup="handleGrab"
         @mousedown="handleGrabbing"

@@ -1,13 +1,10 @@
 <template>
-    <div class="location_card_container common_bento_card_style">
+    <div class="location_card_container common_bento_card_style commom_card_style">
         <div ref="mapContainer" class="map_of_city"></div>
         <div class="reset_location_container">
             <button class="reset_location_btn _glass_effect" @click="reserLocation">
                 <SvgIcon name="reset-location-icon" :width="21" :height="21" />
             </button>
-        </div>
-        <div class="location_data_container _glass_effect">
-            <p class="city_name">{{ $t("message.kazan_city_name") }}</p>
         </div>
     </div>
 </template>
@@ -119,21 +116,6 @@ onBeforeUnmount(() => {
     height: 100%;
 }
 
-.location_data_container {
-    padding: 6px 12px;
-    border-radius: 100px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.city_name {
-    font-size: 16px;
-    font-weight: 400;
-    color: $primary_white;
-}
-
 .custom_marker_wrapper {
     position: relative;
     display: flex;
@@ -194,7 +176,7 @@ onBeforeUnmount(() => {
         opacity: 0;
     }
 }
-// Hiding the Mapbox logo and feedback button
+// === Hiding the Mapbox logo and feedback button ===
 .map_of_city .mapboxgl-ctrl-logo,
 .map_of_city .mapboxgl-ctrl-attrib {
     display: none !important;

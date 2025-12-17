@@ -3,7 +3,7 @@
         <BioText />
         <MyApproach />
         <TechStack />
-        <!-- <SelectedProjects /> -->
+        <SelectedProjects />
     </div>
 </template>
 

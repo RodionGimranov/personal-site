@@ -18,9 +18,9 @@
 import VueEcosystem from "@/components/homeComponents/TechStack/VueEcosystem.vue";
 import JsTsEnvironment from "@/components/homeComponents/TechStack/JsTsEnvironment.vue";
 
-import { useStackingCards } from "@/libs/gsap/StackingCards.js";
+// import { useStackingCards } from "@/libs/gsap/StackingCards.js";
 
-const { techSection, card2 } = useStackingCards();
+// const { techSection, card2 } = useStackingCards();
 </script>
 
 <style lang="scss">
@@ -33,6 +33,7 @@ const { techSection, card2 } = useStackingCards();
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        gap: 50px;
     }
 }
 </style>

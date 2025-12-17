@@ -1,5 +1,8 @@
 <template>
-    <div class="empty_card_container common_bento_card_style" :style="{ width, height }">
+    <div
+        class="empty_card_container common_bento_card_style commom_card_style"
+        :style="{ width, height }"
+    >
         <ShinyText :text="$t('message.empty_card_title')" />
     </div>
 </template>

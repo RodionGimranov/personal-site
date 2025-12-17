@@ -1,5 +1,5 @@
 <template>
-    <div class="greeting_card_container common_bento_card_style">
+    <div class="greeting_card_container common_bento_card_style commom_card_style">
         <p v-html="formatTransferText($t('message.greeting_text'))"></p>
     </div>
 </template>

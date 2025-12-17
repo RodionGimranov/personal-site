@@ -1,6 +1,6 @@
 <template>
     <div
-        class="figma_card_container common_bento_card_style"
+        class="figma_card_container common_bento_card_style commom_card_style"
         @mousemove="onMouseMove"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"

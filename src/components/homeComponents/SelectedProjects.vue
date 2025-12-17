@@ -40,9 +40,10 @@ const projects = computed(() => projectsStore.getProjectsByIds([2, 1, 0]));
 }
 
 .selected_projects_container {
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 21px;
+    gap: 50px;
 }
 </style>
