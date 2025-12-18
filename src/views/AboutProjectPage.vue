@@ -1,5 +1,5 @@
 <template>
-    <div class="about_project_page_wrapper common_page_wrapper">
+    <div class="about_project_page_wrapper">
         <div class="back_to_projects_list_btn_container">
             <RouterLink to="/Projects" class="back_to_projects_list_btn">
                 <SvgIcon name="left-arrow-icon" />

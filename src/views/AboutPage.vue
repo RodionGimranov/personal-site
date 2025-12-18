@@ -1,5 +1,5 @@
 <template>
-    <div class="about_page_wrapper common_page_wrapper">
+    <div class="about_page_wrapper">
         <div class="row_cards_1">
             <GreetingCard />
             <LocationCard />

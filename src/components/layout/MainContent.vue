@@ -1,7 +1,9 @@
 <template>
     <section class="main_content_container common_layout_style">
         <div class="scrolled_content">
-            <router-view />
+            <div class="app-layout">
+                <router-view />
+            </div>
             <Footer v-if="!$route.meta.hideFooter" />
         </div>
     </section>
@@ -31,5 +33,11 @@ const router = useRouter();
     margin: 10px 0;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+
+.app-layout {
+    width: 100%;
+    flex: 1 0 auto;
+    min-height: 100vh;
 }
 </style>
