@@ -2,14 +2,13 @@ import Matter from "matter-js";
 
 export function phycalsIcons() {
     const ICON_TEXTURES = [
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480845/1_opwcpv.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480847/7_zk07xu.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480846/8_hfcger.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480846/5_rprexz.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480846/3_dzt4tk.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480846/6_k0truc.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480846/4_hvld2o.png",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758480845/2_yipfas.png",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037591/Group_4_twqcsl.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275075_lfycqg.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275074_ceg1dk.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037589/Frame_1171275073_iu5xcn.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037588/Frame_1171275069_j7kpnq.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037589/Frame_1171275072_damtno.svg",
+        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037588/Frame_1171275071_pzb9mo.svg",
     ];
 
     const CONFIG = {
@@ -38,6 +37,7 @@ export function phycalsIcons() {
         options: {
             width: CONFIG.width,
             height: CONFIG.height,
+            pixelRatio: window.devicePixelRatio || 1,
             wireframes: false,
             background: "transparent",
         },
