@@ -126,6 +126,7 @@ footer {
 
     &:hover {
         color: $primary_dark;
+        text-decoration: underline;
     }
 }
 </style>

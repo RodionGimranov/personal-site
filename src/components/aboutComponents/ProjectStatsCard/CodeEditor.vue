@@ -12,7 +12,7 @@
                 <span class="brace">{</span>
             </p>
             <p v-for="(value, key, index) in projectData" :key="key">
-                <span class="key margin_left_34">{{ key }}</span>
+                <span class="key margin_left_34">{{ key }}:</span>
                 <span class="literal"> {{ value }}<span class="punctuator">,</span></span>
             </p>
             <p><span class="brace">}</span><span class="punctuator">;</span></p>
