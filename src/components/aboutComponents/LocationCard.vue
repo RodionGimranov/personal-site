@@ -12,10 +12,9 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
-
-import "mapbox-gl/dist/mapbox-gl.css";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
@@ -23,7 +22,7 @@ const mapContainer = ref(null);
 const mapInstance = ref(null);
 
 const coords = [49.122315, 55.792355];
-const zoom_to = 10.5;
+const zoom_to = 11;
 
 const reserLocation = () => {
     if (mapInstance.value) {
