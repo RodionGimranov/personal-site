@@ -1,6 +1,9 @@
 <template>
     <RouterLink
-        :to="`/About-Project/${project.id}`"
+        :to="{
+            path: `/About-Project/${project.id}`,
+            query: from ? { from } : {},
+        }"
         class="project_card_container commom_card_style"
         :style="{ width: projectWidth, height: projectHeight }"
     >
@@ -34,6 +37,10 @@ defineProps({
     project: {
         type: Object,
         required: false,
+    },
+    from: {
+        type: String,
+        default: null,
     },
     projectWidth: { type: String, default: "515px" },
     projectHeight: { type: String, default: "325px" },

@@ -1,6 +1,11 @@
 <template>
     <div class="projects_page_wrapper">
-        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+        <ProjectCard
+            v-for="project in projects"
+            :key="project.id"
+            :project="project"
+            from="projects"
+        />
     </div>
 </template>
 

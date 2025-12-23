@@ -8,6 +8,7 @@
                 v-for="project in projects"
                 :key="project.id"
                 :project="project"
+                from="home"
                 projectWidth="320px"
                 projectHeight="206px"
                 projectNameSize="16px"

@@ -1,12 +1,12 @@
 <template>
     <div class="about_project_page_wrapper">
-        <div class="back_to_projects_list_btn_container">
-            <RouterLink to="/Projects" class="back_to_projects_list_btn">
+        <div class="back_to_projects_list_btn_container about_project_common_width_size">
+            <RouterLink :to="backRoute" class="back_to_projects_list_btn">
                 <SvgIcon name="left-arrow-icon" />
                 <span>{{ $t("message.back_btn") }}</span>
             </RouterLink>
         </div>
-        <div class="about_project_header">
+        <div class="about_project_header about_project_common_width_size">
             <p class="about_project_large_name">{{ project.name }}</p>
             <div class="link_to_prject_container">
                 <Button
@@ -103,6 +103,16 @@ function isEmptyLink(link) {
     return !link || link === "0";
 }
 
+const backRoute = computed(() => {
+    switch (route.query.from) {
+        case "projects":
+            return "/Projects";
+        case "home":
+        default:
+            return "/";
+    }
+});
+
 watchEffect(() => {
     projectsStore.setLocale(locale.value);
 });
@@ -133,10 +143,9 @@ watchEffect(() => {
 
 .back_to_projects_list_btn_container {
     position: sticky;
-    top: -16px;
-    width: 100%;
+    top: 0px;
     z-index: 99;
-    padding: 26px 0 24px 0;
+    padding: 6px 0 24px 0;
     background: $primary_white;
 
     display: flex;
@@ -162,8 +171,6 @@ watchEffect(() => {
 
 .about_project_header {
     margin-bottom: 32px;
-    min-width: 560px !important;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -196,14 +203,6 @@ watchEffect(() => {
 .large_video_cover {
     width: 100%;
     height: 100%;
-}
-
-.technologies_list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 6px;
 }
 
 .about_project_info_container {
@@ -241,6 +240,14 @@ watchEffect(() => {
     font-size: 16px;
     font-weight: 400;
     color: $primary_dark;
+}
+
+.technologies_list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .about_project_common_width_size {
