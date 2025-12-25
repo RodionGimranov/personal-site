@@ -13,30 +13,31 @@
 </template>
 
 <script setup>
-import { inject, computed } from "vue";
+import { computed } from "vue";
+import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 
-const player = inject("player");
+const player = useMusicPlayerStore();
 
 const buttons = computed(() => [
     {
         icon: "previous-icon",
-        action: player.previousSong,
+        action: player.previous,
     },
     {
         icon: "pause-icon",
-        action: player.pauseSong,
-        show: player.state.isPlaying,
+        action: player.pause,
+        show: player.isPlaying,
     },
     {
         icon: "play-icon",
-        action: player.playSong,
-        show: !player.state.isPlaying,
+        action: player.play,
+        show: !player.isPlaying,
     },
     {
         icon: "next-icon",
-        action: player.nextSong,
+        action: player.next,
     },
 ]);
 </script>

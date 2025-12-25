@@ -1,107 +1,50 @@
 <template>
     <div
-        v-if="currentSong"
+        v-if="player.currentSong"
         class="music_cover_container common_bento_card_style commom_card_style"
         :style="{
-            backgroundImage: `url(${currentSong.album_cover})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            backgroundImage: `url(${player.currentSong.album_cover})`,
         }"
     >
         <div class="music_player_header">
             <div class="song_name_and_artist _glass_effect">
                 <div class="song_name_container">
-                    <p class="song_name">{{ currentSong.song_name }}</p>
+                    <p class="song_name">{{ player.currentSong.song_name }}</p>
                     <SvgIcon
-                        v-if="currentSong.explicit_content"
+                        v-if="player.currentSong.explicit_content"
                         name="explicit-icon"
                         :width="12"
                         :height="12"
-                        :style="{ opacity: 0.7 }"
+                        style="opacity: 0.7"
                     />
                 </div>
-                <p class="artist_name">{{ currentSong.artist_name }}</p>
+                <p class="artist_name">{{ player.currentSong.artist_name }}</p>
             </div>
-            <SoundWaveIndicator :audioElement="playerState.audio" />
+            <SoundWaveIndicator :audioElement="player.audio" />
         </div>
         <PlayerControls />
     </div>
 </template>
 
 <script setup>
-import { reactive, computed, provide, onMounted, onBeforeUnmount } from "vue";
+import { onMounted, onBeforeUnmount } from "vue";
+
+import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore.js";
 
 import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
 import SoundWaveIndicator from "@/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue";
 import PlayerControls from "@/components/aboutComponents/MusicPlayerCard/PlayerControls.vue";
 
-import songsData from "@/data/songs.json";
-
-const songs = songsData.songs || [];
-
-const playerState = reactive({
-    currentIndex: 0,
-    currentSong: songs[0] || null,
-    isPlaying: false,
-    audio: null,
-});
-
-const currentSong = computed(() => playerState.currentSong);
+const player = useMusicPlayerStore();
 
 onMounted(() => {
-    if (!playerState.currentSong) return;
-
-    playerState.audio = new Audio(playerState.currentSong.song_url);
-    playerState.audio.addEventListener("ended", nextSong);
+    player.init();
 });
 
 onBeforeUnmount(() => {
-    if (playerState.audio) {
-        playerState.audio.pause();
-        playerState.audio.src = "";
-        playerState.audio = null;
-    }
-});
-
-const playSong = () => {
-    if (!playerState.audio) return;
-    playerState.audio.play();
-    playerState.isPlaying = true;
-};
-
-const pauseSong = () => {
-    if (!playerState.audio) return;
-    playerState.audio.pause();
-    playerState.isPlaying = false;
-};
-
-const nextSong = () => {
-    if (songs.length === 0) return;
-    playerState.currentIndex = (playerState.currentIndex + 1) % songs.length;
-    updateCurrentSong();
-};
-
-const previousSong = () => {
-    if (songs.length === 0) return;
-    playerState.currentIndex = (playerState.currentIndex - 1 + songs.length) % songs.length;
-    updateCurrentSong();
-};
-
-const updateCurrentSong = () => {
-    playerState.currentSong = songs[playerState.currentIndex];
-    if (!playerState.audio) return;
-    playerState.audio.src = playerState.currentSong.song_url;
-    if (playerState.isPlaying) {
-        playerState.audio.play();
-    }
-};
-
-provide("player", {
-    state: playerState,
-    playSong,
-    pauseSong,
-    nextSong,
-    previousSong,
+    player.destroy();
 });
 </script>
 
