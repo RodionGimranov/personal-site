@@ -1,10 +1,10 @@
 <template>
-    <span class="technology_item">{{ name }}</span>
+    <span class="technology_item">{{ label }}</span>
 </template>
 
 <script setup>
 defineProps({
-    name: { type: String, required: true },
+    label: { type: String, required: true },
 });
 </script>
 

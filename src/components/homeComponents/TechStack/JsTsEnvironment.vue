@@ -10,7 +10,7 @@
                 <TechnologyTag
                     v-for="(tech, techIndex) in list"
                     :key="tech + '-' + techIndex"
-                    :name="tech"
+                    :label="tech"
                 />
             </div>
         </div>

@@ -73,7 +73,7 @@
                 <TechnologyTag
                     v-for="(tech, index) in project.technologies"
                     :key="index"
-                    :name="tech.name"
+                    :label="tech.name"
                 />
             </div>
         </div>
