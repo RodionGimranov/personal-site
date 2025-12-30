@@ -9,9 +9,7 @@
         <!-- <transition name="show-arrow-btn"> -->
         <!-- <TopButton  @click="scrollToTop" /> -->
         <!-- </transition> -->
-        <!-- <div class="blur_mask_wrapper">
-            <BlurMask />
-        </div> -->
+        <!-- <BlurMask /> -->
     </main>
 </template>
 
@@ -36,17 +34,5 @@ main {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 16px;
-}
-
-.blur_mask_wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc(100% - 272px);
-    height: 156px;
-    z-index: 2;
-    overflow: hidden;
-    border-radius: 16px;
-    pointer-events: none;
 }
 </style>

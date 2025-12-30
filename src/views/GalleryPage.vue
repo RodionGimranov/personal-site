@@ -37,7 +37,7 @@ const randomHeights = Array.from(
 <style lang="scss">
 .gallery_page_wrapper {
     width: 100%;
-    padding: 6px 16px 0 16px;
+    padding: 16px;
 }
 
 .masonry_container {

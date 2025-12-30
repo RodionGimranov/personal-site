@@ -4,7 +4,7 @@
             <button
                 v-for="(text, index) in textOptions"
                 :key="'text-' + index"
-                :class="['toggle_tab_btn', { _active: activeIndex === index }]"
+                :class="['toggle_tab', { _active: activeIndex === index }]"
                 @click="setActiveTab(index)"
                 ref="buttons"
             >
@@ -15,7 +15,7 @@
             <button
                 v-for="(icon, index) in iconOptions"
                 :key="'icon-' + index"
-                :class="['toggle_tab_btn toggle_tab_icon_btn', { _active: activeIndex === index }]"
+                :class="['toggle_tab toggle_tab_icon', { _active: activeIndex === index }]"
                 @click="setActiveTab(index)"
                 ref="buttons"
             >
@@ -96,7 +96,7 @@ watch(
     gap: 2px;
 }
 
-.toggle_tab_btn {
+.toggle_tab {
     z-index: 2;
     cursor: pointer;
     transition: 0.2s;
@@ -116,7 +116,7 @@ watch(
     }
 }
 
-.toggle_tab_icon_btn {
+.toggle_tab_icon {
     height: 28px !important;
     padding: 4px !important;
 }
