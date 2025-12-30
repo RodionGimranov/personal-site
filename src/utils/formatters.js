@@ -1,3 +1,4 @@
+// Transfer
 export function formatTransferText(value) {
     if (typeof value === "string") {
         return value.replace(/\n/g, "<br />");
@@ -5,6 +6,7 @@ export function formatTransferText(value) {
     return value;
 }
 
+// Bold
 export function formatBoldText(value) {
     if (typeof value === "string") {
         return value.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
