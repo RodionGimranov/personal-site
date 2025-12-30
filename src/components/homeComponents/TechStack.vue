@@ -1,5 +1,5 @@
 <template>
-    <section class="common_home_section_style tech_stack_section" ref="techSection">
+    <section class="common_home_section_style tech_stack_section" ">
         <p class="common_home_section_title">
             {{ $t("message.tech_stack_home_section_title") }}
         </p>
@@ -7,7 +7,7 @@
             <div class="tech_stack_card">
                 <VueEcosystem />
             </div>
-            <div class="tech_stack_card" ref="card2">
+            <div class="tech_stack_card" >
                 <JsTsEnvironment />
             </div>
         </div>
@@ -17,10 +17,6 @@
 <script setup>
 import VueEcosystem from "@/components/homeComponents/TechStack/VueEcosystem.vue";
 import JsTsEnvironment from "@/components/homeComponents/TechStack/JsTsEnvironment.vue";
-
-// import { useStackingCards } from "@/libs/gsap/StackingCards.js";
-
-// const { techSection, card2 } = useStackingCards();
 </script>
 
 <style lang="scss">
