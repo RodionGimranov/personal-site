@@ -1,0 +1,1 @@
+import{c as t,o,t as a}from"./index-B30r9sDp.js";const r={class:"technology_item"},l={__name:"TechnologyTag",props:{label:{type:String,required:!0}},setup(e){return(s,c)=>(o(),t("span",r,a(e.label),1))}};export{l as _};
