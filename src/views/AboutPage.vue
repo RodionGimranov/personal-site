@@ -28,9 +28,9 @@
 <script setup>
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
 import LocationCard from "@/components/aboutComponents/LocationCard.vue";
-import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard.vue";
+import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard/MusicPlayerCard.vue";
 // import BackgroundCard from "@/components/aboutComponents/BackgroundCard.vue";
-import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard.vue";
+import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard/ProjectStatsCard.vue";
 import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
 import PhysicsCard from "@/components/aboutComponents/PhysicsCard.vue";
 import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";

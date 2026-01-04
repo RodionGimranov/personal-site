@@ -10,7 +10,7 @@
 <script setup>
 import BioText from "@/components/homeComponents/BioText.vue";
 import MyApproach from "@/components/homeComponents/MyApproach.vue";
-import TechStack from "@/components/homeComponents/TechStack.vue";
+import TechStack from "@/components/homeComponents/TechStack/TechStack.vue";
 import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
 </script>
 

@@ -16,7 +16,7 @@
 <script setup>
 import { useModalStore } from "@/stores/useModalStore.js";
 
-import SideBar from "@/components/layout/SideBar.vue";
+import SideBar from "@/components/layout/SideBar/SideBar.vue";
 import MainContent from "@/components/layout//MainContent.vue";
 
 import ChangelogModal from "@/components/ui/modals/ChangelogModal.vue";

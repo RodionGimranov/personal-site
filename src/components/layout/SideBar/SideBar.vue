@@ -117,6 +117,7 @@ const navLinks = [
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 2px;
 }
 
 .side_bar_btn {
