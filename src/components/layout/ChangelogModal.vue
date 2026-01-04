@@ -35,7 +35,7 @@ import { useModalStore } from "@/stores/useModalStore";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 import { formatBoldText } from "@/utils/formatters.js";
 
-import CloseButton from "@/components/ui/buttons/CloseButton.vue";
+import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 
 import changelogs from "@/data/changelogs.json";
 
