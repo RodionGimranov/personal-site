@@ -14,7 +14,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 

@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const toolbarButtons = [
     { name: "claude-ai-icon", width: 14, height: 14 },

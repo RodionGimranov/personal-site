@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const backgroundData = [
     {

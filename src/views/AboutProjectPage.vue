@@ -87,10 +87,10 @@ import { useI18n } from "vue-i18n";
 
 import { useProjectsStore } from "@/stores/useProjectsStore.js";
 
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
-import Button from "@/components/ui/buttons/Button.vue";
-import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
-import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+import Button from "@/components/ui/atoms/Button.vue";
+import Skeleton from "@/components/ui/atoms/Skeleton.vue";
+import TechnologyTag from "@/components/ui/atoms/TechnologyTag.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -143,9 +143,9 @@ watchEffect(() => {
 
 .back_to_projects_list_btn_container {
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: 99;
-    padding: 6px 0 24px 0;
+    padding: 16px 0 16px 0;
     background: $primary_white;
 
     display: flex;

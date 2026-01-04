@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import Button from "@/components/ui/buttons/Button.vue";
+import Button from "@/components/ui/atoms/Button.vue";
 </script>
 
 <style lang="scss">

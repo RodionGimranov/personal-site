@@ -61,8 +61,8 @@ import { useLanguageStore } from "@/stores/useLanguageStore";
 import { APP_VERSION, RESUME_URL } from "@/constants/appConstants.js";
 
 import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
-import ToggleTab from "@/components/ui/ToggleTab.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+import ToggleTab from "@/components/ui/molecules/ToggleTab.vue";
 
 const route = useRoute();
 

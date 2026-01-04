@@ -23,7 +23,7 @@
 <script setup>
 import { formatTransferText } from "@/utils/formatters.js";
 
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const approachItems = [
     {

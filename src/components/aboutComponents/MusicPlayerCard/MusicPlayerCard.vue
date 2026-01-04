@@ -33,7 +33,7 @@ import { onMounted, onBeforeUnmount } from "vue";
 
 import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore.js";
 
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 import SoundWaveIndicator from "@/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue";
 import PlayerControls from "@/components/aboutComponents/MusicPlayerCard/PlayerControls.vue";
 

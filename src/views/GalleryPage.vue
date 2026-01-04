@@ -21,8 +21,8 @@
 <script setup>
 import { useShuffledPhotos } from "@/composables/useShuffledPhotos.js";
 
-import ImageCard from "@/components/ui/cards/ImageCard.vue";
-import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
+import ImageCard from "@/components/ui/ImageCard.vue";
+import Skeleton from "@/components/ui/Skeleton.vue";
 
 import photos from "@/data/photos.json";
 

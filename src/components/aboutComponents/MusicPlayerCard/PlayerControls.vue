@@ -16,7 +16,7 @@
 import { computed } from "vue";
 import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore";
 
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const player = useMusicPlayerStore();
 

@@ -36,7 +36,7 @@ import { ref, computed } from "vue";
 
 import { FIGMA_DESIGN_URL } from "@/constants/appConstants.js";
 
-import Button from "@/components/ui/buttons/Button.vue";
+import Button from "@/components/ui/atoms/Button.vue";
 
 const cursorX = ref(0);
 const cursorY = ref(0);

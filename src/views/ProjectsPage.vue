@@ -15,7 +15,7 @@ import { useI18n } from "vue-i18n";
 
 import { useProjectsStore } from "@/stores/useProjectsStore.js";
 
-import ProjectCard from "@/components/ui/cards/ProjectCard.vue";
+import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
 const projectsStore = useProjectsStore();
 

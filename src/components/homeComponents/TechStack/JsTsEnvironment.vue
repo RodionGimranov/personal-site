@@ -24,7 +24,7 @@
 <script setup>
 import { computed } from "vue";
 
-import TechnologyTag from "@/components/ui/TechnologyTag/TechnologyTag.vue";
+import TechnologyTag from "@/components/ui/atoms/TechnologyTag.vue";
 import technologyData from "@/data/technology.json";
 
 import { prepareTechnologyRows } from "@/utils/technologyRows";
