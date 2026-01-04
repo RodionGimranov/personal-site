@@ -12,13 +12,14 @@
             />
             <p class="figma_card_title">{{ $t("message.figma_card_title") }}</p>
         </div>
-        <Button
-            variant="_blue"
-            buttonType="a"
-            :href="FIGMA_DESIGN_URL"
-            :buttonText="$t('message.visit_btn')"
-            buttonWidth="100%"
-        />
+        <a :href="FIGMA_DESIGN_URL" target="_blank">
+            <Button
+                as="span"
+                variant="_blue"
+                :buttonText="$t('message.visit_btn')"
+                buttonWidth="100%"
+            />
+        </a>
         <transition name="fade-scale">
             <div
                 v-show="isHovered"

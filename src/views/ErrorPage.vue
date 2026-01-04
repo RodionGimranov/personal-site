@@ -2,12 +2,9 @@
     <div class="error_page_container">
         <p class="error_page_title">{{ $t("message.error_page_title") }}</p>
         <p class="error_page_subtitle">{{ $t("message.error_page_subtitle") }}</p>
-        <Button
-            buttonType="router-link"
-            to="Home"
-            variant="_dark"
-            :buttonText="$t('message.error_page_btn_title')"
-        />
+        <RouterLink to="/Home">
+            <Button as="span" variant="_dark" :buttonText="$t('message.error_page_btn_title')" />
+        </RouterLink>
     </div>
 </template>
 

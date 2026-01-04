@@ -9,19 +9,21 @@
         <div class="about_project_header about_project_common_width_size">
             <p class="about_project_large_name">{{ project.name }}</p>
             <div class="link_to_prject_container">
-                <Button
-                    buttonType="a"
-                    :href="project.link_to_code"
-                    :buttonText="$t('message.source_code_btn')"
-                    :disabled="isEmptyLink(project.link_to_code)"
-                />
-                <Button
-                    variant="_blue"
-                    buttonType="a"
-                    :href="project.link_to_deploy"
-                    :buttonText="$t('message.visit_btn')"
-                    :disabled="isEmptyLink(project.link_to_deploy)"
-                />
+                <a :href="project.link_to_code" target="_blank">
+                    <Button
+                        as="span"
+                        :buttonText="$t('message.source_code_btn')"
+                        :disabled="isEmptyLink(project.link_to_code)"
+                    />
+                </a>
+                <a :href="project.link_to_deploy" target="_blank">
+                    <Button
+                        as="span"
+                        variant="_blue"
+                        :buttonText="$t('message.visit_btn')"
+                        :disabled="isEmptyLink(project.link_to_deploy)"
+                    />
+                </a>
             </div>
         </div>
         <div class="large_video_cover_container">

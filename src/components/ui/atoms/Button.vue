@@ -1,28 +1,21 @@
 <template>
     <component
-        :is="buttonType"
+        :is="as"
+        :disabled="disabled"
         class="custom_btn"
         :class="[variant, { _disabled: disabled }]"
         :style="{ fontSize, fontWeight, width: buttonWidth }"
-        :to="buttonType === 'router-link' ? to : undefined"
-        :href="buttonType === 'a' ? href : undefined"
-        :target="buttonType === 'a' ? '_blank' : undefined"
-        :disabled="disabled"
         @click="handleClick"
     >
-        <slot name="custom_btn_icon" />
         {{ buttonText }}
-        <slot />
     </component>
 </template>
 
 <script setup>
 const props = defineProps({
     buttonText: { type: String, default: "Label" },
-    buttonType: { type: String, default: "button" },
-    to: { type: String, default: "" },
-    href: { type: String, default: "#" },
-    variant: { type: String, default: "_default" },
+    as: { type: String, default: "button" },
+    variant: { type: String, default: "_gray" },
     fontSize: { type: String, default: "16px" },
     fontWeight: { type: String, default: "400" },
     buttonWidth: { type: String, default: "auto" },
@@ -58,7 +51,7 @@ function handleClick(event) {
         pointer-events: none;
     }
 
-    &._default {
+    &._gray {
         background: $fourth_gray;
         color: $primary_dark;
 
