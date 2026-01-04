@@ -30,8 +30,8 @@
 </template>
 
 <script setup>
-import Skeleton from "@/components/ui/Skeleton/Skeleton.vue";
-import SvgIcon from "@/components/ui/SvgIcon/SvgIcon.vue";
+import Skeleton from "@/components/ui/atoms/Skeleton.vue";
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 defineProps({
     project: {
