@@ -2,7 +2,7 @@
     <div class="error_page_container">
         <p class="error_page_title">{{ $t("message.error_page_title") }}</p>
         <p class="error_page_subtitle">{{ $t("message.error_page_subtitle") }}</p>
-        <RouterLink to="/Home">
+        <RouterLink to="/home">
             <Button as="span" variant="_dark" :buttonText="$t('message.error_page_btn_title')" />
         </RouterLink>
     </div>
