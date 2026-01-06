@@ -149,8 +149,8 @@ const navLinks = [
     width: 100%;
     margin: 8px 0;
     padding: 8px 0 8px 10px;
-    border-top: 1px solid $third_white;
-    border-bottom: 1px solid $third_white;
+    border-top: 1px solid $black_10;
+    border-bottom: 1px solid $black_10;
 
     display: flex;
     flex-direction: column;

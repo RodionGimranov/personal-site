@@ -199,7 +199,7 @@ watchEffect(() => {
     margin-bottom: 32px;
     border-radius: 30px;
     background: $fifth_white;
-    border: 1px solid $ninth_gray;
+    border: 1px solid $black_10;
 }
 
 .large_video_cover {

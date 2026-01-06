@@ -61,7 +61,7 @@ p {
     overflow: hidden;
     border-radius: 30px;
     background: $fifth_white;
-    border: 1px solid $ninth_gray;
+    border: 1px solid $black_10;
 }
 // === HOME PAGE ===
 .common_home_section_style {
@@ -114,7 +114,7 @@ p {
 }
 // === DARK BG BLUR ===
 ._glass_effect {
-    background: $dark_35;
+    background: $black_35;
     backdrop-filter: blur(5px);
 }
 // === MODAL OVERLAY ===
@@ -126,7 +126,7 @@ p {
     height: 100vh;
     z-index: 9999;
     padding: 0 16px;
-    background: $dark_50;
+    background: $black_50;
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;

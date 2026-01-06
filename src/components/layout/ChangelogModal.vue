@@ -84,7 +84,7 @@ useEscapeKeyClose(() => {
 .version_item_container {
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 1px solid $third_white;
+    border-bottom: 1px solid $black_10;
 
     display: flex;
     flex-direction: column;

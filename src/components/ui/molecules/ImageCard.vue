@@ -97,7 +97,7 @@ const currentLocale = computed(() => locale.value);
     left: 0;
     padding: 10px;
     transform: rotateY(180deg);
-    box-shadow: 2px 3px 10px $dark_25;
+    box-shadow: 2px 3px 10px $black_25;
 
     display: flex;
     align-items: center;
