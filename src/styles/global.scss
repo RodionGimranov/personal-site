@@ -28,7 +28,7 @@ body,
     background-color: transparent;
 }
 body {
-    padding: 16px;
+    padding: 8px;
     background: $primary_white_bg;
     font-size: 16px;
     font-weight: 400;
@@ -51,7 +51,7 @@ p {
 }
 // === COMMON LAYOUT ===
 .common_layout_style {
-    height: calc(100vh - 32px);
+    height: calc(100vh - 16px);
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 16px;
