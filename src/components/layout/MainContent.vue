@@ -1,6 +1,6 @@
 <template>
     <section class="main_content_container common_layout_style">
-        <div class="scrolled_content">
+        <div ref="scrollEl" class="scrolled_content">
             <div class="app-layout">
                 <RouterView />
             </div>
@@ -10,7 +10,15 @@
 </template>
 
 <script setup>
+import { ref, defineExpose } from "vue";
+
 import Footer from "@/components/layout/Footer.vue";
+
+const scrollEl = ref(null);
+
+defineExpose({
+    scrollEl,
+});
 </script>
 
 <style lang="scss">
