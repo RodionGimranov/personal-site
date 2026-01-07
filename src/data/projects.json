@@ -3,17 +3,17 @@
         {
             "id": 0,
             "name": "Генератор паролей",
-            "description": "Генератор Паролей - это веб-приложение, которое позволяет пользователю быстро создавать безопасные пароли с настраиваемой длиной и набором символов (заглавные и строчные буквы, цифры, символы). Приложение обеспечивает удобный интерфейс с интерактивными настройками и мгновенной генерацией, а также использует современную логику случайного выбора символов и алгоритм Фишера–Йетса для равномерного перемешивания.",
+            "description": "Генератор паролей - это веб-приложение для быстрого создания безопасных паролей с настраиваемой длиной и набором символов, включая заглавные и строчные буквы, цифры и специальные символы. Приложение предлагает простой и понятный интерфейс с интерактивными настройками и мгновенной генерацией. В основе лежит надёжная логика случайного выбора символов с использованием алгоритма Фишера–Йетса для равномерного перемешивания.",
             "role": "Frontend-разработчик, UX/UI-дизайнер",
             "areas_of_responsibility": [
                 { "area": "Проектирование структуры и компонентов интерфейса" },
                 { "area": "Разработка архитектуры фронтенда" },
-                { "area": "Дизайн интерфейса и UX" },
-                { "area": "Логика генерации пароля" },
+                { "area": "Проектирование UX и дизайн интерфейсов" },
+                { "area": "Реализация логики генерации паролей" },
                 { "area": "Анимации и интерактивные элементы" },
-                { "area": "Настройка деплоя и оптимизация" }
+                { "area": "Настройка деплоя и оптимизация производительности" }
             ],
-            "context_purpose": "Проект создавался для практики работы с Vue 3 и современными подходами к фронтенд-разработке, а также для изучения лучших практик по генерации случайных паролей и безопасности данных. Цель проекта - предоставить простой и удобный инструмент для создания безопасных паролей с возможностью кастомизации по длине и набору символов.",
+            "context_purpose": "Проект был создан для практики работы с Vue 3 и современными подходами к фронтенд-разработке, а также для изучения лучших практик генерации случайных и безопасных паролей. Цель проекта - создать простой, удобный и надёжный инструмент для генерации паролей с гибкой кастомизацией длины и набора символов.",
             "technologies": [
                 { "name": "Vue 3" },
                 { "name": "JavaScript" },
@@ -30,16 +30,16 @@
         {
             "id": 1,
             "name": "Личный сайт",
-            "description": "Мой личный сайт - это место, где вы можете познакомиться со мной как с Frontend-разработчиком. Здесь вы найдёте моё портфолио, информацию о профессиональных навыках и используемых технологиях, а также сможете лучше понять мой подход к разработке. Сайт создан с упором на удобство, современный дизайн и адаптивность, чтобы каждый посетитель мог легко и приятно изучить мои проекты.",
+            "description": "Личный сайт - это мой основной проект и персональная площадка, где я представляю себя как frontend-разработчика. Здесь собраны портфолио, профессиональные навыки, используемые технологии и мой подход к разработке. Сайт спроектирован с акцентом на удобство, современный дизайн и адаптивность, чтобы посетителям было легко и приятно изучать проекты и информацию.",
             "role": "Frontend-разработчик, UX/UI-дизайнер",
             "areas_of_responsibility": [
                 { "area": "Проектирование структуры и навигации" },
                 { "area": "Разработка архитектуры фронтенда" },
-                { "area": "Дизайн интерфейса и UX" },
-                { "area": "Анимации и интерактивные элементы" },
-                { "area": "Настройка деплоя и оптимизация" }
+                { "area": "Проектирование UX и дизайн интерфейсов" },
+                { "area": "Реализация анимаций и интерактивных элементов" },
+                { "area": "Настройка деплоя и оптимизация производительности" }
             ],
-            "context_purpose": "Проект был создан как персональная площадка для презентации портфолио и демонстрации профессиональных навыков. Его цель - показать мой опыт, подход к разработке и дать возможность потенциальным работодателям или клиентам быстро оценить мои компетенции.",
+            "context_purpose": "Проект создан как персональная платформа для демонстрации опыта, подхода к разработке и уровня экспертизы. Его цель - дать потенциальным работодателям и клиентам быстрое и наглядное представление о моих компетенциях, стиле работы и технических решениях.",
             "technologies": [
                 { "name": "Vue 3" },
                 { "name": "JavaScript" },
@@ -64,17 +64,17 @@
         {
             "id": 0,
             "name": "Password Generator",
-            "description": "Password Generator is a web application that allows users to quickly create secure passwords with customizable length and character sets (uppercase and lowercase letters, numbers, symbols). The app provides a user-friendly interface with interactive settings and instant generation, and uses modern random character selection logic and the Fisher–Yates algorithm for uniform shuffling.",
+            "description": "Password Generator is a web application designed to quickly create secure passwords with customizable length and character sets, including uppercase and lowercase letters, numbers, and special characters. The application features a clean and intuitive interface with interactive controls and instant password generation. Under the hood, it uses reliable randomization logic and the Fisher–Yates shuffle algorithm to ensure uniform character distribution.",
             "role": "Frontend Developer, UX/UI Designer",
             "areas_of_responsibility": [
-                { "area": "Designing the structure and components of the interface" },
+                { "area": "Interface structure and component design" },
                 { "area": "Frontend architecture development" },
-                { "area": "Interface and UX design" },
+                { "area": "UX design and interface implementation" },
                 { "area": "Password generation logic" },
                 { "area": "Animations and interactive elements" },
-                { "area": "Deployment setup and optimization" }
+                { "area": "Deployment setup and performance optimization" }
             ],
-            "context_purpose": "The project was created to practice working with Vue 3 and modern frontend development approaches, as well as to explore best practices for random password generation and data security. The goal of the project is to provide a simple and convenient tool for creating secure passwords with customizable length and character sets.",
+            "context_purpose": "This project was created to practice working with Vue 3 and modern frontend development approaches, as well as to explore best practices for secure and random password generation. The goal was to build a simple, user-friendly, and reliable tool for generating secure passwords with flexible customization options.",
             "technologies": [
                 { "name": "Vue 3" },
                 { "name": "JavaScript" },
@@ -91,16 +91,16 @@
         {
             "id": 1,
             "name": "Personal Website",
-            "description": "My personal website is a place where you can get to know me as a Frontend Developer. Here, you will find my portfolio, information about my professional skills and the technologies I use, as well as a clear view of my approach to development. The site is designed with a focus on usability, modern design, and responsiveness, allowing every visitor to explore my projects easily and enjoyably.",
+            "description": "This personal website is my main project and professional platform where I present myself as a frontend developer. It showcases my portfolio, technical skills, tools I work with, and my overall approach to development. The site is designed with a strong focus on usability, modern visual design, and responsiveness, ensuring a smooth and pleasant experience across devices.",
             "role": "Frontend Developer, UX/UI Designer",
             "areas_of_responsibility": [
-                { "area": "Structuring and navigation design" },
-                { "area": "Frontend architecture development" },
-                { "area": "Interface and UX design" },
+                { "area": "Information architecture and navigation design" },
+                { "area": "Frontend architecture and application structure" },
+                { "area": "UX design and interface implementation" },
                 { "area": "Animations and interactive elements" },
-                { "area": "Deployment setup and optimization" }
+                { "area": "Deployment setup and performance optimization" }
             ],
-            "context_purpose": "The project was created as a personal platform to showcase my portfolio and demonstrate professional skills. Its purpose is to highlight my experience, development approach, and allow potential employers or clients to quickly assess my competencies.",
+            "context_purpose": "The project was created as a personal platform to present my experience, development approach, and level of expertise. Its goal is to provide potential employers and clients with a clear and concise understanding of my skills, workflow, and technical decision-making.",
             "technologies": [
                 { "name": "Vue 3" },
                 { "name": "JavaScript" },

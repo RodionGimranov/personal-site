@@ -1,7 +1,7 @@
 {
     "ru": {
         "message": {
-            "bio_text": "Фронтенд-разработчик, создающий чистые\n и продуманные интерфейсы. Специализируюсь\n на разработке веб-решений, уделяя внимание деталям дизайна, качеству кода и современным подходам\n в веб-технологиях.",
+            "bio_text": "Frontend-разработчик, создающий удобные и масштабируемые интерфейсы для веб-продуктов. \nРаботаю на стыке дизайна и инженерии, уделяя особое внимание качеству кода, пользовательскому опыту и современным веб-технологиям.",
 
             "approach_home_section_title": "Мой подход к разработке",
 
@@ -16,17 +16,17 @@
 
             "tech_stack_home_section_title": "Технический стек",
             "tech_stack_card_title_1": "Экосистема Vue ",
-            "tech_stack_card_subtitle_1": "Опыт работы с Vue, а также с ключевыми инструментами экосистемы: Pinia, Vuex, Vue Router, Vuetify, Vue i18n, VueUse и Nuxt. Использую их для создания современных SPA и универсальных приложений.",
+            "tech_stack_card_subtitle_1": "Практический опыт работы с Vue и ключевыми инструментами экосистемы - Nuxt, Pinia, Vuex, Vue Router, Vuetify, Vue i18n и VueUse. Использую их для построения масштабируемых SPA и универсальных веб-приложений.",
 
             "tech_stack_card_title_2": "JS/TS Среда",
-            "tech_stack_card_subtitle_2": "Современные решения на JavaScript и TypeScript, а также более 40 библиотек и инструментов, которые я активно применял на практике для разработки и реализации различных задач.",
+            "tech_stack_card_subtitle_2": "Разрабатываю современные решения на JavaScript и TypeScript, используя широкий набор библиотек и инструментов для реализации сложной бизнес-логики и интерфейсных задач.",
 
             "projects_home_section_title": "Проекты"
         }
     },
     "en": {
         "message": {
-            "bio_text": "Frontend developer crafting clean and thoughtful interfaces.\nI specialize in building web solutions with a focus on design details, code quality, and modern web technologies.",
+            "bio_text": "Frontend developer creating usable and scalable interfaces \nfor web products. I work at the intersection of design and engineering, with a strong focus on code quality, user experience, and modern web technologies.",
 
             "approach_home_section_title": "My Approach to Development",
 
@@ -41,10 +41,10 @@
 
             "tech_stack_home_section_title": "Tech Stack",
             "tech_stack_card_title_1": "Vue Ecosystem",
-            "tech_stack_card_subtitle_1": "Experience working with Vue, as well as key ecosystem tools: Pinia, Vuex, Vue Router, Vuetify, Vue i18n, VueUse and Nuxt. I use them to create modern SPAs and universal applications.",
+            "tech_stack_card_subtitle_1": "I have hands-on experience with Vue and key ecosystem tools, including Nuxt, Pinia, Vuex, Vue Router, Vuetify, Vue I18n, and VueUse. I use them to build scalable SPAs and universal web applications.",
 
             "tech_stack_card_title_2": "JS/TS Environment",
-            "tech_stack_card_subtitle_2": "Modern solutions in JavaScript and TypeScript, as well as over 40 libraries and tools that I have actively used in practice for developing and implementing various tasks.",
+            "tech_stack_card_subtitle_2": "I develop modern solutions using JavaScript and TypeScript, leveraging a broad set of libraries and tools to implement complex business logic and interface-level features.",
 
             "projects_home_section_title": "Projects"
         }
