@@ -1,0 +1,47 @@
+:root {
+    --primary-white: #ffffff;
+    --primary-white-bg: #f0edf3;
+    --primary-dark: #111111;
+    --primary-gray: #281414;
+    --primary-blue: #2563eb;
+    --primary-green: #12b76a;
+
+    /* === SECONDARY PALETTE === */
+    --secondary-white: #f5f5f5;
+    --secondary-dark: #2e2e2e;
+    --secondary-gray: #989898;
+    --secondary-blue: #4487ff;
+    --secondary-green: #039855;
+
+    /* === THIRD PALETTE === */
+    --third-white: #e7e7e7;
+    --third-dark: #1f1f1f;
+    --third-gray: #787878;
+    --third-blue: #0078d4;
+
+    /* === FOURTH PALETTE === */
+    --fourth-white: #f0edf3;
+    --fourth-dark: #181818;
+    --fourth-gray: #f0f0f0;
+    --fourth-blue: #679bff;
+
+    /* === FIFTH & SIXTH & SEVENTH & EIGHTH PALETTE === */
+    --fifth-white: #fcfcfc;
+    --fifth-dark: #706f6c;
+    --fifth-gray: #454545;
+
+    --sixth-gray: #303131;
+
+    --seventh-gray: #c8c8c8;
+
+    --eighth-gray: #959595;
+
+    /* ===  RGBA COLOR === */
+    --white-50: rgba(255, 255, 255, 0.5);
+    --black-10: rgba(0, 0, 0, 0.1);
+    --black-25: rgba(0, 0, 0, 0.25);
+    --black-35: rgba(0, 0, 0, 0.35);
+    --black-50: rgba(0, 0, 0, 0.5);
+    --blue-20: rgba(41, 118, 255, 0.2);
+    --green-70: rgba(16, 185, 129, 0.7);
+}
