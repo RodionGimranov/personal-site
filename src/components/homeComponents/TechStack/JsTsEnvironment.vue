@@ -7,7 +7,7 @@
                 class="technology_list"
                 :class="{ move_right: index % 2 === 0, move_left: index % 2 !== 0 }"
             >
-                <TechnologyTag
+                <Badge
                     v-for="(tech, techIndex) in list"
                     :key="tech + '-' + techIndex"
                     :label="tech"
@@ -24,7 +24,7 @@
 <script setup>
 import { computed } from "vue";
 
-import TechnologyTag from "@/components/ui/atoms/TechnologyTag.vue";
+import Badge from "@/components/ui/atoms/Badge.vue";
 import technologyData from "@/data/technology.json";
 
 import { prepareTechnologyRows } from "@/utils/technologyRows";

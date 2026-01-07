@@ -72,7 +72,7 @@
         <div class="about_project_info_container">
             <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
             <div class="technologies_list about_project_common_width_size">
-                <TechnologyTag
+                <Badge
                     v-for="(tech, index) in project.technologies"
                     :key="index"
                     :label="tech.name"
@@ -92,7 +92,7 @@ import { useProjectsStore } from "@/stores/useProjectsStore.js";
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 import Button from "@/components/ui/atoms/Button.vue";
 import Skeleton from "@/components/ui/atoms/Skeleton.vue";
-import TechnologyTag from "@/components/ui/atoms/TechnologyTag.vue";
+import Badge from "@/components/ui/atoms/Badge.vue";
 
 const route = useRoute();
 const router = useRouter();

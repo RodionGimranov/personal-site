@@ -1,5 +1,5 @@
 <template>
-    <span class="technology_item">{{ label }}</span>
+    <span class="badge">{{ label }}</span>
 </template>
 
 <script setup>
@@ -9,7 +9,7 @@ defineProps({
 </script>
 
 <style lang="scss">
-.technology_item {
+.badge {
     padding: 4px 8px;
     border-radius: 100px;
     background: $blue_20;
