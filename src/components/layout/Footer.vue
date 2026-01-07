@@ -17,12 +17,15 @@
             </div>
             <div class="footer_social_links_container">
                 <p class="footer_title link_title">{{ $t("message.footer_info_links_title") }}</p>
-                <a :href="RESUME_URL" class="footer_link" target="_blank">{{
-                    $t("message.download_btn_title")
-                }}</a>
                 <button class="footer_link" @click="openChangelog">
                     {{ $t("message.changelog_btn_title") }}
                 </button>
+                <a :href="RESUME_URL" class="footer_link" target="_blank">{{
+                    $t("message.download_btn_title")
+                }}</a>
+                <a :href="FIGMA_DESIGN_URL" class="footer_link" target="_blank">{{
+                    $t("message.figma_card_title")
+                }}</a>
             </div>
             <div class="footer_social_links_container">
                 <p class="footer_title link_title">{{ $t("message.footer_social_links_title") }}</p>
@@ -41,7 +44,7 @@
 
 <script setup>
 import { useModalStore } from "@/stores/useModalStore.js";
-import { RESUME_URL } from "@/constants/appConstants.js";
+import { RESUME_URL, FIGMA_DESIGN_URL } from "@/constants/appConstants.js";
 
 const modalStore = useModalStore();
 
@@ -68,9 +71,9 @@ const socialLinks = [
 footer {
     width: 100%;
     margin-top: 100px;
+    padding: 36px 64px;
     background: $primary_white;
-    padding: 36px 64px 16px 64px;
-    border-top: 3px solid $primary_white_bg;
+    border-top: 3px solid $black_10;
 
     display: flex;
     justify-content: space-between;
