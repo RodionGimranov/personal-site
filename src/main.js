@@ -8,6 +8,8 @@ import i18n from "@/libs/vue-i18n/vue-i18n.js";
 import { getPageTitle } from "@/utils/getPageTitle.js";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
+import "./assets/tailwind.css";
+
 const app = createApp(App);
 
 router.beforeEach((to, from, next) => {

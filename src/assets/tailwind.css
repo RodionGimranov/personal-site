@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "@/styles/colors.css";
+
+@theme inline {
+    --color-primary-white: var(--primary-white);
+    --color-primary-white-bg: var(--primary-white-bg);
+    --color-primary-dark: var(--primary-dark);
+    --color-primary-gray: var(--primary-gray);
+    --color-primary-blue: var(--primary-blue);
+    --color-primary-green: var(--primary-green);
+
+    /* === SECONDARY PALETTE === */
+    --color-secondary-white: var(--secondary-white);
+    --color-secondary-dark: var(--secondary-dark);
+    --color-secondary-gray: var(--secondary-gray);
+    --color-secondary-blue: var(--secondary-blue);
+    --color-secondary-green: var(--secondary-green);
+
+    /* === THIRD PALETTE === */
+    --color-third-white: var(--third-white);
+    --color-third-dark: var(--third-dark);
+    --color-third-gray: var(--third-gray);
+    --color-third-blue: var(--third-blue);
+
+    /* === FOURTH PALETTE === */
+    --color-fourth-white: var(--fourth-white);
+    --color-fourth-dark: var(--fourth-dark);
+    --color-fourth-gray: var(--fourth-gray);
+    --color-fourth-blue: var(--fourth-blue);
+
+    /* === FIFTH & SIXTH & SEVENTH & EIGHTH PALETTE === */
+    --color-fifth-white: var(--fifth-white);
+    --color-fifth-dark: var(--fifth-dark);
+    --color-fifth-gray: var(--fifth-gray);
+
+    --color-sixth-gray: var(--sixth-gray);
+
+    --color-seventh-gray: var(--seventh-gray);
+
+    --color-eighth-gray: var(--eighth-gray);
+
+    /* ===  RGBA COLOR === */
+    --color-white-50: var(--white-50);
+    --color-black-10: var(--black-10);
+    --color-black-25: var(--black-25);
+    --color-black-35: var(--black-35);
+    --color-black-50: var(--black-50);
+    --color-blue-20: var(--blue-20);
+    --color-green-70: var(--green-70);
+}
