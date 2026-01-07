@@ -6,15 +6,48 @@
             </div>
             <Footer v-if="!$route.meta.hideFooter" />
         </div>
+        <div class="blur_mask_wrapper" :class="{ 'is-hidden': !isBlurVisible }">
+            <BlurMask />
+        </div>
     </section>
 </template>
 
 <script setup>
-import { ref, defineExpose } from "vue";
+import { ref, onMounted, onBeforeUnmount, defineExpose } from "vue";
 
 import Footer from "@/components/layout/Footer.vue";
+import BlurMask from "@/components/ui/atoms/BlurMask.vue";
+
+const BLUR_HIDE_OFFSET = 100;
+const BLUR_HEIGHT = 140;
 
 const scrollEl = ref(null);
+const isBlurVisible = ref(true);
+
+const handleScroll = () => {
+    const el = scrollEl.value;
+    if (!el) return;
+
+    const { scrollTop, scrollHeight, clientHeight } = el;
+
+    const distanceToBottom = scrollHeight - (scrollTop + clientHeight);
+
+    isBlurVisible.value = distanceToBottom > BLUR_HIDE_OFFSET;
+};
+
+onMounted(() => {
+    if (!scrollEl.value) return;
+
+    scrollEl.value.addEventListener("scroll", handleScroll, {
+        passive: true,
+    });
+
+    handleScroll();
+});
+
+onBeforeUnmount(() => {
+    scrollEl.value?.removeEventListener("scroll", handleScroll);
+});
 
 defineExpose({
     scrollEl,
@@ -41,5 +74,20 @@ defineExpose({
     width: 100%;
     flex: 1 0 auto;
     min-height: 100vh;
+}
+
+.blur_mask_wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    opacity: 1;
+    z-index: 50;
+    pointer-events: none;
+
+    &.is-hidden {
+        opacity: 0;
+    }
 }
 </style>

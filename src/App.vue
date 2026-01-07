@@ -8,7 +8,6 @@
         <transition name="show-arrow-btn">
             <TopButton v-if="isVisible" @click="scrollToTop" />
         </transition>
-        <!-- <BlurMask /> -->
     </main>
 </template>
 
@@ -22,8 +21,6 @@ import SideBar from "@/components/layout/SideBar/SideBar.vue";
 import MainContent from "@/components/layout//MainContent.vue";
 import ChangelogModal from "@/components/layout/ChangelogModal.vue";
 import TopButton from "@/components/ui/atoms/TopButton.vue";
-
-// import BlurMask from "@/components/ui/BlurMask.vue";
 
 const modalStore = useModalStore();
 const mainContentRef = ref(null);
