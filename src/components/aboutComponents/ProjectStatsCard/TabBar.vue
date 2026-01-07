@@ -30,8 +30,8 @@ const toolbarButtons = [
     width: 100%;
     height: 36px;
     cursor: pointer;
-    border-top: 0.47px solid $fifth_gray;
-    border-bottom: 0.47px solid $fifth_gray;
+    border-top: 0.47px solid var(--fifth-gray);
+    border-bottom: 0.47px solid var(--fifth-gray);
 
     display: flex;
     justify-content: space-between;
@@ -41,10 +41,10 @@ const toolbarButtons = [
 .file_tab {
     height: 100%;
     padding: 10px 4px 10px 6px;
-    border-top: 0.47px solid $third_blue;
-    border-bottom: 0.47px solid $fifth_gray;
-    border-left: 0.47px solid $fifth_gray;
-    border-right: 0.47px solid $fifth_gray;
+    border-top: 0.47px solid var(--third-blue);
+    border-bottom: 0.47px solid var(--fifth-gray);
+    border-left: 0.47px solid var(--fifth-gray);
+    border-right: 0.47px solid var(--fifth-gray);
 
     display: flex;
     justify-self: flex-start;
@@ -56,7 +56,7 @@ const toolbarButtons = [
     margin-left: 4px;
     font-size: 12.21px;
     font-weight: 400;
-    color: $primary_white;
+    color: var(--primary-white);
     line-height: 15px;
 }
 
@@ -69,7 +69,7 @@ const toolbarButtons = [
     align-items: center;
 
     &:hover {
-        background: $sixth_gray;
+        background: var(--sixth-gray);
     }
 }
 

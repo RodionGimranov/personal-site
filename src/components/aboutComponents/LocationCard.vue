@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
     z-index: 10;
     padding: 3px;
     border-radius: 100px;
-    background: $primary_white;
+    background: var(--primary-white);
     box-shadow:
         0 16px 31px rgba(0, 0, 0, 0.13),
         0 6px 10px rgba(0, 0, 0, 0.1),
@@ -145,7 +145,7 @@ onBeforeUnmount(() => {
     width: 100%;
     height: 100%;
     border-radius: 100px;
-    background: $fourth_blue;
+    background: var(--fourth-blue);
 }
 
 .custom_marker_animation {
@@ -156,7 +156,7 @@ onBeforeUnmount(() => {
     height: 28px;
     z-index: 5;
     border-radius: 100px;
-    background: $fourth_blue;
+    background: var(--fourth-blue);
     transform: translate(-50%, -50%) scale(1);
     animation: marker_pulse 4s ease-out infinite;
 }

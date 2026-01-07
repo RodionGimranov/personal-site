@@ -84,7 +84,7 @@ useEscapeKeyClose(() => {
 .version_item_container {
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 1px solid $black_10;
+    border-bottom: 1px solid var(--black-10);
 
     display: flex;
     flex-direction: column;
@@ -109,13 +109,13 @@ useEscapeKeyClose(() => {
 .update_date {
     font-size: 16px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .update_number {
     font-size: 16px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 }
 
 .update_description_list {
@@ -130,6 +130,6 @@ useEscapeKeyClose(() => {
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 </style>

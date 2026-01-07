@@ -13,7 +13,7 @@ const props = defineProps({
 <style lang="scss">
 .skeleton_loader {
     display: inline-block;
-    background: $fourth_gray;
+    background: var(--fourth-gray);
     position: relative;
     overflow: hidden;
 }
@@ -25,7 +25,7 @@ const props = defineProps({
     left: -50%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent 0%, $white_50 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--white-50) 50%, transparent 100%);
     animation: flash 1.8s infinite;
 }
 

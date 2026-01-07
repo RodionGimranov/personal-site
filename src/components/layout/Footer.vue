@@ -72,8 +72,8 @@ footer {
     width: 100%;
     margin-top: 100px;
     padding: 36px 64px;
-    background: $primary_white;
-    border-top: 3px solid $black_10;
+    background: var(--primary-white);
+    border-top: 3px solid var(--black-10);
 
     display: flex;
     justify-content: space-between;
@@ -92,13 +92,13 @@ footer {
 .footer_title {
     font-size: 14px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .copyright_text {
     font-size: 14px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 }
 
 .footer_right_side_content {
@@ -123,12 +123,12 @@ footer {
 .footer_link {
     font-size: 14px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
     line-height: 26px;
     text-align: start;
 
     &:hover {
-        color: $primary_dark;
+        color: var(--primary-dark);
         text-decoration: underline;
     }
 }

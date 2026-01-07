@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "@/styles/colors.css";
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +18,10 @@ body,
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 100px;
-    background: $seventh_gray;
+    background: var(--seventh-gray);
 
     &:hover {
-        background: $eighth_gray;
+        background: var(--eighth-gray);
     }
 }
 ::-webkit-scrollbar-track {
@@ -29,10 +29,10 @@ body,
 }
 body {
     padding: 8px;
-    background: $primary_white_bg;
+    background: var(--primary-white-bg);
     font-size: 16px;
     font-weight: 400;
-    color: $primary_dark;
+    color: var(--primary-dark);
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -55,13 +55,13 @@ p {
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 16px;
-    background: $primary_white;
+    background: var(--primary-white);
 }
 .commom_card_style {
     overflow: hidden;
     border-radius: 30px;
-    background: $fifth_white;
-    border: 1px solid $black_10;
+    background: var(--fifth-white);
+    border: 1px solid var(--black-10);
 }
 // === HOME PAGE ===
 .common_home_section_style {
@@ -75,7 +75,7 @@ p {
     margin-bottom: 36px;
     font-size: 26px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 .tech_stack_card_container {
     position: relative;
@@ -101,12 +101,12 @@ p {
 .tech_stack_title {
     font-size: 22px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 .tech_stack_subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 }
 // === ABOUT ME PAGE ===
 .common_bento_card_style {
@@ -114,7 +114,7 @@ p {
 }
 // === DARK BG BLUR ===
 ._glass_effect {
-    background: $black_35;
+    background: var(--black-35);
     backdrop-filter: blur(5px);
 }
 // === MODAL OVERLAY ===
@@ -126,7 +126,7 @@ p {
     height: 100vh;
     z-index: 9999;
     padding: 0 16px;
-    background: $black_50;
+    background: var(--black-50);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@ p {
 .common_modal_style {
     overflow: hidden;
     border-radius: 30px;
-    background: $primary_white;
+    background: var(--primary-white);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -144,7 +144,7 @@ p {
 .modal_header {
     width: 100%;
     padding: 16px;
-    background: $primary_white;
+    background: var(--primary-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -153,5 +153,5 @@ p {
 .modal_header_title {
     font-size: 22px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }

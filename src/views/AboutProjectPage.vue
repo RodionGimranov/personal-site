@@ -148,7 +148,7 @@ watchEffect(() => {
     top: 0;
     z-index: 99;
     padding: 16px 0 16px 0;
-    background: $primary_white;
+    background: var(--primary-white);
 
     display: flex;
     justify-content: flex-start;
@@ -159,7 +159,7 @@ watchEffect(() => {
     transition: 0.2s;
     font-size: 16px;
     font-weight: 500;
-    color: $third_gray;
+    color: var(--third-gray);
 
     display: flex;
     justify-content: flex-start;
@@ -167,7 +167,7 @@ watchEffect(() => {
     gap: 2px;
 
     &:hover {
-        color: $primary_dark;
+        color: var(--primary-dark);
     }
 }
 
@@ -181,7 +181,7 @@ watchEffect(() => {
 .about_project_large_name {
     font-size: 28px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .link_to_prject_container {
@@ -198,8 +198,8 @@ watchEffect(() => {
     object-fit: cover;
     margin-bottom: 32px;
     border-radius: 30px;
-    background: $fifth_white;
-    border: 1px solid $black_10;
+    background: var(--fifth-white);
+    border: 1px solid var(--black-10);
 }
 
 .large_video_cover {
@@ -225,7 +225,7 @@ watchEffect(() => {
 .about_project_info_title {
     font-size: 16px;
     font-weight: 500;
-    color: $primary_gray;
+    color: var(--primary-gray);
 }
 
 .areas_list {
@@ -241,7 +241,7 @@ watchEffect(() => {
 .about_project_info_subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .technologies_list {

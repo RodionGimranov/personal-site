@@ -90,9 +90,9 @@ function onMouseMove(event) {
     padding: 8px 16px;
     pointer-events: none;
     outline-offset: -2px;
-    background: $primary_green;
+    background: var(--primary-green);
     border-radius: 2px 24px 24px 24px;
-    outline: 2px solid $secondary_green;
+    outline: 2px solid var(--secondary-green);
     box-shadow:
         0 20px 18px rgba(0, 0, 0, 0.05),
         0 12.963px 10.5417px rgba(0, 0, 0, 0.038),
@@ -104,7 +104,7 @@ function onMouseMove(event) {
     p {
         font-size: 16px;
         font-weight: 400;
-        color: $primary_white;
+        color: var(--primary-white);
         line-height: 17px;
         white-space: nowrap;
     }

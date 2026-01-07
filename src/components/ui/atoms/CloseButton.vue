@@ -26,14 +26,14 @@ const closeModal = () => {
     padding: 4px;
     transition: 0.2s;
     border-radius: 100px;
-    background: $fourth_gray;
+    background: var(--fourth-gray);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     &:hover {
-        background: $third_white;
+        background: var(--third-white);
     }
 }
 </style>

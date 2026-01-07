@@ -136,7 +136,7 @@ onUnmounted(() => {
         width: 3px;
         min-height: 3px;
         border-radius: 100px;
-        background: $primary_white;
+        background: var(--primary-white);
         transition: height ease-out;
     }
 }

@@ -62,7 +62,7 @@ const projectData = computed(() => ({
         opacity: 40%;
         font-size: 15px;
         font-weight: 400;
-        color: $primary_white;
+        color: var(--primary-white);
         line-height: 20px;
         text-align: right;
         font-family: "Roboto Mono", monospace;
@@ -90,7 +90,7 @@ const projectData = computed(() => ({
 
         font-size: 15px;
         font-weight: 400;
-        color: $primary_white;
+        color: var(--primary-white);
         line-height: 20px;
         font-family: "Source Code Pro", monospace;
         font-optical-sizing: auto;

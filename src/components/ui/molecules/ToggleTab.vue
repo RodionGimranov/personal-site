@@ -88,7 +88,7 @@ watch(
     padding: 4px;
     overflow: hidden;
     border-radius: 100px;
-    background: $fourth_gray;
+    background: var(--fourth-gray);
 
     display: flex;
     justify-content: flex-start;
@@ -105,14 +105,14 @@ watch(
 
     font-size: 14px;
     font-weight: 500;
-    color: $secondary_gray;
+    color: var(--secondary-gray);
 
     &:hover {
-        color: $primary_dark;
+        color: var(--primary-dark);
     }
 
     &._active {
-        color: $primary_dark;
+        color: var(--primary-dark);
     }
 }
 
@@ -128,6 +128,6 @@ watch(
     z-index: 1;
     border-radius: 100px;
     transition: 0.2s ease;
-    background: $primary_white;
+    background: var(--primary-white);
 }
 </style>

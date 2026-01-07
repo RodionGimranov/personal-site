@@ -25,12 +25,12 @@ import Button from "@/components/ui/atoms/Button.vue";
 .error_page_title {
     font-size: 22px;
     font-weight: 600;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .error_page_subtitle {
     font-size: 18px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 }
 </style>

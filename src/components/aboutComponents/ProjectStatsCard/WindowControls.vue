@@ -19,7 +19,7 @@ const colors = ["#FF6057", "#FFBB30", "#28C840"];
 .window_controls_container {
     width: 100%;
     padding: 12px 20px;
-    background: $fourth_dark;
+    background: var(--fourth-dark);
 
     display: flex;
     justify-content: flex-start;

@@ -25,7 +25,7 @@ import myProfileImage from "@/assets/images/my-profile-image.webp";
     height: 48px;
     overflow: hidden;
     border-radius: 100px;
-    background: $secondary_white;
+    background: var(--secondary-white);
 
     display: flex;
     justify-content: center;
@@ -42,12 +42,12 @@ import myProfileImage from "@/assets/images/my-profile-image.webp";
 .user_name {
     font-size: 16px;
     font-weight: 600;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .user_role {
     font-size: 14px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 }
 </style>

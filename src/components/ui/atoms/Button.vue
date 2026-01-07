@@ -52,29 +52,29 @@ function handleClick(event) {
     }
 
     &._gray {
-        background: $fourth_gray;
-        color: $primary_dark;
+        background: var(--fourth-gray);
+        color: var(--primary-dark);
 
         &:hover {
-            background: $third_white;
+            background: var(--third-white);
         }
     }
 
     &._dark {
-        background: $primary_dark;
-        color: $primary_white;
+        background: var(--primary-dark);
+        color: var(--primary-white);
 
         &:hover {
-            background: $secondary_dark;
+            background: var(--secondary-dark);
         }
     }
 
     &._blue {
-        background: $primary_blue;
-        color: $primary_white;
+        background: var(--primary-blue);
+        color: var(--primary-white);
 
         &:hover {
-            background: $secondary_blue;
+            background: var(--secondary-blue);
         }
     }
 }

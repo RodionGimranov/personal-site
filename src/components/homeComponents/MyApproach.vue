@@ -79,12 +79,12 @@ const approachItems = [
 .my_apporoach_title {
     font-size: 22px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .my_apporoach_subtitle {
     font-size: 16px;
     font-weight: 400;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 </style>

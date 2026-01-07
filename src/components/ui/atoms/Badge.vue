@@ -12,11 +12,11 @@ defineProps({
 .badge {
     padding: 4px 8px;
     border-radius: 100px;
-    background: $blue_20;
+    background: var(--blue-20);
 
     font-size: 14px;
     font-weight: 500;
-    color: $primary_blue;
+    color: var(--primary-blue);
     white-space: nowrap;
 
     display: flex;

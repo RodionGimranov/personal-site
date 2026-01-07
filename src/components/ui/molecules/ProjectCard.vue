@@ -86,6 +86,6 @@ defineProps({
 
 .project_name {
     font-weight: 400;
-    color: $primary_white;
+    color: var(--primary-white);
 }
 </style>

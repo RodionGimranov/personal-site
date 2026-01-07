@@ -11,7 +11,7 @@ import { formatTransferText } from "@/utils/formatters.js";
     width: 100%;
     font-size: 36px;
     font-weight: 600;
-    color: $primary_dark;
+    color: var(--primary-dark);
     line-height: 44px;
 }
 </style>

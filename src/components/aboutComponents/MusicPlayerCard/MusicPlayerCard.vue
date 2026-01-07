@@ -99,7 +99,7 @@ onBeforeUnmount(() => {
     overflow: hidden;
     font-size: 14px;
     font-weight: 400;
-    color: $primary_white;
+    color: var(--primary-white);
     line-height: 15px;
     white-space: nowrap;
     text-overflow: ellipsis;

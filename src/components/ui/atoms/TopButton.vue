@@ -19,16 +19,16 @@ import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
     transition: 0.2s;
     padding: 15px 10px;
     border-radius: 100px;
-    background: $primary_dark;
+    background: var(--primary-dark);
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    color: $primary_white;
+    color: var(--primary-white);
 
     &:hover {
-        background: $secondary_dark;
+        background: var(--secondary-dark);
     }
 }
 </style>

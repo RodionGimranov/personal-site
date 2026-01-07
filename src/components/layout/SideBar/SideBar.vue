@@ -132,16 +132,16 @@ const navLinks = [
 
     font-size: 16px;
     font-weight: 400;
-    color: $third_gray;
+    color: var(--third-gray);
 
     &:hover {
-        background: $secondary_white;
-        color: $primary_dark;
+        background: var(--secondary-white);
+        color: var(--primary-dark);
     }
 
     &._active {
-        background: $secondary_white;
-        color: $primary_dark;
+        background: var(--secondary-white);
+        color: var(--primary-dark);
     }
 }
 
@@ -149,8 +149,8 @@ const navLinks = [
     width: 100%;
     margin: 8px 0;
     padding: 8px 0 8px 10px;
-    border-top: 1px solid $black_10;
-    border-bottom: 1px solid $black_10;
+    border-top: 1px solid var(--black-10);
+    border-bottom: 1px solid var(--black-10);
 
     display: flex;
     flex-direction: column;
@@ -162,7 +162,7 @@ const navLinks = [
 .site_settings_title {
     font-size: 16px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .site_settings_wrapper {
@@ -175,7 +175,7 @@ const navLinks = [
 .site_settings_subtitle {
     font-size: 14px;
     font-weight: 500;
-    color: $primary_dark;
+    color: var(--primary-dark);
 }
 
 .download_btn_container {
@@ -185,6 +185,6 @@ const navLinks = [
 .version_number {
     font-size: 14px;
     font-weight: 400;
-    color: $secondary_gray;
+    color: var(--secondary-gray);
 }
 </style>

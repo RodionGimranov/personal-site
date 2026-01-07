@@ -97,7 +97,7 @@ const currentLocale = computed(() => locale.value);
     left: 0;
     padding: 10px;
     transform: rotateY(180deg);
-    box-shadow: 2px 3px 10px $black_25;
+    box-shadow: 2px 3px 10px var(--black-25);
 
     display: flex;
     align-items: center;
@@ -134,7 +134,7 @@ const currentLocale = computed(() => locale.value);
 .back_image_title {
     font-size: 14px;
     font-weight: 500;
-    color: $fifth_dark;
+    color: var(--fifth-dark);
     font-family: "Roboto Mono", monospace;
     font-style: normal;
 }
