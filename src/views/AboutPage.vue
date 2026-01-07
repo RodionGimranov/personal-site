@@ -8,7 +8,6 @@
         <div class="large_block_card_wrapper">
             <div class="large_block_card_1">
                 <div class="large_row_cards_1">
-                    <!-- <BackgroundCard /> -->
                     <EmptyCard />
                     <EmptyCard />
                 </div>
@@ -29,7 +28,6 @@
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
 import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard/MusicPlayerCard.vue";
-// import BackgroundCard from "@/components/aboutComponents/BackgroundCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard/ProjectStatsCard.vue";
 import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
 import PhysicsCard from "@/components/aboutComponents/PhysicsCard.vue";
