@@ -52,6 +52,7 @@ defineProps({
 .project_card_container {
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 
     display: flex;
     justify-content: center;

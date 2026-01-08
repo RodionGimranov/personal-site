@@ -195,7 +195,6 @@ watchEffect(() => {
     width: 560px;
     height: 315px;
     overflow: hidden;
-    object-fit: cover;
     margin-bottom: 32px;
     border-radius: 30px;
     background: var(--fifth-white);
@@ -205,6 +204,7 @@ watchEffect(() => {
 .large_video_cover {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .about_project_info_container {
