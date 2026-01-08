@@ -99,6 +99,16 @@
                 "Переработан дизайн карточек в секциях «Мой подход к разработке» и «Технический стэк» - улучшена читаемость, структура и визуальная иерархия контента.",
                 "Проведена оптимизация кода: повышена общая стабильность приложения, кодовая база стала более надёжной и удобной для дальнейшего развития."
             ]
+        },
+        {
+            "id": 11,
+            "version": "v1.2.61",
+            "date": "8 января 2026",
+            "descriptions": [
+                "Проведена комплексная оптимизация внутренней логики сайта - улучшена производительность, повышена стабильность и предсказуемость работы интерфейса в различных сценариях использования",
+                "Обновлены и переработаны тексты по всему сайту: формулировки стали точнее, структурированнее и лучше отражают суть проектов и моего подхода к разработке.",
+                "В карточки проектов добавлены видеообложки - они делают презентацию проектов более живой, наглядной и позволяют быстрее понять идею и функциональность каждого проекта."
+            ]
         }
     ],
     "en": [
@@ -200,6 +210,16 @@
                 "The website interface received visual refinements across the entire project, aimed at improving visual consistency, coherence, and overall polish.",
                 "Redesigned the cards in the “My Development Approach” and “Tech Stack” sections - improved readability, structure, and visual hierarchy of the content.",
                 "Performed code optimization - improved overall application stability, making the codebase more reliable and easier to maintain."
+            ]
+        },
+        {
+            "id": 11,
+            "version": "v1.2.61",
+            "date": "January 8, 2026",
+            "descriptions": [
+                "A comprehensive optimization of the site's internal logic has been carried out, improving performance, stability, and interface predictability across various usage scenarios.",
+                "Texts across the entire website have been reviewed and refined - wording is now clearer, more structured, and better reflects the essence of the projects and my development approach.",
+                "Video covers have been added to project cards, making project presentation more dynamic and visual while helping users quickly understand each project's idea and functionality."
             ]
         }
     ]
