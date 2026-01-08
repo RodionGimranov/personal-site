@@ -1,0 +1,1 @@
+import{c as t,o as a,t as r}from"./index-0iMY7n03.js";const s={class:"badge"},l={__name:"Badge",props:{label:{type:String,required:!0}},setup(e){return(o,c)=>(a(),t("span",s,r(e.label),1))}};export{l as _};
