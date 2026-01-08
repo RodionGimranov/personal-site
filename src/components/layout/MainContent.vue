@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, defineExpose } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import Footer from "@/components/layout/Footer.vue";
 import BlurMask from "@/components/ui/atoms/BlurMask.vue";
