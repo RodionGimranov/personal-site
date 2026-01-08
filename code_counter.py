@@ -51,6 +51,8 @@ file_paths = [
     "./public/manifest.json",
     "./public/sprite.svg",
 
+    "./src/assets/tailwind.css",
+
     "./src/components/aboutComponents/MusicPlayerCard/MusicPlayerCard.vue",
     "./src/components/aboutComponents/MusicPlayerCard/PlayerControls.vue",
     "./src/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue",
@@ -147,7 +149,9 @@ file_paths = [
     "./code_counter.py",
     "./index.html",
     "./package.json",
+    "./postcss.config.js",
     "./README.md",
+    "./tailwind.config.js",
     "./vite.config.js"
 ]
 
