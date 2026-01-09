@@ -1,13 +1,13 @@
 <template>
-    <section class="common_home_section_style tech_stack_section" ">
+    <section class="common_home_section_style pt-37.5!">
         <p class="common_home_section_title">
             {{ $t("message.tech_stack_home_section_title") }}
         </p>
-        <div class="tech_stack_card_wrapper">
+        <div class="w-full flex flex-col justify-start items-center gap-12.5">
             <div class="tech_stack_card">
                 <VueEcosystem />
             </div>
-            <div class="tech_stack_card" >
+            <div class="tech_stack_card">
                 <JsTsEnvironment />
             </div>
         </div>
@@ -19,17 +19,4 @@ import VueEcosystem from "@/components/homeComponents/TechStack/VueEcosystem.vue
 import JsTsEnvironment from "@/components/homeComponents/TechStack/JsTsEnvironment.vue";
 </script>
 
-<style lang="scss">
-.tech_stack_section {
-    padding-top: 150px;
-
-    .tech_stack_card_wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 50px;
-    }
-}
-</style>
+<style lang="scss"></style>

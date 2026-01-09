@@ -1,6 +1,6 @@
 <template>
     <div
-        class="empty_card_container common_bento_card_style commom_card_style"
+        class="flex justify-center items-center common_bento_card_style commom_card_style"
         :style="{ width, height }"
     >
         <ShinyText :text="$t('message.empty_card_title')" />
@@ -16,10 +16,4 @@ defineProps({
 });
 </script>
 
-<style lang="scss">
-.empty_card_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
+<style lang="scss"></style>

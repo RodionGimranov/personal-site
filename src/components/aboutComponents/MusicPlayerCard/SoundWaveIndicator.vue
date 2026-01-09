@@ -1,9 +1,9 @@
 <template>
-    <div class="sound_wave_wrapper">
+    <div class="flex justify-center items-center gap-0.5 w-11 h-11">
         <span
             v-for="(wave, index) in waveData"
             :key="index"
-            class="sound_wave"
+            class="w-0.75 min-h-0.75 rounded-[100px] bg-primary-white transition-[height] ease-out"
             :style="{ height: `${wave}px` }"
         ></span>
     </div>
@@ -122,22 +122,4 @@ onUnmounted(() => {
 });
 </script>
 
-<style lang="scss">
-.sound_wave_wrapper {
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-
-    .sound_wave {
-        width: 3px;
-        min-height: 3px;
-        border-radius: 100px;
-        background: var(--primary-white);
-        transition: height ease-out;
-    }
-}
-</style>
+<style lang="scss"></style>

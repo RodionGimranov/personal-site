@@ -3,7 +3,7 @@
         <p class="common_home_section_title">
             {{ $t("message.projects_home_section_title") }}
         </p>
-        <div class="selected_projects_container">
+        <div class="w-full flex justify-start items-start gap-12.5">
             <ProjectCard
                 v-for="project in projects"
                 :key="project.id"
@@ -38,13 +38,5 @@ const projects = computed(() => projectsStore.getProjectsByIds([2, 1, 0]));
 <style lang="scss">
 .selected_projects_section {
     align-items: flex-start !important;
-}
-
-.selected_projects_container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 50px;
 }
 </style>

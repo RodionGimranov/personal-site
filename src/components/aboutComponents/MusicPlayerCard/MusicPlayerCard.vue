@@ -1,17 +1,19 @@
 <template>
     <div
         v-if="player.currentSong"
-        class="music_cover_container common_bento_card_style commom_card_style"
+        class="w-62.5 h-62.5 flex flex-col items-start justify-between common_bento_card_style commom_card_style bg-no-repeat bg-cover bg-center"
         :style="{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundImage: `url(${player.currentSong.album_cover})`,
         }"
     >
-        <div class="music_player_header">
-            <div class="song_name_and_artist _glass_effect">
-                <div class="song_name_container">
-                    <p class="song_name">{{ player.currentSong.song_name }}</p>
+        <div class="w-full flex justify-between items-start">
+            <div
+                class="flex flex-col justify-start items-start _glass_effect rounded-[100px] overflow-hidden max-w-37.5 min-w-37.5 px-3! py-1!"
+            >
+                <div class="song_name_container w-full flex items-center gap-1">
+                    <p class="song_name shrink">{{ player.currentSong.song_name }}</p>
                     <SvgIcon
                         v-if="player.currentSong.explicit_content"
                         name="explicit-icon"
@@ -20,7 +22,7 @@
                         style="opacity: 0.7"
                     />
                 </div>
-                <p class="artist_name">{{ player.currentSong.artist_name }}</p>
+                <p class="artist_name w-full opacity-70">{{ player.currentSong.artist_name }}</p>
             </div>
             <SoundWaveIndicator :audioElement="player.audio" />
         </div>
@@ -49,46 +51,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss">
-.music_cover_container {
-    width: 250px;
-    height: 250px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.music_player_header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.song_name_and_artist {
-    max-width: 150px;
-    min-width: 150px;
-    overflow: hidden;
-    padding: 4px 12px;
-    border-radius: 100px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
 .song_name_container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-
     &svg {
         flex-shrink: 0;
     }
@@ -103,14 +66,5 @@ onBeforeUnmount(() => {
     line-height: 15px;
     white-space: nowrap;
     text-overflow: ellipsis;
-}
-
-.song_name {
-    flex-shrink: 1;
-}
-
-.artist_name {
-    width: 100%;
-    opacity: 0.7;
 }
 </style>

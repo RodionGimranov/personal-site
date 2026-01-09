@@ -1,9 +1,9 @@
 <template>
-    <div class="player_controlls_container">
+    <div class="w-full flex justify-center items-center gap-3.5">
         <button
             v-for="(button, index) in buttons"
             :key="index"
-            class="player_controll_btn _glass_effect"
+            class="_glass_effect flex justify-center items-center w-11.5 h-11.5 rounded-[100px] transform transition-transform duration-200 hover:scale-105"
             v-show="button.show === undefined || button.show"
             @click="button.action"
         >
@@ -42,27 +42,4 @@ const buttons = computed(() => [
 ]);
 </script>
 
-<style lang="scss">
-.player_controlls_container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-}
-
-.player_controll_btn {
-    width: 46px;
-    height: 46px;
-    transition: 0.2s;
-    border-radius: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-</style>
+<style lang="scss"></style>

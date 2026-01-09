@@ -1,6 +1,6 @@
 <template>
     <div
-        class="physics_card_container common_bento_card_style commom_card_style"
+        class="physics_card_container w-62.5 h-130 p-0! cursor-grab common_bento_card_style commom_card_style"
         id="phycalsIcons"
         @mouseup="handleGrab"
         @mousedown="handleGrabbing"
@@ -39,11 +39,6 @@ onUnmounted(() => {
 
 <style lang="scss">
 .physics_card_container {
-    width: 250px;
-    height: 520px;
-    cursor: grab;
-    padding: 0 !important;
-
     &._grabbing {
         cursor: grabbing;
     }

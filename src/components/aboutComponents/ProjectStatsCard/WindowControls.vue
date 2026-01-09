@@ -1,10 +1,10 @@
 <template>
-    <div class="window_controls_container">
-        <div class="window_controls_btn">
+    <div class="flex justify-start items-center w-full px-5! py-3! bg-fourth-dark">
+        <div class="flex justify-start items-center gap-1.75">
             <span
                 v-for="(color, index) in colors"
                 :key="index"
-                class="controls_btn"
+                class="w-3 h-3 rounded-[100px]"
                 :style="{ backgroundColor: color }"
             ></span>
         </div>
@@ -15,27 +15,4 @@
 const colors = ["#FF6057", "#FFBB30", "#28C840"];
 </script>
 
-<style lang="scss">
-.window_controls_container {
-    width: 100%;
-    padding: 12px 20px;
-    background: var(--fourth-dark);
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.window_controls_btn {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 7px;
-}
-
-.controls_btn {
-    width: 12px;
-    height: 12px;
-    border-radius: 100px;
-}
-</style>
+<style lang="scss"></style>
