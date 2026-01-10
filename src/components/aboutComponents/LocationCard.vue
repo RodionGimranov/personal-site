@@ -1,7 +1,9 @@
 <template>
-    <div class="location_card_container common_bento_card_style commom_card_style">
+    <div
+        class="common_bento_card_style commom_card_style relative w-62.5 h-62.5 flex flex-col justify-between items-start"
+    >
         <div ref="mapContainer" class="map_of_city"></div>
-        <div class="reset_location_container">
+        <div class="w-full flex justify-end items-start">
             <button class="reset_location_btn _glass_effect" @click="reserLocation">
                 <SvgIcon name="reset-location-icon" :width="21" :height="21" />
             </button>
@@ -79,24 +81,6 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss">
-.location_card_container {
-    position: relative;
-    width: 250px;
-    height: 250px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.reset_location_container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
 .reset_location_btn {
     width: 32px;
     height: 32px;

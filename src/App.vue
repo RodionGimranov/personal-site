@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="relative flex justify-start items-start gap-4">
         <SideBar />
         <MainContent ref="mainContentRef" />
         <transition name="show-modal">
@@ -32,12 +32,4 @@ const { isVisible, scrollToTop } = useScrollToTop(scrollEl, {
 });
 </script>
 
-<style lang="scss">
-main {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 16px;
-}
-</style>
+<style lang="scss"></style>

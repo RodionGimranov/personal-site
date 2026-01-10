@@ -1,17 +1,19 @@
 <template>
     <div class="my_apporoach_section common_home_section_style">
         <p class="common_home_section_title">{{ $t("message.approach_home_section_title") }}</p>
-        <div class="my_apporoach_card_container">
+        <div class="w-full overflow-hidden flex justify-center items-start flex-wrap gap-5">
             <div
-                class="my_apporoach_card commom_card_style"
+                class="w-85 min-h-55.5 flex flex-col justify-between items-start gap-3 py-9! px-5.5! commom_card_style"
                 v-for="(item, index) in approachItems"
                 :key="index"
             >
                 <SvgIcon :name="item.icon" :width="24" :height="24" />
-                <div class="my_apporoach_texts">
-                    <p class="my_apporoach_title">{{ $t(item.title) }}</p>
+                <div class="flex flex-col justify-start items-start gap-2">
+                    <p class="text-[22px] font-medium text-primary-dark">
+                        {{ $t(item.title) }}
+                    </p>
                     <p
-                        class="my_apporoach_subtitle"
+                        class="text-[16px] font-normal text-primary-dark"
                         v-html="formatTransferText($t(item.subtitle))"
                     ></p>
                 </div>
@@ -44,47 +46,4 @@ const approachItems = [
 ];
 </script>
 
-<style lang="scss">
-.my_apporoach_card_container {
-    width: 100%;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.my_apporoach_card {
-    width: 340px;
-    min-height: 222px;
-    padding: 36px 22px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.my_apporoach_texts {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.my_apporoach_title {
-    font-size: 22px;
-    font-weight: 500;
-    color: var(--primary-dark);
-}
-
-.my_apporoach_subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--primary-dark);
-}
-</style>
+<style lang="scss"></style>

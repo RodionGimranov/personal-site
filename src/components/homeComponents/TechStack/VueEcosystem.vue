@@ -1,10 +1,10 @@
 <template>
     <div class="tech_stack_card_container commom_card_style">
-        <div class="vue_ecosystem">
+        <div class="w-full h-50.25 flex justify-center items-center gap-8.75">
             <div
                 v-for="(column, columnIndex) in vueEcosystem"
                 :key="columnIndex"
-                class="vue_ecosystem__column"
+                class="w-12 h-full flex items-center"
                 :class="`vue_ecosystem__column--${column.type}`"
             >
                 <img
@@ -117,23 +117,6 @@ const vueEcosystem = [
 </script>
 
 <style lang="scss">
-.vue_ecosystem {
-    width: 100%;
-    height: 201px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-}
-
-.vue_ecosystem__column {
-    width: 48px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
 .vue_ecosystem__column--single {
     justify-content: center;
 }

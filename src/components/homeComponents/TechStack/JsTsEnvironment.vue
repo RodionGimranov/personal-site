@@ -4,13 +4,16 @@
             <div
                 v-for="(list, index) in duplicatedRows"
                 :key="index"
-                class="technology_list"
+                class="flex gap-1.5"
                 :class="{ move_right: index % 2 === 0, move_left: index % 2 !== 0 }"
             >
                 <Badge
                     v-for="(tech, techIndex) in list"
                     :key="tech + '-' + techIndex"
                     :label="tech"
+                    size="medium"
+                    color="blue"
+                    rounded="pill"
                 />
             </div>
         </div>
@@ -48,11 +51,6 @@ const duplicatedRows = computed(() =>
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-}
-
-.technology_list {
-    display: flex;
     gap: 6px;
 }
 

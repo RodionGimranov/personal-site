@@ -1,5 +1,5 @@
 <template>
-    <div class="gallery_page_wrapper">
+    <div class="w-full p-4!">
         <div class="masonry_container">
             <ImageCard v-if="shuffledPhotos.length" :images="shuffledPhotos" />
             <template v-else>
@@ -35,11 +35,6 @@ const randomHeights = Array.from(
 </script>
 
 <style lang="scss">
-.gallery_page_wrapper {
-    width: 100%;
-    padding: 16px;
-}
-
 .masonry_container {
     column-count: 4;
     column-gap: 16px;
