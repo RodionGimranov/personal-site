@@ -1,23 +1,48 @@
 <template>
     <div class="commnon_modal_overlay">
-        <div class="changelog_modal_style common_modal_style" ref="modalRef">
+        <div class="common_modal_style max-w-150 h-100" ref="modalRef">
             <div class="modal_header">
-                <p class="modal_header_title">{{ $t("message.changelog_modal_title") }}</p>
+                <p class="modal_header_title">{{ $t("message.changelog_title") }}</p>
                 <CloseButton :action="close" />
             </div>
-            <div class="version_list_container">
-                <div class="version_item_container" v-for="update in updates" :key="update.id">
-                    <div class="changelog_version_header">
-                        <p class="update_date">{{ update.version }}</p>
-                        <p class="update_number">{{ update.date }}</p>
+            <div
+                class="w-ffull pt-0! pr-4! pb-4! pl-4! overflow-auto flex flex-col justify-start items-start gap-5"
+            >
+                <div class="w-full flex gap-5" v-for="update in updates" :key="update.id">
+                    <div class="flex flex-col justify-start items-center gap-1.5">
+                        <span
+                            class="sticky top-0 z-2 min-w-6 min-h-6 w-6 h-6 rounded-[100px] border border-black-10"
+                            :class="getDotClasses(update)"
+                        ></span>
+                        <span class="h-full w-px bg-black-10"></span>
                     </div>
-                    <div class="update_description_list">
-                        <p
-                            class="update_description"
-                            v-for="(desc, index) in update.descriptions"
-                            :key="index"
-                            v-html="formatBoldText(desc)"
-                        ></p>
+                    <div class="w-full flex flex-col justify-start items-start gap-1">
+                        <div class="w-full flex flex-col justify-start items-start gap-1">
+                            <div class="flex justify-start items-end gap-2">
+                                <p class="text-[16px] font-medium text-primary-dark">
+                                    {{ update.version }}
+                                </p>
+                                <div class="flex justify-start items-start gap-1">
+                                    <Badge
+                                        :label="update.type"
+                                        size="small"
+                                        :color="typeColorMap[update.type]"
+                                        rounded="square"
+                                    />
+                                </div>
+                            </div>
+                            <p class="text-[14px] font-normal text-third-gray">
+                                {{ update.date }}
+                            </p>
+                        </div>
+                        <div class="flex flex-col justify-start items-start gap-2">
+                            <p
+                                class="w-full text-[14px] font-normal text-primary-dark"
+                                v-for="(desc, index) in update.descriptions"
+                                :key="index"
+                                v-html="formatBoldText(desc)"
+                            ></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -36,6 +61,7 @@ import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 import { formatBoldText } from "@/utils/formatters.js";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
+import Badge from "@/components/ui/atoms/Badge.vue";
 
 import changelogs from "@/data/changelogs.json";
 
@@ -43,6 +69,25 @@ const modalStore = useModalStore();
 
 const { locale } = useI18n();
 const modalRef = ref(null);
+
+const latestUpdate = computed(() => updates.value[0] || null);
+
+const typeColorMap = {
+    major: "purple",
+    minor: "blue",
+    improvement: "green",
+    beta: "gray",
+};
+
+const getDotClasses = (update) => {
+    const isActive = latestUpdate.value?.id === update.id;
+
+    if (!isActive) {
+        return "bg-fourth-gray";
+    }
+
+    return ["dot-active", typeColorMap[update.type] || "gray"];
+};
 
 const close = () => {
     modalStore.close("changelog");
@@ -63,73 +108,19 @@ useEscapeKeyClose(() => {
 </script>
 
 <style lang="scss">
-.changelog_modal_style {
-    max-width: 600px;
-    height: 400px;
+.gray {
+    background: #ededee;
 }
 
-.version_list_container {
-    width: 100%;
-    overflow: auto;
-    margin-bottom: 16px;
-    padding: 0 16px 16px 16px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
+.blue {
+    background: #dfecff;
 }
 
-.version_item_container {
-    width: 100%;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--black-10);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 12px;
-
-    &:last-child {
-        padding-bottom: 0;
-        border-bottom: none;
-    }
+.green {
+    background: #ebfacc;
 }
 
-.changelog_version_header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 4px;
-}
-
-.update_date {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--primary-dark);
-}
-
-.update_number {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--third-gray);
-}
-
-.update_description_list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.update_description {
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--primary-dark);
+.purple {
+    background: #f3e4ff;
 }
 </style>
