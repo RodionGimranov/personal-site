@@ -130,7 +130,6 @@ file_paths = [
 
     "./src/styles/global.scss",
     "./src/styles/transition.scss",
-    "./src/styles/variables.scss",
 
     "./src/utils/formatters.js",
     "./src/utils/getPageTitle.js",
