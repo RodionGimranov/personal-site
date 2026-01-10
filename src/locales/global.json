@@ -8,7 +8,7 @@
             "about_btn_title": "Обо мне",
             "projects_btn_title": "Проекты",
             "gallery_btn_title": "Галерея",
-            "changelog_btn_title": "Журнал изменений",
+            "changelog_title": "Журнал изменений",
             "download_btn_title": "Скачать резюме",
 
             "site_settings_title": "Язык и тема",
@@ -21,14 +21,12 @@
             "footer_info_links_title": "Информация",
             "footer_social_links_title": "Контакты",
             "footer_fun_text": "Сделано с любовью и большим количеством кофе.",
-            "footer_copyright_text": "© Родион Гимранов 2026. Все права защищены.",
+            "footer_copyright_text": "© Родион Гимранов 2026.",
 
             "github_title": "GitHub",
             "linkedin_title": "LinkedIn",
             "telegram_title": "Telegram",
             "instagram_title": "Instagram",
-
-            "changelog_modal_title": "Что нового?",
 
             "home_tab_title": "Главная",
             "about_tab_title": "Обо мне",
@@ -51,7 +49,7 @@
             "about_btn_title": "About",
             "projects_btn_title": "Projects",
             "gallery_btn_title": "Gallery",
-            "changelog_btn_title": "Changelog",
+            "changelog_title": "Changelog",
             "download_btn_title": "Download CV",
 
             "site_settings_title": "Language & Theme",
@@ -64,14 +62,12 @@
             "footer_info_links_title": "Information",
             "footer_social_links_title": "Contacts",
             "footer_fun_text": "Made with love and countless cups of coffee.",
-            "footer_copyright_text": "© Rodion Gimranov 2026. All rights reserved.",
+            "footer_copyright_text": "© Rodion Gimranov 2026.",
 
             "github_title": "GitHub",
             "linkedin_title": "LinkedIn",
             "telegram_title": "Telegram",
             "instagram_title": "Instagram",
-
-            "changelog_modal_title": "What's new?",
 
             "home_tab_title": "Home",
             "about_tab_title": "About",

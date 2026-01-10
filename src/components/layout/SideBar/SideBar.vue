@@ -16,7 +16,7 @@
                     {{ $t(link.name) }}
                 </RouterLink>
                 <button class="side_bar_btn" @click="openChangelog">
-                    <SvgIcon name="changelog-icon" /> {{ $t("message.changelog_btn_title") }}
+                    <SvgIcon name="changelog-icon" /> {{ $t("message.changelog_title") }}
                 </button>
             </div>
             <div class="site_settings_container">
