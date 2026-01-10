@@ -76,6 +76,9 @@
                     v-for="(tech, index) in project.technologies"
                     :key="index"
                     :label="tech.name"
+                    size="medium"
+                    color="blue"
+                    rounded="pill"
                 />
             </div>
         </div>
