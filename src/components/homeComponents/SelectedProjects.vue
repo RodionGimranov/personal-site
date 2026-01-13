@@ -32,7 +32,7 @@ watchEffect(() => {
     projectsStore.setLocale(locale.value);
 });
 
-const projects = computed(() => projectsStore.getProjectsByIds([2, 1, 0]));
+const projects = computed(() => projectsStore.getProjectsByIds([0]));
 </script>
 
 <style lang="scss">
