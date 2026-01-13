@@ -67,6 +67,14 @@ file_paths = [
     "./src/components/aboutComponents/GreetingCard.vue",
     "./src/components/aboutComponents/LocationCard.vue",
     "./src/components/aboutComponents/PhysicsCard.vue",
+
+    "./src/components/aboutProjectPage/ProjectContext.vue",
+    "./src/components/aboutProjectPage/ProjectDescription.vue",
+    "./src/components/aboutProjectPage/ProjectHeader.vue",
+    "./src/components/aboutProjectPage/ProjectResponsibilities.vue",
+    "./src/components/aboutProjectPage/ProjectRole.vue",
+    "./src/components/aboutProjectPage/ProjectTechnologies.vue",
+    "./src/components/aboutProjectPage/ProjectVideoCover.vue",
     
     "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
     "./src/components/homeComponents/TechStack/TechStack.vue",
