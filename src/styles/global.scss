@@ -155,3 +155,29 @@ p {
     font-weight: 500;
     color: var(--primary-dark);
 }
+// === ABOUT PROJECT PAGE ===
+.common_width_size {
+    width: 560px;
+}
+.about_project_info_title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-gray);
+}
+.about_project_info_subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-dark);
+}
+.about_project_info_container {
+    width: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
