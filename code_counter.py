@@ -74,7 +74,7 @@ file_paths = [
     "./src/components/aboutProjectPage/ProjectResponsibilities.vue",
     "./src/components/aboutProjectPage/ProjectRole.vue",
     "./src/components/aboutProjectPage/ProjectTechnologies.vue",
-    "./src/components/aboutProjectPage/ProjectVideoCover.vue",
+    "./src/components/aboutProjectPage/ProjectVideoCover.vue",  
     
     "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
     "./src/components/homeComponents/TechStack/TechStack.vue",
