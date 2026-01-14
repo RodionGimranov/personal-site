@@ -103,31 +103,31 @@ const projectData = computed(() => ({
 }
 
 .kw_export {
-    color: #c586c0;
+    color: var(--syntax-keyword-export);
 }
 
 .kw_const {
-    color: #569cd6;
+    color: var(--syntax-keyword-const);
 }
 
 .variable {
-    color: #4fc1ff;
+    color: var(--syntax-variable);
 }
 
 .key {
-    color: #9cdcfe;
+    color: var(--syntax-property);
 }
 
 .literal {
-    color: #b5cea8;
+    color: var(--syntax-literal);
 }
 
 .punctuator {
-    color: #d4d4d4;
+    color: var(--syntax-punctuation);
 }
 
 .brace {
-    color: #ffd602;
+    color: var(--syntax-brace);
 }
 
 .margin_left_34 {

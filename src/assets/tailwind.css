@@ -8,6 +8,7 @@
     --color-primary-gray: var(--primary-gray);
     --color-primary-blue: var(--primary-blue);
     --color-primary-green: var(--primary-green);
+    --color-primary-purple: var(--primary-purple);
 
     /* === SECONDARY PALETTE === */
     --color-secondary-white: var(--secondary-white);
@@ -21,6 +22,7 @@
     --color-third-dark: var(--third-dark);
     --color-third-gray: var(--third-gray);
     --color-third-blue: var(--third-blue);
+    --color-third-green: var(--third-green);
 
     /* === FOURTH PALETTE === */
     --color-fourth-white: var(--fourth-white);
@@ -33,6 +35,7 @@
     --color-fifth-dark: var(--fifth-dark);
     --color-fifth-gray: var(--fifth-gray);
 
+    --color-sixth-dark: var(--sixth-dark);
     --color-sixth-gray: var(--sixth-gray);
 
     --color-seventh-gray: var(--seventh-gray);
@@ -45,6 +48,24 @@
     --color-black-25: var(--black-25);
     --color-black-35: var(--black-35);
     --color-black-50: var(--black-50);
+    --color-gray-10: var(--gray-10);
     --color-blue-20: var(--blue-20);
+    --color-green-20: var(--green-20);
     --color-green-70: var(--green-70);
+    --color-purple-15: var(--purple-15);
+
+    /* === LIGHT COLOR === */
+    --color-light-gray: var(--light-gray);
+    --color-light-blue: var(--light-blue);
+    --color-light-green: var(--light-green);
+    --color-light-purple: var(--light-purple);
+
+    /* === SYNTAX COLOR === */
+    --color-syntax-keyword-export: var(--syntax-keyword-export);
+    --color-syntax-keyword-const: var(--syntax-keyword-const);
+    --color-syntax-variable: var(--syntax-variable);
+    --color-syntax-property: var(--syntax-property);
+    --color-syntax-literal: var(--syntax-literal);
+    --color-syntax-punctuation: var(--syntax-punctuation);
+    --color-syntax-brace: var(--syntax-brace);
 }

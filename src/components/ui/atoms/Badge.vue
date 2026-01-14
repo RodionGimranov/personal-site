@@ -12,7 +12,7 @@ const props = defineProps({
     size: {
         type: String,
         default: "small",
-        validator: (v) => ["default", "small"].includes(v),
+        validator: (v) => ["small", "medium"].includes(v),
     },
     color: {
         type: String,
@@ -63,8 +63,8 @@ const badgeClasses = computed(() => [
 }
 
 .gray {
-    background: rgba(82, 82, 92, 0.1);
-    color: #3f3f46;
+    background: var(--gray-10);
+    color: var(--sixth-dark);
 }
 
 .blue {
@@ -73,12 +73,12 @@ const badgeClasses = computed(() => [
 }
 
 .green {
-    background: rgba(154, 230, 0, 0.2);
-    color: #497d00;
+    background: var(--green-20);
+    color: var(--third-green);
 }
 
 .purple {
-    background: rgba(173, 70, 255, 0.15);
-    color: #8200db;
+    background: var(--purple-15);
+    color: var(--primary-purple);
 }
 </style>

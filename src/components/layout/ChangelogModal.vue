@@ -109,18 +109,18 @@ useEscapeKeyClose(() => {
 
 <style lang="scss">
 .gray {
-    background: #ededee;
+    background: var(--light-gray);
 }
 
 .blue {
-    background: #dfecff;
+    background: var(--light-blue);
 }
 
 .green {
-    background: #ebfacc;
+    background: var(--light-green);
 }
 
 .purple {
-    background: #f3e4ff;
+    background: var(--light-purple);
 }
 </style>

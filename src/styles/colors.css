@@ -5,6 +5,7 @@
     --primary-gray: #281414;
     --primary-blue: #2563eb;
     --primary-green: #12b76a;
+    --primary-purple: #8200db;
 
     /* === SECONDARY PALETTE === */
     --secondary-white: #f5f5f5;
@@ -18,6 +19,7 @@
     --third-dark: #1f1f1f;
     --third-gray: #787878;
     --third-blue: #0078d4;
+    --third-green: #497d00;
 
     /* === FOURTH PALETTE === */
     --fourth-white: #f0edf3;
@@ -30,6 +32,7 @@
     --fifth-dark: #706f6c;
     --fifth-gray: #454545;
 
+    --sixth-dark: #3f3f46;
     --sixth-gray: #303131;
 
     --seventh-gray: #c8c8c8;
@@ -42,6 +45,24 @@
     --black-25: rgba(0, 0, 0, 0.25);
     --black-35: rgba(0, 0, 0, 0.35);
     --black-50: rgba(0, 0, 0, 0.5);
+    --gray-10: rgba(82, 82, 92, 0.1);
     --blue-20: rgba(41, 118, 255, 0.2);
+    --green-20: rgba(154, 230, 0, 0.2);
     --green-70: rgba(16, 185, 129, 0.7);
+    --purple-15: rgba(173, 70, 255, 0, 15);
+
+    /* === LIGHT COLOR === */
+    --light-gray: #ededee;
+    --light-blue: #dfecff;
+    --light-green: #ebfacc;
+    --light-purple: #f3e4ff;
+
+    /* === SYNTAX COLOR === */
+    --syntax-keyword-export: #c586c0;
+    --syntax-keyword-const: #569cd6;
+    --syntax-variable: #4fc1ff;
+    --syntax-property: #9cdcfe;
+    --syntax-literal: #b5cea8;
+    --syntax-punctuation: #d4d4d4;
+    --syntax-brace: #ffd602;
 }
