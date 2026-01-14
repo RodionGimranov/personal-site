@@ -50,9 +50,5 @@ export const useProjectsStore = defineStore("projects", {
         selectProjectById(id) {
             this.selectedProjectId = Number(id);
         },
-
-        clearSelectedProject() {
-            this.selectedProjectId = null;
-        },
     },
 });
