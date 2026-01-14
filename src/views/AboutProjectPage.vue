@@ -4,7 +4,7 @@
             class="sticky top-0 z-99 py-4! bg-primary-white flex justify-start items-start common_width_size"
         >
             <RouterLink
-                :to="backRoute"
+                to="/projects"
                 class="transition duration-200 text-base font-medium text-third-gray flex justify-start items-center gap-0.5 hover:text-primary-dark"
             >
                 <SvgIcon name="left-arrow-icon" />
@@ -48,16 +48,6 @@ const router = useRouter();
 const projectsStore = useProjectsStore();
 
 const { locale } = useI18n();
-
-const backRoute = computed(() => {
-    switch (route.query.from) {
-        case "projects":
-            return "/Projects";
-        case "home":
-        default:
-            return "/";
-    }
-});
 
 watchEffect(() => {
     projectsStore.setLocale(locale.value);
