@@ -1,9 +1,9 @@
-export const APP_VERSION = "1.3.55";
+export const APP_VERSION = "1.3.65";
 
-export const TOTAL_LINES_OF_CODE = "5322";
-export const TOTAL_FILE_COUNT = "85";
+export const TOTAL_LINES_OF_CODE = "5388";
+export const TOTAL_FILE_COUNT = "88";
 export const TOTAL_FOLDER_COUNT = "28";
-export const PROJECT_SIZE_MB = "373.90";
+export const PROJECT_SIZE_MB = "376.16";
 
 export const RESUME_URL =
     "https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?";
