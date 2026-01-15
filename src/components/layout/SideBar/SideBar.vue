@@ -49,7 +49,7 @@
                 </a>
             </div>
         </div>
-        <p class="version_number">v{{ APP_VERSION }}</p>
+        <p class="version_number">v.{{ APP_VERSION }}</p>
     </section>
 </template>
 
@@ -136,10 +136,14 @@ const navLinks = [
 
     &:hover {
         background: var(--secondary-white);
-        color: var(--primary-dark);
     }
 
     &._active {
+        background: var(--secondary-white);
+        color: var(--primary-dark);
+    }
+
+    &:active {
         background: var(--secondary-white);
         color: var(--primary-dark);
     }

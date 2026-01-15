@@ -30,5 +30,9 @@ import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
     &:hover {
         background: var(--secondary-dark);
     }
+
+    &:active {
+        transform: scale(0.97);
+    }
 }
 </style>
