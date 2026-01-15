@@ -156,10 +156,13 @@ file_paths = [
     "./code_counter.py",
     "./index.html",
     "./package.json",
-    "./postcss.config.js",
+    "./postcss.config.ts",
     "./README.md",
     "./tailwind.config.js",
-    "./vite.config.js"
+    "./tsconfig.app.json",
+    "./tsconfig.json",
+    "./tsconfig.node.json",
+    "./vite.config.ts"
 ]
 
 print("📑 Count for the specified files:\n")
