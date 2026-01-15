@@ -13,7 +13,7 @@
                     :label="tech"
                     size="medium"
                     color="blue"
-                    rounded="pill"
+                    shape="pill"
                 />
             </div>
         </div>

@@ -8,7 +8,7 @@
                 :label="tech.name"
                 size="medium"
                 color="blue"
-                rounded="pill"
+                shape="pill"
             />
         </div>
     </div>

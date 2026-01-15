@@ -27,7 +27,7 @@
                                         :label="update.type"
                                         size="small"
                                         :color="typeColorMap[update.type]"
-                                        rounded="square"
+                                        shape="regular"
                                     />
                                 </div>
                             </div>

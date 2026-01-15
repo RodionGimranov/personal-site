@@ -19,18 +19,14 @@ const props = defineProps({
         default: "gray",
         validator: (v) => ["gray", "purple", "blue", "green"].includes(v),
     },
-    rounded: {
+    shape: {
         type: String,
-        default: "square",
-        validator: (v) => ["square", "pill"].includes(v),
+        default: "regular",
+        validator: (v) => ["regular", "pill"].includes(v),
     },
 });
 
-const badgeClasses = computed(() => [
-    props.color,
-    `size-${props.size}`,
-    `rounded-${props.rounded}`,
-]);
+const badgeClasses = computed(() => [props.color, `size-${props.size}`, `shape-${props.shape}`]);
 </script>
 
 <style lang="scss">
@@ -54,11 +50,11 @@ const badgeClasses = computed(() => [
     font-size: 14px;
 }
 
-.rounded-square {
+.shape-regular {
     border-radius: 6px;
 }
 
-.rounded-pill {
+.shape-pill {
     border-radius: 100px;
 }
 
