@@ -58,7 +58,7 @@ import { useRoute } from "vue-router";
 
 import { useModalStore } from "@/stores/useModalStore.js";
 import { useLanguageStore } from "@/stores/useLanguageStore";
-import { APP_VERSION, RESUME_URL } from "@/constants/appConstants.js";
+import { APP_VERSION, RESUME_URL } from "@/constants/appConstants";
 
 import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";

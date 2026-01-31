@@ -5,8 +5,8 @@
     ></p>
 </template>
 
-<script setup>
-import { formatTransferText } from "@/utils/formatters.js";
+<script setup lang="ts">
+import { formatTransferText } from "@/utils/formatters";
 </script>
 
 <style lang="scss"></style>

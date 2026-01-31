@@ -35,7 +35,7 @@
 <script setup>
 import { ref, computed } from "vue";
 
-import { FIGMA_DESIGN_URL } from "@/constants/appConstants.js";
+import { FIGMA_DESIGN_URL } from "@/constants/appConstants";
 
 import Button from "@/components/ui/atoms/Button.vue";
 

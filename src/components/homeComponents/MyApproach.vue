@@ -22,8 +22,8 @@
     </div>
 </template>
 
-<script setup>
-import { formatTransferText } from "@/utils/formatters.js";
+<script setup lang="ts">
+import { formatTransferText } from "@/utils/formatters";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 

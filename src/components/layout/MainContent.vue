@@ -6,7 +6,7 @@
             </div>
             <Footer v-if="!$route.meta.hideFooter" />
         </div>
-        <div class="blur_mask_wrapper" :class="{ 'is-hidden': !isBlurVisible }">
+        <div v-if="isBlurVisible" class="blur_mask_wrapper">
             <BlurMask />
         </div>
     </section>
@@ -18,35 +18,31 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import Footer from "@/components/layout/Footer.vue";
 import BlurMask from "@/components/ui/atoms/BlurMask.vue";
 
-const BLUR_HIDE_OFFSET = 100;
-const BLUR_HEIGHT = 140;
+const BLUR_HIDE_OFFSET = 140;
 
 const scrollEl = ref(null);
-const isBlurVisible = ref(true);
+const isBlurVisible = ref(false);
 
-const handleScroll = () => {
+const updateBlurVisibility = () => {
     const el = scrollEl.value;
     if (!el) return;
 
-    const { scrollTop, scrollHeight, clientHeight } = el;
-
-    const distanceToBottom = scrollHeight - (scrollTop + clientHeight);
+    const distanceToBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
 
     isBlurVisible.value = distanceToBottom > BLUR_HIDE_OFFSET;
 };
 
 onMounted(() => {
-    if (!scrollEl.value) return;
+    const el = scrollEl.value;
+    if (!el) return;
 
-    scrollEl.value.addEventListener("scroll", handleScroll, {
-        passive: true,
-    });
+    el.addEventListener("scroll", updateBlurVisibility, { passive: true });
 
-    handleScroll();
+    updateBlurVisibility();
 });
 
 onBeforeUnmount(() => {
-    scrollEl.value?.removeEventListener("scroll", handleScroll);
+    scrollEl.value?.removeEventListener("scroll", updateBlurVisibility);
 });
 
 defineExpose({

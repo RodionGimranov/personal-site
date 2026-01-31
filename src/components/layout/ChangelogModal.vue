@@ -50,7 +50,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 
 import { onClickOutside } from "@vueuse/core";
@@ -58,7 +58,7 @@ import { useI18n } from "vue-i18n";
 
 import { useModalStore } from "@/stores/useModalStore";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
-import { formatBoldText } from "@/utils/formatters.js";
+import { formatBoldText } from "@/utils/formatters";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 import Badge from "@/components/ui/atoms/Badge.vue";
