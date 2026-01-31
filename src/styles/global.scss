@@ -114,8 +114,9 @@ p {
 }
 // === DARK BG BLUR ===
 ._glass_effect {
-    background: var(--black-35);
+    background: var(--gray-35);
     backdrop-filter: blur(5px);
+    border: 1px solid var(--black-10);
 }
 // === MODAL OVERLAY ===
 .commnon_modal_overlay {
