@@ -109,7 +109,7 @@ file_paths = [
     "./src/composables/useScrollToTop.js",
     "./src/composables/useShuffledPhotos.js",
 
-    "./src/constants/appConstants.js",
+    "./src/constants/appConstants.ts",
 
     "./src/data/changelogs.json",
     "./src/data/photos.json",
@@ -139,7 +139,7 @@ file_paths = [
     "./src/styles/global.scss",
     "./src/styles/transition.scss",
 
-    "./src/utils/formatters.js",
+    "./src/utils/formatters.ts",
     "./src/utils/getPageTitle.js",
     "./src/utils/technologyRows.js",
 
@@ -152,13 +152,14 @@ file_paths = [
 
     "./src/App.vue",
     "./src/main.js",
+    "./src/shims-vue.d.ts",
 
     "./code_counter.py",
     "./index.html",
     "./package.json",
     "./postcss.config.ts",
     "./README.md",
-    "./tailwind.config.js",
+    "./tailwind.config.ts",
     "./tsconfig.app.json",
     "./tsconfig.json",
     "./tsconfig.node.json",
