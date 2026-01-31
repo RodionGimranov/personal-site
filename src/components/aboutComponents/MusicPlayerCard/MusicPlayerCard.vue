@@ -1,52 +1,54 @@
 <template>
     <div
-        v-if="player.currentSong"
+        v-if="musicPlayerStore.currentSong"
         class="w-62.5 h-62.5 flex flex-col items-start justify-between common_bento_card_style commom_card_style bg-no-repeat bg-cover bg-center"
         :style="{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundImage: `url(${player.currentSong.album_cover})`,
+            backgroundImage: `url(${musicPlayerStore.currentSong.album_cover})`,
         }"
     >
-        <div class="w-full flex justify-between items-start">
+        <div class="w-full flex justify-between items-start gap-1">
             <div
                 class="flex flex-col justify-start items-start _glass_effect rounded-[100px] overflow-hidden max-w-37.5 min-w-37.5 px-3! py-1!"
             >
                 <div class="song_name_container w-full flex items-center gap-1">
-                    <p class="song_name shrink">{{ player.currentSong.song_name }}</p>
+                    <p class="song_name shrink">{{ musicPlayerStore.currentSong.song_name }}</p>
                     <SvgIcon
-                        v-if="player.currentSong.explicit_content"
+                        v-if="musicPlayerStore.currentSong.explicit_content"
                         name="explicit-icon"
                         :width="12"
                         :height="12"
                         style="opacity: 0.7"
                     />
                 </div>
-                <p class="artist_name w-full opacity-70">{{ player.currentSong.artist_name }}</p>
+                <p class="artist_name w-full opacity-70">
+                    {{ musicPlayerStore.currentSong.artist_name }}
+                </p>
             </div>
-            <SoundWaveIndicator :audioElement="player.audio" />
+            <SoundWaveIndicator :audioElement="musicPlayerStore.audio" />
         </div>
         <PlayerControls />
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, onBeforeUnmount } from "vue";
 
-import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore.js";
+import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 import SoundWaveIndicator from "@/components/aboutComponents/MusicPlayerCard/SoundWaveIndicator.vue";
 import PlayerControls from "@/components/aboutComponents/MusicPlayerCard/PlayerControls.vue";
 
-const player = useMusicPlayerStore();
+const musicPlayerStore = useMusicPlayerStore();
 
 onMounted(() => {
-    player.init();
+    musicPlayerStore.init();
 });
 
 onBeforeUnmount(() => {
-    player.destroy();
+    musicPlayerStore.destroy();
 });
 </script>
 

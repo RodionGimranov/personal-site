@@ -12,32 +12,33 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
+
 import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
-const player = useMusicPlayerStore();
+const musicPlayerStore = useMusicPlayerStore();
 
 const buttons = computed(() => [
     {
         icon: "previous-icon",
-        action: player.previous,
+        action: musicPlayerStore.previous,
     },
     {
         icon: "pause-icon",
-        action: player.pause,
-        show: player.isPlaying,
+        action: musicPlayerStore.pause,
+        show: musicPlayerStore.isPlaying,
     },
     {
         icon: "play-icon",
-        action: player.play,
-        show: !player.isPlaying,
+        action: musicPlayerStore.play,
+        show: !musicPlayerStore.isPlaying,
     },
     {
         icon: "next-icon",
-        action: player.next,
+        action: musicPlayerStore.next,
     },
 ]);
 </script>
