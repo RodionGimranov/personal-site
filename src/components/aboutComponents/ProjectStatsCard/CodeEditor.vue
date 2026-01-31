@@ -28,7 +28,7 @@ import {
     TOTAL_FILE_COUNT,
     TOTAL_FOLDER_COUNT,
     PROJECT_SIZE_MB,
-} from "@/constants/appConstants.js";
+} from "@/constants/appConstants";
 
 const projectData = computed(() => ({
     linesOfCode: TOTAL_LINES_OF_CODE,
