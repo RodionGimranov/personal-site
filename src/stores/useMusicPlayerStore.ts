@@ -1,65 +1,68 @@
 import { defineStore } from "pinia";
+
+import type { Song, SongsJson } from "@/types/music";
 import songsData from "@/data/songs.json";
 
 export const useMusicPlayerStore = defineStore("musicPlayer", {
     state: () => ({
-        songs: songsData.songs || [],
-        currentIndex: 0,
-        isPlaying: false,
-        audio: null,
+        songs: ((songsData as SongsJson).songs ?? []) as Song[],
+        currentIndex: 0 as number,
+        isPlaying: false as boolean,
+        audio: null as HTMLAudioElement | null,
     }),
 
     getters: {
-        currentSong(state) {
-            return state.songs[state.currentIndex] || null;
+        currentSong(state): Song | null {
+            return state.songs[state.currentIndex] ?? null;
         },
     },
 
     actions: {
-        init() {
+        init(): void {
             if (!this.currentSong) return;
 
             this.audio = new Audio(this.currentSong.song_url);
-            this.audio.addEventListener("ended", this.next);
+
+            this.audio.addEventListener("ended", () => {
+                this.next();
+            });
         },
 
-        play() {
+        play(): void {
             if (!this.audio) return;
-            this.audio.play();
+            void this.audio.play();
             this.isPlaying = true;
         },
 
-        pause() {
+        pause(): void {
             if (!this.audio) return;
             this.audio.pause();
             this.isPlaying = false;
         },
 
-        next() {
+        next(): void {
             if (!this.songs.length) return;
-
             this.currentIndex = (this.currentIndex + 1) % this.songs.length;
             this.updateTrack();
         },
 
-        previous() {
+        previous(): void {
             if (!this.songs.length) return;
-
             this.currentIndex = (this.currentIndex - 1 + this.songs.length) % this.songs.length;
             this.updateTrack();
         },
 
-        updateTrack() {
+        updateTrack(): void {
             if (!this.audio || !this.currentSong) return;
 
             this.audio.src = this.currentSong.song_url;
 
             if (this.isPlaying) {
-                this.audio.play();
+                void this.audio.play();
             }
         },
 
-        destroy() {
+        destroy(): void {
             if (!this.audio) return;
 
             this.audio.pause();

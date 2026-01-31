@@ -5,6 +5,7 @@
             :key="index"
             class="_glass_effect flex justify-center items-center w-11.5 h-11.5 rounded-[100px] transform transition-transform duration-200 hover:scale-105"
             v-show="button.show === undefined || button.show"
+            type="button"
             @click="button.action"
         >
             <SvgIcon :name="button.icon" :width="36" :height="36" />
@@ -19,26 +20,34 @@ import { useMusicPlayerStore } from "@/stores/useMusicPlayerStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
+type PlayerIconName = "previous-icon" | "pause-icon" | "play-icon" | "next-icon";
+
+type PlayerButton = {
+    icon: PlayerIconName;
+    action: () => void;
+    show?: boolean;
+};
+
 const musicPlayerStore = useMusicPlayerStore();
 
-const buttons = computed(() => [
+const buttons = computed<PlayerButton[]>(() => [
     {
         icon: "previous-icon",
-        action: musicPlayerStore.previous,
+        action: () => musicPlayerStore.previous(),
     },
     {
         icon: "pause-icon",
-        action: musicPlayerStore.pause,
+        action: () => musicPlayerStore.pause(),
         show: musicPlayerStore.isPlaying,
     },
     {
         icon: "play-icon",
-        action: musicPlayerStore.play,
+        action: () => musicPlayerStore.play(),
         show: !musicPlayerStore.isPlaying,
     },
     {
         icon: "next-icon",
-        action: musicPlayerStore.next,
+        action: () => musicPlayerStore.next(),
     },
 ]);
 </script>

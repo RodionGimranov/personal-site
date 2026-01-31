@@ -9,116 +9,156 @@
     </div>
 </template>
 
-<script setup>
-import { ref, onUnmounted, watch, nextTick } from "vue";
+<script setup lang="ts">
+import { ref, watch, nextTick, onUnmounted } from "vue";
 
-const props = defineProps({
-    audioElement: Object,
-});
+type Props = {
+    audioElement: HTMLAudioElement | null;
+};
 
-const waveData = ref([3, 3, 3, 3, 3, 3]);
+const props = defineProps<Props>();
 
-let audioContext = null;
-let analyser = null;
-let dataArray = null;
-let source = null;
-let animationFrameId = null;
+const waveData = ref<number[]>([3, 3, 3, 3, 3, 3]);
 
-const initializeVisualizer = () => {
-    if (props.audioElement) {
-        if (audioContext) {
-            audioContext.close().catch(console.error);
-        }
+let audioContext: AudioContext | null = null;
+let analyser: AnalyserNode | null = null;
+let dataArray: Uint8Array<ArrayBuffer> | null = null;
+let source: MediaElementAudioSourceNode | null = null;
+let animationFrameId: number | null = null;
 
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        analyser = audioContext.createAnalyser();
-        analyser.fftSize = 2048;
-        const bufferLength = analyser.frequencyBinCount;
-        dataArray = new Uint8Array(bufferLength);
+const resetWaves = (): void => {
+    waveData.value = waveData.value.map(() => 3);
+};
 
-        source = audioContext.createMediaElementSource(props.audioElement);
-        source.connect(analyser);
-        analyser.connect(audioContext.destination);
-
-        updateWaveData();
+const stopAnimation = (): void => {
+    if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
     }
 };
 
-const updateWaveData = () => {
-    if (analyser && !props.audioElement.paused && !props.audioElement.muted) {
+const getAudioContextCtor = (): typeof AudioContext => {
+    return (window.AudioContext || (window as any).webkitAudioContext) as typeof AudioContext;
+};
+
+const initializeVisualizer = (): void => {
+    const audio = props.audioElement;
+    if (!audio) return;
+
+    if (audioContext) {
+        audioContext.close().catch(console.error);
+    }
+
+    const Ctx = getAudioContextCtor();
+    audioContext = new Ctx();
+
+    analyser = audioContext.createAnalyser();
+    analyser.fftSize = 2048;
+
+    const bufferLength = analyser.frequencyBinCount;
+
+    dataArray = new Uint8Array(new ArrayBuffer(bufferLength));
+
+    source = audioContext.createMediaElementSource(audio);
+    source.connect(analyser);
+    analyser.connect(audioContext.destination);
+
+    updateWaveData();
+};
+
+const updateWaveData = (): void => {
+    const audio = props.audioElement;
+
+    if (!audio || !analyser || !dataArray) {
+        resetWaves();
+        stopAnimation();
+        return;
+    }
+
+    if (!audio.paused && !audio.muted) {
         analyser.getByteFrequencyData(dataArray);
 
         const minHeight = 3;
         const maxHeight = 34;
         const maxFrequencyValue = 255;
-
         const smoothingFactor = 0.2;
+
         for (let i = 0; i < waveData.value.length; i++) {
+            const freq = dataArray[i] ?? 0;
+            const prev = waveData.value[i] ?? minHeight;
+
+            const target = (freq / maxFrequencyValue) * maxHeight;
+
             waveData.value[i] = Math.max(
                 minHeight,
-                Math.min(
-                    maxHeight,
-                    waveData.value[i] * (1 - smoothingFactor) +
-                        (dataArray[i] / maxFrequencyValue) * maxHeight * smoothingFactor,
-                ),
+                Math.min(maxHeight, prev * (1 - smoothingFactor) + target * smoothingFactor),
             );
         }
 
         animationFrameId = requestAnimationFrame(updateWaveData);
     } else {
-        waveData.value = waveData.value.map(() => 3);
-
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-        }
+        resetWaves();
+        stopAnimation();
     }
 };
 
-const handlePlay = () => {
+const handlePlay = (): void => {
     if (!audioContext) {
         initializeVisualizer();
-    } else {
-        audioContext.resume().catch(console.error);
-        updateWaveData();
+        return;
     }
+
+    audioContext.resume().catch(console.error);
+    updateWaveData();
 };
 
-const handlePauseOrMute = () => {
+const handlePauseOrMute = (): void => {
     updateWaveData();
 };
 
 watch(
     () => props.audioElement,
-    (newAudioElement) => {
-        if (newAudioElement) {
-            newAudioElement.addEventListener("play", handlePlay);
-            newAudioElement.addEventListener("pause", handlePauseOrMute);
-            newAudioElement.addEventListener("ended", handlePauseOrMute);
-
-            nextTick(() => {
-                if (!newAudioElement.paused && !newAudioElement.muted) {
-                    handlePlay();
-                } else {
-                    handlePauseOrMute();
-                }
-            });
+    (newAudio, oldAudio) => {
+        if (oldAudio) {
+            oldAudio.removeEventListener("play", handlePlay);
+            oldAudio.removeEventListener("pause", handlePauseOrMute);
+            oldAudio.removeEventListener("ended", handlePauseOrMute);
         }
+
+        if (!newAudio) return;
+
+        newAudio.addEventListener("play", handlePlay);
+        newAudio.addEventListener("pause", handlePauseOrMute);
+        newAudio.addEventListener("ended", handlePauseOrMute);
+
+        nextTick(() => {
+            if (!newAudio.paused && !newAudio.muted) {
+                handlePlay();
+            } else {
+                handlePauseOrMute();
+            }
+        });
     },
     { immediate: true },
 );
 
 onUnmounted(() => {
-    if (audioContext) {
-        audioContext.close().catch(console.error);
-    }
-    if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-    }
+    stopAnimation();
+
     if (props.audioElement) {
         props.audioElement.removeEventListener("play", handlePlay);
         props.audioElement.removeEventListener("pause", handlePauseOrMute);
         props.audioElement.removeEventListener("ended", handlePauseOrMute);
     }
+
+    if (audioContext) {
+        audioContext.close().catch(console.error);
+        audioContext = null;
+    }
+
+    analyser = null;
+    dataArray = null;
+    source = null;
 });
 </script>
 
