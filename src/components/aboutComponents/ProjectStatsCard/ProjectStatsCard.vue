@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import WindowControls from "@/components/aboutComponents/ProjectStatsCard/WindowControls.vue";
 import TabBar from "@/components/aboutComponents/ProjectStatsCard/TabBar.vue";
 import CodeEditor from "@/components/aboutComponents/ProjectStatsCard/CodeEditor.vue";

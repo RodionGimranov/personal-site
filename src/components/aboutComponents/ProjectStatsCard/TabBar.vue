@@ -1,24 +1,42 @@
 <template>
-    <div class="top_bar_container">
-        <div class="file_tab">
+    <div
+        class="w-full h-9 cursor-pointer flex justify-between items-start border-t-[0.47px] border-fifth-gray border-b-[0.47px]"
+    >
+        <div class="file_tab h-full flex justify-start items-center gap-1 py-2.5! pr-1! pl-1.5!">
             <SvgIcon name="js-lang-icon" :width="14" :height="14" />
-            <p class="file_name">projectStats.js</p>
-            <button class="top_bar_btn">
+            <p class="text-xs font-normal ml-1! text-primary-white leading-3.75">projectStats.js</p>
+            <button
+                class="p-1! rounded-sm flex justify-center items-center hover:bg-sixth-gray! bg-transparent"
+                type="button"
+            >
                 <SvgIcon name="close-file-tab-icon" :width="10.18" :height="10.18" />
             </button>
         </div>
-        <div class="toolbar_container">
-            <button v-for="(btn, index) in toolbarButtons" :key="index" class="top_bar_btn">
+        <div class="h-full mr-1.5! flex justify-start items-center gap-0.75">
+            <button
+                v-for="(btn, index) in toolbarButtons"
+                :key="index"
+                class="p-1! rounded-sm flex justify-center items-center hover:bg-sixth-gray!"
+                type="button"
+            >
                 <SvgIcon :name="btn.name" :width="btn.width" :height="btn.height" />
             </button>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
-const toolbarButtons = [
+type ToolbarIconName = "claude-ai-icon" | "split-editor-icon" | "more-actions-icon";
+
+type ToolbarButton = {
+    name: ToolbarIconName;
+    width: number;
+    height: number;
+};
+
+const toolbarButtons: ToolbarButton[] = [
     { name: "claude-ai-icon", width: 14, height: 14 },
     { name: "split-editor-icon", width: 13, height: 13 },
     { name: "more-actions-icon", width: 12, height: 12 },
@@ -26,60 +44,10 @@ const toolbarButtons = [
 </script>
 
 <style lang="scss">
-.top_bar_container {
-    width: 100%;
-    height: 36px;
-    cursor: pointer;
-    border-top: 0.47px solid var(--fifth-gray);
-    border-bottom: 0.47px solid var(--fifth-gray);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .file_tab {
-    height: 100%;
-    padding: 10px 4px 10px 6px;
     border-top: 0.47px solid var(--third-blue);
     border-bottom: 0.47px solid var(--fifth-gray);
     border-left: 0.47px solid var(--fifth-gray);
     border-right: 0.47px solid var(--fifth-gray);
-
-    display: flex;
-    justify-self: flex-start;
-    align-items: center;
-    gap: 4px;
-}
-
-.file_name {
-    margin-left: 4px;
-    font-size: 12.21px;
-    font-weight: 400;
-    color: var(--primary-white);
-    line-height: 15px;
-}
-
-.top_bar_btn {
-    padding: 4px;
-    border-radius: 4px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        background: var(--sixth-gray);
-    }
-}
-
-.toolbar_container {
-    height: 100%;
-    margin-right: 6px;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 3px;
 }
 </style>
