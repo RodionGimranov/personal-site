@@ -117,31 +117,34 @@ file_paths = [
     "./src/data/songs.json",
     "./src/data/technology.json",
 
-    "./src/libs/matter-js/phycalsIcons.js",
+    "./src/libs/matter-js/phycalsIcons.ts",
 
     "./src/libs/vue-i18n/vue-i18n.js",
 
     "./src/locales/pages/about.json",
     "./src/locales/pages/home.json",
     "./src/locales/pages/projectsLocale.json",
-
     "./src/locales/global.json",
 
-    "./src/plugins/pinia.js",
+    "./src/plugins/pinia.ts",
 
-    "./src/router/index.js",
+    "./src/router/index.ts",
 
     "./src/stores/useLanguageStore.js",
     "./src/stores/useModalStore.js",
-    "./src/stores/useMusicPlayerStore.js",
+    "./src/stores/useMusicPlayerStore.ts",
     "./src/stores/useProjectsStore.js",
 
+    "./src/styles/colors.css",
     "./src/styles/global.scss",
     "./src/styles/transition.scss",
 
+    "./src/types/index.ts",
+    "./src/types/music.ts",
+
     "./src/utils/formatters.ts",
     "./src/utils/getPageTitle.js",
-    "./src/utils/technologyRows.js",
+    "./src/utils/technologyRows.ts",
 
     "./src/views/AboutPage.vue",
     "./src/views/AboutProjectPage.vue",
