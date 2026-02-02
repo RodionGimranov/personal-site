@@ -14,11 +14,19 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Badge from "@/components/ui/atoms/Badge.vue";
 
-defineProps({
-    technologies: { type: Array, required: true, default: () => [] },
+type TechnologyItem = {
+    name: string;
+};
+
+interface Props {
+    technologies: TechnologyItem[];
+}
+
+withDefaults(defineProps<Props>(), {
+    technologies: () => [],
 });
 </script>
 

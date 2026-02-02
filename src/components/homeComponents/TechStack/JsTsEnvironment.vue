@@ -30,7 +30,7 @@ import { computed } from "vue";
 import Badge from "@/components/ui/atoms/Badge.vue";
 import technologyData from "@/data/technology.json";
 
-import { prepareTechnologyRows } from "@/utils/technologyRows";
+import { prepareTechnologyRows } from "@/utils/technologyRows.ts";
 
 const ROWS_COUNT = 5;
 

@@ -7,9 +7,13 @@
     </div>
 </template>
 
-<script setup>
-defineProps({
-    description: { type: String, default: "" },
+<script setup lang="ts">
+interface Props {
+    description?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+    description: "",
 });
 </script>
 

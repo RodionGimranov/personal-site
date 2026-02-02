@@ -5,9 +5,13 @@
     </div>
 </template>
 
-<script setup>
-defineProps({
-    role: { type: String, default: "" },
+<script setup lang="ts">
+interface Props {
+    role?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+    role: "",
 });
 </script>
 

@@ -1,6 +1,6 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
 
-const routes = [
+const routes: RouteRecordRaw[] = [
     { path: "/", redirect: "/home" },
     {
         path: "/home",
@@ -47,8 +47,8 @@ const router = createRouter({
 
 router.afterEach(() => {
     requestAnimationFrame(() => {
-        const el = document.querySelector(".scrolled_content");
-        if (el) el.scrollTo({ top: 0, behavior: "auto" });
+        const el = document.querySelector<HTMLElement>(".scrolled_content");
+        el?.scrollTo({ top: 0, behavior: "auto" });
     });
 });
 

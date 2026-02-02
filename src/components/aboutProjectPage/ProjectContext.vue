@@ -7,9 +7,13 @@
     </div>
 </template>
 
-<script setup>
-defineProps({
-    context: { type: String, default: "" },
+<script setup lang="ts">
+interface Props {
+    context?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+    context: "",
 });
 </script>
 

@@ -1,24 +1,31 @@
 <template>
     <div class="flex justify-between items-center mb-8! common_width_size">
-        <p class="project_large_name text-[28px] font-medium text-primary-dark">{{ name }}</p>
+        <p class="project_large_name text-[28px] font-medium text-primary-dark">
+            {{ name }}
+        </p>
         <div class="flex justify-start items-end gap-2.5">
-            <a :href="codeUrl" target="_blank">
+            <a :href="codeUrl" target="_blank" rel="noopener noreferrer">
                 <Button as="span" :buttonText="$t('message.source_code_btn')" />
             </a>
-            <a :href="deployUrl" target="_blank">
+            <a :href="deployUrl" target="_blank" rel="noopener noreferrer">
                 <Button as="span" variant="_blue" :buttonText="$t('message.visit_btn')" />
             </a>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Button from "@/components/ui/atoms/Button.vue";
 
-defineProps({
-    name: { type: String, required: true },
-    codeUrl: { type: String, default: "#" },
-    deployUrl: { type: String, default: "#" },
+interface Props {
+    name: string;
+    codeUrl?: string;
+    deployUrl?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+    codeUrl: "#",
+    deployUrl: "#",
 });
 </script>
 

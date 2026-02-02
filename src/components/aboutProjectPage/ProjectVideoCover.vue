@@ -18,11 +18,15 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Skeleton from "@/components/ui/atoms/Skeleton.vue";
 
-defineProps({
-    videoSrc: { type: String, default: "" },
+interface Props {
+    videoSrc?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+    videoSrc: "",
 });
 </script>
 

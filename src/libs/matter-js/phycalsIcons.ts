@@ -1,7 +1,22 @@
 import Matter from "matter-js";
 
-export function phycalsIcons() {
-    const ICON_TEXTURES = [
+type PhycalsIconsConfig = {
+    width: number;
+    height: number;
+    iconSize: number;
+    gravity: number;
+};
+
+export type PhycalsIconsInstance = {
+    engine: Matter.Engine;
+    world: Matter.World;
+    render: Matter.Render;
+    icons: Matter.Body[];
+    destroy: () => void;
+};
+
+export function phycalsIcons(): PhycalsIconsInstance | void {
+    const ICON_TEXTURES: string[] = [
         "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037591/Group_4_twqcsl.svg",
         "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275075_lfycqg.svg",
         "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275074_ceg1dk.svg",
@@ -11,7 +26,7 @@ export function phycalsIcons() {
         "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037588/Frame_1171275071_pzb9mo.svg",
     ];
 
-    const CONFIG = {
+    const CONFIG: PhycalsIconsConfig = {
         width: 250,
         height: 520,
         iconSize: 60,
@@ -21,7 +36,7 @@ export function phycalsIcons() {
     const WALL_THICKNESS = 2;
     const OUT_MARGIN = 100;
 
-    const container = document.getElementById("phycalsIcons");
+    const container = document.getElementById("phycalsIcons") as HTMLElement | null;
     if (!container) {
         console.error('Container with id "phycalsIcons" not found');
         return;
@@ -43,10 +58,11 @@ export function phycalsIcons() {
         },
     });
 
-    function createWalls() {
+    function createWalls(): Matter.Body[] {
         const w = CONFIG.width;
         const h = CONFIG.height;
         const t = WALL_THICKNESS;
+
         return [
             Matter.Bodies.rectangle(w / 2, h - t / 2, w, t, {
                 isStatic: true,
@@ -66,35 +82,47 @@ export function phycalsIcons() {
             }),
         ];
     }
+
     Matter.World.add(world, createWalls());
 
-    function createIcon(x, y, textureUrl) {
+    function createIcon(x: number, y: number, textureUrl: string): Matter.Body {
         const size = CONFIG.iconSize;
+
         return Matter.Bodies.rectangle(x, y, size, size, {
             restitution: 0.6,
             friction: 0.3,
             frictionAir: 0.01,
-            render: { sprite: { texture: textureUrl } },
+            render: {
+                sprite: {
+                    texture: textureUrl,
+                    xScale: 1,
+                    yScale: 1,
+                },
+            },
         });
     }
 
-    function spawnIcon(textureUrl, x, y) {
+    function spawnIcon(textureUrl: string, x?: number, y?: number): Matter.Body {
         const half = CONFIG.iconSize / 2;
+
         const px =
             x ??
             Math.random() * (CONFIG.width - 2 * (half + WALL_THICKNESS)) + half + WALL_THICKNESS;
+
         const py = y ?? WALL_THICKNESS + half + 25;
 
-        const b = createIcon(px, py, textureUrl);
-        Matter.World.add(world, b);
-        Matter.Body.setVelocity(b, { x: (Math.random() - 0.5) * 2, y: 0.1 });
-        return b;
+        const body = createIcon(px, py, textureUrl);
+
+        Matter.World.add(world, body);
+        Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 2, y: 0.1 });
+
+        return body;
     }
 
-    const icons = [];
+    const icons: Matter.Body[] = [];
     const half = CONFIG.iconSize / 2;
 
-    const rows = [
+    const rows: number[] = [
         WALL_THICKNESS + half + 50,
         WALL_THICKNESS + half + 120,
         WALL_THICKNESS + half + 190,
@@ -114,16 +142,20 @@ export function phycalsIcons() {
         mouse: Matter.Mouse.create(render.canvas),
         constraint: { stiffness: 0.2, render: { visible: false } },
     });
+
     Matter.World.add(world, mouseConstraint);
 
     const runner = Matter.Runner.create();
     Matter.Runner.run(runner, engine);
     Matter.Render.run(render);
 
-    let rafId = null;
-    function update() {
+    let rafId: number | null = null;
+
+    function update(): void {
         for (let i = icons.length - 1; i >= 0; i--) {
             const icon = icons[i];
+            if (!icon) continue;
+
             const bnd = icon.bounds;
 
             const outAbove = bnd.max.y < -OUT_MARGIN;
@@ -133,12 +165,13 @@ export function phycalsIcons() {
 
             if (outAbove || outBelow || outLeft || outRight) {
                 const texture =
-                    icon.render?.sprite?.texture ||
-                    ICON_TEXTURES[Math.floor(Math.random() * ICON_TEXTURES.length)];
+                    icon.render?.sprite?.texture ??
+                    ICON_TEXTURES[Math.floor(Math.random() * ICON_TEXTURES.length)]!;
+
                 Matter.World.remove(world, icon);
                 icons.splice(i, 1);
 
-                setTimeout(() => {
+                window.setTimeout(() => {
                     const newIcon = spawnIcon(texture);
                     icons.push(newIcon);
                 }, 500);
@@ -147,6 +180,7 @@ export function phycalsIcons() {
 
         rafId = requestAnimationFrame(update);
     }
+
     update();
 
     return {
@@ -154,14 +188,22 @@ export function phycalsIcons() {
         world,
         render,
         icons,
-        destroy() {
-            if (rafId != null) cancelAnimationFrame(rafId);
+
+        destroy(): void {
+            if (rafId !== null) cancelAnimationFrame(rafId);
+
             Matter.Render.stop(render);
             Matter.Runner.stop(runner);
+
             Matter.World.clear(world, false);
             Matter.Engine.clear(engine);
-            if (render.canvas?.parentNode) render.canvas.parentNode.removeChild(render.canvas);
-            render.textures = {};
+
+            if (render.canvas?.parentNode) {
+                render.canvas.parentNode.removeChild(render.canvas);
+            }
+
+            (render.textures as Record<string, unknown>) = {};
+
             icons.length = 0;
         },
     };
