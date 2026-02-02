@@ -7,13 +7,20 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ShinyText from "@/components/vue-bits/TextAnimation/ShinyText.vue";
 
-defineProps({
-    width: { type: String, default: "250px" },
-    height: { type: String, default: "250px" },
+type Props = {
+    width?: string;
+    height?: string;
+};
+
+const props = withDefaults(defineProps<Props>(), {
+    width: "250px",
+    height: "250px",
 });
+
+const { width, height } = props;
 </script>
 
 <style lang="scss"></style>

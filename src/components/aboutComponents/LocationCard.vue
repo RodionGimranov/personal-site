@@ -4,44 +4,49 @@
     >
         <div ref="mapContainer" class="map_of_city"></div>
         <div class="w-full flex justify-end items-start">
-            <button class="reset_location_btn _glass_effect" @click="reserLocation">
+            <button
+                class="w-8 h-8 rounded-[100px] flex justify-center items-center _glass_effect"
+                @click="resetLocation"
+            >
                 <SvgIcon name="reset-location-icon" :width="21" :height="21" />
             </button>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import mapboxgl from "mapbox-gl";
+import mapboxgl, { type Map } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
-mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
+mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN as string;
 
-const mapContainer = ref(null);
-const mapInstance = ref(null);
+const mapContainer = ref<HTMLDivElement | null>(null);
+const mapInstance = ref<Map | null>(null);
 
-const coords = [49.122315, 55.792355];
-const zoom_to = 11;
+const coords = [49.122315, 55.792355] as [number, number];
+const zoomTo = 11;
 
-const reserLocation = () => {
-    if (mapInstance.value) {
-        mapInstance.value.flyTo({
-            center: coords,
-            zoom: zoom_to,
-            essential: true,
-        });
-    }
+const resetLocation = (): void => {
+    if (!mapInstance.value) return;
+
+    mapInstance.value.flyTo({
+        center: coords,
+        zoom: zoomTo,
+        essential: true,
+    });
 };
 
-onMounted(() => {
+onMounted((): void => {
+    if (!mapContainer.value) return;
+
     const map = new mapboxgl.Map({
         container: mapContainer.value,
-        style: import.meta.env.VITE_MAPBOX_STYLE,
+        style: import.meta.env.VITE_MAPBOX_STYLE as string,
         center: coords,
-        zoom: zoom_to,
+        zoom: zoomTo,
         projection: "globe",
         attributionControl: false,
     });
@@ -55,42 +60,34 @@ onMounted(() => {
         });
     });
 
-    const markerEl = document.createElement("div");
+    const markerEl: HTMLDivElement = document.createElement("div");
     markerEl.className = "custom_marker_wrapper";
 
-    const markerAnimation = document.createElement("div");
+    const markerAnimation: HTMLDivElement = document.createElement("div");
     markerAnimation.className = "custom_marker_animation";
     markerEl.appendChild(markerAnimation);
 
-    const outer = document.createElement("div");
+    const outer: HTMLDivElement = document.createElement("div");
     outer.className = "custom_marker_outer";
-    const inner = document.createElement("span");
+
+    const inner: HTMLSpanElement = document.createElement("span");
     inner.className = "custom_marker_inner";
+
     outer.appendChild(inner);
     markerEl.appendChild(outer);
 
-    new mapboxgl.Marker(markerEl).setLngLat(coords).addTo(map);
+    new mapboxgl.Marker({ element: markerEl }).setLngLat(coords).addTo(map);
 });
 
-onBeforeUnmount(() => {
-    if (mapInstance.value) {
-        mapInstance.value.remove();
-        mapInstance.value = null;
-    }
+onBeforeUnmount((): void => {
+    if (!mapInstance.value) return;
+
+    mapInstance.value.remove();
+    mapInstance.value = null;
 });
 </script>
 
 <style lang="scss">
-.reset_location_btn {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .map_of_city {
     position: absolute;
     top: 0;
