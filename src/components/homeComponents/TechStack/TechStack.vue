@@ -14,7 +14,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import VueEcosystem from "@/components/homeComponents/TechStack/VueEcosystem.vue";
 import JsTsEnvironment from "@/components/homeComponents/TechStack/JsTsEnvironment.vue";
 </script>

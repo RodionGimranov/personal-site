@@ -10,8 +10,10 @@
                 <img
                     v-for="(icon, iconIndex) in column.icons"
                     :key="iconIndex"
-                    class="vue_ecosystem__icon"
+                    class="vue_ecosystem__icon w-12 h-12"
                     :src="icon.src"
+                    decoding="async"
+                    referrerpolicy="no-referrer"
                     alt="vue ecosystem icon"
                     :style="{
                         '--x': icon.x,
@@ -32,8 +34,22 @@
     </div>
 </template>
 
-<script setup>
-const vueEcosystem = [
+<script setup lang="ts">
+type VueEcosystemColumnType = "single" | "double" | "triple";
+
+type VueEcosystemIcon = {
+    src: string;
+    x: string;
+    y: string;
+    duration: string;
+};
+
+type VueEcosystemColumn = {
+    type: VueEcosystemColumnType;
+    icons: VueEcosystemIcon[];
+};
+
+const vueEcosystem: VueEcosystemColumn[] = [
     {
         type: "single",
         icons: [
@@ -151,9 +167,6 @@ const vueEcosystem = [
 }
 
 .vue_ecosystem__icon {
-    width: 48px;
-    height: 48px;
-
     animation: drift var(--duration) linear infinite;
     animation-delay: calc(var(--duration) * -0.45);
     will-change: transform;

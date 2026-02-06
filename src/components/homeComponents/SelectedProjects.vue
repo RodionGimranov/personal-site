@@ -16,22 +16,23 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { watchEffect, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-import { useProjectsStore } from "@/stores/useProjectsStore.js";
+import type { Project } from "@/types";
+import { useProjectsStore } from "@/stores/useProjectsStore";
 
 import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
-const projectsStore = useProjectsStore();
 const { locale } = useI18n();
+const projectsStore = useProjectsStore();
 
 watchEffect(() => {
-    projectsStore.setLocale(locale.value);
+    projectsStore.setLocale(locale.value as "ru" | "en");
 });
 
-const projects = computed(() => projectsStore.getProjectsByIds([0]));
+const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([0]));
 </script>
 
 <style lang="scss">

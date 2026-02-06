@@ -1,6 +1,6 @@
 <template>
-    <div class="tech_stack_card_container js_ts_environment commom_card_style">
-        <div class="technology_list_wrapper">
+    <div class="tech_stack_card_container commom_card_style justify-end!">
+        <div class="technology_list_wrapper absolute top-5.5 left-5.5 w-full flex flex-col gap-1.5">
             <div
                 v-for="(list, index) in duplicatedRows"
                 :key="index"
@@ -27,33 +27,25 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import Badge from "@/components/ui/atoms/Badge.vue";
-import technologyData from "@/data/technology.json";
+import { prepareTechnologyRows } from "@/utils/technologyRows";
+import technologyDataJson from "@/data/technology.json";
 
-import { prepareTechnologyRows } from "@/utils/technologyRows.ts";
+import Badge from "@/components/ui/atoms/Badge.vue";
+
+type TechnologyData = {
+    technologies: string[];
+};
+
+const technologyData = technologyDataJson as TechnologyData;
 
 const ROWS_COUNT = 5;
 
-const duplicatedRows = computed(() =>
-    prepareTechnologyRows(technologyData.technologies, ROWS_COUNT),
-);
+const duplicatedRows = computed<string[][]>(() => {
+    return prepareTechnologyRows(technologyData.technologies, ROWS_COUNT);
+});
 </script>
 
 <style lang="scss">
-.js_ts_environment {
-    justify-content: flex-end !important;
-}
-
-.technology_list_wrapper {
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
 @keyframes scroll-right {
     0% {
         transform: translateX(-100%);
