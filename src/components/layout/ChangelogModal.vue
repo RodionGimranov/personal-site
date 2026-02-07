@@ -54,9 +54,9 @@
 import { ref, computed, onMounted } from "vue";
 
 import { onClickOutside } from "@vueuse/core";
-import { useI18n } from "vue-i18n";
 
 import { useModalStore } from "@/stores/useModalStore";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 import { formatBoldText } from "@/utils/formatters";
 
@@ -66,8 +66,8 @@ import Badge from "@/components/ui/atoms/Badge.vue";
 import changelogs from "@/data/changelogs.json";
 
 const modalStore = useModalStore();
+const languageStore = useLanguageStore();
 
-const { locale } = useI18n();
 const modalRef = ref(null);
 
 const latestUpdate = computed(() => updates.value[0] || null);
@@ -94,7 +94,7 @@ const close = () => {
 };
 
 const updates = computed(() => {
-    const list = changelogs[locale.value] || [];
+    const list = changelogs[languageStore.currentLocale] || [];
     return [...list].sort((a, b) => b.id - a.id);
 });
 

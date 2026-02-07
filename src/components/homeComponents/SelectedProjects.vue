@@ -17,22 +17,26 @@
 </template>
 
 <script setup lang="ts">
-import { watchEffect, computed } from "vue";
-import { useI18n } from "vue-i18n";
+import { computed, watch } from "vue";
 
 import type { Project } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
-const { locale } = useI18n();
 const projectsStore = useProjectsStore();
-
-watchEffect(() => {
-    projectsStore.setLocale(locale.value as "ru" | "en");
-});
+const languageStore = useLanguageStore();
 
 const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([0]));
+
+watch(
+    () => languageStore.currentLocale,
+    (locale) => {
+        projectsStore.setLocale(locale);
+    },
+    { immediate: true },
+);
 </script>
 
 <style lang="scss">
