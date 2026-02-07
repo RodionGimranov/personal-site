@@ -1,0 +1,39 @@
+{
+    "my_name_title": "Родион Гимранов",
+    "my_role_title": "Frontend-разработчик",
+
+    "home_btn_title": "Главная",
+    "about_btn_title": "Обо мне",
+    "projects_btn_title": "Проекты",
+    "gallery_btn_title": "Галерея",
+    "changelog_title": "Журнал изменений",
+    "download_btn_title": "Скачать резюме",
+
+    "site_settings_title": "Язык и тема",
+    "language_settings_title": "Язык",
+    "theme_settings_title": "Тема",
+    "selected_lang_ru": "Ru",
+    "selected_lang_en": "En",
+
+    "footer_router_links_title": "Навигация",
+    "footer_info_links_title": "Информация",
+    "footer_social_links_title": "Контакты",
+    "footer_fun_text": "Сделано с любовью и большим количеством кофе.",
+    "footer_copyright_text": "© Родион Гимранов, 2026",
+
+    "github_title": "GitHub",
+    "linkedin_title": "LinkedIn",
+    "telegram_title": "Telegram",
+    "instagram_title": "Instagram",
+
+    "home_tab_title": "Главная",
+    "about_tab_title": "Обо мне",
+    "projects_tab_title": "Проекты",
+    "about_project_tab_title": "О проекте",
+    "gallery_tab_title": "Галерея",
+    "error_tab_title": "Ошибка",
+
+    "error_page_title": "Ой! Кажется, вы попали не туда.",
+    "error_page_subtitle": "Страница, которую вы ищете, не существует.",
+    "error_page_btn_title": "Вернуться на главную"
+}

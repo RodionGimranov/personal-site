@@ -1,0 +1,39 @@
+{
+    "my_name_title": "Rodion Gimranov",
+    "my_role_title": "Frontend Developer",
+
+    "home_btn_title": "Home",
+    "about_btn_title": "About",
+    "projects_btn_title": "Projects",
+    "gallery_btn_title": "Gallery",
+    "changelog_title": "Changelog",
+    "download_btn_title": "Download CV",
+
+    "site_settings_title": "Language & Theme",
+    "language_settings_title": "Language",
+    "theme_settings_title": "Theme",
+    "selected_lang_ru": "Ru",
+    "selected_lang_en": "En",
+
+    "footer_router_links_title": "Navigation",
+    "footer_info_links_title": "Information",
+    "footer_social_links_title": "Contacts",
+    "footer_fun_text": "Made with love and countless cups of coffee.",
+    "footer_copyright_text": "© Rodion Gimranov, 2026",
+
+    "github_title": "GitHub",
+    "linkedin_title": "LinkedIn",
+    "telegram_title": "Telegram",
+    "instagram_title": "Instagram",
+
+    "home_tab_title": "Home",
+    "about_tab_title": "About",
+    "projects_tab_title": "Projects",
+    "about_project_tab_title": "About Project",
+    "gallery_tab_title": "Gallery",
+    "error_tab_title": "Error",
+
+    "error_page_title": "Oops! Looks like you’ve come to the wrong place.",
+    "error_page_subtitle": "The page you’re looking for doesn’t exist.",
+    "error_page_btn_title": "Back to Home"
+}

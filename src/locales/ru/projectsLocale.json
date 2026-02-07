@@ -1,0 +1,12 @@
+{
+    "back_btn": "Назад",
+    "visit_btn": "Посетить",
+    "source_code_btn": "Исходный код",
+
+    "project_video_text": "Ваш браузер не поддерживает видео :(",
+    "description_title": "Описание",
+    "technologies_title": "Технологии и инструменты",
+    "role_title": "Роль",
+    "areas_of_responsibility_titl": "Зоны ответственности",
+    "context_purpose_title": "Контекст и цель"
+}

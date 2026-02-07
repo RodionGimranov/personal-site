@@ -1,0 +1,23 @@
+{
+    "bio_text": "Frontend developer creating usable and scalable interfaces \nfor web products. I work at the intersection of design and engineering, with a strong focus on code quality, user experience, and modern web technologies.",
+
+    "approach_home_section_title": "My Approach to Development",
+
+    "clean_code_title": "Clean Code",
+    "clean_code_subtitle": "Write clear, well-structured, and maintainable code, following best practices.",
+
+    "ux_ui_attention_title": "UX/UI Focus",
+    "ux_ui_attention_subtitle": "Design interfaces with a strong focus on usability, logic, and user experience.",
+
+    "learning_title": "Learning-Driven Growth",
+    "learning_subtitle": "Continuously learn new approaches and tools to support professional growth.",
+
+    "tech_stack_home_section_title": "Tech Stack",
+    "tech_stack_card_title_1": "Vue Ecosystem",
+    "tech_stack_card_subtitle_1": "I have hands-on experience with Vue and key ecosystem tools, including Nuxt, Pinia, Vuex, Vue Router, Vuetify, Vue I18n, and VueUse. I use them to build scalable SPAs and universal web applications.",
+
+    "tech_stack_card_title_2": "JS/TS Environment",
+    "tech_stack_card_subtitle_2": "I develop modern solutions using JavaScript and TypeScript, leveraging a broad set of libraries and tools to implement complex business logic and interface-level features.",
+
+    "projects_home_section_title": "Projects"
+}
