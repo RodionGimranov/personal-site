@@ -30,7 +30,7 @@ import { computed, watchEffect } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
-import { useProjectsStore } from "@/stores/useProjectsStore.js";
+import { useProjectsStore } from "@/stores/useProjectsStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
