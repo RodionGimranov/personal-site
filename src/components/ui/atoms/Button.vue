@@ -1,51 +1,41 @@
 <template>
     <component
-        :is="as"
-        :disabled="disabled"
-        class="custom_btn"
-        :class="[variant, { _disabled: disabled }]"
-        :style="{ fontSize, fontWeight, width: buttonWidth }"
-        @click="handleClick"
+        class="custom_btn cursor-pointer rounded-[100px] transition duration-200 flex justify-between items-center py-2! px-4! active:scale-[0.97] no-underline"
+        :class="buttonClasses"
+        :style="{
+            fontSize,
+            fontWeight,
+        }"
     >
         {{ buttonText }}
     </component>
 </template>
 
-<script setup>
-const props = defineProps({
-    buttonText: { type: String, default: "Label" },
-    as: { type: String, default: "button" },
-    variant: { type: String, default: "_gray" },
-    fontSize: { type: String, default: "16px" },
-    fontWeight: { type: String, default: "400" },
-    buttonWidth: { type: String, default: "auto" },
-    disabled: { type: Boolean, default: false },
-});
+<script setup lang="ts">
+import { computed } from "vue";
 
-function handleClick(event) {
-    if (props.disabled) {
-        event.preventDefault();
-        event.stopPropagation();
-    }
-}
+type ButtonVariant = "_gray" | "_dark" | "_blue";
+
+const props = withDefaults(
+    defineProps<{
+        buttonText?: string;
+        variant?: ButtonVariant;
+        fontSize?: string;
+        fontWeight?: string;
+    }>(),
+    {
+        buttonText: "Label",
+        variant: "_gray",
+        fontSize: "16px",
+        fontWeight: "400",
+    },
+);
+
+const buttonClasses = computed(() => [props.variant]);
 </script>
 
 <style lang="scss">
 .custom_btn {
-    cursor: pointer;
-    transition: 0.2s;
-    padding: 8px 16px;
-    border-radius: 100px;
-    text-decoration: none;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:active {
-        transform: scale(0.97);
-    }
-
     &._disabled {
         opacity: 0.7;
         pointer-events: none;

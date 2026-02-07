@@ -1,21 +1,26 @@
 <template>
-    <svg class="svg_icon" aria-hidden="true" :width="width" :height="height">
+    <svg
+        aria-hidden="true"
+        :width="width"
+        :height="height"
+        class="inline-block overflow-visible fill-current"
+    >
         <use :href="`/personal-site/sprite.svg#${name}`" />
     </svg>
 </template>
 
-<script setup>
-const props = defineProps({
-    name: { type: String, required: true },
-    width: { type: Number, default: 20 },
-    height: { type: Number, default: 20 },
-});
+<script setup lang="ts">
+withDefaults(
+    defineProps<{
+        name: string;
+        width?: number;
+        height?: number;
+    }>(),
+    {
+        width: 20,
+        height: 20,
+    },
+);
 </script>
 
-<style scoped lang="scss">
-.svg_icon {
-    overflow: visible;
-    fill: currentColor;
-    display: inline-block;
-}
-</style>
+<style scoped lang="scss"></style>

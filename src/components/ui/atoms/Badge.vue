@@ -4,27 +4,27 @@
     </span>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 
-const props = defineProps({
-    label: { type: String, required: true, default: "Label" },
-    size: {
-        type: String,
-        default: "small",
-        validator: (v) => ["small", "medium"].includes(v),
+type BadgeSize = "small" | "medium";
+type BadgeShape = "regular" | "pill";
+type BadgeColor = "gray" | "purple" | "blue" | "green";
+
+const props = withDefaults(
+    defineProps<{
+        label?: string;
+        size?: BadgeSize;
+        shape?: BadgeShape;
+        color?: BadgeColor;
+    }>(),
+    {
+        label: "Label",
+        size: "small",
+        shape: "regular",
+        color: "gray",
     },
-    color: {
-        type: String,
-        default: "gray",
-        validator: (v) => ["gray", "purple", "blue", "green"].includes(v),
-    },
-    shape: {
-        type: String,
-        default: "regular",
-        validator: (v) => ["regular", "pill"].includes(v),
-    },
-});
+);
 
 const badgeClasses = computed(() => [props.color, `size-${props.size}`, `shape-${props.shape}`]);
 </script>

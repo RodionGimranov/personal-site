@@ -1,13 +1,22 @@
 <template>
-    <div class="skeleton_loader" :style="{ width, height, borderRadius: radius }"></div>
+    <div class="skeleton_loader" :style="{ width, height, borderRadius: radius }" />
 </template>
 
-<script setup>
-const props = defineProps({
-    width: { type: [String, Number], default: 50 },
-    height: { type: [String, Number], default: 50 },
-    radius: { type: [String, Number], default: 0 },
-});
+<script setup lang="ts">
+type SizeValue = string | number;
+
+withDefaults(
+    defineProps<{
+        width?: SizeValue;
+        height?: SizeValue;
+        radius?: SizeValue;
+    }>(),
+    {
+        width: 50,
+        height: 50,
+        radius: 0,
+    },
+);
 </script>
 
 <style lang="scss">

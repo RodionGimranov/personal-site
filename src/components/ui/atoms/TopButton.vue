@@ -1,38 +1,18 @@
 <template>
-    <button class="top_btn" @click="$emit('click')">
+    <button
+        class="fixed right-6 top-[calc(100%-76px)] z-9998 flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark! py-[15px] px-[10px] text-primary-white transition duration-200 hover:bg-secondary-dark! active:scale-[0.97]"
+        @click="emit('click')"
+    >
         <SvgIcon name="arrow-icon" :width="24" :height="14" />
     </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+
+const emit = defineEmits<{
+    (event: "click"): void;
+}>();
 </script>
 
-<style lang="scss">
-.top_btn {
-    position: fixed;
-    top: calc(100% - 76px);
-    right: 24px;
-    width: 44px;
-    height: 44px;
-    z-index: 9998;
-    transition: 0.2s;
-    padding: 15px 10px;
-    border-radius: 100px;
-    background: var(--primary-dark);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: var(--primary-white);
-
-    &:hover {
-        background: var(--secondary-dark);
-    }
-
-    &:active {
-        transform: scale(0.97);
-    }
-}
-</style>
+<style lang="scss"></style>

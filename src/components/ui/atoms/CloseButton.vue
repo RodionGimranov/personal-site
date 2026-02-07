@@ -1,39 +1,18 @@
 <template>
-    <button class="close_btn" @click="closeModal">
+    <button
+        class="w-7 h-7 p-1! rounded-[100px] flex justify-center items-center bg-fourth-gray! hover:bg-third-white! transition duration-200"
+        @click="emit('close')"
+    >
         <SvgIcon name="cross-icon" />
     </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
-const props = defineProps({
-    action: {
-        type: Function,
-        required: true,
-    },
-});
-
-const closeModal = () => {
-    props.action();
-};
+const emit = defineEmits<{
+    (event: "close"): void;
+}>();
 </script>
 
-<style lang="scss">
-.close_btn {
-    width: 28px;
-    height: 28px;
-    padding: 4px;
-    transition: 0.2s;
-    border-radius: 100px;
-    background: var(--fourth-gray);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        background: var(--third-white);
-    }
-}
-</style>
+<style lang="scss"></style>
