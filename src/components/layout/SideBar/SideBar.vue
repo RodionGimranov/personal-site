@@ -16,25 +16,25 @@
                     {{ $t(link.name) }}
                 </RouterLink>
                 <button class="side_bar_btn" @click="openChangelog">
-                    <SvgIcon name="changelog-icon" /> {{ $t("message.changelog_title") }}
+                    <SvgIcon name="changelog-icon" /> {{ $t("global.changelog_title") }}
                 </button>
             </div>
             <div class="site_settings_container">
-                <p class="site_settings_title">{{ $t("message.site_settings_title") }}</p>
+                <p class="site_settings_title">{{ $t("global.site_settings_title") }}</p>
                 <div class="site_settings_wrapper">
                     <p class="site_settings_subtitle">
-                        {{ $t("message.language_settings_title") }}
+                        {{ $t("global.language_settings_title") }}
                     </p>
                     <ToggleTab
                         storageKey="language-tab"
                         :useToggleIcon="true"
                         :useToggleText="true"
-                        :textOptions="['message.selected_lang_ru', 'message.selected_lang_en']"
+                        :textOptions="['global.selected_lang_ru', 'global.selected_lang_en']"
                         @update:activeIndex="languageStore.setByIndex"
                     />
                 </div>
                 <div class="site_settings_wrapper">
-                    <p class="site_settings_subtitle">{{ $t("message.theme_settings_title") }}</p>
+                    <p class="site_settings_subtitle">{{ $t("global.theme_settings_title") }}</p>
                     <ToggleTab
                         storageKey="theme-tab"
                         :useToggleText="false"
@@ -45,7 +45,7 @@
             </div>
             <div class="download_btn_container">
                 <a :href="RESUME_URL" class="side_bar_btn" target="_blank">
-                    <SvgIcon name="download-icon" /> {{ $t("message.download_btn_title") }}
+                    <SvgIcon name="download-icon" /> {{ $t("global.download_btn_title") }}
                 </a>
             </div>
         </div>
@@ -56,7 +56,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 
-import { useModalStore } from "@/stores/useModalStore.js";
+import { useModalStore } from "@/stores/useModalStore";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 import { APP_VERSION, RESUME_URL } from "@/constants/appConstants";
 
@@ -75,10 +75,10 @@ const openChangelog = () => {
 };
 
 const navLinks = [
-    { name: "message.home_btn_title", icon: "home-icon", path: "/home" },
-    { name: "message.about_btn_title", icon: "profile-card-icon", path: "/about" },
-    { name: "message.projects_btn_title", icon: "projects-icon", path: "/projects" },
-    { name: "message.gallery_btn_title", icon: "gallery-icon", path: "/gallery" },
+    { name: "global.home_btn_title", icon: "home-icon", path: "/home" },
+    { name: "global.about_btn_title", icon: "profile-card-icon", path: "/about" },
+    { name: "global.projects_btn_title", icon: "projects-icon", path: "/projects" },
+    { name: "global.gallery_btn_title", icon: "gallery-icon", path: "/gallery" },
 ];
 </script>
 

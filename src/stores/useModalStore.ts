@@ -1,36 +1,39 @@
 import { defineStore } from "pinia";
 
+export type ModalName = "changelog";
+
+export type ModalsState = Record<ModalName, boolean>;
+
 export const useModalStore = defineStore("modal", {
-    state: () => ({
+    state: (): { modals: ModalsState } => ({
         modals: {
             changelog: false,
         },
     }),
 
     getters: {
-        isOpen: (state) => (name) => {
-            return Boolean(state.modals[name]);
-        },
+        isOpen:
+            (state) =>
+            (name: ModalName): boolean => {
+                return state.modals[name];
+            },
     },
 
     actions: {
-        open(name) {
-            if (this.modals[name] === undefined) return;
+        open(name: ModalName) {
             this.modals[name] = true;
         },
 
-        close(name) {
-            if (this.modals[name] === undefined) return;
+        close(name: ModalName) {
             this.modals[name] = false;
         },
 
-        toggle(name) {
-            if (this.modals[name] === undefined) return;
+        toggle(name: ModalName) {
             this.modals[name] = !this.modals[name];
         },
 
         closeAll() {
-            Object.keys(this.modals).forEach((key) => {
+            (Object.keys(this.modals) as ModalName[]).forEach((key) => {
                 this.modals[key] = false;
             });
         },

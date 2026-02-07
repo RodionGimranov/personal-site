@@ -2,7 +2,7 @@
     <div class="commnon_modal_overlay">
         <div class="common_modal_style max-w-150 h-100" ref="modalRef">
             <div class="modal_header">
-                <p class="modal_header_title">{{ $t("message.changelog_title") }}</p>
+                <p class="modal_header_title">{{ $t("global.changelog_title") }}</p>
                 <CloseButton :action="close" />
             </div>
             <div

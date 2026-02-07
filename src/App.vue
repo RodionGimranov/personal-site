@@ -11,10 +11,10 @@
     </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from "vue";
 
-import { useModalStore } from "@/stores/useModalStore.js";
+import { useModalStore } from "@/stores/useModalStore";
 import { useScrollToTop } from "@/composables/useScrollToTop.js";
 
 import SideBar from "@/components/layout/SideBar/SideBar.vue";
