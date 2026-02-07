@@ -133,7 +133,7 @@ file_paths = [
     "./src/stores/useLanguageStore.js",
     "./src/stores/useModalStore.js",
     "./src/stores/useMusicPlayerStore.ts",
-    "./src/stores/useProjectsStore.js",
+    "./src/stores/useProjectsStore.ts",
 
     "./src/styles/colors.css",
     "./src/styles/global.scss",
@@ -141,6 +141,7 @@ file_paths = [
 
     "./src/types/index.ts",
     "./src/types/music.ts",
+    "./src/types/project.ts",
 
     "./src/utils/formatters.ts",
     "./src/utils/getPageTitle.js",
