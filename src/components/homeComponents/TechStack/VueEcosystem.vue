@@ -25,10 +25,10 @@
         </div>
         <div class="tech_stack_text">
             <p class="tech_stack_title">
-                {{ $t("message.tech_stack_card_title_1") }}
+                {{ $t("home.tech_stack_card_title_1") }}
             </p>
             <p class="tech_stack_subtitle">
-                {{ $t("message.tech_stack_card_subtitle_1") }}
+                {{ $t("home.tech_stack_card_subtitle_1") }}
             </p>
         </div>
     </div>

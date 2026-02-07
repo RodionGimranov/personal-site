@@ -2,8 +2,8 @@
     <div class="user_info_container">
         <img class="user_image" :src="myProfileImage" alt="user image" />
         <div class="user_info_text_wrapper">
-            <p class="user_name">{{ $t("message.my_name_title") }}</p>
-            <p class="user_role">{{ $t("message.my_role_title") }}</p>
+            <p class="user_name">{{ $t("global.my_name_title") }}</p>
+            <p class="user_role">{{ $t("global.my_role_title") }}</p>
         </div>
     </div>
 </template>

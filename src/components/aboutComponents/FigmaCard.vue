@@ -12,14 +12,14 @@
                 class="pointer-events-none"
             />
             <p class="text-base text-primary-dark font-normal">
-                {{ $t("message.figma_card_title") }}
+                {{ $t("about.figma_card_title") }}
             </p>
         </div>
         <a :href="FIGMA_DESIGN_URL" target="_blank" rel="noopener noreferrer">
             <Button
                 as="span"
                 variant="_blue"
-                :buttonText="$t('message.visit_btn')"
+                :buttonText="$t('about.visit_btn')"
                 buttonWidth="100%"
             />
         </a>
@@ -30,7 +30,7 @@
                 :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
             >
                 <p class="test-base font-normal text-primary-white leading-4.25 whitespace-nowrap">
-                    {{ $t("message.figma_bubble_text") }}
+                    {{ $t("about.figma_bubble_text") }}
                 </p>
             </div>
         </transition>

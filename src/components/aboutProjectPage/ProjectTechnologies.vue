@@ -1,6 +1,6 @@
 <template>
     <div class="about_project_info_container">
-        <p class="about_project_info_title">{{ $t("message.technologies_title") }}</p>
+        <p class="about_project_info_title">{{ $t("projectsLocale.technologies_title") }}</p>
         <div class="flex justify-start items-start flex-wrap gap-1.5 common_width_size">
             <Badge
                 v-for="(tech, index) in technologies"

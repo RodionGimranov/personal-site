@@ -18,8 +18,8 @@
             </div>
         </div>
         <div class="tech_stack_text">
-            <p class="tech_stack_title">{{ $t("message.tech_stack_card_title_2") }}</p>
-            <p class="tech_stack_subtitle">{{ $t("message.tech_stack_card_subtitle_2") }}</p>
+            <p class="tech_stack_title">{{ $t("home.tech_stack_card_title_2") }}</p>
+            <p class="tech_stack_subtitle">{{ $t("home.tech_stack_card_subtitle_2") }}</p>
         </div>
     </div>
 </template>

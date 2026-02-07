@@ -1,7 +1,7 @@
 <template>
     <div class="about_project_info_container common_width_size">
         <p class="about_project_info_title">
-            {{ $t("message.areas_of_responsibility_titl") }}
+            {{ $t("projectsLocale.areas_of_responsibility_titl") }}
         </p>
         <ul class="areas_list m-0 list-disc pl-3.5!">
             <li

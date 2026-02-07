@@ -17,7 +17,7 @@
             playsinline
         >
             <source :src="project.project_video_cover" type="video/mp4" />
-            {{ $t("message.project_video_text") }}
+            {{ $t("projectsLocale.project_video_text") }}
         </video>
         <Skeleton v-else width="100%" height="100%" />
         <div class="project_name_container _glass_effect">

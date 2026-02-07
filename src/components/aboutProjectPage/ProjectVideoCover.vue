@@ -12,7 +12,7 @@
             playsinline
         >
             <source :src="videoSrc" type="video/mp4" />
-            {{ $t("message.project_video_text") }}
+            {{ $t("projectsLocale.project_video_text") }}
         </video>
         <Skeleton v-else width="100%" height="100%" />
     </div>

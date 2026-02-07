@@ -1,7 +1,7 @@
 <template>
     <div class="selected_projects_section common_home_section_style">
         <p class="common_home_section_title">
-            {{ $t("message.projects_home_section_title") }}
+            {{ $t("home.projects_home_section_title") }}
         </p>
         <div class="w-full flex justify-start items-start gap-12.5">
             <ProjectCard

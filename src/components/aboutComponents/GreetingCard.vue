@@ -2,7 +2,7 @@
     <div class="w-130 h-62.5 p-4! common_bento_card_style commom_card_style">
         <p
             class="text-base font-normal text-primary-dark"
-            v-html="formatTransferText($t('message.greeting_text'))"
+            v-html="formatTransferText($t('about.greeting_text'))"
         ></p>
     </div>
 </template>

@@ -3,7 +3,7 @@
         class="flex justify-center items-center common_bento_card_style commom_card_style"
         :style="{ width, height }"
     >
-        <ShinyText :text="$t('message.empty_card_title')" />
+        <ShinyText :text="$t('about.empty_card_title')" />
     </div>
 </template>
 

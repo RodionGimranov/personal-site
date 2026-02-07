@@ -1,7 +1,7 @@
 <template>
     <section class="common_home_section_style pt-37.5!">
         <p class="common_home_section_title">
-            {{ $t("message.tech_stack_home_section_title") }}
+            {{ $t("home.tech_stack_home_section_title") }}
         </p>
         <div class="w-full flex flex-col justify-start items-center gap-12.5">
             <div class="tech_stack_card">

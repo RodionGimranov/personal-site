@@ -8,7 +8,7 @@
                 class="transition duration-200 text-base font-medium text-third-gray flex justify-start items-center gap-0.5 hover:text-primary-dark"
             >
                 <SvgIcon name="left-arrow-icon" />
-                <span>{{ $t("message.back_btn") }}</span>
+                <span>{{ $t("projectsLocale.back_btn") }}</span>
             </RouterLink>
         </div>
         <ProjectHeader

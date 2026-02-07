@@ -1,7 +1,7 @@
 <template>
     <div class="my_apporoach_section common_home_section_style">
         <p class="common_home_section_title">
-            {{ $t("message.approach_home_section_title") }}
+            {{ $t("home.approach_home_section_title") }}
         </p>
         <div class="w-full overflow-hidden flex justify-center items-start flex-wrap gap-5">
             <div
@@ -38,18 +38,18 @@ type ApproachItem = {
 const approachItems: ApproachItem[] = [
     {
         icon: "clean-code-icon",
-        title: "message.clean_code_title",
-        subtitle: "message.clean_code_subtitle",
+        title: "home.clean_code_title",
+        subtitle: "home.clean_code_subtitle",
     },
     {
         icon: "ux-ui-attention-icon",
-        title: "message.ux_ui_attention_title",
-        subtitle: "message.ux_ui_attention_subtitle",
+        title: "home.ux_ui_attention_title",
+        subtitle: "home.ux_ui_attention_subtitle",
     },
     {
         icon: "learning-icon",
-        title: "message.learning_title",
-        subtitle: "message.learning_subtitle",
+        title: "home.learning_title",
+        subtitle: "home.learning_subtitle",
     },
 ];
 </script>

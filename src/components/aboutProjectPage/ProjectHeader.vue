@@ -5,10 +5,10 @@
         </p>
         <div class="flex justify-start items-end gap-2.5">
             <a :href="codeUrl" target="_blank" rel="noopener noreferrer">
-                <Button as="span" :buttonText="$t('message.source_code_btn')" />
+                <Button as="span" :buttonText="$t('projectsLocale.source_code_btn')" />
             </a>
             <a :href="deployUrl" target="_blank" rel="noopener noreferrer">
-                <Button as="span" variant="_blue" :buttonText="$t('message.visit_btn')" />
+                <Button as="span" variant="_blue" :buttonText="$t('projectsLocale.visit_btn')" />
             </a>
         </div>
     </div>
