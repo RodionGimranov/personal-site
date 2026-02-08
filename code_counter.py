@@ -105,9 +105,7 @@ file_paths = [
 
     "./src/components/vue-bits/TextAnimation/ShinyText.vue",
 
-    "./src/composables/useEscapeKey.js",
-    "./src/composables/useScrollToTop.js",
-    "./src/composables/useShuffledPhotos.js",
+    "./src/composables/useShuffledPhotos.ts",
 
     "./src/constants/appConstants.ts",
 
@@ -119,19 +117,23 @@ file_paths = [
 
     "./src/libs/matter-js/phycalsIcons.ts",
 
-    "./src/libs/vue-i18n/vue-i18n.js",
-
-    "./src/locales/pages/about.json",
-    "./src/locales/pages/home.json",
-    "./src/locales/pages/projectsLocale.json",
-    "./src/locales/global.json",
+    "./src/locales/en/about.json",
+    "./src/locales/en/global.json",
+    "./src/locales/en/home.json",
+    "./src/locales/en/projectsLocale.json",
+    "./src/locales/ru/about.json",
+    "./src/locales/ru/global.json",
+    "./src/locales/ru/home.json",
+    "./src/locales/ru/projectsLocale.json",
+    "./src/locales/index.ts",
 
     "./src/plugins/pinia.ts",
+    "./src/plugins/vue-i18n.ts",
 
     "./src/router/index.ts",
 
-    "./src/stores/useLanguageStore.js",
-    "./src/stores/useModalStore.js",
+    "./src/stores/useLanguageStore.ts",
+    "./src/stores/useModalStore.ts",
     "./src/stores/useMusicPlayerStore.ts",
     "./src/stores/useProjectsStore.ts",
 
@@ -144,7 +146,7 @@ file_paths = [
     "./src/types/project.ts",
 
     "./src/utils/formatters.ts",
-    "./src/utils/getPageTitle.js",
+    "./src/utils/getPageTitle.ts",
     "./src/utils/technologyRows.ts",
 
     "./src/views/AboutPage.vue",
@@ -155,7 +157,7 @@ file_paths = [
     "./src/views/ProjectsPage.vue",
 
     "./src/App.vue",
-    "./src/main.js",
+    "./src/main.ts",
     "./src/shims-vue.d.ts",
 
     "./code_counter.py",
