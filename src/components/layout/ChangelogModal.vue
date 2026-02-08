@@ -51,13 +51,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
-
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
 import { useModalStore } from "@/stores/useModalStore";
 import { useLanguageStore } from "@/stores/useLanguageStore";
-import { useEscapeKeyClose } from "@/composables/useEscapeKey.js";
 import { formatBoldText } from "@/utils/formatters";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
@@ -68,42 +66,53 @@ import changelogs from "@/data/changelogs.json";
 const modalStore = useModalStore();
 const languageStore = useLanguageStore();
 
-const modalRef = ref(null);
+const modalRef = ref<HTMLElement | null>(null);
 
-const latestUpdate = computed(() => updates.value[0] || null);
-
-const typeColorMap = {
-    major: "purple",
-    minor: "blue",
-    improvement: "green",
-    beta: "gray",
-};
-
-const getDotClasses = (update) => {
-    const isActive = latestUpdate.value?.id === update.id;
-
-    if (!isActive) {
-        return "bg-fourth-gray";
-    }
-
-    return ["dot-active", typeColorMap[update.type] || "gray"];
-};
+/* ---------- close ---------- */
 
 const close = () => {
     modalStore.close("changelog");
 };
+
+/* ---------- Escape ---------- */
+
+const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+        close();
+    }
+};
+
+/* ---------- data ---------- */
 
 const updates = computed(() => {
     const list = changelogs[languageStore.currentLocale] || [];
     return [...list].sort((a, b) => b.id - a.id);
 });
 
+const latestUpdate = computed(() => updates.value[0] || null);
+
+const typeColorMap: Record<string, string> = {
+    major: "purple",
+    minor: "blue",
+    improvement: "green",
+    beta: "gray",
+};
+
+const getDotClasses = (update: any) => {
+    const isActive = latestUpdate.value?.id === update.id;
+
+    return isActive ? ["dot-active", typeColorMap[update.type] || "gray"] : "bg-fourth-gray";
+};
+
+/* ---------- lifecycle ---------- */
+
 onMounted(() => {
     onClickOutside(modalRef, close);
+    window.addEventListener("keydown", handleKeydown);
 });
 
-useEscapeKeyClose(() => {
-    close();
+onBeforeUnmount(() => {
+    window.removeEventListener("keydown", handleKeydown);
 });
 </script>
 

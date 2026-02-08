@@ -12,23 +12,48 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 import { useModalStore } from "@/stores/useModalStore";
-import { useScrollToTop } from "@/composables/useScrollToTop.js";
 
 import SideBar from "@/components/layout/SideBar/SideBar.vue";
-import MainContent from "@/components/layout//MainContent.vue";
+import MainContent from "@/components/layout/MainContent.vue";
 import ChangelogModal from "@/components/layout/ChangelogModal.vue";
 import TopButton from "@/components/ui/atoms/TopButton.vue";
 
 const modalStore = useModalStore();
-const mainContentRef = ref(null);
 
-const scrollEl = computed(() => mainContentRef.value?.scrollEl);
+const mainContentRef = ref<InstanceType<typeof MainContent> | null>(null);
+const isVisible = ref(false);
 
-const { isVisible, scrollToTop } = useScrollToTop(scrollEl, {
-    showAfter: 400,
+const SHOW_AFTER = 400;
+
+const getScrollEl = () => mainContentRef.value?.scrollEl ?? null;
+
+const onScroll = () => {
+    const el = getScrollEl();
+    if (!el) return;
+
+    isVisible.value = el.scrollTop > SHOW_AFTER;
+};
+
+const scrollToTop = () => {
+    getScrollEl()?.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+};
+
+onMounted(() => {
+    const el = getScrollEl();
+    if (!el) return;
+
+    onScroll();
+    el.addEventListener("scroll", onScroll, { passive: true });
+});
+
+onBeforeUnmount(() => {
+    getScrollEl()?.removeEventListener("scroll", onScroll);
 });
 </script>
 
