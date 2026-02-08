@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { useShuffledPhotos } from "@/composables/useShuffledPhotos.js";
+import { useShuffledPhotos } from "@/composables/useShuffledPhotos";
 
 import ImageCard from "@/components/ui/molecules/ImageCard.vue";
 import Skeleton from "@/components/ui/atoms/Skeleton.vue";
