@@ -3,7 +3,7 @@
         <div class="common_modal_style max-w-150 h-100" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">{{ $t("global.changelog_title") }}</p>
-                <CloseButton :action="close" />
+                <CloseButton @click="close" />
             </div>
             <div
                 class="w-ffull pt-0! pr-4! pb-4! pl-4! overflow-auto flex flex-col justify-start items-start gap-5"
@@ -68,21 +68,15 @@ const languageStore = useLanguageStore();
 
 const modalRef = ref<HTMLElement | null>(null);
 
-/* ---------- close ---------- */
-
 const close = () => {
     modalStore.close("changelog");
 };
-
-/* ---------- Escape ---------- */
 
 const handleKeydown = (e: KeyboardEvent) => {
     if (e.key === "Escape") {
         close();
     }
 };
-
-/* ---------- data ---------- */
 
 const updates = computed(() => {
     const list = changelogs[languageStore.currentLocale] || [];
@@ -103,8 +97,6 @@ const getDotClasses = (update: any) => {
 
     return isActive ? ["dot-active", typeColorMap[update.type] || "gray"] : "bg-fourth-gray";
 };
-
-/* ---------- lifecycle ---------- */
 
 onMounted(() => {
     onClickOutside(modalRef, close);

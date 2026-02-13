@@ -1,7 +1,7 @@
 <template>
-    <main class="relative flex justify-start items-start gap-4">
+    <main ref="layoutRef" class="relative flex justify-start items-start">
         <SideBar />
-        <MainContent ref="mainContentRef" />
+        <MainContent />
         <transition name="show-modal">
             <ChangelogModal v-if="modalStore.isOpen('changelog')" />
         </transition>
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onUnmounted, watch } from "vue";
 
 import { useModalStore } from "@/stores/useModalStore";
 
@@ -23,38 +23,50 @@ import TopButton from "@/components/ui/atoms/TopButton.vue";
 
 const modalStore = useModalStore();
 
-const mainContentRef = ref<InstanceType<typeof MainContent> | null>(null);
+const layoutRef = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
 
-const SHOW_AFTER = 400;
+const VISIBILITY_OFFSET = 300;
 
-const getScrollEl = () => mainContentRef.value?.scrollEl ?? null;
-
-const onScroll = () => {
-    const el = getScrollEl();
-    if (!el) return;
-
-    isVisible.value = el.scrollTop > SHOW_AFTER;
+const handleScroll = () => {
+    isVisible.value = window.scrollY > VISIBILITY_OFFSET;
 };
 
 const scrollToTop = () => {
-    getScrollEl()?.scrollTo({
+    window.scrollTo({
         top: 0,
         behavior: "smooth",
     });
 };
 
 onMounted(() => {
-    const el = getScrollEl();
-    if (!el) return;
-
-    onScroll();
-    el.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
-onBeforeUnmount(() => {
-    getScrollEl()?.removeEventListener("scroll", onScroll);
+onUnmounted(() => {
+    window.removeEventListener("scroll", handleScroll);
 });
+
+const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
+
+watch(
+    () => modalStore.isAnyOpen,
+    (isOpen) => {
+        const scrollbarWidth = getScrollbarWidth();
+        const el = layoutRef.value;
+
+        if (!el) return;
+
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            el.style.paddingRight = `${scrollbarWidth}px`;
+        } else {
+            document.body.style.overflow = "";
+            el.style.paddingRight = "";
+        }
+    },
+    { immediate: true },
+);
 </script>
 
 <style lang="scss"></style>
