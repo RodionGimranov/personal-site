@@ -1,5 +1,5 @@
 <template>
-    <div class="projects_page_wrapper">
+    <div class="flex justify-start items-start flex-wrap gap-7.5">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 </template>
@@ -23,13 +23,4 @@ watchEffect(() => {
 const projects = computed(() => projectsStore.projects);
 </script>
 
-<style lang="scss">
-.projects_page_wrapper {
-    padding: 36px 36px 0 36px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-</style>
+<style lang="scss"></style>

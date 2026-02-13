@@ -3,7 +3,6 @@
 
 @theme inline {
     --color-primary-white: var(--primary-white);
-    --color-primary-white-bg: var(--primary-white-bg);
     --color-primary-dark: var(--primary-dark);
     --color-primary-gray: var(--primary-gray);
     --color-primary-blue: var(--primary-blue);

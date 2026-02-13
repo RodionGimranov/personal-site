@@ -1,5 +1,5 @@
 <template>
-    <div class="home_page_wrapper">
+    <div class="flex flex-col justify-start items-start gap-[150px]">
         <BioText />
         <MyApproach />
         <TechStack />
@@ -14,13 +14,4 @@ import TechStack from "@/components/homeComponents/TechStack/TechStack.vue";
 import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
 </script>
 
-<style lang="scss">
-.home_page_wrapper {
-    padding: 36px 36px 0 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 150px;
-}
-</style>
+<style lang="scss"></style>

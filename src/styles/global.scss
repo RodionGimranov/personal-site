@@ -29,7 +29,7 @@ body,
 }
 body {
     padding: 8px;
-    background: var(--primary-white-bg);
+    background: var(--primary-white);
     font-size: 16px;
     font-weight: 400;
     color: var(--primary-dark);
@@ -50,13 +50,6 @@ p {
     line-height: 20px;
 }
 // === COMMON LAYOUT ===
-.common_layout_style {
-    height: calc(100vh - 16px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 16px;
-    background: var(--primary-white);
-}
 .commom_card_style {
     overflow: hidden;
     border-radius: 30px;

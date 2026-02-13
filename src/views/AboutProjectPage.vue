@@ -1,5 +1,5 @@
 <template>
-    <div class="relative px-9! flex flex-col justify-start items-start">
+    <div class="relative flex flex-col justify-start items-start">
         <div
             class="sticky top-0 z-99 py-4! bg-primary-white flex justify-start items-start common_width_size"
         >

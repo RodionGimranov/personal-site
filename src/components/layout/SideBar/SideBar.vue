@@ -1,10 +1,13 @@
 <template>
-    <section class="side_bar_container common_layout_style">
+    <section
+        class="side_bar_container bg-primary-white border border-black-10 shadow-[0px_3px_11px_0px_rgba(0,0,0,0.06)] rounded-2xl"
+    >
         <div class="side_bar_content_wrapper">
             <div class="user_info_panel_wrapper">
                 <UserInfoPanel />
             </div>
             <div class="side_bar_btn_container">
+                <!--  -->
                 <RouterLink
                     v-for="link in navLinks"
                     :key="link.path"
@@ -15,9 +18,11 @@
                     <SvgIcon :name="link.icon" />
                     {{ $t(link.name) }}
                 </RouterLink>
+                <!--  -->
                 <button class="side_bar_btn" @click="openChangelog">
                     <SvgIcon name="changelog-icon" /> {{ $t("global.changelog_title") }}
                 </button>
+                <!--  -->
             </div>
             <div class="site_settings_container">
                 <p class="site_settings_title">{{ $t("global.site_settings_title") }}</p>
@@ -43,11 +48,13 @@
                     />
                 </div>
             </div>
+            <!--  -->
             <div class="download_btn_container">
                 <a :href="RESUME_URL" class="side_bar_btn" target="_blank">
                     <SvgIcon name="download-icon" /> {{ $t("global.download_btn_title") }}
                 </a>
             </div>
+            <!--  -->
         </div>
         <p class="version_number">v.{{ APP_VERSION }}</p>
     </section>
@@ -84,7 +91,10 @@ const navLinks = [
 
 <style lang="scss">
 .side_bar_container {
-    width: 256px;
+    position: sticky;
+    top: 8px;
+    min-width: 256px;
+    height: calc(100vh - 16px);
     padding: 16px;
     overflow: hidden;
 
@@ -139,11 +149,6 @@ const navLinks = [
     }
 
     &._active {
-        background: var(--secondary-white);
-        color: var(--primary-dark);
-    }
-
-    &:active {
         background: var(--secondary-white);
         color: var(--primary-dark);
     }

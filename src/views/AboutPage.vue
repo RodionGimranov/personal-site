@@ -35,10 +35,6 @@ import EmptyCard from "@/components/aboutComponents/EmptyCard.vue";
 </script>
 
 <style lang="scss">
-.about_page_wrapper {
-    padding: 36px 36px 0 36px;
-}
-
 .row_cards_1,
 .large_row_cards_1,
 .large_block_card_2,

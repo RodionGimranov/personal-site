@@ -1,53 +1,23 @@
 <template>
-    <div class="user_info_container">
-        <img class="user_image" :src="myProfileImage" alt="user image" />
-        <div class="user_info_text_wrapper">
-            <p class="user_name">{{ $t("global.my_name_title") }}</p>
-            <p class="user_role">{{ $t("global.my_role_title") }}</p>
+    <div class="flex justify-center items-center gap-1.5">
+        <img
+            class="w-12 h-12 overflow-hidden rounded-[100px] bg-secondary-white flex justify-center items-center"
+            :src="myProfileImage"
+            alt="user image"
+        />
+        <div class="flex flex-col justify-start items-start">
+            <p class="text-base font-semibold text-primary-dark">
+                {{ $t("global.my_name_title") }}
+            </p>
+            <p class="text-sm font-normal text-third-gray">
+                {{ $t("global.my_role_title") }}
+            </p>
         </div>
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import myProfileImage from "@/assets/images/my-profile-image.webp";
 </script>
 
-<style lang="scss">
-.user_info_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-}
-
-.user_image {
-    width: 48px;
-    height: 48px;
-    overflow: hidden;
-    border-radius: 100px;
-    background: var(--secondary-white);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.user_info_text_wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-.user_name {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.user_role {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--third-gray);
-}
-</style>
+<style lang="scss"></style>

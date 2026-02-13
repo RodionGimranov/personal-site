@@ -19,18 +19,18 @@
             <Button
                 as="span"
                 variant="_blue"
-                :buttonText="$t('about.visit_btn')"
+                :buttonText="$t('projectsLocale.visit_btn')"
                 buttonWidth="100%"
             />
         </a>
         <transition name="fade-scale">
             <div
                 v-show="isHovered"
-                class="figma_bubble_wrapper"
+                class="figma_bubble_wrapper absolute z-9 bg-primary-green px-4! py-2! pointer-events-none outline-2 outline-secondary-green -outline-offset-2 rounded-[2px_24px_24px_24px]"
                 :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
             >
                 <p class="test-base font-normal text-primary-white leading-4.25 whitespace-nowrap">
-                    {{ $t("about.figma_bubble_text") }}
+                    {{ $t("about.figma_card_title") }}
                 </p>
             </div>
         </transition>
@@ -70,14 +70,6 @@ function onMouseMove(event: MouseEvent): void {
 }
 
 .figma_bubble_wrapper {
-    position: absolute;
-    z-index: 9;
-    padding: 8px 16px;
-    pointer-events: none;
-    outline-offset: -2px;
-    background: var(--primary-green);
-    border-radius: 2px 24px 24px 24px;
-    outline: 2px solid var(--secondary-green);
     box-shadow:
         0 20px 18px rgba(0, 0, 0, 0.05),
         0 12.963px 10.5417px rgba(0, 0, 0, 0.038),

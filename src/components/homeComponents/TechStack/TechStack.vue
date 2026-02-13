@@ -1,5 +1,5 @@
 <template>
-    <section class="common_home_section_style pt-37.5!">
+    <section class="common_home_section_style">
         <p class="common_home_section_title">
             {{ $t("home.tech_stack_home_section_title") }}
         </p>

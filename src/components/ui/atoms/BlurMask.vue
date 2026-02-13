@@ -1,5 +1,5 @@
 <template>
-    <div class="blur-mask-container w-full h-full flex-none">
+    <div class="w-full h-full flex-none">
         <div class="layer layer-1 z-1 backdrop-blur-[0.125px]"></div>
         <div class="layer layer-2 z-2 backdrop-blur-[0.25px]"></div>
         <div class="layer layer-3 z-3 backdrop-blur-[0.5px]"></div>

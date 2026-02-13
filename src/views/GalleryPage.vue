@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full p-4!">
+    <div class="w-full">
         <div class="masonry_container">
             <ImageCard v-if="shuffledPhotos.length" :images="shuffledPhotos" />
             <template v-else>

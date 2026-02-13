@@ -1,5 +1,5 @@
 <template>
-    <div class="selected_projects_section common_home_section_style">
+    <div class="common_home_section_style items-start!">
         <p class="common_home_section_title">
             {{ $t("home.projects_home_section_title") }}
         </p>
@@ -39,8 +39,4 @@ watch(
 );
 </script>
 
-<style lang="scss">
-.selected_projects_section {
-    align-items: flex-start !important;
-}
-</style>
+<style lang="scss"></style>

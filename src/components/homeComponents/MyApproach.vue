@@ -1,5 +1,5 @@
 <template>
-    <div class="my_apporoach_section common_home_section_style">
+    <div class="common_home_section_style">
         <p class="common_home_section_title">
             {{ $t("home.approach_home_section_title") }}
         </p>
