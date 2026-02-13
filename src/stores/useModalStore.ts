@@ -17,6 +17,8 @@ export const useModalStore = defineStore("modal", {
             (name: ModalName): boolean => {
                 return state.modals[name];
             },
+
+        isAnyOpen: (state): boolean => Object.values(state.modals).some(Boolean),
     },
 
     actions: {
@@ -26,16 +28,6 @@ export const useModalStore = defineStore("modal", {
 
         close(name: ModalName) {
             this.modals[name] = false;
-        },
-
-        toggle(name: ModalName) {
-            this.modals[name] = !this.modals[name];
-        },
-
-        closeAll() {
-            (Object.keys(this.modals) as ModalName[]).forEach((key) => {
-                this.modals[key] = false;
-            });
         },
     },
 });
