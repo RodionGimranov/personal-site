@@ -1,12 +1,16 @@
 <template>
-    <footer>
-        <div class="footer_left_side_content">
+    <footer
+        class="w-full mt-25! flex justify-between items-start gap-5 py-16! border-t-[3px] border-t-black-10"
+    >
+        <div class="h-32 flex flex-col justify-between items-start">
             <p class="footer_title">{{ $t("global.footer_fun_text") }}</p>
-            <p class="copyright_text">{{ $t("global.footer_copyright_text") }}</p>
+            <p class="text-sm font-normal text-third-gray">
+                {{ $t("global.footer_copyright_text") }}
+            </p>
         </div>
-        <div class="footer_right_side_content">
+        <div class="flex justify-start items-start gap-17.5">
             <div class="footer_nav_links_container">
-                <p class="footer_title link_title">{{ $t("global.footer_router_links_title") }}</p>
+                <p class="footer_title mb-1!">{{ $t("global.footer_router_links_title") }}</p>
                 <RouterLink
                     v-for="link in navLinks"
                     :key="link.path"
@@ -16,7 +20,7 @@
                 >
             </div>
             <div class="footer_social_links_container">
-                <p class="footer_title link_title">{{ $t("global.footer_info_links_title") }}</p>
+                <p class="footer_title mb-1!">{{ $t("global.footer_info_links_title") }}</p>
                 <a :href="RESUME_URL" class="footer_link" target="_blank">{{
                     $t("global.download_btn_title")
                 }}</a>
@@ -28,10 +32,10 @@
                 }}</a>
             </div>
             <div class="footer_social_links_container">
-                <p class="footer_title link_title">{{ $t("global.footer_social_links_title") }}</p>
+                <p class="footer_title mb-1!">{{ $t("global.footer_social_links_title") }}</p>
                 <a
                     v-for="link in socialLinks"
-                    :key="link.path"
+                    :key="link.url"
                     :href="link.url"
                     class="footer_link"
                     target="_blank"
@@ -42,24 +46,34 @@
     </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useModalStore } from "@/stores/useModalStore";
 import { RESUME_URL, FIGMA_DESIGN_URL } from "@/constants/appConstants";
 
+interface NavLink {
+    name: string;
+    path: string;
+}
+
+interface SocialLink {
+    name: string;
+    url: string;
+}
+
 const modalStore = useModalStore();
 
-const openChangelog = () => {
+const openChangelog: () => void = () => {
     modalStore.open("changelog");
 };
 
-const navLinks = [
+const navLinks: NavLink[] = [
     { name: "global.home_btn_title", path: "/home" },
     { name: "global.about_btn_title", path: "/about" },
     { name: "global.projects_btn_title", path: "/projects" },
     { name: "global.gallery_btn_title", path: "/gallery" },
 ];
 
-const socialLinks = [
+const socialLinks: SocialLink[] = [
     { name: "global.github_title", url: "https://github.com/RodionGimranov" },
     { name: "global.linkedin_title", url: "https://www.linkedin.com/in/rodiongimranov/" },
     { name: "global.telegram_title", url: "https://t.me/RodionGimranov" },
@@ -68,44 +82,10 @@ const socialLinks = [
 </script>
 
 <style lang="scss">
-footer {
-    width: 100%;
-    margin-top: 100px;
-    padding: 36px 64px;
-    background: var(--primary-white);
-    border-top: 3px solid var(--black-10);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.footer_left_side_content {
-    height: 128px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .footer_title {
     font-size: 14px;
     font-weight: 500;
     color: var(--primary-dark);
-}
-
-.copyright_text {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--third-gray);
-}
-
-.footer_right_side_content {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 70px;
 }
 
 .footer_nav_links_container,
@@ -114,10 +94,6 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-}
-
-.link_title {
-    margin-bottom: 4px;
 }
 
 .footer_link {
