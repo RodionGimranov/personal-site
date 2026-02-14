@@ -1,7 +1,7 @@
 <template>
     <div class="relative flex flex-col justify-start items-start">
         <div
-            class="sticky top-0 z-99 py-4! bg-primary-white flex justify-start items-start common_width_size"
+            class="fixed top-0 z-99 pt-6! pb-4! flex justify-start items-start test common_width_size bg-primary-white"
         >
             <RouterLink
                 to="/projects"
@@ -15,6 +15,7 @@
             :name="project.name"
             :codeUrl="project.link_to_code"
             :deployUrl="project.link_to_deploy"
+            class="mt-16!"
         />
         <ProjectVideoCover :videoSrc="project.project_video_cover" />
         <ProjectDescription :description="project.description" />
@@ -25,42 +26,48 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, watchEffect } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useI18n } from "vue-i18n";
 
+import type { Locale, Project } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
-
-import ProjectHeader from "@/components/aboutProjectPage/ProjectHeader.vue";
-import ProjectVideoCover from "@/components/aboutProjectPage/ProjectVideoCover.vue";
-import ProjectDescription from "@/components/aboutProjectPage/ProjectDescription.vue";
-import ProjectRole from "@/components/aboutProjectPage/ProjectRole.vue";
-import ProjectResponsibilities from "@/components/aboutProjectPage/ProjectResponsibilities.vue";
-import ProjectContext from "@/components/aboutProjectPage/ProjectContext.vue";
-import ProjectTechnologies from "@/components/aboutProjectPage/ProjectTechnologies.vue";
+import ProjectHeader from "@/components/AboutProjectPage/ProjectHeader.vue";
+import ProjectVideoCover from "@/components/AboutProjectPage/ProjectVideoCover.vue";
+import ProjectDescription from "@/components/AboutProjectPage/ProjectDescription.vue";
+import ProjectRole from "@/components/AboutProjectPage/ProjectRole.vue";
+import ProjectResponsibilities from "@/components/AboutProjectPage/ProjectResponsibilities.vue";
+import ProjectContext from "@/components/AboutProjectPage/ProjectContext.vue";
+import ProjectTechnologies from "@/components/AboutProjectPage/ProjectTechnologies.vue";
 
 const route = useRoute();
 const router = useRouter();
 
 const projectsStore = useProjectsStore();
 
-const { locale } = useI18n();
+const { locale } = useI18n<{ message: unknown }, Locale>();
 
-watchEffect(() => {
+watchEffect((): void => {
     projectsStore.setLocale(locale.value);
 });
 
-watchEffect(() => {
-    projectsStore.selectProjectById(route.params.id);
+watchEffect((): void => {
+    const idParam = route.params.id;
+
+    if (typeof idParam === "string") {
+        projectsStore.selectProjectById(Number(idParam));
+    }
 });
 
-const project = computed(() => projectsStore.selectedProject);
+const project = computed<Project>(() => {
+    return projectsStore.selectedProject as Project;
+});
 
-watchEffect(() => {
-    if (project.value === null) {
+watchEffect((): void => {
+    if (!projectsStore.selectedProject) {
         router.replace("/Error");
     }
 });

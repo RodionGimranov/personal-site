@@ -105,7 +105,12 @@ watch(
 
     font-size: 14px;
     font-weight: 500;
+    letter-spacing: 1px;
     color: var(--secondary-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         color: var(--primary-dark);

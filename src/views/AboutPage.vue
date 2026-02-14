@@ -24,7 +24,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
 import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard/MusicPlayerCard.vue";

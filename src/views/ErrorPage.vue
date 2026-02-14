@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-37.5! flex flex-col justify-center items-center gap-3">
+    <div class="mt-37.5! flex flex-col justify-center items-center gap-3 w-full">
         <p class="text-[22px] font-semibold text-primary-dark">
             {{ $t("global.error_page_title") }}
         </p>
@@ -12,7 +12,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Button from "@/components/ui/atoms/Button.vue";
 </script>
 

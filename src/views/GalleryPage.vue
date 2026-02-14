@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <div class="masonry_container">
+        <div class="columns-4 gap-4">
             <ImageCard v-if="shuffledPhotos.length" :images="shuffledPhotos" />
             <template v-else>
                 <Skeleton
@@ -18,25 +18,19 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useShuffledPhotos } from "@/composables/useShuffledPhotos";
+import photos from "@/data/photos.json";
 
 import ImageCard from "@/components/ui/molecules/ImageCard.vue";
 import Skeleton from "@/components/ui/atoms/Skeleton.vue";
 
-import photos from "@/data/photos.json";
-
 const { shuffledPhotos } = useShuffledPhotos(photos.photos);
 
-const randomHeights = Array.from(
+const randomHeights: number[] = Array.from(
     { length: 8 },
     () => Math.floor(Math.random() * (470 - 355 + 1)) + 355,
 );
 </script>
 
-<style lang="scss">
-.masonry_container {
-    column-count: 4;
-    column-gap: 16px;
-}
-</style>
+<style lang="scss"></style>

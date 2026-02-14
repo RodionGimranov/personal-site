@@ -3,24 +3,33 @@
         <div
             v-for="photo in images"
             :key="photo.id"
-            class="masonry_item"
+            class="masonry_item cursor-pointer select-none transition-transform duration-200 rounded-2xl mb-4! break-inside-avoid perspective-[1000px] hover:scale-[0.98]"
             :class="{ flipped: flippedId === photo.id }"
             @click="toggleFlip(photo.id)"
         >
-            <div class="flip_card_inner">
+            <div
+                class="flip_card_inner relative w-full h-full transition-transform duration-400 transform-3d"
+            >
                 <div class="flip_card_front">
                     <img
-                        class="gallery_image_item"
+                        class="w-full block"
                         :src="photo.url"
                         :alt="photo.name[currentLocale]"
                         loading="lazy"
                     />
                 </div>
-                <div class="flip_card_back">
-                    <div class="photopaper"></div>
-                    <div class="flip_card_back_content">
+                <div
+                    class="flip_card_back absolute top-0 left-0 p-2.5 transform-[rotateY(180deg)] shadow-[2px_3px_10px_var(--black-25)] flex items-center justify-center text-center"
+                >
+                    <div class="photopaper absolute inset-0 w-full h-full z-0"></div>
+
+                    <div
+                        class="relative w-full z-10 rotate-[-25deg] flex flex-col items-start justify-start gap-1"
+                    >
                         <p class="back_image_title">{{ photo.name[currentLocale] }}.JPG</p>
-                        <p class="back_image_title">{{ photo.date }}</p>
+                        <p class="back_image_title">
+                            {{ photo.date }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -28,58 +37,30 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from "vue";
 import { useI18n } from "vue-i18n";
 
-defineProps({
-    images: {
-        type: Array,
-        required: true,
-    },
-});
+import type { PhotoWithHeight, Locale } from "@/types";
 
-const { locale } = useI18n();
+defineProps<{
+    images: PhotoWithHeight[];
+}>();
 
-const flippedId = ref(null);
+const { locale } = useI18n<{ message: unknown }, Locale>();
 
-function toggleFlip(id) {
+const flippedId = ref<number | null>(null);
+
+function toggleFlip(id: number): void {
     flippedId.value = flippedId.value === id ? null : id;
 }
 
-const currentLocale = computed(() => locale.value);
+const currentLocale = computed<Locale>(() => locale.value);
 </script>
 
 <style lang="scss">
-.masonry_item {
-    cursor: pointer;
-    transition: 0.2s;
-    user-select: none;
-    border-radius: 16px;
-    margin-bottom: 16px;
-    break-inside: avoid;
-    perspective: 1000px;
-
-    &:hover {
-        transform: scale(0.98);
-    }
-}
-
-.flip_card_inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.4s;
-    transform-style: preserve-3d;
-}
-
 .masonry_item.flipped .flip_card_inner {
     transform: rotateY(180deg);
-}
-
-.gallery_image_item {
-    width: 100%;
-    display: block;
 }
 
 .flip_card_front,
@@ -91,44 +72,11 @@ const currentLocale = computed(() => locale.value);
     backface-visibility: hidden;
 }
 
-.flip_card_back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    transform: rotateY(180deg);
-    box-shadow: 2px 3px 10px var(--black-25);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .photopaper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
     background-size: contain;
     background-repeat: repeat;
     background-position: center;
     background-image: url("/personal-site/images/photopaper.webp");
-}
-
-.flip_card_back_content {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    transform: rotate(-25deg);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 4px;
 }
 
 .back_image_title {

@@ -7,7 +7,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import BioText from "@/components/homeComponents/BioText.vue";
 import MyApproach from "@/components/homeComponents/MyApproach.vue";
 import TechStack from "@/components/homeComponents/TechStack/TechStack.vue";

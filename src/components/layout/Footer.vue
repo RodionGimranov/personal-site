@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="w-full mt-25! flex justify-between items-start gap-5 py-16! border-t-[3px] border-t-black-10"
+        class="w-full mt-25! flex justify-between items-start gap-5 pt-16! pb-[10px]! pr-12! border-t-[3px] border-t-black-10"
     >
         <div class="h-32 flex flex-col justify-between items-start">
             <p class="footer_title">{{ $t("global.footer_fun_text") }}</p>

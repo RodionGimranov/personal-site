@@ -16,32 +16,39 @@
                         ></span>
                         <span class="h-full w-px bg-black-10"></span>
                     </div>
-                    <div class="w-full flex flex-col justify-start items-start gap-1">
-                        <div class="w-full flex flex-col justify-start items-start gap-1">
+                    <div class="w-full flex flex-col justify-start items-start">
+                        <div class="w-full flex flex-col justify-start items-start gap-2">
                             <div class="flex justify-start items-end gap-2">
                                 <p class="text-[16px] font-medium text-primary-dark">
                                     {{ update.version }}
                                 </p>
-                                <div class="flex justify-start items-start gap-1">
-                                    <Badge
-                                        :label="update.type"
-                                        size="small"
-                                        :color="typeColorMap[update.type]"
-                                        shape="regular"
-                                    />
-                                </div>
+                                <Badge
+                                    :label="update.type"
+                                    size="small"
+                                    :color="typeColorMap[update.type]"
+                                    shape="regular"
+                                />
                             </div>
                             <p class="text-[14px] font-normal text-third-gray">
                                 {{ update.date }}
                             </p>
                         </div>
-                        <div class="flex flex-col justify-start items-start gap-2">
-                            <p
-                                class="w-full text-[14px] font-normal text-primary-dark"
-                                v-for="(desc, index) in update.descriptions"
-                                :key="index"
-                                v-html="formatBoldText(desc)"
-                            ></p>
+                        <p class="text-[14px] font-normal text-primary-dark mt-2! mb-4!">
+                            {{ update.summary }}
+                        </p>
+                        <div v-if="update.changes" class="flex flex-col justify-start items-start">
+                            <p class="text-[16px] font-normal text-primary-dark mb-2!">
+                                {{ $t("global.changes_title") }}
+                            </p>
+                            <ul class="list-disc pl-4! space-y-1!">
+                                <li
+                                    v-for="(item, index) in update.changes"
+                                    :key="index"
+                                    class="text-[14px] font-normal text-primary-dark"
+                                >
+                                    {{ item }}
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -56,7 +63,6 @@ import { onClickOutside } from "@vueuse/core";
 
 import { useModalStore } from "@/stores/useModalStore";
 import { useLanguageStore } from "@/stores/useLanguageStore";
-import { formatBoldText } from "@/utils/formatters";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 import Badge from "@/components/ui/atoms/Badge.vue";
@@ -67,16 +73,6 @@ const modalStore = useModalStore();
 const languageStore = useLanguageStore();
 
 const modalRef = ref<HTMLElement | null>(null);
-
-const close = () => {
-    modalStore.close("changelog");
-};
-
-const handleKeydown = (e: KeyboardEvent) => {
-    if (e.key === "Escape") {
-        close();
-    }
-};
 
 const updates = computed(() => {
     const list = changelogs[languageStore.currentLocale] || [];
@@ -95,7 +91,17 @@ const typeColorMap: Record<string, string> = {
 const getDotClasses = (update: any) => {
     const isActive = latestUpdate.value?.id === update.id;
 
-    return isActive ? ["dot-active", typeColorMap[update.type] || "gray"] : "bg-fourth-gray";
+    return [typeColorMap[update.type] || "gray", { "dot-active": isActive }];
+};
+
+const close = () => {
+    modalStore.close("changelog");
+};
+
+const handleKeydown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+        close();
+    }
 };
 
 onMounted(() => {
