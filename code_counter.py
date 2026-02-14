@@ -142,7 +142,9 @@ file_paths = [
     "./src/styles/transition.scss",
 
     "./src/types/index.ts",
+    "./src/types/locale.ts",
     "./src/types/music.ts",
+    "./src/types/photo.ts",
     "./src/types/project.ts",
 
     "./src/utils/formatters.ts",
