@@ -42,7 +42,7 @@
             "context_purpose": "Проект создан как персональная платформа для демонстрации опыта, подхода к разработке и уровня экспертизы. Его цель - дать потенциальным работодателям и клиентам быстрое и наглядное представление о моих компетенциях, стиле работы и технических решениях.",
             "technologies": [
                 { "name": "Vue 3" },
-                { "name": "JavaScript" },
+                { "name": "TypeScript" },
                 { "name": "Pinia" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
@@ -105,7 +105,7 @@
             "context_purpose": "The project was created as a personal platform to present my experience, development approach, and level of expertise. Its goal is to provide potential employers and clients with a clear and concise understanding of my skills, workflow, and technical decision-making.",
             "technologies": [
                 { "name": "Vue 3" },
-                { "name": "JavaScript" },
+                { "name": "TypeScript" },
                 { "name": "Pinia" },
                 { "name": "Vue Router" },
                 { "name": "Vue I18n" },
