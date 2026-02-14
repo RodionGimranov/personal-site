@@ -1,9 +1,7 @@
 import { defineStore } from "pinia";
+
+import type { Project, Locale } from "@/types";
 import projectsDataJson from "@/data/projects.json";
-
-import type { Project } from "@/types/project";
-
-type Locale = "ru" | "en";
 
 type ProjectsData = Record<Locale, Project[]>;
 
