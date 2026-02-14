@@ -1,5 +1,5 @@
 <template>
-    <main ref="layoutRef" class="relative flex justify-start items-start">
+    <main ref="layoutRef" class="flex justify-start items-start relative">
         <SideBar />
         <MainContent />
         <transition name="show-modal">
