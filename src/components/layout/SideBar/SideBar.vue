@@ -32,7 +32,7 @@
                     </p>
                     <ToggleTab
                         storageKey="language-tab"
-                        :useToggleIcon="true"
+                        :useToggleIcon="false"
                         :useToggleText="true"
                         :textOptions="['global.selected_lang_ru', 'global.selected_lang_en']"
                         @update:activeIndex="languageStore.setByIndex"
@@ -94,6 +94,7 @@ const navLinks = [
     position: sticky;
     top: 8px;
     min-width: 256px;
+    max-width: 256px;
     height: calc(100vh - 16px);
     padding: 16px;
     overflow: hidden;

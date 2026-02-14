@@ -156,7 +156,7 @@ onBeforeUnmount((): void => {
         opacity: 0;
     }
 }
-// === Hiding the Mapbox logo and feedback button ===
+
 .map_of_city .mapboxgl-ctrl-logo,
 .map_of_city .mapboxgl-ctrl-attrib {
     display: none !important;

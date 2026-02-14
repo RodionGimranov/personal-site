@@ -17,7 +17,6 @@
         </div>
         <a :href="FIGMA_DESIGN_URL" target="_blank" rel="noopener noreferrer">
             <Button
-                as="span"
                 variant="_blue"
                 :buttonText="$t('projectsLocale.visit_btn')"
                 buttonWidth="100%"
@@ -30,7 +29,7 @@
                 :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
             >
                 <p class="test-base font-normal text-primary-white leading-4.25 whitespace-nowrap">
-                    {{ $t("about.figma_card_title") }}
+                    {{ $t("about.figma_bubble_text") }}
                 </p>
             </div>
         </transition>
