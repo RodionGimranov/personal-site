@@ -6,8 +6,10 @@
     "about_btn_title": "Обо мне",
     "projects_btn_title": "Проекты",
     "gallery_btn_title": "Галерея",
-    "changelog_title": "Журнал изменений",
     "download_btn_title": "Скачать резюме",
+
+    "changelog_title": "Журнал изменений",
+    "changes_title": "Изменения",
 
     "site_settings_title": "Язык и тема",
     "language_settings_title": "Язык",

@@ -6,8 +6,10 @@
     "about_btn_title": "About",
     "projects_btn_title": "Projects",
     "gallery_btn_title": "Gallery",
+    "download_btn_title": "Download resume",
+
     "changelog_title": "Changelog",
-    "download_btn_title": "Download CV",
+    "changes_title": "Changes",
 
     "site_settings_title": "Language & Theme",
     "language_settings_title": "Language",
