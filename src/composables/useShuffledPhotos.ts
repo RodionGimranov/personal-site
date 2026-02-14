@@ -1,24 +1,10 @@
 import { ref, onMounted, type Ref } from "vue";
+import type { PhotoBase, PhotoWithHeight } from "@/types";
 
-/* ---------- types ---------- */
-
-export interface Photo {
-    url: string;
-    // при необходимости добавь остальные поля:
-    // id?: number;
-    // alt?: string;
-}
-
-export interface PhotoWithHeight extends Photo {
-    height: number;
-}
-
-/* ---------- composable ---------- */
-
-export function useShuffledPhotos(photos: Photo[]) {
+export function useShuffledPhotos(photos: PhotoBase[]) {
     const shuffledPhotos: Ref<PhotoWithHeight[]> = ref([]);
 
-    const loadImagesWithHeight = (photosArray: Photo[]): Promise<PhotoWithHeight[]> => {
+    const loadImagesWithHeight = (photosArray: PhotoBase[]): Promise<PhotoWithHeight[]> => {
         return Promise.all(
             photosArray.map(
                 (photo) =>
