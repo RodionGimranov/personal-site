@@ -1,25 +1,25 @@
 <template>
     <div class="commnon_modal_overlay">
-        <div class="common_modal_style max-w-150 h-100" ref="modalRef">
+        <div class="common_modal_style h-100 max-w-150" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">{{ $t("global.changelog_title") }}</p>
                 <CloseButton @click="close" />
             </div>
             <div
-                class="w-ffull pt-0! pr-4! pb-4! pl-4! overflow-auto flex flex-col justify-start items-start gap-5"
+                class="w-ffull flex flex-col items-start justify-start gap-5 overflow-auto pt-0! pr-4! pb-4! pl-4!"
             >
-                <div class="w-full flex gap-5" v-for="update in updates" :key="update.id">
-                    <div class="flex flex-col justify-start items-center gap-1.5">
+                <div class="flex w-full gap-5" v-for="update in updates" :key="update.id">
+                    <div class="flex flex-col items-center justify-start gap-1.5">
                         <span
-                            class="sticky top-0 z-2 min-w-6 min-h-6 w-6 h-6 rounded-[100px] border border-black-10"
+                            class="border-black-10 sticky top-0 z-2 h-6 min-h-6 w-6 min-w-6 rounded-[100px] border"
                             :class="getDotClasses(update)"
                         ></span>
-                        <span class="h-full w-px bg-black-10"></span>
+                        <span class="bg-black-10 h-full w-px"></span>
                     </div>
-                    <div class="w-full flex flex-col justify-start items-start">
-                        <div class="w-full flex flex-col justify-start items-start gap-2">
-                            <div class="flex justify-start items-end gap-2">
-                                <p class="text-[16px] font-medium text-primary-dark">
+                    <div class="flex w-full flex-col items-start justify-start">
+                        <div class="flex w-full flex-col items-start justify-start gap-2">
+                            <div class="flex items-end justify-start gap-2">
+                                <p class="text-primary-dark text-base font-medium">
                                     {{ update.version }}
                                 </p>
                                 <Badge
@@ -29,22 +29,22 @@
                                     shape="regular"
                                 />
                             </div>
-                            <p class="text-[14px] font-normal text-third-gray">
+                            <p class="text-third-gray text-sm font-normal">
                                 {{ update.date }}
                             </p>
                         </div>
-                        <p class="text-[14px] font-normal text-primary-dark mt-2! mb-4!">
+                        <p class="text-primary-dark mt-2! mb-4! text-sm font-normal">
                             {{ update.summary }}
                         </p>
-                        <div v-if="update.changes" class="flex flex-col justify-start items-start">
-                            <p class="text-[16px] font-normal text-primary-dark mb-2!">
+                        <div v-if="update.changes" class="flex flex-col items-start justify-start">
+                            <p class="text-primary-dark mb-2! text-base font-normal">
                                 {{ $t("global.changes_title") }}
                             </p>
-                            <ul class="list-disc pl-4! space-y-1!">
+                            <ul class="list-disc space-y-1! pl-4!">
                                 <li
                                     v-for="(item, index) in update.changes"
                                     :key="index"
-                                    class="text-[14px] font-normal text-primary-dark"
+                                    class="text-primary-dark text-sm font-normal"
                                 >
                                     {{ item }}
                                 </li>

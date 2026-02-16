@@ -1,9 +1,9 @@
 <template>
-    <div class="mt-37.5! flex flex-col justify-center items-center gap-3 w-full">
-        <p class="text-[22px] font-semibold text-primary-dark">
+    <div class="mt-37.5! flex w-full flex-col items-center justify-center gap-3">
+        <p class="text-primary-dark text-[22px] font-semibold">
             {{ $t("global.error_page_title") }}
         </p>
-        <p class="error_page_subtitle text-[18px] font-normal text-third-gray">
+        <p class="error_page_subtitle text-third-gray text-lg font-normal">
             {{ $t("global.error_page_subtitle") }}
         </p>
         <Button buttonType="router" variant="_dark" v-slot="slotProps">

@@ -7,7 +7,7 @@
             <button
                 v-for="(text, index) in textOptions"
                 :key="'text-' + index"
-                :class="['toggle_tab', { _active: activeIndex === index }]"
+                :class="['toggle_tab text-sm', { _active: activeIndex === index }]"
                 @click="setActiveTab(index)"
                 ref="buttons"
             >
@@ -18,7 +18,7 @@
             <button
                 v-for="(icon, index) in iconOptions"
                 :key="'icon-' + index"
-                :class="['toggle_tab h-7! p-1!', { _active: activeIndex === index }]"
+                :class="['toggle_tab h-7! p-1! text-sm', { _active: activeIndex === index }]"
                 @click="setActiveTab(index)"
                 ref="buttons"
             >
@@ -93,7 +93,6 @@ watch(
     padding: 4px 12px;
     border-radius: 100px;
 
-    font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
     color: var(--secondary-gray);

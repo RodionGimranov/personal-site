@@ -1,6 +1,6 @@
 <template>
     <div
-        class="skeleton_loader relative overflow-hidden inline-block bg-fourth-gray"
+        class="skeleton_loader bg-fourth-gray relative inline-block overflow-hidden"
         :style="{ width, height, borderRadius: radius }"
     />
 </template>

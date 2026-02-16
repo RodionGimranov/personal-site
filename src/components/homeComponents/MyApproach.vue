@@ -3,20 +3,19 @@
         <p class="common_home_section_title">
             {{ $t("home.approach_home_section_title") }}
         </p>
-        <div class="w-full overflow-hidden flex justify-center items-start flex-wrap gap-5">
+        <div class="flex w-full flex-wrap items-start justify-center gap-5 overflow-hidden">
             <div
                 v-for="(item, index) in approachItems"
                 :key="index"
-                class="w-85 min-h-55.5 flex flex-col justify-between items-start gap-3 py-9! px-5.5! commom_card_style"
+                class="commom_card_style flex min-h-55.5 w-85 flex-col items-start justify-between gap-3 px-5.5! py-9!"
             >
                 <SvgIcon :name="item.icon" :width="24" :height="24" />
-                <div class="flex flex-col justify-start items-start gap-2">
-                    <p class="text-[22px] font-medium text-primary-dark">
+                <div class="flex flex-col items-start justify-start gap-2">
+                    <p class="text-primary-dark text-[22px] font-medium">
                         {{ $t(item.title) }}
                     </p>
-
                     <p
-                        class="text-[16px] font-normal text-primary-dark"
+                        class="text-primary-dark text-base font-normal"
                         v-html="formatTransferText($t(item.subtitle))"
                     />
                 </div>

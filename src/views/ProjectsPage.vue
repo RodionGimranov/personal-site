@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-start items-start flex-wrap gap-7.5">
+    <div class="flex flex-wrap items-start justify-start gap-[30px]">
         <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
     </div>
 </template>

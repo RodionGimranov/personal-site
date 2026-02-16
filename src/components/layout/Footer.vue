@@ -1,43 +1,47 @@
 <template>
     <footer
-        class="w-full mt-25! flex justify-between items-start gap-5 pt-16! pb-[10px]! pr-12! border-t-[3px] border-t-black-10"
+        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-[10px]!"
     >
-        <div class="h-32 flex flex-col justify-between items-start">
-            <p class="footer_title">{{ $t("global.footer_fun_text") }}</p>
-            <p class="text-sm font-normal text-third-gray">
+        <div class="flex h-32 flex-col items-start justify-between">
+            <p class="footer_title text-sm">{{ $t("global.footer_fun_text") }}</p>
+            <p class="text-third-gray text-sm font-normal">
                 {{ $t("global.footer_copyright_text") }}
             </p>
         </div>
-        <div class="flex justify-start items-start gap-17.5">
+        <div class="flex items-start justify-start gap-17.5">
             <div class="footer_nav_links_container">
-                <p class="footer_title mb-1!">{{ $t("global.footer_router_links_title") }}</p>
+                <p class="footer_title mb-1! text-sm">
+                    {{ $t("global.footer_router_links_title") }}
+                </p>
                 <RouterLink
                     v-for="link in navLinks"
                     :key="link.path"
                     :to="link.path"
-                    class="footer_link"
+                    class="footer_link text-sm"
                     >{{ $t(link.name) }}</RouterLink
                 >
             </div>
             <div class="footer_social_links_container">
-                <p class="footer_title mb-1!">{{ $t("global.footer_info_links_title") }}</p>
-                <a :href="RESUME_URL" class="footer_link" target="_blank">{{
+                <p class="footer_title mb-1! text-sm">{{ $t("global.footer_info_links_title") }}</p>
+                <a :href="RESUME_URL" class="footer_link text-sm" target="_blank">{{
                     $t("global.download_btn_title")
                 }}</a>
-                <button class="footer_link" @click="openChangelog">
+                <button class="footer_link text-sm" @click="openChangelog">
                     {{ $t("global.changelog_title") }}
                 </button>
-                <a :href="FIGMA_DESIGN_URL" class="footer_link" target="_blank">{{
+                <a :href="FIGMA_DESIGN_URL" class="footer_link text-sm" target="_blank">{{
                     $t("about.figma_card_title")
                 }}</a>
             </div>
             <div class="footer_social_links_container">
-                <p class="footer_title mb-1!">{{ $t("global.footer_social_links_title") }}</p>
+                <p class="footer_title mb-1! text-sm">
+                    {{ $t("global.footer_social_links_title") }}
+                </p>
                 <a
                     v-for="link in socialLinks"
                     :key="link.url"
                     :href="link.url"
-                    class="footer_link"
+                    class="footer_link text-sm"
                     target="_blank"
                     >{{ $t(link.name) }}</a
                 >
@@ -83,7 +87,6 @@ const socialLinks: SocialLink[] = [
 
 <style lang="scss">
 .footer_title {
-    font-size: 14px;
     font-weight: 500;
     color: var(--primary-dark);
 }
@@ -97,7 +100,6 @@ const socialLinks: SocialLink[] = [
 }
 
 .footer_link {
-    font-size: 14px;
     font-weight: 400;
     color: var(--third-gray);
     line-height: 26px;

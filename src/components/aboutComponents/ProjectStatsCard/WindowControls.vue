@@ -1,10 +1,10 @@
 <template>
-    <div class="flex justify-start items-center w-full px-5! py-3! bg-fourth-dark">
-        <div class="flex justify-start items-center gap-1.75">
+    <div class="bg-fourth-dark flex w-full items-center justify-start px-5! py-3!">
+        <div class="flex items-center justify-start gap-1.75">
             <span
                 v-for="color in colors"
                 :key="color"
-                class="w-3 h-3 rounded-[100px]"
+                class="h-3 w-3 rounded-[100px]"
                 :style="{ backgroundColor: color }"
             ></span>
         </div>

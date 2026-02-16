@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-start items-start gap-[150px]">
+    <div class="flex flex-col items-start justify-start gap-[150px]">
         <BioText />
         <MyApproach />
         <TechStack />

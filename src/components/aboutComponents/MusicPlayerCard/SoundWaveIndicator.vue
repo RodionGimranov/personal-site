@@ -1,9 +1,9 @@
 <template>
-    <div class="flex justify-center items-center gap-0.5 w-11 h-11">
+    <div class="flex h-11 w-11 items-center justify-center gap-0.5">
         <span
             v-for="(wave, index) in waveData"
             :key="index"
-            class="w-0.75 min-h-0.75 rounded-[100px] bg-primary-white transition-[height] ease-out"
+            class="bg-primary-white min-h-0.75 w-0.75 rounded-[100px] transition-[height] ease-out"
             :style="{ height: `${wave}px` }"
         ></span>
     </div>

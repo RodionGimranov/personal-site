@@ -1,11 +1,11 @@
 <template>
-    <div class="relative flex flex-col justify-start items-start">
+    <div class="relative flex flex-col items-start justify-start">
         <div
-            class="fixed top-0 z-99 pt-6! pb-4! flex justify-start items-start test common_width_size bg-primary-white"
+            class="test common_width_size bg-primary-white fixed top-0 z-99 flex items-start justify-start pt-6! pb-4!"
         >
             <RouterLink
                 to="/projects"
-                class="transition duration-200 text-base font-medium text-third-gray flex justify-start items-center gap-0.5 hover:text-primary-dark"
+                class="text-third-gray hover:text-primary-dark flex items-center justify-start gap-0.5 text-base font-medium transition duration-200"
             >
                 <SvgIcon name="left-arrow-icon" />
                 <span>{{ $t("projectsLocale.back_btn") }}</span>

@@ -1,7 +1,7 @@
 <template>
     <div class="about_project_info_container">
         <p class="about_project_info_title">{{ $t("projectsLocale.technologies_title") }}</p>
-        <div class="flex justify-start items-start flex-wrap gap-1.5 common_width_size">
+        <div class="common_width_size flex flex-wrap items-start justify-start gap-1.5">
             <Badge
                 v-for="(tech, index) in technologies"
                 :key="index"

@@ -1,6 +1,6 @@
 <template>
     <div class="tech_stack_card_container commom_card_style justify-end!">
-        <div class="technology_list_wrapper absolute top-5.5 left-5.5 w-full flex flex-col gap-1.5">
+        <div class="technology_list_wrapper absolute top-5.5 left-5.5 flex w-full flex-col gap-1.5">
             <div
                 v-for="(list, index) in duplicatedRows"
                 :key="index"

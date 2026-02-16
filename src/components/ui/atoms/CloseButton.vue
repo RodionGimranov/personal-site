@@ -1,6 +1,6 @@
 <template>
     <button
-        class="w-7 h-7 p-1! rounded-[100px] flex justify-center items-center bg-fourth-gray! hover:bg-third-white! transition duration-200"
+        class="bg-fourth-gray! hover:bg-third-white! flex h-7 w-7 items-center justify-center rounded-[100px] p-1! transition duration-200"
         @click="emit('click')"
     >
         <SvgIcon name="cross-icon" />

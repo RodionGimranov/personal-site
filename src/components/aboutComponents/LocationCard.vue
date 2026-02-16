@@ -1,11 +1,11 @@
 <template>
     <div
-        class="common_bento_card_style commom_card_style relative w-62.5 h-62.5 flex flex-col justify-between items-start"
+        class="common_bento_card_style commom_card_style relative flex h-62.5 w-62.5 flex-col items-start justify-between"
     >
         <div ref="mapContainer" class="map_of_city"></div>
-        <div class="w-full flex justify-end items-start">
+        <div class="flex w-full items-start justify-end">
             <button
-                class="w-8 h-8 rounded-[100px] flex justify-center items-center _glass_effect"
+                class="_glass_effect flex h-8 w-8 items-center justify-center rounded-[100px]"
                 @click="resetLocation"
             >
                 <SvgIcon name="reset-location-icon" :width="21" :height="21" />

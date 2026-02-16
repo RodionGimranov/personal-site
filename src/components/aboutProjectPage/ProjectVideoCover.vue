@@ -1,10 +1,10 @@
 <template>
     <div
-        class="w-140 h-78.75 overflow-hidden mb-8! rounded-[30px] bg-fifth-white border border-black-10"
+        class="bg-fifth-white border-black-10 mb-8! h-78.75 w-140 overflow-hidden rounded-[30px] border"
     >
         <video
             v-if="videoSrc"
-            class="w-full h-full object-cover"
+            class="h-full w-full object-cover"
             preload="metadata"
             autoplay
             loop

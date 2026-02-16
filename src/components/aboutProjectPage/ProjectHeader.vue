@@ -1,9 +1,9 @@
 <template>
-    <div class="flex justify-between items-center mb-8! common_width_size">
-        <p class="project_large_name text-[28px] font-medium text-primary-dark">
+    <div class="common_width_size mb-8! flex items-center justify-between">
+        <p class="project_large_name text-primary-dark text-[28px] font-medium">
             {{ name }}
         </p>
-        <div class="flex justify-start items-end gap-2.5">
+        <div class="flex items-end justify-start gap-2.5">
             <Button
                 buttonType="external"
                 :href="codeUrl"

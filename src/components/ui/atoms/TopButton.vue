@@ -1,6 +1,6 @@
 <template>
     <button
-        class="fixed right-4 bottom-4 z-9998 flex h-11 w-11 items-center justify-center rounded-full bg-primary-dark! py-[15px] px-[10px] text-primary-white transition duration-200 hover:bg-secondary-dark! active:scale-[0.97]"
+        class="bg-primary-dark! text-primary-white hover:bg-secondary-dark! fixed right-4 bottom-4 z-9998 flex h-11 w-11 items-center justify-center rounded-full px-[10px] py-[15px] transition duration-200 active:scale-[0.97]"
         @click="emit('click')"
     >
         <SvgIcon name="arrow-icon" :width="24" :height="14" />

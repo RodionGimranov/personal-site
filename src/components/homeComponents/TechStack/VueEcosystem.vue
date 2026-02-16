@@ -1,16 +1,16 @@
 <template>
     <div class="tech_stack_card_container commom_card_style">
-        <div class="w-full h-50.25 flex justify-center items-center gap-8.75">
+        <div class="flex h-50.25 w-full items-center justify-center gap-8.75">
             <div
                 v-for="(column, columnIndex) in vueEcosystem"
                 :key="columnIndex"
-                class="w-12 h-full flex items-center"
+                class="flex h-full w-12 items-center"
                 :class="`vue_ecosystem__column--${column.type}`"
             >
                 <img
                     v-for="(icon, iconIndex) in column.icons"
                     :key="iconIndex"
-                    class="vue_ecosystem__icon w-12 h-12"
+                    class="vue_ecosystem__icon h-12 w-12"
                     :src="icon.src"
                     decoding="async"
                     referrerpolicy="no-referrer"

@@ -1,6 +1,6 @@
 <template>
     <div
-        class="flex justify-center items-center common_bento_card_style commom_card_style"
+        class="common_bento_card_style commom_card_style flex items-center justify-center"
         :style="{ width, height }"
     >
         <ShinyText :text="$t('about.empty_card_title')" />

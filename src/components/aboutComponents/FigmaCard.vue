@@ -1,17 +1,17 @@
 <template>
     <div
-        class="figma_card_container relative w-62.5 h-62.5 flex flex-col justify-between items-start cursor-none p-4! overflow-visible! common_bento_card_style commom_card_style"
+        class="figma_card_container common_bento_card_style commom_card_style relative flex h-62.5 w-62.5 cursor-none flex-col items-start justify-between overflow-visible! p-4!"
         @mousemove="onMouseMove"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"
     >
-        <div class="figma_card_header flex flex-col justify-start items-start gap-3">
+        <div class="figma_card_header flex flex-col items-start justify-start gap-3">
             <img
                 src="https://res.cloudinary.com/dii7e7hu0/image/upload/v1758382906/Figma-icon_bryhxb.svg"
                 alt="Figma Icon"
                 class="pointer-events-none"
             />
-            <p class="text-base text-primary-dark font-normal">
+            <p class="text-primary-dark text-base font-normal">
                 {{ $t("about.figma_card_title") }}
             </p>
         </div>
@@ -24,10 +24,10 @@
         <transition name="fade-scale">
             <div
                 v-show="isHovered"
-                class="figma_bubble_wrapper absolute z-9 bg-primary-green px-4! py-2! pointer-events-none outline-2 outline-secondary-green -outline-offset-2 rounded-[2px_24px_24px_24px]"
+                class="figma_bubble_wrapper bg-primary-green outline-secondary-green pointer-events-none absolute z-9 rounded-[2px_24px_24px_24px] px-4! py-2! outline-2 -outline-offset-2"
                 :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
             >
-                <p class="test-base font-normal text-primary-white leading-4.25 whitespace-nowrap">
+                <p class="test-base text-primary-white leading-4.25 font-normal whitespace-nowrap">
                     {{ $t("about.figma_bubble_text") }}
                 </p>
             </div>

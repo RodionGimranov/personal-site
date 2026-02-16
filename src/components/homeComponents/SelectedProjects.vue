@@ -3,7 +3,7 @@
         <p class="common_home_section_title">
             {{ $t("home.projects_home_section_title") }}
         </p>
-        <div class="w-full flex justify-start items-start gap-12.5">
+        <div class="flex w-full items-start justify-start gap-12.5">
             <ProjectCard
                 v-for="project in projects"
                 :key="project.id"

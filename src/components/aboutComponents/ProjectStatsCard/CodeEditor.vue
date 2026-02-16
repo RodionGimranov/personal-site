@@ -1,10 +1,10 @@
 <template>
-    <div class="w-full pl-5! flex justify-start items-start gap-2.5">
-        <div class="line_number cursor-default mt-2.5! flex flex-col justify-start items-start">
+    <div class="flex w-full items-start justify-start gap-2.5 pl-5!">
+        <div class="line_number mt-2.5! flex cursor-default flex-col items-start justify-start">
             <p v-for="n in 8" :key="n">{{ n }}</p>
         </div>
         <div
-            class="code_text_container w-full h-full cursor-text flex flex-col justify-start items-start pt-2.5!"
+            class="code_text_container flex h-full w-full cursor-text flex-col items-start justify-start pt-2.5!"
         >
             <p>
                 <span class="text-syntax-keyword-export">export</span>
@@ -14,7 +14,7 @@
                 <span class="text-syntax-brace">{</span>
             </p>
             <p v-for="(value, key) in projectData" :key="key">
-                <span class="ml-8.5! text-syntax-property">{{ key }}:</span>
+                <span class="text-syntax-property ml-8.5!">{{ key }}:</span>
                 <span class="text-syntax-literal">
                     {{ value }}<span class="text-syntax-punctuation!">,</span></span
                 >

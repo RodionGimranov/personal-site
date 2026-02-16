@@ -1,6 +1,6 @@
 <template>
     <section
-        class="side_bar_container bg-primary-white border border-black-10 shadow-[0px_3px_11px_0px_rgba(0,0,0,0.06)] rounded-2xl"
+        class="side_bar_container bg-primary-white border-black-10 rounded-2xl border shadow-[0px_3px_11px_0px_rgba(0,0,0,0.06)]"
     >
         <div class="side_bar_content_wrapper">
             <div class="user_info_panel_wrapper">
@@ -12,22 +12,22 @@
                     v-for="link in navLinks"
                     :key="link.path"
                     :to="link.path"
-                    class="side_bar_btn"
+                    class="side_bar_btn text-base"
                     :class="{ _active: isActive(link.path) }"
                 >
                     <SvgIcon :name="link.icon" />
                     {{ $t(link.name) }}
                 </RouterLink>
                 <!--  -->
-                <button class="side_bar_btn" @click="openChangelog">
+                <button class="side_bar_btn text-base" @click="openChangelog">
                     <SvgIcon name="changelog-icon" /> {{ $t("global.changelog_title") }}
                 </button>
                 <!--  -->
             </div>
             <div class="site_settings_container">
-                <p class="site_settings_title">{{ $t("global.site_settings_title") }}</p>
+                <p class="site_settings_title text-base">{{ $t("global.site_settings_title") }}</p>
                 <div class="site_settings_wrapper">
-                    <p class="site_settings_subtitle">
+                    <p class="site_settings_subtitle text-sm">
                         {{ $t("global.language_settings_title") }}
                     </p>
                     <ToggleTab
@@ -39,7 +39,9 @@
                     />
                 </div>
                 <div class="site_settings_wrapper">
-                    <p class="site_settings_subtitle">{{ $t("global.theme_settings_title") }}</p>
+                    <p class="site_settings_subtitle text-sm">
+                        {{ $t("global.theme_settings_title") }}
+                    </p>
                     <ToggleTab
                         storageKey="theme-tab"
                         :useToggleText="false"
@@ -50,13 +52,13 @@
             </div>
             <!--  -->
             <div class="download_btn_container">
-                <a :href="RESUME_URL" class="side_bar_btn" target="_blank">
+                <a :href="RESUME_URL" class="side_bar_btn text-base" target="_blank">
                     <SvgIcon name="download-icon" /> {{ $t("global.download_btn_title") }}
                 </a>
             </div>
             <!--  -->
         </div>
-        <p class="version_number">v.{{ APP_VERSION }}</p>
+        <p class="text-secondary-gray text-sm font-normal">v.{{ APP_VERSION }}</p>
     </section>
 </template>
 
@@ -141,7 +143,6 @@ const navLinks = [
     align-items: center;
     gap: 6px;
 
-    font-size: 16px;
     font-weight: 400;
     color: var(--third-gray);
 
@@ -170,7 +171,6 @@ const navLinks = [
 }
 
 .site_settings_title {
-    font-size: 16px;
     font-weight: 500;
     color: var(--primary-dark);
 }
@@ -183,18 +183,11 @@ const navLinks = [
 }
 
 .site_settings_subtitle {
-    font-size: 14px;
     font-weight: 500;
     color: var(--primary-dark);
 }
 
 .download_btn_container {
     width: 100%;
-}
-
-.version_number {
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--secondary-gray);
 }
 </style>

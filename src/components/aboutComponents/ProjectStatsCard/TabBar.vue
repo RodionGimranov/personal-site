@@ -1,22 +1,22 @@
 <template>
     <div
-        class="w-full h-9 cursor-pointer flex justify-between items-start border-t-[0.47px] border-fifth-gray border-b-[0.47px]"
+        class="border-fifth-gray flex h-9 w-full cursor-pointer items-start justify-between border-t-[0.47px] border-b-[0.47px]"
     >
-        <div class="file_tab h-full flex justify-start items-center gap-1 py-2.5! pr-1! pl-1.5!">
+        <div class="file_tab flex h-full items-center justify-start gap-1 py-2.5! pr-1! pl-1.5!">
             <SvgIcon name="js-lang-icon" :width="14" :height="14" />
-            <p class="text-xs font-normal ml-1! text-primary-white leading-3.75">projectStats.js</p>
+            <p class="text-primary-white ml-1! text-xs leading-3.75 font-normal">projectStats.js</p>
             <button
-                class="p-1! rounded-sm flex justify-center items-center hover:bg-sixth-gray! bg-transparent"
+                class="hover:bg-sixth-gray! flex items-center justify-center rounded-sm bg-transparent p-1!"
                 type="button"
             >
                 <SvgIcon name="close-file-tab-icon" :width="10.18" :height="10.18" />
             </button>
         </div>
-        <div class="h-full mr-1.5! flex justify-start items-center gap-0.75">
+        <div class="mr-1.5! flex h-full items-center justify-start gap-0.75">
             <button
                 v-for="(btn, index) in toolbarButtons"
                 :key="index"
-                class="p-1! rounded-sm flex justify-center items-center hover:bg-sixth-gray!"
+                class="hover:bg-sixth-gray! flex items-center justify-center rounded-sm p-1!"
                 type="button"
             >
                 <SvgIcon :name="btn.name" :width="btn.width" :height="btn.height" />

@@ -1,7 +1,7 @@
 <template>
     <div
         id="phycalsIcons"
-        class="physics_card_container w-62.5 h-130 p-0! cursor-grab common_bento_card_style commom_card_style"
+        class="physics_card_container common_bento_card_style commom_card_style h-130 w-62.5 cursor-grab p-0!"
         :class="{ _grabbing: isGrabbing }"
         @mousedown="handleGrabbing"
         @mouseup="handleGrab"

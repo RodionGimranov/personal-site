@@ -1,6 +1,6 @@
 <template>
     <div
-        class="overflow-hidden flex flex-col justify-start items-start w-130 h-62.5 rounded-[30px] bg-third-dark"
+        class="bg-third-dark flex h-62.5 w-130 flex-col items-start justify-start overflow-hidden rounded-[30px]"
     >
         <WindowControls />
         <TabBar />

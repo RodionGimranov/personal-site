@@ -1,19 +1,19 @@
 <template>
     <div
         v-if="currentSong"
-        class="w-62.5 h-62.5 flex flex-col items-start justify-between common_bento_card_style commom_card_style bg-no-repeat bg-cover bg-center"
+        class="common_bento_card_style commom_card_style flex h-62.5 w-62.5 flex-col items-start justify-between bg-cover bg-center bg-no-repeat"
         :style="{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundImage: `url(${currentSong.album_cover})`,
         }"
     >
-        <div class="w-full flex justify-between items-start gap-1">
+        <div class="flex w-full items-start justify-between gap-1">
             <div
-                class="flex flex-col justify-start items-start _glass_effect rounded-[100px] overflow-hidden max-w-37.5 min-w-37.5 px-3! py-1!"
+                class="_glass_effect flex max-w-37.5 min-w-37.5 flex-col items-start justify-start overflow-hidden rounded-[100px] px-3! py-1!"
             >
-                <div class="song_name_container w-full flex items-center gap-1">
-                    <p class="song_name shrink">{{ currentSong.song_name }}</p>
+                <div class="song_name_container flex w-full items-center gap-1">
+                    <p class="song_name shrink text-sm">{{ currentSong.song_name }}</p>
                     <SvgIcon
                         v-if="currentSong.explicit_content"
                         name="explicit-icon"
@@ -22,7 +22,7 @@
                         style="opacity: 0.7"
                     />
                 </div>
-                <p class="artist_name w-full opacity-70">
+                <p class="artist_name w-full text-sm opacity-70">
                     {{ currentSong.artist_name }}
                 </p>
             </div>
@@ -65,7 +65,6 @@ onBeforeUnmount((): void => {
 .song_name,
 .artist_name {
     overflow: hidden;
-    font-size: 14px;
     font-weight: 400;
     color: var(--primary-white);
     line-height: 15px;

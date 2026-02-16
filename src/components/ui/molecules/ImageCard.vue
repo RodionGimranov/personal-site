@@ -3,31 +3,31 @@
         <div
             v-for="photo in images"
             :key="photo.id"
-            class="masonry_item cursor-pointer select-none transition-transform duration-200 rounded-2xl mb-4! break-inside-avoid perspective-[1000px] hover:scale-[0.98]"
+            class="masonry_item mb-4! cursor-pointer break-inside-avoid rounded-2xl transition-transform duration-200 select-none perspective-[1000px] hover:scale-[0.98]"
             :class="{ flipped: flippedId === photo.id }"
             @click="toggleFlip(photo.id)"
         >
             <div
-                class="flip_card_inner relative w-full h-full transition-transform duration-400 transform-3d"
+                class="flip_card_inner relative h-full w-full transition-transform duration-400 transform-3d"
             >
                 <div class="flip_card_front">
                     <img
-                        class="w-full block"
+                        class="block w-full"
                         :src="photo.url"
                         :alt="photo.name[currentLocale]"
                         loading="lazy"
                     />
                 </div>
                 <div
-                    class="flip_card_back absolute top-0 left-0 p-2.5 transform-[rotateY(180deg)] shadow-[2px_3px_10px_var(--black-25)] flex items-center justify-center text-center"
+                    class="flip_card_back absolute top-0 left-0 flex transform-[rotateY(180deg)] items-center justify-center p-2.5 text-center shadow-[2px_3px_10px_var(--black-25)]"
                 >
-                    <div class="photopaper absolute inset-0 w-full h-full z-0"></div>
+                    <div class="photopaper absolute inset-0 z-0 h-full w-full"></div>
 
                     <div
-                        class="relative w-full z-10 rotate-[-25deg] flex flex-col items-start justify-start gap-1"
+                        class="relative z-10 flex w-full rotate-[-25deg] flex-col items-start justify-start gap-1"
                     >
-                        <p class="back_image_title">{{ photo.name[currentLocale] }}.JPG</p>
-                        <p class="back_image_title">
+                        <p class="back_image_title text-sm">{{ photo.name[currentLocale] }}.JPG</p>
+                        <p class="back_image_title text-sm">
                             {{ photo.date }}
                         </p>
                     </div>
@@ -80,7 +80,6 @@ const currentLocale = computed<Locale>(() => locale.value);
 }
 
 .back_image_title {
-    font-size: 14px;
     font-weight: 500;
     color: var(--fifth-dark);
     font-family: "Roboto Mono", monospace;
