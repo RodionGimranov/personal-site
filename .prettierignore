@@ -1,0 +1,44 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+build
+coverage
+
+# Vite / tooling cache
+.vite
+.cache
+
+# Logs
+*.log
+logs
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE / Editor
+.idea
+.vscode
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package manager lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Git hooks
+.husky
+
+# Static public assets (media only)
+public/audio
+public/images/icons
+public/*.ico
+public/*.png
+public/*.webp
+public/*.svg
