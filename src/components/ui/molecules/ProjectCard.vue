@@ -17,9 +17,7 @@
             <source :src="project.project_video_cover" type="video/mp4" />
             {{ $t("projectsLocale.project_video_text") }}
         </video>
-
         <Skeleton v-else width="100%" height="100%" />
-
         <div
             class="project_name_container _glass_effect absolute bottom-3 left-3 opacity-0 transition-all duration-200 rounded-full py-1! pr-3! pl-1.5! flex items-center justify-start gap-1"
         >

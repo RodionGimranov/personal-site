@@ -1,5 +1,8 @@
 <template>
-    <div class="toggle_tab_container" ref="containerRef">
+    <div
+        class="bg-fourth-gray relative flex items-start justify-start gap-0.5 overflow-hidden rounded-[100px] p-1!"
+        ref="containerRef"
+    >
         <template v-if="useToggleText">
             <button
                 v-for="(text, index) in textOptions"
@@ -15,7 +18,7 @@
             <button
                 v-for="(icon, index) in iconOptions"
                 :key="'icon-' + index"
-                :class="['toggle_tab toggle_tab_icon', { _active: activeIndex === index }]"
+                :class="['toggle_tab h-7! p-1!', { _active: activeIndex === index }]"
                 @click="setActiveTab(index)"
                 ref="buttons"
             >
@@ -23,7 +26,7 @@
             </button>
         </template>
         <span
-            class="toggle_tab_btn_bg"
+            class="bg-primary-white absolute top-1 z-1 h-7 rounded-full transition-all duration-200 ease-in-out"
             :style="{ width: bgWidth + 'px', left: bgLeft + 'px' }"
         ></span>
     </div>
@@ -83,19 +86,6 @@ watch(
 </script>
 
 <style scoped lang="scss">
-.toggle_tab_container {
-    position: relative;
-    padding: 4px;
-    overflow: hidden;
-    border-radius: 100px;
-    background: var(--fourth-gray);
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 2px;
-}
-
 .toggle_tab {
     z-index: 2;
     cursor: pointer;
@@ -119,20 +109,5 @@ watch(
     &._active {
         color: var(--primary-dark);
     }
-}
-
-.toggle_tab_icon {
-    height: 28px !important;
-    padding: 4px !important;
-}
-
-.toggle_tab_btn_bg {
-    position: absolute;
-    top: 4px;
-    height: 28px;
-    z-index: 1;
-    border-radius: 100px;
-    transition: 0.2s ease;
-    background: var(--primary-white);
 }
 </style>

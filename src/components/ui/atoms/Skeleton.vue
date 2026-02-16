@@ -1,5 +1,8 @@
 <template>
-    <div class="skeleton_loader" :style="{ width, height, borderRadius: radius }" />
+    <div
+        class="skeleton_loader relative overflow-hidden inline-block bg-fourth-gray"
+        :style="{ width, height, borderRadius: radius }"
+    />
 </template>
 
 <script setup lang="ts">
@@ -20,13 +23,6 @@ withDefaults(
 </script>
 
 <style lang="scss">
-.skeleton_loader {
-    display: inline-block;
-    background: var(--fourth-gray);
-    position: relative;
-    overflow: hidden;
-}
-
 .skeleton_loader::after {
     content: "";
     position: absolute;
