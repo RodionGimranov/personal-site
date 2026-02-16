@@ -28,7 +28,7 @@ import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 const projectsStore = useProjectsStore();
 const languageStore = useLanguageStore();
 
-const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([0]));
+const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([2, 0]));
 
 watch(
     () => languageStore.currentLocale,
