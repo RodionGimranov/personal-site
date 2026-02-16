@@ -4,12 +4,19 @@
             {{ name }}
         </p>
         <div class="flex justify-start items-end gap-2.5">
-            <a :href="codeUrl" target="_blank" rel="noopener noreferrer">
-                <Button as="span" :buttonText="$t('projectsLocale.source_code_btn')" />
-            </a>
-            <a :href="deployUrl" target="_blank" rel="noopener noreferrer">
-                <Button as="span" variant="_blue" :buttonText="$t('projectsLocale.visit_btn')" />
-            </a>
+            <Button
+                buttonType="external"
+                :href="codeUrl"
+                :buttonText="$t('projectsLocale.source_code_btn')"
+                :disabled="!codeUrl"
+            />
+            <Button
+                buttonType="external"
+                :href="deployUrl"
+                variant="_blue"
+                :buttonText="$t('projectsLocale.visit_btn')"
+                :disabled="!deployUrl"
+            />
         </div>
     </div>
 </template>
@@ -24,8 +31,8 @@ interface Props {
 }
 
 withDefaults(defineProps<Props>(), {
-    codeUrl: "#",
-    deployUrl: "#",
+    codeUrl: "",
+    deployUrl: "",
 });
 </script>
 

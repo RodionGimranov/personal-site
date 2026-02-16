@@ -6,9 +6,11 @@
         <p class="error_page_subtitle text-[18px] font-normal text-third-gray">
             {{ $t("global.error_page_subtitle") }}
         </p>
-        <RouterLink to="/home">
-            <Button as="span" variant="_dark" :buttonText="$t('global.error_page_btn_title')" />
-        </RouterLink>
+        <Button buttonType="router" variant="_dark" v-slot="slotProps">
+            <RouterLink to="/home" v-bind="slotProps">
+                {{ $t("global.error_page_btn_title") }}
+            </RouterLink>
+        </Button>
     </div>
 </template>
 

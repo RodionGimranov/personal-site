@@ -15,13 +15,12 @@
                 {{ $t("about.figma_card_title") }}
             </p>
         </div>
-        <a :href="FIGMA_DESIGN_URL" target="_blank" rel="noopener noreferrer">
-            <Button
-                variant="_blue"
-                :buttonText="$t('projectsLocale.visit_btn')"
-                buttonWidth="100%"
-            />
-        </a>
+        <Button
+            buttonType="external"
+            :href="FIGMA_DESIGN_URL"
+            variant="_blue"
+            :buttonText="$t('projectsLocale.visit_btn')"
+        />
         <transition name="fade-scale">
             <div
                 v-show="isHovered"
