@@ -1,9 +1,8 @@
 import { createRouter, createWebHashHistory, type RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
-    { path: "/", redirect: "/home" },
     {
-        path: "/home",
+        path: "/",
         name: "homePage",
         component: () => import("@/views/HomePage.vue"),
         meta: { titleKey: "global.my_name_title" },
@@ -43,13 +42,12 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
-});
-
-router.afterEach(() => {
-    requestAnimationFrame(() => {
-        const el = document.querySelector<HTMLElement>(".scrolled_content");
-        el?.scrollTo({ top: 0, behavior: "auto" });
-    });
+    scrollBehavior(_to, _from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition;
+        }
+        return { top: 0 };
+    },
 });
 
 export default router;

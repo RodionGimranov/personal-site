@@ -7,7 +7,7 @@ import router from "@/router";
 import { i18n } from "@/plugins/vue-i18n";
 
 import { getPageTitle } from "@/utils/getPageTitle";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { usePreferencesStore } from "@/stores/usePreferencesStore";
 
 import "./assets/tailwind.css";
 
@@ -15,19 +15,17 @@ const app = createApp(App);
 
 app.use(pinia);
 
-const languageStore = useLanguageStore();
-languageStore.init();
+const preferencesStore = usePreferencesStore();
+preferencesStore.init();
 
 router.beforeEach((to: RouteLocationNormalizedLoaded) => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-
-    document.title = getPageTitle(to, languageStore.currentLocale);
+    document.title = getPageTitle(to, preferencesStore.currentLocale);
 
     return true;
 });
 
 watch(
-    () => languageStore.currentLocale,
+    () => preferencesStore.currentLocale,
     (locale) => {
         document.title = getPageTitle(router.currentRoute.value, locale);
     },
