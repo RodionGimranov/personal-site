@@ -21,17 +21,17 @@ import { computed, watch } from "vue";
 
 import type { Project } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { usePreferencesStore } from "@/stores/usePreferencesStore";
 
 import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
 const projectsStore = useProjectsStore();
-const languageStore = useLanguageStore();
+const preferencesStore = usePreferencesStore();
 
 const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([2, 0]));
 
 watch(
-    () => languageStore.currentLocale,
+    () => preferencesStore.currentLocale,
     (locale) => {
         projectsStore.setLocale(locale);
     },

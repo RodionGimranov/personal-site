@@ -62,7 +62,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { onClickOutside } from "@vueuse/core";
 
 import { useModalStore } from "@/stores/useModalStore";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { usePreferencesStore } from "@/stores/usePreferencesStore";
 
 import CloseButton from "@/components/ui/atoms/CloseButton.vue";
 import Badge from "@/components/ui/atoms/Badge.vue";
@@ -70,12 +70,12 @@ import Badge from "@/components/ui/atoms/Badge.vue";
 import changelogs from "@/data/changelogs.json";
 
 const modalStore = useModalStore();
-const languageStore = useLanguageStore();
+const preferencesStore = usePreferencesStore();
 
 const modalRef = ref<HTMLElement | null>(null);
 
 const updates = computed(() => {
-    const list = changelogs[languageStore.currentLocale] || [];
+    const list = changelogs[preferencesStore.currentLocale] || [];
     return [...list].sort((a, b) => b.id - a.id);
 });
 

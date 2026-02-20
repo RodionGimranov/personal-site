@@ -35,7 +35,7 @@
                         :useToggleIcon="false"
                         :useToggleText="true"
                         :textOptions="['global.selected_lang_ru', 'global.selected_lang_en']"
-                        @update:activeIndex="languageStore.setByIndex"
+                        @update:activeIndex="preferencesStore.setByIndex"
                     />
                 </div>
                 <div class="site_settings_wrapper">
@@ -47,6 +47,7 @@
                         :useToggleText="false"
                         :useToggleIcon="true"
                         :iconOptions="['light-theme-icon', 'dark-theme-icon', 'system-theme-icon']"
+                        @update:activeIndex="preferencesStore.setThemeByIndex"
                     />
                 </div>
             </div>
@@ -66,7 +67,7 @@
 import { useRoute } from "vue-router";
 
 import { useModalStore } from "@/stores/useModalStore";
-import { useLanguageStore } from "@/stores/useLanguageStore";
+import { usePreferencesStore } from "@/stores/usePreferencesStore";
 import { APP_VERSION, RESUME_URL } from "@/constants/appConstants";
 
 import UserInfoPanel from "@/components/layout/SideBar/UserInfoPanel.vue";
@@ -76,7 +77,8 @@ import ToggleTab from "@/components/ui/molecules/ToggleTab.vue";
 const route = useRoute();
 
 const modalStore = useModalStore();
-const languageStore = useLanguageStore();
+const preferencesStore = usePreferencesStore();
+
 const isActive = (path) => route.path === path;
 
 const openChangelog = () => {
@@ -84,7 +86,7 @@ const openChangelog = () => {
 };
 
 const navLinks = [
-    { name: "global.home_btn_title", icon: "home-icon", path: "/home" },
+    { name: "global.home_btn_title", icon: "home-icon", path: "/" },
     { name: "global.about_btn_title", icon: "profile-card-icon", path: "/about" },
     { name: "global.projects_btn_title", icon: "projects-icon", path: "/projects" },
     { name: "global.gallery_btn_title", icon: "gallery-icon", path: "/gallery" },
