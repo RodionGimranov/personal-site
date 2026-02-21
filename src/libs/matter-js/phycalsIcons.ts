@@ -4,7 +4,6 @@ type PhycalsIconsConfig = {
     width: number;
     height: number;
     iconSize: number;
-    gravity: number;
 };
 
 export type PhycalsIconsInstance = {
@@ -30,10 +29,9 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
         width: 250,
         height: 520,
         iconSize: 60,
-        gravity: 0.8,
     };
 
-    const WALL_THICKNESS = 2;
+    const WALL_THICKNESS = 20;
     const OUT_MARGIN = 100;
 
     const container = document.getElementById("phycalsIcons") as HTMLElement | null;
@@ -42,9 +40,19 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
         return;
     }
 
-    const engine = Matter.Engine.create();
+    const engine = Matter.Engine.create({
+        velocityIterations: 4,
+        positionIterations: 6,
+        constraintIterations: 2,
+    });
+
+    engine.timing.timeScale = 1;
+
     const world = engine.world;
-    world.gravity.y = CONFIG.gravity;
+
+    engine.gravity.scale = 0.001;
+    engine.gravity.x = 0;
+    engine.gravity.y = 1;
 
     const render = Matter.Render.create({
         element: container,
@@ -64,20 +72,36 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
         const t = WALL_THICKNESS;
 
         return [
-            Matter.Bodies.rectangle(w / 2, h - t / 2, w, t, {
+            // bottom
+            Matter.Bodies.rectangle(w / 2, h + t / 2 - 1, w + 100, t, {
                 isStatic: true,
+                friction: 0,
+                frictionStatic: 0,
+                restitution: 0,
                 render: { visible: false },
             }),
-            Matter.Bodies.rectangle(w / 2, t / 2, w, t, {
+            // top
+            Matter.Bodies.rectangle(w / 2, -t / 2, w + 100, t, {
                 isStatic: true,
+                friction: 0,
+                frictionStatic: 0,
+                restitution: 0,
                 render: { visible: false },
             }),
-            Matter.Bodies.rectangle(t / 2, h / 2, t, h, {
+            // left
+            Matter.Bodies.rectangle(-t / 2, h / 2, t, h + 100, {
                 isStatic: true,
+                friction: 0,
+                frictionStatic: 0,
+                restitution: 0,
                 render: { visible: false },
             }),
-            Matter.Bodies.rectangle(w - t / 2, h / 2, t, h, {
+            // right
+            Matter.Bodies.rectangle(w + t / 2, h / 2, t, h + 100, {
                 isStatic: true,
+                friction: 0,
+                frictionStatic: 0,
+                restitution: 0,
                 render: { visible: false },
             }),
         ];
@@ -89,9 +113,15 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
         const size = CONFIG.iconSize;
 
         return Matter.Bodies.rectangle(x, y, size, size, {
-            restitution: 0.6,
-            friction: 0.3,
-            frictionAir: 0.01,
+            density: 0.001,
+            friction: 0.1,
+            frictionStatic: 0.2,
+            frictionAir: 0.003,
+            restitution: 0.35,
+            slop: 0.01,
+            chamfer: {
+                radius: 10,
+            },
             render: {
                 sprite: {
                     texture: textureUrl,
@@ -105,37 +135,24 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
     function spawnIcon(textureUrl: string, x?: number, y?: number): Matter.Body {
         const half = CONFIG.iconSize / 2;
 
-        const px =
-            x ??
-            Math.random() * (CONFIG.width - 2 * (half + WALL_THICKNESS)) + half + WALL_THICKNESS;
+        const px = x ?? Math.random() * (CONFIG.width - 2 * half) + half;
 
-        const py = y ?? WALL_THICKNESS + half + 25;
+        const py = y ?? half + 10;
 
         const body = createIcon(px, py, textureUrl);
 
         Matter.World.add(world, body);
-        Matter.Body.setVelocity(body, { x: (Math.random() - 0.5) * 2, y: 0.1 });
 
         return body;
     }
 
     const icons: Matter.Body[] = [];
-    const half = CONFIG.iconSize / 2;
-
-    const rows: number[] = [
-        WALL_THICKNESS + half + 50,
-        WALL_THICKNESS + half + 120,
-        WALL_THICKNESS + half + 190,
-    ];
 
     ICON_TEXTURES.forEach((tex, i) => {
-        const rowIndex = Math.floor(i / 3);
-        const rowY = rows[rowIndex] ?? rows[rows.length - 1];
+        const x = ((i % 3) + 0.5) * (CONFIG.width / 3);
+        const y = 50 + Math.floor(i / 3) * 70;
 
-        const perRow = rowIndex === 2 ? 2 : 3;
-        const colX = ((i % 3) + 0.5) * (CONFIG.width / perRow);
-
-        icons.push(spawnIcon(tex, colX, rowY));
+        icons.push(spawnIcon(tex, x, y));
     });
 
     const mouseConstraint = Matter.MouseConstraint.create(engine, {
@@ -188,7 +205,6 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
         world,
         render,
         icons,
-
         destroy(): void {
             if (rafId !== null) cancelAnimationFrame(rafId);
 
@@ -203,7 +219,6 @@ export function phycalsIcons(): PhycalsIconsInstance | void {
             }
 
             (render.textures as Record<string, unknown>) = {};
-
             icons.length = 0;
         },
     };
