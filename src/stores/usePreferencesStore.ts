@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-
 import { i18n } from "@/plugins/vue-i18n";
 import type { Locale, Theme } from "@/types/";
 
@@ -11,16 +10,43 @@ const INDEX_TO_THEME: Theme[] = ["light", "dark", "system"];
 
 export const usePreferencesStore = defineStore("preferences", {
     state: () => ({
-        locale: i18n.global.locale.value as Locale,
+        locale: "ru" as Locale,
         theme: "system" as Theme,
     }),
 
     getters: {
         currentLocale: (state) => state.locale,
         currentTheme: (state) => state.theme,
+
+        localeIndex: (state) => INDEX_TO_LOCALE.indexOf(state.locale),
+        themeIndex: (state) => INDEX_TO_THEME.indexOf(state.theme),
     },
 
     actions: {
+        init() {
+            const savedLocale = localStorage.getItem(LOCALE_KEY) as Locale | null;
+            const savedTheme = localStorage.getItem(THEME_KEY) as Theme | null;
+
+            if (savedLocale) {
+                this.locale = savedLocale;
+            }
+
+            if (savedTheme) {
+                this.theme = savedTheme;
+            }
+
+            i18n.global.locale.value = this.locale;
+            this.applyTheme();
+
+            const media = window.matchMedia("(prefers-color-scheme: dark)");
+
+            media.addEventListener("change", () => {
+                if (this.theme === "system") {
+                    this.applyTheme();
+                }
+            });
+        },
+
         setLocale(locale: Locale) {
             if (this.locale === locale) return;
 
@@ -29,14 +55,19 @@ export const usePreferencesStore = defineStore("preferences", {
             localStorage.setItem(LOCALE_KEY, locale);
         },
 
-        setByIndex(index: number) {
+        setLocaleByIndex(index: number) {
             const locale = INDEX_TO_LOCALE[index];
-            if (locale) {
-                this.setLocale(locale);
-            }
+            if (locale) this.setLocale(locale);
+        },
+
+        toggleLocale() {
+            const next = this.locale === "ru" ? "en" : "ru";
+            this.setLocale(next);
         },
 
         setTheme(theme: Theme) {
+            if (this.theme === theme) return;
+
             this.theme = theme;
             localStorage.setItem(THEME_KEY, theme);
             this.applyTheme();
@@ -54,23 +85,6 @@ export const usePreferencesStore = defineStore("preferences", {
             const isDark = this.theme === "dark" || (this.theme === "system" && prefersDark);
 
             root.classList.toggle("dark", isDark);
-        },
-
-        init() {
-            const media = window.matchMedia("(prefers-color-scheme: dark)");
-
-            const savedTheme = localStorage.getItem(THEME_KEY) as Theme | null;
-            if (savedTheme) {
-                this.theme = savedTheme;
-            }
-
-            this.applyTheme();
-
-            media.addEventListener("change", () => {
-                if (this.theme === "system") {
-                    this.applyTheme();
-                }
-            });
         },
     },
 });

@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export type ModalName = "changelog";
+export type ModalName = "changelog" | "shortcuts";
 
 export type ModalsState = Record<ModalName, boolean>;
 
@@ -8,6 +8,7 @@ export const useModalStore = defineStore("modal", {
     state: (): { modals: ModalsState } => ({
         modals: {
             changelog: false,
+            shortcuts: false,
         },
     }),
 
