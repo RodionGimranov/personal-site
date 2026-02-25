@@ -2,35 +2,42 @@
     <slot
         v-if="isRouter"
         :class="mergedClasses"
-        :style="inlineStyles"
         :aria-disabled="disabled || undefined"
         @click="onRouterClick"
-    />
-    <component
-        v-else
-        :is="componentTag"
-        :class="mergedClasses"
-        :style="inlineStyles"
-        v-bind="componentAttrs"
     >
-        {{ buttonText }}
+        <SvgIcon v-if="icon" :name="icon!" :width="iconWidth" :height="iconHeight" />
+        <span v-if="buttonText"> {{ buttonText }} </span>
+    </slot>
+    <component v-else :is="componentTag" :class="mergedClasses" v-bind="componentAttrs">
+        <SvgIcon v-if="icon" :name="icon!" :width="iconWidth" :height="iconHeight" />
+        <span v-if="buttonText"> {{ buttonText }} </span>
     </component>
 </template>
 
 <script setup lang="ts">
 import { computed, useAttrs } from "vue";
 
+import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
+
 type ButtonType = "default" | "external" | "router";
-type ButtonVariant = "_gray" | "_dark" | "_blue";
+type ButtonVariant = "_gray" | "_dark" | "_blue" | "_side-bar";
+type PaddingVariant = "default" | "compact";
+type ShapeVariant = "regular" | "pill";
 
 const props = withDefaults(
     defineProps<{
         buttonText?: string;
         buttonType?: ButtonType;
         variant?: ButtonVariant;
-        fontSize?: string;
-        fontWeight?: string;
+        padding?: PaddingVariant;
+        shape?: ShapeVariant;
+
+        icon?: string;
+        iconWidth?: number;
+        iconHeight?: number;
+
         disabled?: boolean;
+
         target?: "_self" | "_blank";
         rel?: string;
     }>(),
@@ -38,9 +45,15 @@ const props = withDefaults(
         buttonText: "Label",
         buttonType: "default",
         variant: "_gray",
-        fontSize: "16px",
-        fontWeight: "400",
+        padding: "default",
+        shape: "pill",
+
+        icon: undefined,
+        iconWidth: 20,
+        iconHeight: 20,
+
         disabled: false,
+
         target: "_blank",
         rel: "noopener noreferrer",
     },
@@ -51,20 +64,14 @@ const attrs = useAttrs();
 const isRouter = computed(() => props.buttonType === "router");
 const componentTag = computed(() => (props.buttonType === "external" ? "a" : "button"));
 
-const baseClasses =
-    "custom_btn cursor-pointer rounded-[100px] transition duration-200 flex justify-between items-center py-2! px-4! active:scale-[0.97] no-underline";
-
 const mergedClasses = computed(() => [
-    baseClasses,
-    props.variant,
+    "custom_btn",
+    `variant-${props.variant.replace("_", "")}`,
+    `shape-${props.shape}`,
+    `pad-${props.padding}`,
+    { "is-disabled": props.disabled },
     attrs.class,
-    props.disabled && "opacity-70 pointer-events-none cursor-not-allowed",
 ]);
-
-const inlineStyles = computed(() => ({
-    fontSize: props.fontSize,
-    fontWeight: props.fontWeight,
-}));
 
 const componentAttrs = computed(() => {
     if (props.buttonType === "default") {
@@ -106,7 +113,41 @@ function onRouterClick(e: Event) {
 
 <style lang="scss">
 .custom_btn {
-    &._gray {
+    cursor: pointer;
+    transition: 0.2s;
+
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+
+    &.is-disabled {
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    // Padding
+    &.pad-default {
+        padding: 8px 16px;
+    }
+    &.pad-compact {
+        padding: 8px 10px;
+    }
+
+    // Shape
+    &.shape-regular {
+        border-radius: 12px;
+    }
+    &.shape-pill {
+        border-radius: 100px;
+    }
+
+    // Color
+    &.variant-gray {
         background: var(--fourth-gray);
         color: var(--primary-dark);
 
@@ -115,7 +156,7 @@ function onRouterClick(e: Event) {
         }
     }
 
-    &._dark {
+    &.variant-dark {
         background: var(--primary-dark);
         color: var(--primary-white);
 
@@ -124,12 +165,30 @@ function onRouterClick(e: Event) {
         }
     }
 
-    &._blue {
+    &.variant-blue {
         background: var(--primary-blue);
         color: var(--primary-white);
 
         &:hover {
             background: var(--secondary-blue);
+        }
+    }
+
+    &.variant-side-bar {
+        width: 100%;
+        background: transparent;
+        transition: none !important;
+        color: var(--third-gray);
+        display: inline-flex;
+        align-items: center;
+
+        &:hover {
+            background: var(--secondary-white);
+        }
+
+        &._active {
+            background: var(--secondary-white);
+            color: var(--primary-dark);
         }
     }
 }
