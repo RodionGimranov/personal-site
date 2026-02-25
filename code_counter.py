@@ -1,39 +1,13 @@
 import os
 import time
+from collections import defaultdict
 
 def human_readable_size(size_in_bytes):
-    for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
+    for unit in ["B", "KB", "MB", "GB", "TB"]:
         if size_in_bytes < 1024:
             return f"{size_in_bytes:.2f} {unit}"
         size_in_bytes /= 1024
     return f"{size_in_bytes:.2f} TB"
-
-def count_lines_in_file_list(file_paths):
-    total_lines = 0
-    unique_dirs = set()
-    file_count = 0
-
-    for index, file_path in enumerate(file_paths, start=1):
-        if not os.path.isfile(file_path):
-            print(f"File not found: {file_path}")
-            time.sleep(0.02)
-            continue
-        
-        file_count += 1
-        unique_dirs.add(os.path.dirname(file_path))  
-
-        try:
-            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-                lines = sum(1 for _ in f)
-                total_lines += lines
-                file_name = os.path.basename(file_path) 
-                print(f"{index}. {file_name} - {lines} lines")
-        except Exception as e:
-            print(f"Failed to read file {file_path}: {e}")
-        
-        time.sleep(0.02)
-
-    return total_lines, file_count, len(unique_dirs)
 
 def get_project_size(root_path):
     total_size = 0
@@ -42,10 +16,56 @@ def get_project_size(root_path):
             file_path = os.path.join(dirpath, filename)
             try:
                 total_size += os.path.getsize(file_path)
-            except:
+            except OSError:
                 pass
     return total_size
 
+def count_lines_in_file_list(file_paths):
+    total_lines = 0
+    file_count = 0
+    unique_dirs = set()
+
+    extensions_counter = defaultdict(int)
+    extensions_lines = defaultdict(int)
+    files_stats = []
+
+    for index, file_path in enumerate(file_paths, start=1):
+        if not os.path.isfile(file_path):
+            print(f"File not found: {file_path}")
+            time.sleep(0.02)
+            continue
+
+        file_count += 1
+        unique_dirs.add(os.path.dirname(file_path))
+
+        _, ext = os.path.splitext(file_path)
+        ext = ext.lower() if ext else "no_ext"
+
+        try:
+            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                lines = sum(1 for _ in f)
+
+            total_lines += lines
+            extensions_counter[ext] += 1
+            extensions_lines[ext] += lines
+            files_stats.append((lines, os.path.basename(file_path)))
+
+            print(f"{index}. {os.path.basename(file_path)} — {lines} lines")
+
+        except Exception as e:
+            print(f"Failed to read file {file_path}: {e}")
+
+        time.sleep(0.02)
+
+
+    return {
+        "total_lines": total_lines,
+        "file_count": file_count,
+        "dirs_count": len(unique_dirs),
+        "extensions_counter": extensions_counter,
+        "extensions_lines": extensions_lines,
+        "files_stats": files_stats,
+    }
 
 file_paths = [
     "./public/manifest.json",
@@ -84,10 +104,12 @@ file_paths = [
     "./src/components/homeComponents/MyApproach.vue",
     "./src/components/homeComponents/SelectedProjects.vue",
 
+    "./src/components/layout/modals/ChangelogModal.vue",
+    "./src/components/layout/modals/ShortcutsModal.vue",
+
     "./src/components/layout/SideBar/SideBar.vue",
     "./src/components/layout/SideBar/UserInfoPanel.vue",
 
-    "./src/components/layout/ChangelogModal.vue",
     "./src/components/layout/Footer.vue",
     "./src/components/layout/MainContent.vue",
 
@@ -95,6 +117,7 @@ file_paths = [
     "./src/components/ui/atoms/BlurMask.vue",
     "./src/components/ui/atoms/Button.vue",
     "./src/components/ui/atoms/CloseButton.vue",
+    "./src/components/ui/atoms/Kbd.vue",
     "./src/components/ui/atoms/Skeleton.vue",
     "./src/components/ui/atoms/SvgIcon.vue",
     "./src/components/ui/atoms/TopButton.vue",
@@ -105,6 +128,7 @@ file_paths = [
 
     "./src/components/vue-bits/TextAnimation/ShinyText.vue",
 
+    "./src/composables/useKeyboardShortcuts.ts",
     "./src/composables/useShuffledPhotos.ts",
 
     "./src/constants/appConstants.ts",
@@ -132,9 +156,9 @@ file_paths = [
 
     "./src/router/index.ts",
 
-    "./src/stores/useLanguageStore.ts",
     "./src/stores/useModalStore.ts",
     "./src/stores/useMusicPlayerStore.ts",
+    "./src/stores/usePreferencesStore.ts",
     "./src/stores/useProjectsStore.ts",
 
     "./src/styles/colors.css",
@@ -142,9 +166,9 @@ file_paths = [
     "./src/styles/transition.scss",
 
     "./src/types/index.ts",
-    "./src/types/locale.ts",
     "./src/types/music.ts",
     "./src/types/photo.ts",
+    "./src/types/preferences.ts",
     "./src/types/project.ts",
 
     "./src/utils/formatters.ts",
@@ -159,6 +183,7 @@ file_paths = [
     "./src/views/ProjectsPage.vue",
 
     "./src/App.vue",
+    "./src/env.d.ts",
     "./src/main.ts",
     "./src/shims-vue.d.ts",
 
@@ -174,15 +199,28 @@ file_paths = [
     "./vite.config.ts"
 ]
 
-print("📑 Count for the specified files:\n")
-lines_list, files_list, dirs_list = count_lines_in_file_list(file_paths)
+print("\n📑 Code line statistics for the specified files:\n")
+stats = count_lines_in_file_list(file_paths)
 
-print("\nTOTAL for the list:")
-print("📜 Lines:", lines_list)
-print("📄 Files:", files_list)
-print("📂 Folders:", dirs_list)
+print("\nTOTAL for the list:\n")
+print("📜 Lines:", stats["total_lines"])
+print("📄 Files:", stats["file_count"])
+print("📂 Folders:", stats["dirs_count"])
 
-project_path = "."
-project_size = get_project_size(project_path)
+print("\n📦 Extensions summary:\n")
+for ext, count in sorted(
+    stats["extensions_counter"].items(),
+    key=lambda x: x[1],
+    reverse=True
+):
+    percent = (count / stats["file_count"]) * 100
+    label = ext if ext != "no_ext" else "(no extension)"
 
+    print(f"  {label} — {count} files ({percent:.1f}%)")
+
+print("\n🧠 Top 5 largest files by line count:\n")
+for lines, name in sorted(stats["files_stats"], reverse=True)[:5]:
+    print(f"  {name} — {lines} lines")
+
+project_size = get_project_size(".")
 print("\n💾 Total project size:", human_readable_size(project_size))
