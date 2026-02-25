@@ -1,1 +1,0 @@
-import{d as t,c as a,e as o,o as s}from"./index-BYldwOfp.js";const i=t({__name:"Skeleton",props:{width:{default:50},height:{default:50},radius:{default:0}},setup(r){return(e,l)=>(s(),a("div",{class:"skeleton_loader",style:o({width:e.width,height:e.height,borderRadius:e.radius})},null,4))}});export{i as _};
