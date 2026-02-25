@@ -5,6 +5,9 @@
         <transition name="show-modal">
             <ChangelogModal v-if="modalStore.isOpen('changelog')" />
         </transition>
+        <transition name="show-modal">
+            <ShortcutsModal v-if="modalStore.isOpen('shortcuts')" />
+        </transition>
         <transition name="show-arrow-btn">
             <TopButton v-if="isVisible" @click="scrollToTop" />
         </transition>
@@ -15,13 +18,19 @@
 import { ref, onMounted, onUnmounted, watch } from "vue";
 
 import { useModalStore } from "@/stores/useModalStore";
+import { usePreferencesStore } from "@/stores/usePreferencesStore";
+import { useKeyboardShortcuts } from "@/composables/useKeyboardShortcuts";
 
 import SideBar from "@/components/layout/SideBar/SideBar.vue";
 import MainContent from "@/components/layout/MainContent.vue";
-import ChangelogModal from "@/components/layout/ChangelogModal.vue";
+import ChangelogModal from "@/components/layout/modals/ChangelogModal.vue";
+import ShortcutsModal from "@/components/layout/modals/ShortcutsModal.vue";
 import TopButton from "@/components/ui/atoms/TopButton.vue";
 
 const modalStore = useModalStore();
+const preferencesStore = usePreferencesStore();
+
+useKeyboardShortcuts();
 
 const layoutRef = ref<HTMLElement | null>(null);
 const isVisible = ref(false);
@@ -40,6 +49,7 @@ const scrollToTop = () => {
 };
 
 onMounted(() => {
+    preferencesStore.init();
     window.addEventListener("scroll", handleScroll, { passive: true });
 });
 
