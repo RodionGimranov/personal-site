@@ -11,6 +11,11 @@
     "changelog_title": "Changelog",
     "changes_title": "Changes",
 
+    "kb_shortcuts_title": "Keyboard shortcuts",
+    "shortcuts_nav_title": "Navigation",
+    "shortcuts_actions_title": "Actions",
+    "change_language": "Change language",
+
     "site_settings_title": "Language & Theme",
     "language_settings_title": "Language",
     "theme_settings_title": "Theme",

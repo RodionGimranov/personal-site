@@ -11,6 +11,11 @@
     "changelog_title": "Журнал изменений",
     "changes_title": "Изменения",
 
+    "kb_shortcuts_title": "Сочетания клавиш",
+    "shortcuts_nav_title": "Навигация",
+    "shortcuts_actions_title": "Действия",
+    "change_language": "Сменить язык",
+
     "site_settings_title": "Язык и тема",
     "language_settings_title": "Язык",
     "theme_settings_title": "Тема",
