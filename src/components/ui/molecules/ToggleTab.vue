@@ -33,48 +33,49 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, nextTick } from "vue";
+import { ref, onMounted, nextTick, watch } from "vue";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 const props = defineProps({
-    useToggleIcon: { type: Boolean, default: false },
-    useToggleText: { type: Boolean, default: true },
+    useToggleIcon: Boolean,
+    useToggleText: Boolean,
     textOptions: { type: Array, default: () => [] },
     iconOptions: { type: Array, default: () => [] },
-    storageKey: { type: String, required: true },
+    activeIndex: { type: Number, required: true },
 });
 
 const emit = defineEmits(["update:activeIndex"]);
 
 const buttons = ref([]);
-const activeIndex = ref(0);
 const bgWidth = ref(0);
 const bgLeft = ref(0);
 
+function setActiveTab(index) {
+    emit("update:activeIndex", index);
+}
+
+function updateBgPosition() {
+    const btn = buttons.value[props.activeIndex];
+    if (!btn) return;
+
+    const { offsetLeft, offsetWidth } = btn;
+    bgLeft.value = offsetLeft;
+    bgWidth.value = offsetWidth;
+}
+
 onMounted(async () => {
-    const savedIndex = localStorage.getItem(props.storageKey);
-    activeIndex.value = savedIndex ? parseInt(savedIndex) : 0;
-    emit("update:activeIndex", activeIndex.value);
     await nextTick();
     updateBgPosition();
 });
 
-function setActiveTab(index) {
-    activeIndex.value = index;
-    localStorage.setItem(props.storageKey, index.toString());
-    emit("update:activeIndex", index);
-    updateBgPosition();
-}
-
-function updateBgPosition() {
-    const btn = buttons.value[activeIndex.value];
-    if (btn) {
-        const { offsetLeft, offsetWidth } = btn;
-        bgLeft.value = offsetLeft;
-        bgWidth.value = offsetWidth;
-    }
-}
+watch(
+    () => props.activeIndex,
+    async () => {
+        await nextTick();
+        updateBgPosition();
+    },
+);
 
 watch(
     () => props.textOptions,
