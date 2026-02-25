@@ -7,7 +7,7 @@
             {{ $t("global.error_page_subtitle") }}
         </p>
         <Button buttonType="router" variant="_dark" v-slot="slotProps">
-            <RouterLink to="/home" v-bind="slotProps">
+            <RouterLink to="/" v-bind="slotProps">
                 {{ $t("global.error_page_btn_title") }}
             </RouterLink>
         </Button>
