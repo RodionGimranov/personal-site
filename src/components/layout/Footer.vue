@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-[10px]!"
+        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-2.5!"
     >
         <div class="flex h-32 flex-col items-start justify-between">
             <p class="footer_title text-sm">{{ $t("global.footer_fun_text") }}</p>
@@ -26,6 +26,9 @@
                 <a :href="RESUME_URL" class="footer_link text-sm" target="_blank">{{
                     $t("global.download_btn_title")
                 }}</a>
+                <button class="footer_link text-sm" @click="openShortcuts">
+                    {{ $t("global.kb_shortcuts_title") }}
+                </button>
                 <button class="footer_link text-sm" @click="openChangelog">
                     {{ $t("global.changelog_title") }}
                 </button>
@@ -66,12 +69,16 @@ interface SocialLink {
 
 const modalStore = useModalStore();
 
+const openShortcuts = () => {
+    modalStore.open("shortcuts");
+};
+
 const openChangelog: () => void = () => {
     modalStore.open("changelog");
 };
 
 const navLinks: NavLink[] = [
-    { name: "global.home_btn_title", path: "/home" },
+    { name: "global.home_btn_title", path: "/" },
     { name: "global.about_btn_title", path: "/about" },
     { name: "global.projects_btn_title", path: "/projects" },
     { name: "global.gallery_btn_title", path: "/gallery" },
