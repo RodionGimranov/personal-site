@@ -1,9 +1,9 @@
 export const APP_VERSION: string = "1.4.10";
 
-export const TOTAL_LINES_OF_CODE: number = 5827;
+export const TOTAL_LINES_OF_CODE: number = 5955;
 export const TOTAL_FILE_COUNT: number = 102;
-export const TOTAL_FOLDER_COUNT: number = 30;
-export const PROJECT_SIZE_MB: number = 327.1;
+export const TOTAL_FOLDER_COUNT: number = 31;
+export const PROJECT_SIZE_MB: number = 26.6;
 
 export const RESUME_URL: string =
     "https://drive.google.com/drive/folders/1xIWBnyshRjCosq57ADyIZSv7d8wflI48?";
