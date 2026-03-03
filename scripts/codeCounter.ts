@@ -1,75 +1,14 @@
-import os
-import time
-from collections import defaultdict
+import fs from "fs";
+import path from "path";
 
-def human_readable_size(size_in_bytes):
-    for unit in ["B", "KB", "MB", "GB", "TB"]:
-        if size_in_bytes < 1024:
-            return f"{size_in_bytes:.2f} {unit}"
-        size_in_bytes /= 1024
-    return f"{size_in_bytes:.2f} TB"
+const ROOT_DIR = process.cwd();
+const CONSTANTS_PATH = path.resolve(ROOT_DIR, "src/constants/appConstants.ts");
 
-def get_project_size(root_path):
-    total_size = 0
-    for dirpath, dirnames, filenames in os.walk(root_path):
-        for filename in filenames:
-            file_path = os.path.join(dirpath, filename)
-            try:
-                total_size += os.path.getsize(file_path)
-            except OSError:
-                pass
-    return total_size
-
-def count_lines_in_file_list(file_paths):
-    total_lines = 0
-    file_count = 0
-    unique_dirs = set()
-
-    extensions_counter = defaultdict(int)
-    extensions_lines = defaultdict(int)
-    files_stats = []
-
-    for index, file_path in enumerate(file_paths, start=1):
-        if not os.path.isfile(file_path):
-            print(f"File not found: {file_path}")
-            time.sleep(0.02)
-            continue
-
-        file_count += 1
-        unique_dirs.add(os.path.dirname(file_path))
-
-        _, ext = os.path.splitext(file_path)
-        ext = ext.lower() if ext else "no_ext"
-
-        try:
-            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                lines = sum(1 for _ in f)
-
-            total_lines += lines
-            extensions_counter[ext] += 1
-            extensions_lines[ext] += lines
-            files_stats.append((lines, os.path.basename(file_path)))
-
-            print(f"{index}. {os.path.basename(file_path)} — {lines} lines")
-
-        except Exception as e:
-            print(f"Failed to read file {file_path}: {e}")
-
-        time.sleep(0.02)
-
-
-    return {
-        "total_lines": total_lines,
-        "file_count": file_count,
-        "dirs_count": len(unique_dirs),
-        "extensions_counter": extensions_counter,
-        "extensions_lines": extensions_lines,
-        "files_stats": files_stats,
-    }
-
-file_paths = [
+const TRACKED_FILES: string[] = [
     "./public/manifest.json",
     "./public/sprite.svg",
+
+    "./scripts/codeCounter.ts",
 
     "./src/assets/tailwind.css",
 
@@ -94,8 +33,8 @@ file_paths = [
     "./src/components/aboutProjectPage/ProjectResponsibilities.vue",
     "./src/components/aboutProjectPage/ProjectRole.vue",
     "./src/components/aboutProjectPage/ProjectTechnologies.vue",
-    "./src/components/aboutProjectPage/ProjectVideoCover.vue",  
-    
+    "./src/components/aboutProjectPage/ProjectVideoCover.vue",
+
     "./src/components/homeComponents/TechStack/JsTsEnvironment.vue",
     "./src/components/homeComponents/TechStack/TechStack.vue",
     "./src/components/homeComponents/TechStack/VueEcosystem.vue",
@@ -187,7 +126,6 @@ file_paths = [
     "./src/main.ts",
     "./src/shims-vue.d.ts",
 
-    "./code_counter.py",
     "./index.html",
     "./package.json",
     "./postcss.config.ts",
@@ -196,31 +134,117 @@ file_paths = [
     "./tsconfig.app.json",
     "./tsconfig.json",
     "./tsconfig.node.json",
-    "./vite.config.ts"
-]
+    "./vite.config.ts",
+];
 
-print("\n📑 Code line statistics for the specified files:\n")
-stats = count_lines_in_file_list(file_paths)
+type Stats = {
+    totalLines: number;
+    fileCount: number;
+    folderCount: number;
+    projectSizeMB: number;
+};
 
-print("\nTOTAL for the list:\n")
-print("📜 Lines:", stats["total_lines"])
-print("📄 Files:", stats["file_count"])
-print("📂 Folders:", stats["dirs_count"])
+function countLines(filePath: string): number {
+    try {
+        const content = fs.readFileSync(filePath, "utf-8");
+        return content.split("\n").length;
+    } catch {
+        return 0;
+    }
+}
 
-print("\n📦 Extensions summary:\n")
-for ext, count in sorted(
-    stats["extensions_counter"].items(),
-    key=lambda x: x[1],
-    reverse=True
-):
-    percent = (count / stats["file_count"]) * 100
-    label = ext if ext != "no_ext" else "(no extension)"
+function getProjectSize(dir: string): number {
+    let total = 0;
 
-    print(f"  {label} — {count} files ({percent:.1f}%)")
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
 
-print("\n🧠 Top 5 largest files by line count:\n")
-for lines, name in sorted(stats["files_stats"], reverse=True)[:5]:
-    print(f"  {name} — {lines} lines")
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
 
-project_size = get_project_size(".")
-print("\n💾 Total project size:", human_readable_size(project_size))
+        if (entry.isDirectory()) {
+            if (entry.name === "node_modules" || entry.name === "dist" || entry.name === ".git") {
+                continue;
+            }
+
+            total += getProjectSize(fullPath);
+        } else {
+            try {
+                total += fs.statSync(fullPath).size;
+            } catch {}
+        }
+    }
+
+    return total;
+}
+
+function collectStats(): Stats {
+    let totalLines = 0;
+    let fileCount = 0;
+    const folders = new Set<string>();
+
+    console.log("\n📑 Counting tracked files:\n");
+
+    TRACKED_FILES.forEach((relativePath, index) => {
+        const absolutePath = path.resolve(ROOT_DIR, relativePath);
+
+        if (!fs.existsSync(absolutePath)) {
+            console.warn(`⚠ File not found: ${relativePath}`);
+            return;
+        }
+
+        const lines = countLines(absolutePath);
+
+        fileCount++;
+        totalLines += lines;
+        folders.add(path.dirname(relativePath));
+
+        console.log(`${index + 1}. ${path.basename(relativePath)} — ${lines} lines`);
+    });
+
+    const sizeBytes = getProjectSize(ROOT_DIR);
+    const sizeMB = sizeBytes / 1024 / 1024;
+
+    return {
+        totalLines,
+        fileCount,
+        folderCount: folders.size,
+        projectSizeMB: Number(sizeMB.toFixed(1)),
+    };
+}
+
+function updateConstants(stats: Stats) {
+    let content = fs.readFileSync(CONSTANTS_PATH, "utf-8");
+
+    content = content
+        .replace(
+            /export const TOTAL_LINES_OF_CODE: number = \d+;/,
+            `export const TOTAL_LINES_OF_CODE: number = ${stats.totalLines};`,
+        )
+        .replace(
+            /export const TOTAL_FILE_COUNT: number = \d+;/,
+            `export const TOTAL_FILE_COUNT: number = ${stats.fileCount};`,
+        )
+        .replace(
+            /export const TOTAL_FOLDER_COUNT: number = \d+;/,
+            `export const TOTAL_FOLDER_COUNT: number = ${stats.folderCount};`,
+        )
+        .replace(
+            /export const PROJECT_SIZE_MB: number = [\d.]+;/,
+            `export const PROJECT_SIZE_MB: number = ${stats.projectSizeMB};`,
+        );
+
+    fs.writeFileSync(CONSTANTS_PATH, content);
+
+    console.log("\n✅ appConstants.ts updated successfully\n");
+    console.log(`📜 Lines: ${stats.totalLines}`);
+    console.log(`📄 Files: ${stats.fileCount}`);
+    console.log(`📂 Folders: ${stats.folderCount}`);
+    console.log(`💾 Project size: ${stats.projectSizeMB} MB\n`);
+}
+
+function main() {
+    const stats = collectStats();
+    updateConstants(stats);
+}
+
+main();
