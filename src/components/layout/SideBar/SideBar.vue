@@ -56,7 +56,7 @@
                         :activeIndex="languageIndex"
                         :useToggleText="true"
                         :textOptions="['global.selected_lang_ru', 'global.selected_lang_en']"
-                        @update:activeIndex="preferencesStore.setByIndex"
+                        @update:activeIndex="preferencesStore.setLocaleByIndex"
                     />
                 </div>
                 <div class="site_settings_wrapper">
