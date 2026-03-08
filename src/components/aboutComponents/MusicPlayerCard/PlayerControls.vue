@@ -1,9 +1,9 @@
 <template>
-    <div class="flex w-full items-center justify-center gap-3.5">
+    <div class="flex w-full items-center justify-center gap-[14px]">
         <button
             v-for="(button, index) in buttons"
             :key="index"
-            class="_glass_effect flex h-11.5 w-11.5 transform items-center justify-center rounded-[100px] transition-transform duration-200 hover:scale-105"
+            class="_glass_effect flex h-[46px] w-[46px] transform items-center justify-center rounded-[100px] transition-transform duration-200 hover:scale-105"
             v-show="button.show === undefined || button.show"
             type="button"
             @click="button.action"

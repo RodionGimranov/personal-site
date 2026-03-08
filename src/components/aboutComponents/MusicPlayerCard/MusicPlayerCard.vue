@@ -1,7 +1,7 @@
 <template>
     <div
         v-if="currentSong"
-        class="common_bento_card_style commom_card_style flex h-62.5 w-62.5 flex-col items-start justify-between bg-cover bg-center bg-no-repeat"
+        class="common_bento_card_style commom_card_style flex h-[250px] w-[250px] flex-col items-start justify-between bg-cover bg-center bg-no-repeat"
         :style="{
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -10,7 +10,7 @@
     >
         <div class="flex w-full items-start justify-between gap-1">
             <div
-                class="_glass_effect flex max-w-37.5 min-w-37.5 flex-col items-start justify-start overflow-hidden rounded-[100px] px-3! py-1!"
+                class="_glass_effect flex max-w-[150px] min-w-[150px] flex-col items-start justify-start overflow-hidden rounded-[100px] px-3! py-1!"
             >
                 <div class="song_name_container flex w-full items-center gap-1">
                     <p class="song_name shrink text-sm">{{ currentSong.song_name }}</p>

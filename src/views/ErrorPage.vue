@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-37.5! flex w-full flex-col items-center justify-center gap-3">
+    <div class="mt-[150px]! flex w-full flex-col items-center justify-center gap-3">
         <p class="text-primary-dark text-[22px] font-semibold">
             {{ $t("global.error_page_title") }}
         </p>

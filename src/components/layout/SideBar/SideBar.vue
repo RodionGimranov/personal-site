@@ -6,7 +6,7 @@
             <div class="flex w-full items-start justify-start">
                 <UserInfoPanel />
             </div>
-            <div class="mt-7! flex w-full flex-col items-start justify-start gap-0.5">
+            <div class="mt-7! flex w-full flex-col items-start justify-start gap-px">
                 <Button
                     v-for="link in navLinks"
                     :key="link.path"

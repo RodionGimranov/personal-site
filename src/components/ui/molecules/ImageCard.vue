@@ -19,7 +19,7 @@
                     />
                 </div>
                 <div
-                    class="flip_card_back absolute top-0 left-0 flex transform-[rotateY(180deg)] items-center justify-center p-2.5 text-center shadow-[2px_3px_10px_var(--black-25)]"
+                    class="flip_card_back absolute top-0 left-0 flex transform-[rotateY(180deg)] items-center justify-center p-[10px]! text-center shadow-[2px_3px_10px_var(--black-25)]"
                 >
                     <div class="photopaper absolute inset-0 z-0 h-full w-full"></div>
 

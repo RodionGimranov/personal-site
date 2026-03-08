@@ -3,7 +3,7 @@
         <p class="project_large_name text-primary-dark text-[28px] font-medium">
             {{ name }}
         </p>
-        <div class="flex items-end justify-start gap-2.5">
+        <div class="flex items-end justify-start gap-[10px]">
             <Button
                 buttonType="external"
                 :href="codeUrl"

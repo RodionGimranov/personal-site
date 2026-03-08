@@ -7,7 +7,7 @@
             <div
                 v-for="(item, index) in approachItems"
                 :key="index"
-                class="commom_card_style flex min-h-55.5 w-85 flex-col items-start justify-between gap-3 px-5.5! py-9!"
+                class="commom_card_style flex min-h-[222px] w-85 flex-col items-start justify-between gap-3 px-[22px]! py-9!"
             >
                 <SvgIcon :name="item.icon" :width="24" :height="24" />
                 <div class="flex flex-col items-start justify-start gap-2">

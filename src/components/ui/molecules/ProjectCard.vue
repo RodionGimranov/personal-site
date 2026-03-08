@@ -19,7 +19,7 @@
         </video>
         <Skeleton v-else width="100%" height="100%" />
         <div
-            class="project_name_container _glass_effect absolute bottom-3 left-3 flex items-center justify-start gap-1 rounded-full py-1! pr-3! pl-1.5! opacity-0 transition-all duration-200"
+            class="project_name_container _glass_effect absolute bottom-3 left-3 flex items-center justify-start gap-1 rounded-full py-1! pr-3! pl-[6px]! opacity-0 transition-all duration-200"
         >
             <SvgIcon name="eye-icon" />
             <p class="text-primary-white font-normal" :style="{ fontSize: projectNameSize }">

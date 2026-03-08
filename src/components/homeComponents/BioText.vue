@@ -1,6 +1,6 @@
 <template>
     <p
-        class="text-primary-dark w-full text-4xl leading-11! font-semibold"
+        class="text-primary-dark w-full text-4xl leading-[44px]! font-semibold"
         v-html="formatTransferText($t('home.bio_text'))"
     ></p>
 </template>

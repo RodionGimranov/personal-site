@@ -5,7 +5,7 @@
         >
             <RouterLink
                 to="/projects"
-                class="text-third-gray hover:text-primary-dark flex items-center justify-start gap-0.5 text-base font-medium transition duration-200"
+                class="text-third-gray hover:text-primary-dark flex items-center justify-start gap-[2px] text-base font-medium transition duration-200"
             >
                 <SvgIcon name="left-arrow-icon" />
                 <span>{{ $t("projectsLocale.back_btn") }}</span>

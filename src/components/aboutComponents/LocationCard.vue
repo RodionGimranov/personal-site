@@ -1,6 +1,6 @@
 <template>
     <div
-        class="common_bento_card_style commom_card_style relative flex h-62.5 w-62.5 flex-col items-start justify-between"
+        class="common_bento_card_style commom_card_style relative flex h-[250px] w-[250px] flex-col items-start justify-between"
     >
         <div ref="mapContainer" class="map_of_city"></div>
         <div class="flex w-full items-start justify-end">

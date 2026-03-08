@@ -3,7 +3,7 @@
         <p class="about_project_info_title">
             {{ $t("projectsLocale.areas_of_responsibility_titl") }}
         </p>
-        <ul class="areas_list m-0 list-disc pl-3.5!">
+        <ul class="areas_list m-0 list-disc pl-[14px]!">
             <li
                 v-for="(area, index) in areas"
                 :key="index"

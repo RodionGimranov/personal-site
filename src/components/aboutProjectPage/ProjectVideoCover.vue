@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-fifth-white border-black-10 mb-8! h-78.75 w-140 overflow-hidden rounded-[30px] border"
+        class="bg-fifth-white border-black-10 mb-8! h-[315px] w-140 overflow-hidden rounded-[30px] border"
     >
         <video
             v-if="videoSrc"

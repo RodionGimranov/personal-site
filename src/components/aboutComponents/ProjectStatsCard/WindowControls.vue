@@ -1,6 +1,6 @@
 <template>
     <div class="bg-fourth-dark flex w-full items-center justify-start px-5! py-3!">
-        <div class="flex items-center justify-start gap-1.75">
+        <div class="flex items-center justify-start gap-[7px]">
             <span
                 v-for="color in colors"
                 :key="color"

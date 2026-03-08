@@ -1,5 +1,5 @@
 <template>
-    <div class="flex h-11 w-11 items-center justify-center gap-0.5">
+    <div class="flex h-11 w-11 items-center justify-center gap-[2px]">
         <span
             v-for="(wave, index) in waveData"
             :key="index"

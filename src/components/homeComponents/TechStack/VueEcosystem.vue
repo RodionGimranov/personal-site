@@ -1,6 +1,6 @@
 <template>
     <div class="tech_stack_card_container commom_card_style">
-        <div class="flex h-50.25 w-full items-center justify-center gap-8.75">
+        <div class="flex h-[201px] w-full items-center justify-center gap-[35px]">
             <div
                 v-for="(column, columnIndex) in vueEcosystem"
                 :key="columnIndex"

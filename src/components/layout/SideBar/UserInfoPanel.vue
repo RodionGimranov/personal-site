@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-center gap-1.5">
+    <div class="flex items-center justify-center gap-[6px]">
         <img
             class="bg-secondary-white flex h-12 w-12 items-center justify-center overflow-hidden rounded-[100px]"
             :src="myProfileImage"

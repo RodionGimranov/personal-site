@@ -2,9 +2,13 @@
     <div
         class="border-fifth-gray flex h-9 w-full cursor-pointer items-start justify-between border-t-[0.47px] border-b-[0.47px]"
     >
-        <div class="file_tab flex h-full items-center justify-start gap-1 py-2.5! pr-1! pl-1.5!">
+        <div
+            class="file_tab flex h-full items-center justify-start gap-1 py-[10px]! pr-1! pl-[6px]!"
+        >
             <SvgIcon name="js-lang-icon" :width="14" :height="14" />
-            <p class="text-primary-white ml-1! text-xs leading-3.75 font-normal">projectStats.js</p>
+            <p class="text-primary-white ml-1! text-xs leading-[15px] font-normal">
+                projectStats.js
+            </p>
             <button
                 class="hover:bg-sixth-gray! flex items-center justify-center rounded-sm bg-transparent p-1!"
                 type="button"
@@ -12,7 +16,7 @@
                 <SvgIcon name="close-file-tab-icon" :width="10.18" :height="10.18" />
             </button>
         </div>
-        <div class="mr-1.5! flex h-full items-center justify-start gap-0.75">
+        <div class="mr-[6px]! flex h-full items-center justify-start gap-[3px]">
             <button
                 v-for="(btn, index) in toolbarButtons"
                 :key="index"

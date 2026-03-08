@@ -1,6 +1,6 @@
 <template>
     <footer
-        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-2.5!"
+        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-[10px]!"
     >
         <div class="flex h-32 flex-col items-start justify-between">
             <p class="footer_title text-sm">{{ $t("global.footer_fun_text") }}</p>
@@ -8,7 +8,7 @@
                 {{ $t("global.footer_copyright_text") }}
             </p>
         </div>
-        <div class="flex items-start justify-start gap-17.5">
+        <div class="flex items-start justify-start gap-[70px]">
             <div class="footer_nav_links_container">
                 <p class="footer_title mb-1! text-sm">
                     {{ $t("global.footer_router_links_title") }}

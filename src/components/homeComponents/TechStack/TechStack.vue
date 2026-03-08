@@ -3,7 +3,7 @@
         <p class="common_home_section_title">
             {{ $t("home.tech_stack_home_section_title") }}
         </p>
-        <div class="flex w-full flex-col items-center justify-start gap-12.5">
+        <div class="flex w-full flex-col items-center justify-start gap-[50px]">
             <div class="tech_stack_card">
                 <VueEcosystem />
             </div>

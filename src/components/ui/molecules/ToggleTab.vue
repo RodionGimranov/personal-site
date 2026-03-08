@@ -1,6 +1,6 @@
 <template>
     <div
-        class="bg-fourth-gray relative flex items-start justify-start gap-0.5 overflow-hidden rounded-[100px] p-1!"
+        class="bg-fourth-gray relative flex items-start justify-start gap-[2px] overflow-hidden rounded-[100px] p-1!"
         ref="containerRef"
     >
         <template v-if="useToggleText">
