@@ -7,7 +7,7 @@
     >
         <div class="figma_card_header flex flex-col items-start justify-start gap-3">
             <img
-                src="https://res.cloudinary.com/dii7e7hu0/image/upload/v1758382906/Figma-icon_bryhxb.svg"
+                src="https://storage.yandexcloud.net/personal-site-assets/icons/Figma.svg"
                 alt="Figma Icon"
                 class="pointer-events-none"
             />
@@ -21,19 +21,15 @@
             variant="_blue"
             :buttonText="$t('projectsLocale.visit_btn')"
         />
-        <transition name="fade-scale">
-            <div
-                v-show="isHovered"
-                class="figma_bubble_wrapper bg-primary-green outline-secondary-green pointer-events-none absolute z-9 rounded-[2px_24px_24px_24px] px-4! py-2! outline-2 -outline-offset-2"
-                :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
-            >
-                <p
-                    class="test-base text-primary-white leading-[17px] font-normal whitespace-nowrap"
-                >
-                    {{ $t("about.figma_bubble_text") }}
-                </p>
-            </div>
-        </transition>
+        <div
+            v-show="isHovered"
+            class="figma_bubble_wrapper bg-primary-green outline-secondary-green pointer-events-none absolute z-9 rounded-[2px_24px_24px_24px] px-4! py-2! outline-2 -outline-offset-2"
+            :style="{ top: cursorTextY + 'px', left: cursorTextX + 'px' }"
+        >
+            <p class="text-primary-white text-base leading-[17px] font-normal whitespace-nowrap">
+                {{ $t("about.figma_bubble_text") }}
+            </p>
+        </div>
     </div>
 </template>
 

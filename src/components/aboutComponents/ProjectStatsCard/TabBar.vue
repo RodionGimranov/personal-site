@@ -50,7 +50,6 @@ const toolbarButtons: ToolbarButton[] = [
 <style lang="scss">
 .file_tab {
     border-top: 0.47px solid var(--third-blue);
-    border-bottom: 0.47px solid var(--fifth-gray);
     border-left: 0.47px solid var(--fifth-gray);
     border-right: 0.47px solid var(--fifth-gray);
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="commnon_modal_overlay">
-        <div class="common_modal_style h-100 max-w-150" ref="modalRef">
+        <div class="common_modal_style h-[400px] w-[640px]" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">{{ $t("global.changelog_title") }}</p>
                 <CloseButton @click="close" />

@@ -1,6 +1,6 @@
 <template>
     <section
-        class="side_bar_container bg-primary-white border-black-10 flex flex-col items-start justify-between rounded-2xl border shadow-[0px_3px_11px_0px_rgba(0,0,0,0.06)]"
+        class="side_bar_container bg-primary-white border-black-10 sticky top-2 flex max-w-[256px] min-w-[256px] flex-col items-start justify-between overflow-hidden rounded-2xl border p-4! shadow-[0px_3px_11px_0px_rgba(0,0,0,0.06)]"
     >
         <div class="flex w-full flex-col items-start justify-start">
             <div class="flex w-full items-start justify-start">
@@ -49,7 +49,7 @@
                     {{ $t("global.site_settings_title") }}
                 </p>
                 <div class="site_settings_wrapper">
-                    <p class="site_settings_subtitle text-sm">
+                    <p class="text-primary-dark text-sm font-medium">
                         {{ $t("global.language_settings_title") }}
                     </p>
                     <ToggleTab
@@ -60,7 +60,7 @@
                     />
                 </div>
                 <div class="site_settings_wrapper">
-                    <p class="site_settings_subtitle text-sm">
+                    <p class="text-primary-dark text-sm font-medium">
                         {{ $t("global.theme_settings_title") }}
                     </p>
                     <ToggleTab
@@ -129,13 +129,7 @@ const navLinks = [
 
 <style lang="scss">
 .side_bar_container {
-    position: sticky;
-    top: 8px;
-    min-width: 256px;
-    max-width: 256px;
     height: calc(100vh - 16px);
-    padding: 16px;
-    overflow: hidden;
 }
 
 .site_settings_container {
@@ -150,10 +144,5 @@ const navLinks = [
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.site_settings_subtitle {
-    font-weight: 500;
-    color: var(--primary-dark);
 }
 </style>

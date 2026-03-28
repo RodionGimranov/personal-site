@@ -54,10 +54,10 @@ const vueEcosystem: VueEcosystemColumn[] = [
         type: "single",
         icons: [
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661675/favicon_1_dq62lq.svg",
                 x: "8px",
                 y: "-6px",
                 duration: "18s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vue-i18n.svg",
             },
         ],
     },
@@ -65,16 +65,16 @@ const vueEcosystem: VueEcosystemColumn[] = [
         type: "double",
         icons: [
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661676/favicon_8_wcgs7e.svg",
                 x: "-12px",
                 y: "4px",
                 duration: "22s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vuetify.svg",
             },
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661674/favicon_10_vkejor.svg",
                 x: "4px",
                 y: "-10px",
                 duration: "20s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vuex.svg",
             },
         ],
     },
@@ -82,22 +82,22 @@ const vueEcosystem: VueEcosystemColumn[] = [
         type: "triple",
         icons: [
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661677/favicon_6_l79pfo.svg",
                 x: "7px",
                 y: "12px",
                 duration: "24s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Nuxt.svg",
             },
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661674/favicon_9_tvxms2.svg",
                 x: "-11px",
                 y: "-8px",
                 duration: "19s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vue.svg",
             },
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661826/favicon_12_pc3ow0.svg",
                 x: "14px",
                 y: "-5px",
                 duration: "26s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vite.svg",
             },
         ],
     },
@@ -105,16 +105,16 @@ const vueEcosystem: VueEcosystemColumn[] = [
         type: "double",
         icons: [
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661674/favicon_7_hjwiat.svg",
                 x: "-9px",
                 y: "15px",
                 duration: "21s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Pinia.svg",
             },
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661675/favicon_11_epmxpz.svg",
                 x: "17px",
                 y: "-14px",
                 duration: "23s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vue-use.svg",
             },
         ],
     },
@@ -122,10 +122,10 @@ const vueEcosystem: VueEcosystemColumn[] = [
         type: "single",
         icons: [
             {
-                src: "https://res.cloudinary.com/dii7e7hu0/image/upload/v1765661676/favicon_5_r8esuk.svg",
                 x: "-20px",
                 y: "7px",
                 duration: "27s",
+                src: "https://storage.yandexcloud.net/personal-site-assets/icons/vue-ecosystem/Vue-router.svg",
             },
         ],
     },
