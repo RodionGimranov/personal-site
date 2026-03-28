@@ -2,6 +2,7 @@
     "technologies": [
         "HTML",
         "SCSS",
+        "CSS",
         "Vue",
         "Vuex",
         "Vue Router",
@@ -16,7 +17,7 @@
         "Vitest",
         "Storybook",
         "Pinia",
-        "Nest",
+        "NestJS",
         "Prisma ORM",
         "Python",
         "C++",
@@ -43,7 +44,6 @@
         "Express",
         "Cloudinary",
         "Telegram Mini Apps",
-        "CSS",
         "PHP",
         "REST API",
         "MongoDB",
@@ -55,11 +55,16 @@
         "Vue Draggable",
         "Yandex Cloud",
         "aws-sdk/client-s3",
+        "aws-sdk/lib-storage",
         "NanoID",
         "qs",
         "Tailwind CSS",
         "CSS",
         "React",
-        "Zustand"
+        "Zustand",
+        "Next.js",
+        "MobX",
+        "Ant Design",
+        "PDF.js"
     ]
 }
