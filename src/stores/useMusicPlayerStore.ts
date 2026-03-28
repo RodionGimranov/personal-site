@@ -21,11 +21,17 @@ export const useMusicPlayerStore = defineStore("musicPlayer", {
         init(): void {
             if (!this.currentSong) return;
 
-            this.audio = new Audio(this.currentSong.song_url);
+            const audio = new Audio();
 
-            this.audio.addEventListener("ended", () => {
+            audio.crossOrigin = "anonymous";
+
+            audio.src = this.currentSong.song_url;
+
+            audio.addEventListener("ended", () => {
                 this.next();
             });
+
+            this.audio = audio;
         },
 
         play(): void {
