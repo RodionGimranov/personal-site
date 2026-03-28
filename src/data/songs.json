@@ -2,35 +2,35 @@
     "songs": [
         {
             "id": 0,
-            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758040119/800x800_z8p9on.jpg",
+            "album_cover": "https://storage.yandexcloud.net/personal-site-assets/images/music-covers/Tyler_The_Creator-See_You_Again-800x800.jpg",
             "explicit_content": true,
             "song_name": "See You Again",
             "artist_name": "Tyler, the Creator",
-            "song_url": "/personal-site/audio/Tyler_The_Creator-See_You_Again.mp3"
+            "song_url": "https://storage.yandexcloud.net/personal-site-assets/audio/tracks/Tyler_The_Creator-See_You_Again.mp3"
         },
         {
             "id": 1,
-            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1758383352/800x800_l9i7ss.jpg",
+            "album_cover": "https://storage.yandexcloud.net/personal-site-assets/images/music-covers/Arctic_Monkeys-Sculptures_Of_Anything_Goes-800x800.jpg",
             "explicit_content": false,
             "song_name": "Sculptures Of Anything Goes",
             "artist_name": "Arctic Monkeys",
-            "song_url": "/personal-site/audio/Arctic_Monkeys-Sculptures_Of_Anything_Goes.mp3"
+            "song_url": "https://storage.yandexcloud.net/personal-site-assets/audio/tracks/Arctic_Monkeys-Sculptures_Of_Anything_Goes.mp3"
         },
         {
             "id": 2,
-            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1759697312/800x800_nlscsb.jpg",
+            "album_cover": "https://storage.yandexcloud.net/personal-site-assets/images/music-covers/Sampa_the_Great%26Nadeem_Din-Gabisi-Energy-800x800.jpg",
             "explicit_content": false,
             "song_name": "Energy",
             "artist_name": "Sampa The Great, Nadeem Din-Gabisi",
-            "song_url": "/personal-site/audio/Sampa_the_Great&Nadeem_Din-Gabisi-Energy.mp3"
+            "song_url": "https://storage.yandexcloud.net/personal-site-assets/audio/tracks/Sampa_the_Great%26Nadeem_Din-Gabisi-Energy.mp3"
         },
         {
             "id": 3,
-            "album_cover": "https://res.cloudinary.com/dii7e7hu0/image/upload/v1759697663/800x800_ocxdyd.jpg",
+            "album_cover": "https://storage.yandexcloud.net/personal-site-assets/images/music-covers/The_New_Madness-Recess_Brother-800x800.jpg",
             "explicit_content": false,
             "song_name": "Recess, Brother",
             "artist_name": "The New Madness",
-            "song_url": "/personal-site/audio/The_New_Madness-Recess_Brother-.mp3"
+            "song_url": "https://storage.yandexcloud.net/personal-site-assets/audio/tracks/The_New_Madness-Recess_Brother.mp3"
         }
     ]
 }

@@ -16,13 +16,13 @@ export type PhycalsIconsInstance = {
 
 export function phycalsIcons(): PhycalsIconsInstance | void {
     const ICON_TEXTURES: string[] = [
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037591/Group_4_twqcsl.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275075_lfycqg.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037590/Frame_1171275074_ceg1dk.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037589/Frame_1171275073_iu5xcn.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037588/Frame_1171275069_j7kpnq.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037589/Frame_1171275072_damtno.svg",
-        "https://res.cloudinary.com/dii7e7hu0/image/upload/v1766037588/Frame_1171275071_pzb9mo.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/Vue.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/Figma.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/React.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/VSCode.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/Claude.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/GitHub.svg",
+        "https://storage.yandexcloud.net/personal-site-assets/icons/physics/ChatGPT.svg",
     ];
 
     const CONFIG: PhycalsIconsConfig = {
