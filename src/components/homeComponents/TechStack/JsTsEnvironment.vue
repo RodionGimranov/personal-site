@@ -29,7 +29,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import { prepareTechnologyRows } from "@/utils/technologyRows";
 import technologyDataJson from "@/data/technology.json";
 
 import Badge from "@/components/ui/atoms/Badge.vue";
@@ -41,6 +40,37 @@ type TechnologyData = {
 const technologyData = technologyDataJson as TechnologyData;
 
 const ROWS_COUNT = 5;
+
+function shuffleArray<T>(array: readonly T[]): T[] {
+    const result = [...array];
+
+    for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i]!, result[j]!] = [result[j]!, result[i]!];
+    }
+
+    return result;
+}
+
+function splitIntoRows<T>(items: readonly T[], rowsCount: number): T[][] {
+    if (rowsCount <= 0) return [];
+
+    const rows: T[][] = Array.from({ length: rowsCount }, () => []);
+
+    items.forEach((item, index) => {
+        const rowIndex = index % rowsCount;
+        rows[rowIndex]!.push(item);
+    });
+
+    return rows;
+}
+
+function prepareTechnologyRows<T>(technologies: readonly T[], rowsCount: number): T[][] {
+    const shuffled = shuffleArray(technologies);
+    const rows = splitIntoRows(shuffled, rowsCount);
+
+    return rows.map((row) => [...row, ...row]);
+}
 
 const duplicatedRows = computed<string[][]>(() => {
     return prepareTechnologyRows(technologyData.technologies, ROWS_COUNT);
