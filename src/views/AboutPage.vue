@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import GreetingCard from "@/components/aboutComponents/GreetingCard.vue";
-import LocationCard from "@/components/aboutComponents/LocationCard.vue";
+// import LocationCard from "@/components/aboutComponents/LocationCard.vue";
 import MusicPlayerCard from "@/components/aboutComponents/MusicPlayerCard/MusicPlayerCard.vue";
 import ProjectStatsCard from "@/components/aboutComponents/ProjectStatsCard/ProjectStatsCard.vue";
 import FigmaCard from "@/components/aboutComponents/FigmaCard.vue";
