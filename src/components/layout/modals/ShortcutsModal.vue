@@ -1,6 +1,6 @@
 <template>
     <div class="commnon_modal_overlay">
-        <div class="common_modal_style w-[317px]" ref="modalRef">
+        <div class="common_modal_style w-[400px]" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">
                     {{ $t("global.kb_shortcuts_title") }}

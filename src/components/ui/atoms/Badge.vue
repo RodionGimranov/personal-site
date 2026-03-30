@@ -1,5 +1,5 @@
 <template>
-    <span class="badge" :class="badgeClasses">
+    <span class="badge leading-5 font-medium" :class="badgeClasses">
         {{ label }}
     </span>
 </template>
@@ -35,29 +35,27 @@ const badgeClasses = computed(() => [props.color, `size-${props.size}`, `shape-$
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-
-    font-weight: 500;
-    line-height: 20px;
 }
 
+// Size
 .size-small {
     padding: 2px 6px;
     font-size: 12px;
 }
-
 .size-medium {
     padding: 4px 8px;
     font-size: 14px;
 }
 
+// Shape
 .shape-regular {
     border-radius: 6px;
 }
-
 .shape-pill {
     border-radius: 100px;
 }
 
+// Color
 .gray {
     background: var(--gray-10);
     color: var(--sixth-dark);
