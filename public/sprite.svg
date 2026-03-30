@@ -74,7 +74,7 @@
 <!-- cross-icon -->
 <symbol id="cross-icon" viewBox="0 0 20 20" fill="none">
   <path d="M3.70703 3.70703L16.2963 16.2963M16.2963 3.70703L3.70703 16.2963" 
-        stroke="#747474" stroke-width="2"/>
+        stroke="currentColor" stroke-width="2"/>
 </symbol>
 <!-- arrow-icon -->
 <symbol id="arrow-icon" viewBox="0 0 24 14" fill="none">
