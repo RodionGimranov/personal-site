@@ -1,8 +1,8 @@
 <template>
     <footer
-        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-[10px]!"
+        class="border-t-black-10 mt-25! flex w-full items-start justify-between gap-5 border-t-[3px] pt-16! pr-12! pb-[9px]!"
     >
-        <div class="flex h-32 flex-col items-start justify-between">
+        <div class="flex h-34 flex-col items-start justify-between">
             <p class="footer_title text-sm">{{ $t("global.footer_fun_text") }}</p>
             <p class="text-third-gray text-sm font-normal">
                 {{ $t("global.footer_copyright_text") }}
@@ -55,7 +55,14 @@
 
 <script setup lang="ts">
 import { useModalStore } from "@/stores/useModalStore";
-import { RESUME_URL, FIGMA_DESIGN_URL } from "@/constants/appConstants";
+import {
+    RESUME_URL,
+    FIGMA_DESIGN_URL,
+    GITHUB_URL,
+    LINKEDIN_URL,
+    TELEGRAM_URL,
+    INSTAGRAM_URL,
+} from "@/constants/appConstants";
 
 interface NavLink {
     name: string;
@@ -85,10 +92,10 @@ const navLinks: NavLink[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-    { name: "global.github_title", url: "https://github.com/RodionGimranov" },
-    { name: "global.linkedin_title", url: "https://www.linkedin.com/in/rodiongimranov/" },
-    { name: "global.telegram_title", url: "https://t.me/RodionGimranov" },
-    { name: "global.instagram_title", url: "https://www.instagram.com/esta_laowai/" },
+    { name: "global.github_title", url: GITHUB_URL },
+    { name: "global.linkedin_title", url: LINKEDIN_URL },
+    { name: "global.telegram_title", url: TELEGRAM_URL },
+    { name: "global.instagram_title", url: INSTAGRAM_URL },
 ];
 </script>
 
@@ -104,6 +111,7 @@ const socialLinks: SocialLink[] = [
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 2px;
 }
 
 .footer_link {
