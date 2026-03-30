@@ -61,7 +61,6 @@ const TRACKED_FILES: string[] = [
     "./src/components/ui/atoms/SvgIcon.vue",
     "./src/components/ui/atoms/TopButton.vue",
 
-    "./src/components/ui/molecules/ImageCard.vue",
     "./src/components/ui/molecules/ProjectCard.vue",
     "./src/components/ui/molecules/ToggleTab.vue",
 
@@ -112,7 +111,6 @@ const TRACKED_FILES: string[] = [
 
     "./src/utils/formatters.ts",
     "./src/utils/getPageTitle.ts",
-    "./src/utils/technologyRows.ts",
 
     "./src/views/AboutPage.vue",
     "./src/views/AboutProjectPage.vue",
@@ -142,14 +140,45 @@ type Stats = {
     fileCount: number;
     folderCount: number;
     projectSizeMB: number;
+
+    commentLines: number;
+    emptyLines: number;
+
+    largestFiles: { file: string; lines: number }[];
+    largestBySize: { file: string; sizeKB: number }[];
+
+    fileTypes: Record<string, number>;
 };
 
-function countLines(filePath: string): number {
+function analyzeFile(filePath: string) {
     try {
         const content = fs.readFileSync(filePath, "utf-8");
-        return content.split("\n").length;
+        const lines = content.split("\n");
+
+        let commentLines = 0;
+        let emptyLines = 0;
+
+        for (const line of lines) {
+            const trimmed = line.trim();
+
+            if (!trimmed) {
+                emptyLines++;
+            } else if (
+                trimmed.startsWith("//") ||
+                trimmed.startsWith("/*") ||
+                trimmed.startsWith("*")
+            ) {
+                commentLines++;
+            }
+        }
+
+        return {
+            total: lines.length,
+            commentLines,
+            emptyLines,
+        };
     } catch {
-        return 0;
+        return { total: 0, commentLines: 0, emptyLines: 0 };
     }
 }
 
@@ -162,10 +191,7 @@ function getProjectSize(dir: string): number {
         const fullPath = path.join(dir, entry.name);
 
         if (entry.isDirectory()) {
-            if (entry.name === "node_modules" || entry.name === "dist" || entry.name === ".git") {
-                continue;
-            }
-
+            if (["node_modules", "dist", ".git"].includes(entry.name)) continue;
             total += getProjectSize(fullPath);
         } else {
             try {
@@ -180,7 +206,13 @@ function getProjectSize(dir: string): number {
 function collectStats(): Stats {
     let totalLines = 0;
     let fileCount = 0;
+    let commentLines = 0;
+    let emptyLines = 0;
+
     const folders = new Set<string>();
+    const largestFiles: { file: string; lines: number }[] = [];
+    const largestBySize: { file: string; sizeKB: number }[] = [];
+    const fileTypes: Record<string, number> = {};
 
     console.log("\n📑 Counting tracked files:\n");
 
@@ -192,23 +224,52 @@ function collectStats(): Stats {
             return;
         }
 
-        const lines = countLines(absolutePath);
+        const analysis = analyzeFile(absolutePath);
 
         fileCount++;
-        totalLines += lines;
+        totalLines += analysis.total;
+        commentLines += analysis.commentLines;
+        emptyLines += analysis.emptyLines;
+
         folders.add(path.dirname(relativePath));
 
-        console.log(`${index + 1}. ${path.basename(relativePath)} — ${lines} lines`);
+        largestFiles.push({
+            file: path.basename(relativePath),
+            lines: analysis.total,
+        });
+
+        try {
+            const sizeKB = fs.statSync(absolutePath).size / 1024;
+            largestBySize.push({
+                file: path.basename(relativePath),
+                sizeKB: Number(sizeKB.toFixed(1)),
+            });
+        } catch {}
+
+        const ext = path.extname(relativePath) || "no-ext";
+        fileTypes[ext] = (fileTypes[ext] || 0) + 1;
+
+        console.log(`${index + 1}. ${path.basename(relativePath)} — ${analysis.total} lines`);
     });
 
-    const sizeBytes = getProjectSize(ROOT_DIR);
-    const sizeMB = sizeBytes / 1024 / 1024;
+    const sizeMB = getProjectSize(ROOT_DIR) / 1024 / 1024;
+
+    largestFiles.sort((a, b) => b.lines - a.lines);
+    largestBySize.sort((a, b) => b.sizeKB - a.sizeKB);
 
     return {
         totalLines,
         fileCount,
         folderCount: folders.size,
         projectSizeMB: Number(sizeMB.toFixed(1)),
+
+        commentLines,
+        emptyLines,
+
+        largestFiles: largestFiles.slice(0, 5),
+        largestBySize: largestBySize.slice(0, 5),
+
+        fileTypes,
     };
 }
 
@@ -217,29 +278,49 @@ function updateConstants(stats: Stats) {
 
     content = content
         .replace(
-            /export const TOTAL_LINES_OF_CODE: number = \d+;/,
-            `export const TOTAL_LINES_OF_CODE: number = ${stats.totalLines};`,
+            /TOTAL_LINES_OF_CODE: number = \d+;/,
+            `TOTAL_LINES_OF_CODE: number = ${stats.totalLines};`,
         )
         .replace(
-            /export const TOTAL_FILE_COUNT: number = \d+;/,
-            `export const TOTAL_FILE_COUNT: number = ${stats.fileCount};`,
+            /TOTAL_FILE_COUNT: number = \d+;/,
+            `TOTAL_FILE_COUNT: number = ${stats.fileCount};`,
         )
         .replace(
-            /export const TOTAL_FOLDER_COUNT: number = \d+;/,
-            `export const TOTAL_FOLDER_COUNT: number = ${stats.folderCount};`,
+            /TOTAL_FOLDER_COUNT: number = \d+;/,
+            `TOTAL_FOLDER_COUNT: number = ${stats.folderCount};`,
         )
         .replace(
-            /export const PROJECT_SIZE_MB: number = [\d.]+;/,
-            `export const PROJECT_SIZE_MB: number = ${stats.projectSizeMB};`,
+            /PROJECT_SIZE_MB: number = [\d.]+;/,
+            `PROJECT_SIZE_MB: number = ${stats.projectSizeMB};`,
         );
 
     fs.writeFileSync(CONSTANTS_PATH, content);
 
-    console.log("\n✅ appConstants.ts updated successfully\n");
-    console.log(`📜 Lines: ${stats.totalLines}`);
-    console.log(`📄 Files: ${stats.fileCount}`);
-    console.log(`📂 Folders: ${stats.folderCount}`);
-    console.log(`💾 Project size: ${stats.projectSizeMB} MB\n`);
+    console.log("\n✅ appConstants.ts updated\n");
+
+    console.log(`\n📦 Project Overview:`);
+    console.log(`- Lines: ${stats.totalLines}`);
+    console.log(`- Files: ${stats.fileCount}`);
+    console.log(`- Folders: ${stats.folderCount}`);
+    console.log(`- Size: ${stats.projectSizeMB} MB`);
+
+    const commentPercent = ((stats.commentLines / stats.totalLines) * 100).toFixed(1);
+    const emptyPercent = ((stats.emptyLines / stats.totalLines) * 100).toFixed(1);
+
+    console.log(`\n📊 Code Quality:`);
+    console.log(`- Comments: ${stats.commentLines} (${commentPercent}%)`);
+    console.log(`- Empty lines: ${stats.emptyLines} (${emptyPercent}%)`);
+
+    console.log(`\n🔥 Largest files:`);
+    stats.largestFiles.forEach((f, i) => console.log(`${i + 1}. ${f.file} — ${f.lines} lines`));
+
+    console.log(`\n🐘 Largest by size:`);
+    stats.largestBySize.forEach((f, i) => console.log(`${i + 1}. ${f.file} — ${f.sizeKB} KB`));
+
+    console.log(`\n🧩 File types:`);
+    Object.entries(stats.fileTypes).forEach(([ext, count]) => console.log(`${ext}: ${count}`));
+
+    console.log();
 }
 
 function main() {
