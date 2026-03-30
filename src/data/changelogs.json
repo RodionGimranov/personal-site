@@ -11,32 +11,33 @@
             "id": 1,
             "version": "v0.3.30",
             "date": "13 августа 2025",
-            "type": "beta",
-            "summary": "Обновление, направленное на расширение возможностей страницы «Обо мне» и общее повышение качества работы сайта. Релиз делает взаимодействие с контентом нагляднее и стабильнее.",
+            "type": "improvement",
+            "summary": "Обновление, направленное на расширение функциональности страницы «Обо мне» и повышение стабильности работы сайта.",
             "changes": [
-                "Добавлена интерактивная карта на страницу «Обо мне» - теперь можно увидеть мое местоположение и даже отдалить карту настолько, чтобы посмотреть на нашу планету из космоса.",
-                "Оптимизация и исправления - улучшена производительность сайта и устранены мелкие баги для более плавной и стабильной работы."
+                "Добавлена интерактивная карта на страницу «Обо мне», реализованная на базе Mapbox, с возможностью масштабирования до глобального уровня.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
             "id": 2,
             "version": "v0.4.40",
             "date": "17 августа 2025",
-            "type": "beta",
-            "summary": "Обновление, направленное на улучшение представления проекта и повышение общего качества работы сайта. Релиз делает информацию о проекте более наглядной, а интерфейс - стабильнее",
+            "type": "minor",
+            "summary": "Добавлено наглядное представление метрик проекта на странице «Обо мне», упрощающее оценку структуры и масштаба проекта.",
             "changes": [
-                "Добавлена карточка метаданных в виде редактора кода проекта на страницу «Обо мне», наглядно отображающая ключевые показатели и структуру проекта.",
-                "Оптимизирована производительность сайта и исправлены мелкие ошибки, что повысило стабильность и плавность взаимодействия с интерфейсом."
+                "Добавлена карточка метаданных проекта в формате редактора кода на странице «Обо мне», отображающая linesOfCode, fileCount, folderCount и projectSizeMB.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
             "id": 3,
             "version": "v0.5.83",
             "date": "29 августа 2025",
-            "type": "beta",
-            "summary": "Обновление, сфокусированное на улучшении взаимодействия с галереей. Релиз закладывает основу для более интерактивного и информативного просмотра контента.",
+            "type": "minor",
+            "summary": "Добавлена страница «Галерея» с интерактивным просмотром изображений, упрощающим навигацию и доступ к информации о фотографиях.",
             "changes": [
-                "Добавлены интерактивные фотографии на странице «Галереи», позволяющие при нажатии просматривать краткую информацию на обратной стороне изображения."
+                "Добавлена страница «Галерея» с набором фотографий и интерактивным переворотом карточек по клику.",
+                "Реализовано отображение метаданных на обратной стороне изображения в формате печатной фотографии с выводом имени файла и даты снимка."
             ]
         },
         {
@@ -44,10 +45,10 @@
             "version": "v0.5.153",
             "date": "10 сентября 2025",
             "type": "minor",
-            "summary": "Обновление, направленное на более полное раскрытие профессионального профиля и повышение общего качества работы сайта. Релиз делает главную страницу информативнее и понятнее для просмотра.",
+            "summary": "Расширено содержимое главной страницы за счёт новых секций, улучшающих представление профессионального профиля.",
             "changes": [
-                "Добавлены новые секции «Мой подход к разработке» и «Технический стек» на главную страницу, позволяющие лучше понять принципы работы и профессиональный фокус.",
-                "Оптимизирована производительность сайта и исправлены мелкие ошибки, что повысило стабильность и плавность взаимодействия с интерфейсом."
+                "Добавлены секции «Мой подход к разработке» и «Технический стек» на главную страницу для структурированного отображения принципов работы и используемых технологий.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
@@ -55,22 +56,22 @@
             "version": "v0.6.42",
             "date": "16 сентября 2025",
             "type": "minor",
-            "summary": "Обновление, направленное на персонализацию страницы «Обо мне» и повышение общего качества работы сайта. Релиз делает контент более живым и улучшает стабильность интерфейса.",
+            "summary": "Добавлен музыкальный плеер на страницу «Обо мне», расширяющий персонализацию и делая контент более выразительным.",
             "changes": [
-                "Добавлена карточка с музыкальным плеером на страницу «Обо мне», позволяющая прослушивать подборку любимых треков.",
-                "Оптимизирована производительность сайта и исправлены мелкие ошибки, что повысило стабильность и плавность взаимодействия с интерфейсом."
+                "Добавлена карточка с музыкальным плеером на страницу «Обо мне», позволяющая воспроизводить подборку треков.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
             "id": 6,
             "version": "v0.7.92",
             "date": "22 сентября 2025",
-            "type": "beta",
-            "summary": "Обновление, сфокусированное на визуальной переработке и экспериментальных элементах взаимодействия. Релиз исследует новые подходы к подаче контента и интерактивности страницы «Обо мне».",
+            "type": "minor",
+            "summary": "Обновлён визуальный слой страницы «Обо мне» с добавлением интерактивных карточек, демонстрирующих элементы интерфейса и поведение компонентов.",
             "changes": [
-                "Переработан дизайн карточек на странице «Обо мне», что улучшило визуальную целостность и удобство восприятия контента.",
-                "Добавлена интерактивная карточка с UI-китом сайта, позволяющая наглядно изучить элементы интерфейса и их поведение.",
-                "Добавлена интерактивная карточка с перетаскиваемыми иконками, усиливающая ощущение живого взаимодействия с интерфейсом."
+                "Переработан дизайн карточек на странице «Обо мне» для повышения визуальной целостности и читаемости контента.",
+                "Добавлена карточка с UI-китом в Figma, отображающая структуру и состав элементов интерфейса.",
+                "Добавлена интерактивная карточка с иконками технологий, реализованная на базе Matter.js, с поддержкой физического взаимодействия элементов."
             ]
         },
         {
@@ -78,10 +79,10 @@
             "version": "v0.8.42",
             "date": "24 сентября 2025",
             "type": "improvement",
-            "summary": "Обновление, направленное на повышение удобства использования и общей отзывчивости сайта. Релиз делает взаимодействие с интерфейсом более комфортным и стабильным.",
+            "summary": "Обновление с фокусом на исправление UX/UI недочётов и повышение общей отзывчивости интерфейса.",
             "changes": [
-                "Улучшены удобство использования и внешний вид сайта, что сделало навигацию более понятной и аккуратной.",
-                "Оптимизирована производительность страниц, повысив скорость работы и отзывчивость интерфейса."
+                "Улучшены UX/UI элементы интерфейса, устраняющие мелкие несоответствия в навигации и визуальном представлении.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
@@ -89,9 +90,9 @@
             "version": "v0.9.59",
             "date": "28 сентября 2025",
             "type": "minor",
-            "summary": "Обновление, направленное на уточнение и структурирование информации о проектах. Релиз делает страницу «О проекте» более понятной и ориентированной на демонстрацию контекста работы.",
+            "summary": "Расширена страница «О проекте» для более структурированного представления контекста и роли в проекте.",
             "changes": [
-                "Добавлены секции «Зоны ответственности» и «Контекст и цель» на страницу «О проекте», что повысило информативность и помогает лучше понять проект и роль в нём."
+                "Добавлены секции «Зоны ответственности» и «Контекст и цель» на страницу «О проекте» для структурирования информации в формате, близком к case study."
             ]
         },
         {
@@ -99,11 +100,11 @@
             "version": "v1.0.0",
             "date": "7 октября 2025",
             "type": "major",
-            "summary": "Первый официальный релиз 🎉, фиксирующий первую стабильную версию проекта и закладывающий основу для дальнейшего развития. Обновление повышает надёжность сайта и расширяет доступность контента на разных устройствах.",
+            "summary": "Первый стабильный релиз, фиксирующий базовую функциональность проекта и обеспечивающий корректную работу на разных устройствах.",
             "changes": [
-                "Проведена комплексная оптимизация и исправлены мелкие ошибки, что повысило скорость и стабильность работы сайта.",
-                "Добавлена адаптация интерфейса под планшеты и мобильные устройства, улучшив удобство просмотра контента на разных экранах.",
-                "Добавлен новый проект «Генератор паролей» на страницу проектов, расширяющий портфолио.",
+                "Добавлен проект «Генератор паролей» на страницу проектов.",
+                "Обновлено содержимое музыкального плеера с добавлением новых треков.",
+                "Добавлена адаптация интерфейса под планшеты и мобильные устройства для корректного отображения на разных экранах.",
                 "Обновлено содержимое музыкального плеера, дополнив его новыми треками."
             ]
         },
@@ -111,24 +112,23 @@
             "id": 10,
             "version": "v1.1.36",
             "date": "17 декабря 2025",
-            "type": "improvement",
-            "summary": "Минорное обновление, направленное на повышение визуальной целостности интерфейса и улучшение качества основы проекта. Релиз делает сайт аккуратнее, понятнее и стабильнее в повседневном использовании.",
+            "type": "minor",
+            "summary": "Обновлён интерфейс и внутренняя структура проекта для повышения визуальной согласованности и стабильности работы.",
             "changes": [
-                "Обновлён интерфейс сайта по всему проекту, что повысило визуальную согласованность и общее ощущение аккуратности.",
-                "Переработан дизайн карточек в секциях «Мой подход к разработке» и «Технический стек», улучшив читаемость, структуру и визуальную иерархию контента.",
-                "Оптимизирована внутренняя логика приложения, что повысило стабильность и упростило дальнейшее развитие проекта."
+                "Обновлён интерфейс по всему проекту для повышения визуальной целостности и согласованности компонентов.",
+                "Переработаны карточки в секциях «Мой подход к разработке» и «Технический стек» для улучшения читаемости и визуальной иерархии.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         },
         {
             "id": 11,
             "version": "v1.2.61",
             "date": "8 января 2026",
-            "type": "major",
-            "summary": "Обновление, сфокусированное на качестве восприятия и устойчивости работы сайта. Релиз повышает предсказуемость интерфейса и делает презентацию проектов более выразительной и понятной.",
+            "type": "minor",
+            "summary": "Улучшено восприятие контента и представление проектов за счёт переработки текстов и добавления визуальных превью.",
             "changes": [
-                "Оптимизирована внутренняя логика сайта, что повысило производительность, стабильность и предсказуемость работы интерфейса в разных сценариях использования.",
-                "Обновлены и переработаны тексты по всему сайту, сделав формулировки более точными, структурированными и отражающими суть проектов и подход к разработке.",
-                "Добавлены видеообложки в карточки проектов, усиливающие наглядность и помогающие быстрее понять идею и функциональность каждого проекта."
+                "Переработаны тексты по всему сайту для повышения точности формулировок, читаемости и структурированности контента.",
+                "Добавлены видеообложки в карточки проектов для наглядного предварительного просмотра функциональности."
             ]
         },
         {
@@ -136,14 +136,26 @@
             "version": "v1.3.84",
             "date": "15 февраля 2026",
             "type": "improvement",
-            "summary": "Обновление, направленное на фундаментальное улучшение качества кода, производительности и визуального восприятия проекта. Релиз делает сайт легче, стабильнее и системнее как с точки зрения интерфейса, так и внутренней структуры.",
+            "summary": "Полная переработка архитектуры и технологической базы проекта с переходом на типизацию и обновлением визуальной системы.",
             "changes": [
-                "Переработана архитектурная основа проекта, что повысило предсказуемость поведения интерфейса и упростило дальнейшее развитие.",
-                "Оптимизирована внутренняя логика и уменьшен объём кода, что снизило нагрузку на браузер и ускорило работу сайта.",
-                "Оптимизировано управление состоянием приложения, улучшив производительность и стабильность в повседневных сценариях использования.",
-                "Обновлена визуальная концепция интерфейса, сделав дизайн более лёгким, минималистичным и современным.",
-                "Переработан журнал изменений, улучшив структуру, читаемость и навигацию по типам обновлений.",
-                "Исправлены мелкие визуальные и функциональные ошибки, повысив общее качество и аккуратность интерфейса."
+                "Выполнена миграция проекта с JavaScript на TypeScript, повысив надёжность типизации и предсказуемость поведения кода.",
+                "Переработана архитектура приложения для упрощения поддержки и дальнейшего масштабирования.",
+                "Оптимизирована внутренняя логика и управление состоянием, снизив нагрузку на браузер и повысив стабильность.",
+                "Внедрён Tailwind CSS и обновлена визуальная система интерфейса для более консистентного и масштабируемого дизайна.",
+                "Переработан журнал изменений, улучшив структуру и навигацию по релизам.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
+            ]
+        },
+        {
+            "id": 13,
+            "version": "v1.4.32",
+            "date": "31 марта 2026",
+            "type": "minor",
+            "summary": "Добавлена поддержка горячих клавиш и модальное окно со списком доступных сочетаний для ускорения взаимодействия с интерфейсом.",
+            "changes": [
+                "Добавлено модальное окно «Сочетания клавиш» со списком доступных быстрых команд и комбинаций.",
+                "Реализована поддержка горячих клавиш с обработкой нажатий для быстрого выполнения действий без использования мыши.",
+                "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
         }
     ],
@@ -159,32 +171,33 @@
             "id": 1,
             "version": "v0.3.30",
             "date": "August 13, 2025",
-            "type": "beta",
-            "summary": "An update focused on expanding the capabilities of the “About Me” page and improving the overall quality of the website. The release makes interaction with content clearer and more stable.",
+            "type": "improvement",
+            "summary": "An update focused on expanding the functionality of the About Me page and improving overall site stability.",
             "changes": [
-                "An interactive map has been added to the “About Me” page — you can now see my location and even zoom out far enough to view our planet from space.",
-                "Optimizations and fixes — website performance has been improved and minor bugs have been fixed for smoother and more stable operation."
+                "Added an interactive map to the About Me page based on Mapbox, with zoom support up to the global level.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
             "id": 2,
             "version": "v0.4.40",
             "date": "August 17, 2025",
-            "type": "beta",
-            "summary": "An update aimed at improving project presentation and overall website quality. The release makes project information more visual and the interface more stable.",
+            "type": "minor",
+            "summary": "Added a clearer presentation of project metrics on the About Me page, making it easier to assess the project's structure and scale.",
             "changes": [
-                "A metadata card styled as a project code editor has been added to the “About Me” page, visually showcasing key metrics and the project structure.",
-                "Website performance has been optimized and minor bugs have been fixed, improving stability and smooth interaction with the interface."
+                "Added a code editor-style project metadata card to the About Me page displaying linesOfCode, fileCount, folderCount, and projectSizeMB.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
             "id": 3,
             "version": "v0.5.83",
             "date": "August 29, 2025",
-            "type": "beta",
-            "summary": "An update focused on improving interaction with the gallery. The release lays the groundwork for a more interactive and informative content viewing experience.",
+            "type": "minor",
+            "summary": "Added a Gallery page with interactive image viewing, making navigation easier and photo information more accessible.",
             "changes": [
-                "Interactive photos have been added to the “Gallery” page, allowing users to view brief information on the back side of an image when clicked."
+                "Added a Gallery page with a set of photos and interactive card flipping on click.",
+                "Implemented metadata display on the back of each image in the style of a printed photo, showing the file name and capture date."
             ]
         },
         {
@@ -192,10 +205,10 @@
             "version": "v0.5.153",
             "date": "September 10, 2025",
             "type": "minor",
-            "summary": "An update aimed at more fully showcasing the professional profile and improving overall website quality. The release makes the homepage more informative and easier to understand.",
+            "summary": "Expanded the homepage with new sections that improve the presentation of the professional profile.",
             "changes": [
-                "New sections “My Development Approach” and “Tech Stack” have been added to the homepage, helping better convey working principles and professional focus.",
-                "Website performance has been optimized and minor bugs have been fixed, improving stability and smooth interaction with the interface."
+                "Added the My Approach to Development and Technical Stack sections to the homepage for a more structured presentation of working principles and technologies used.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
@@ -203,22 +216,22 @@
             "version": "v0.6.42",
             "date": "September 16, 2025",
             "type": "minor",
-            "summary": "An update focused on personalizing the “About Me” page and improving overall website quality. The release makes the content feel more alive and improves interface stability.",
+            "summary": "Added a music player to the About Me page, increasing personalization and making the content more expressive.",
             "changes": [
-                "A music player card has been added to the “About Me” page, allowing visitors to listen to a selection of favorite tracks.",
-                "Website performance has been optimized and minor bugs have been fixed, improving stability and smooth interaction with the interface."
+                "Added a music player card to the About Me page, allowing visitors to play a curated selection of tracks.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
             "id": 6,
             "version": "v0.7.92",
             "date": "September 22, 2025",
-            "type": "beta",
-            "summary": "An update focused on visual redesign and experimental interaction elements. The release explores new approaches to content presentation and interactivity on the “About Me” page.",
+            "type": "minor",
+            "summary": "Updated the visual layer of the About Me page by adding interactive cards that showcase interface elements and component behavior.",
             "changes": [
-                "The design of cards on the “About Me” page has been redesigned, improving visual consistency and content readability.",
-                "An interactive card with the website UI kit has been added, allowing users to visually explore interface elements and their behavior.",
-                "An interactive card with draggable icons has been added, enhancing the sense of live interaction with the interface."
+                "Redesigned the cards on the About Me page to improve visual consistency and content readability.",
+                "Added a card with a Figma UI kit that showcases the structure and composition of interface elements.",
+                "Added an interactive card with technology icons powered by Matter.js, with support for physics-based interaction between elements."
             ]
         },
         {
@@ -226,10 +239,10 @@
             "version": "v0.8.42",
             "date": "September 24, 2025",
             "type": "improvement",
-            "summary": "An update aimed at improving usability and overall responsiveness of the website. The release makes interaction with the interface more comfortable and stable.",
+            "summary": "An update focused on fixing UX/UI issues and improving the overall responsiveness of the interface.",
             "changes": [
-                "Usability and visual appearance of the website have been improved, making navigation clearer and cleaner.",
-                "Page performance has been optimized, increasing speed and interface responsiveness."
+                "Improved UX/UI interface elements to eliminate minor inconsistencies in navigation and visual presentation.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
@@ -237,9 +250,9 @@
             "version": "v0.9.59",
             "date": "September 28, 2025",
             "type": "minor",
-            "summary": "An update focused on clarifying and structuring project information. The release makes the “About the Project” page clearer and more context-oriented.",
+            "summary": "Expanded the About Project page for a more structured presentation of the context and role within the project.",
             "changes": [
-                "The sections “Areas of Responsibility” and “Context and Goal” have been added to the “About the Project” page, increasing clarity and helping better understand the project and role within it."
+                "Added the Areas of Responsibility and Context and Goal sections to the About Project page to structure the information in a case study-like format."
             ]
         },
         {
@@ -247,36 +260,35 @@
             "version": "v1.0.0",
             "date": "October 7, 2025",
             "type": "major",
-            "summary": "The first official release 🎉, marking the first stable version of the project and laying the foundation for future development. The update improves website reliability and content accessibility across devices.",
+            "summary": "The first stable release, establishing the core functionality of the project and ensuring correct behavior across different devices.",
             "changes": [
-                "Comprehensive optimization has been carried out and minor bugs have been fixed, improving website speed and stability.",
-                "Responsive interface support for tablets and mobile devices has been added, improving content viewing across different screen sizes.",
-                "A new project, “Password Generator”, has been added to the projects page, expanding the portfolio.",
-                "The music player content has been updated with new tracks."
+                "Added the Password Generator project to the projects page.",
+                "Updated the music player content by adding new tracks.",
+                "Added tablet and mobile interface support for correct display on different screen sizes.",
+                "Updated the music player content, supplementing it with new tracks."
             ]
         },
         {
             "id": 10,
             "version": "v1.1.36",
             "date": "December 17, 2025",
-            "type": "improvement",
-            "summary": "A minor update focused on improving visual consistency of the interface and strengthening the project foundation. The release makes the website cleaner, clearer, and more stable for everyday use.",
+            "type": "minor",
+            "summary": "Updated the interface and internal project structure to improve visual consistency and overall stability.",
             "changes": [
-                "The interface has been updated across the entire project, improving visual consistency and overall polish.",
-                "The card design in the “My Development Approach” and “Tech Stack” sections has been redesigned, improving readability, structure, and visual hierarchy.",
-                "Internal application logic has been optimized, increasing stability and simplifying future development."
+                "Updated the interface across the entire project to improve visual coherence and component consistency.",
+                "Redesigned the cards in the My Approach to Development and Technical Stack sections to improve readability and visual hierarchy.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         },
         {
             "id": 11,
             "version": "v1.2.61",
             "date": "January 8, 2026",
-            "type": "major",
-            "summary": "An update focused on perception quality and operational stability of the website. The release improves interface predictability and makes project presentation more expressive and clear.",
+            "type": "minor",
+            "summary": "Improved content perception and project presentation by rewriting text and adding visual previews.",
             "changes": [
-                "Internal website logic has been optimized, improving performance, stability, and interface predictability across different usage scenarios.",
-                "Texts across the entire website have been updated and refined, making wording more precise, structured, and reflective of the projects and development approach.",
-                "Video covers have been added to project cards, enhancing visual clarity and helping users quickly understand the idea and functionality of each project."
+                "Reworked the copy across the entire site to improve wording accuracy, readability, and content structure.",
+                "Added video covers to project cards for a clearer preview of functionality."
             ]
         },
         {
@@ -284,14 +296,26 @@
             "version": "v1.3.84",
             "date": "February 15, 2026",
             "type": "improvement",
-            "summary": "An update aimed at fundamentally improving code quality, performance, and visual perception of the project. The release makes the website lighter, more stable, and more systematic both in terms of interface and internal structure.",
+            "summary": "A complete overhaul of the project's architecture and technology stack, including a move to static typing and an updated visual system.",
             "changes": [
-                "The architectural foundation of the project has been reworked, improving interface behavior predictability and simplifying future development.",
-                "Internal logic has been optimized and code size reduced, decreasing browser load and speeding up website performance.",
-                "Application state management has been optimized, improving performance and stability in everyday usage scenarios.",
-                "The visual concept of the interface has been updated, making the design lighter, more minimalistic, and modern.",
-                "The changelog has been reworked, improving structure, readability, and navigation by update types.",
-                "Minor visual and functional bugs have been fixed, improving overall quality and polish of the interface."
+                "Migrated the project from JavaScript to TypeScript, improving type safety and code behavior predictability.",
+                "Reworked the application architecture to simplify maintenance and future scaling.",
+                "Optimized internal logic and state management, reducing browser load and improving stability.",
+                "Introduced Tailwind CSS and updated the interface visual system for a more consistent and scalable design.",
+                "Reworked the changelog to improve release structure and navigation.",
+                "Optimized site performance and fixed minor issues affecting stability."
+            ]
+        },
+        {
+            "id": 13,
+            "version": "v1.4.32",
+            "date": "March 31, 2026",
+            "type": "minor",
+            "summary": "Added support for keyboard shortcuts and a modal window with a list of available combinations to improve interaction speed.",
+            "changes": [
+                "Added a “Keyboard Shortcuts” modal with a list of available quick commands and key combinations.",
+                "Implemented keyboard shortcut support with key press handling for faster actions without using a mouse.",
+                "Optimized site performance and fixed minor issues affecting stability."
             ]
         }
     ]
