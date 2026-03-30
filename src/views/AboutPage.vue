@@ -2,7 +2,8 @@
     <div class="about_page_wrapper">
         <div class="row_cards_1">
             <GreetingCard />
-            <LocationCard />
+            <!-- <LocationCard /> -->
+            <EmptyCard />
             <MusicPlayerCard />
         </div>
         <div class="large_block_card_wrapper">
