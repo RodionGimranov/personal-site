@@ -21,22 +21,22 @@
                     >{{ $t(link.name) }}</RouterLink
                 >
             </div>
-            <div class="footer_social_links_container">
+            <div class="footer_info_container">
                 <p class="footer_title mb-1! text-sm">{{ $t("global.footer_info_links_title") }}</p>
                 <a :href="RESUME_URL" class="footer_link text-sm" target="_blank">{{
                     $t("global.download_btn_title")
                 }}</a>
-                <button class="footer_link text-sm" @click="openShortcuts">
-                    {{ $t("global.kb_shortcuts_title") }}
-                </button>
+                <a :href="FIGMA_DESIGN_URL" class="footer_link text-sm" target="_blank"
+                    >Figma UI Kit
+                </a>
                 <button class="footer_link text-sm" @click="openChangelog">
                     {{ $t("global.changelog_title") }}
                 </button>
-                <a :href="FIGMA_DESIGN_URL" class="footer_link text-sm" target="_blank">{{
-                    $t("about.figma_card_title")
-                }}</a>
+                <button class="footer_link text-sm" @click="openShortcuts">
+                    {{ $t("global.kb_shortcuts_title") }}
+                </button>
             </div>
-            <div class="footer_social_links_container">
+            <div class="footer_contacts_container">
                 <p class="footer_title mb-1! text-sm">
                     {{ $t("global.footer_social_links_title") }}
                 </p>
@@ -92,10 +92,10 @@ const navLinks: NavLink[] = [
 ];
 
 const socialLinks: SocialLink[] = [
-    { name: "global.github_title", url: GITHUB_URL },
-    { name: "global.linkedin_title", url: LINKEDIN_URL },
-    { name: "global.telegram_title", url: TELEGRAM_URL },
-    { name: "global.instagram_title", url: INSTAGRAM_URL },
+    { name: "GitHub", url: GITHUB_URL },
+    { name: "LinkedIn", url: LINKEDIN_URL },
+    { name: "Telegram", url: TELEGRAM_URL },
+    { name: "Instagram", url: INSTAGRAM_URL },
 ];
 </script>
 
@@ -106,7 +106,8 @@ const socialLinks: SocialLink[] = [
 }
 
 .footer_nav_links_container,
-.footer_social_links_container {
+.footer_info_container,
+.footer_contacts_container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
