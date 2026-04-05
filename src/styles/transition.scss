@@ -1,4 +1,4 @@
-// Modal Transition
+// === Modal Transition ===
 .show-modal-enter-active,
 .show-modal-leave-active {
     transition: opacity 0.25s ease;
@@ -18,7 +18,7 @@
     opacity: 0;
     transform: scale(0.97);
 }
-// Arrow Transition
+// === Arrow Transition ===
 .show-arrow-btn-enter-active,
 .show-arrow-btn-leave-active {
     transition: 0.2s;
@@ -30,4 +30,23 @@
 .show-arrow-btn-enter-to,
 .show-arrow-btn-from {
     opacity: 1;
+}
+// === ===
+$ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+.sidebar-fade-element-enter-active {
+    transition:
+        opacity 0.2s $ease-out 0.12s,
+        transform 0.2s $ease-out 0.12s;
+}
+
+.sidebar-fade-element-leave-active {
+    transition:
+        opacity 0.12s $ease-out,
+        transform 0.12s $ease-out;
+}
+
+.sidebar-fade-element-enter-from,
+.sidebar-fade-element-leave-to {
+    opacity: 0;
+    transform: translateX(-6px);
 }

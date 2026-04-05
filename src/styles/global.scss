@@ -112,7 +112,7 @@ p {
     border: 1px solid var(--black-10);
 }
 // === MODAL OVERLAY ===
-.commnon_modal_overlay {
+.modal_overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -150,28 +150,23 @@ p {
     color: var(--primary-dark);
 }
 // === ABOUT PROJECT PAGE ===
-.common_width_size {
-    width: 560px;
-}
-.about_project_info_title {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--primary-gray);
-}
-.about_project_info_subtitle {
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--primary-dark);
-}
 .about_project_info_container {
     width: 100%;
-    margin-bottom: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
-    &:last-child {
-        margin-bottom: 0;
-    }
+}
+.about_project_info_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-gray);
+    letter-spacing: 0.04em;
+}
+.about_project_info_subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-dark);
+    line-height: 24px;
 }
