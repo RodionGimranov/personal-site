@@ -1,24 +1,24 @@
 import ruGlobal from "./ru/global.json";
-import ruAbout from "./ru/about.json";
 import ruHome from "./ru/home.json";
-import ruProjectsLocale from "./ru/projectsLocale.json";
+import ruAbout from "./ru/about.json";
+import ruProjectsLocale from "./ru/projects.locale.json";
 
 import enGlobal from "./en/global.json";
-import enAbout from "./en/about.json";
 import enHome from "./en/home.json";
-import enProjectsLocale from "./en/projectsLocale.json";
+import enAbout from "./en/about.json";
+import enProjectsLocale from "./en/projects.locale.json";
 
 export const messages = {
     ru: {
         global: ruGlobal,
-        about: ruAbout,
         home: ruHome,
+        about: ruAbout,
         projectsLocale: ruProjectsLocale,
     },
     en: {
         global: enGlobal,
-        about: enAbout,
         home: enHome,
+        about: enAbout,
         projectsLocale: enProjectsLocale,
     },
 };
