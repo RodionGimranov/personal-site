@@ -1,6 +1,6 @@
 <template>
-    <div class="commnon_modal_overlay">
-        <div class="common_modal_style w-[400px]" ref="modalRef">
+    <div class="modal_overlay">
+        <div class="common_modal_style w-[360px]" ref="modalRef">
             <div class="modal_header">
                 <p class="modal_header_title">
                     {{ $t("global.kb_shortcuts_title") }}
@@ -45,25 +45,32 @@ const modalRef = ref<HTMLElement | null>(null);
 
 const isMac = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 
-const baseModifier = isMac ? "⌥" : "Alt";
+const cmdKey = isMac ? "⌘" : "Ctrl";
+const altKey = isMac ? "⌥" : "Alt";
 const shiftKey = isMac ? "⇧" : "Shift";
 
 const sections = [
     {
         title: "global.shortcuts_nav_title",
         items: [
-            { label: "global.home_btn_title", keys: [baseModifier, "1"] },
-            { label: "global.about_btn_title", keys: [baseModifier, "2"] },
-            { label: "global.projects_btn_title", keys: [baseModifier, "3"] },
-            { label: "global.gallery_btn_title", keys: [baseModifier, "4"] },
+            { label: "global.home_btn_title", keys: [altKey, "1"] },
+            { label: "global.about_btn_title", keys: [altKey, "2"] },
+            { label: "global.projects_btn_title", keys: [altKey, "3"] },
+            { label: "global.gallery_btn_title", keys: [altKey, "4"] },
         ],
     },
     {
         title: "global.shortcuts_actions_title",
         items: [
-            { label: "global.change_language", keys: [baseModifier, shiftKey, "L"] },
-            { label: "global.kb_shortcuts_title", keys: [baseModifier, shiftKey, "K"] },
-            { label: "global.changelog_title", keys: [baseModifier, shiftKey, "C"] },
+            { label: "global.change_language", keys: [shiftKey, cmdKey, "L"] },
+            { label: "global.sidebar_toggle", keys: [shiftKey, cmdKey, "S"] },
+        ],
+    },
+    {
+        title: "global.shortcuts_modal_title",
+        items: [
+            { label: "global.changelog_title", keys: [cmdKey, "."] },
+            { label: "global.kb_shortcuts_title", keys: [cmdKey, "/"] },
         ],
     },
 ];

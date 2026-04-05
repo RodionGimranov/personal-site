@@ -22,6 +22,9 @@ export function useKeyboardShortcuts() {
 
         if (isTyping) return;
 
+        const isCmd = isMac ? e.metaKey : e.ctrlKey;
+
+        // Navigation - option / Alt
         if (e.altKey && !e.shiftKey) {
             if (e.code === "Digit1") router.push("/");
             if (e.code === "Digit2") router.push("/about");
@@ -29,21 +32,33 @@ export function useKeyboardShortcuts() {
             if (e.code === "Digit4") router.push("/gallery");
         }
 
-        if (e.altKey && e.shiftKey) {
-            if (e.altKey && e.shiftKey) {
-                if (e.code === "KeyL") {
-                    preferencesStore.toggleLocale();
-                }
+        // Actions - shift + command / Ctrl
+        if (isCmd && e.shiftKey) {
+            if (e.code === "KeyL") {
+                e.preventDefault();
+                preferencesStore.toggleLocale();
             }
 
-            if (e.code === "KeyK") {
-                modalStore.close("changelog");
-                modalStore.open("shortcuts");
+            if (e.code === "KeyS") {
+                e.preventDefault();
+                preferencesStore.toggleSidebar();
             }
+        }
 
-            if (e.code === "KeyC") {
+        // modal windows - command / Ctrl
+        if (isCmd && !e.shiftKey) {
+            // ⌘ + .
+            if (e.code === "Period") {
+                e.preventDefault();
                 modalStore.close("shortcuts");
                 modalStore.open("changelog");
+            }
+
+            // ⌘ + /
+            if (e.code === "Slash") {
+                e.preventDefault();
+                modalStore.close("changelog");
+                modalStore.open("shortcuts");
             }
         }
     };
