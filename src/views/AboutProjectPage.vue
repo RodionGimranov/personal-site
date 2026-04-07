@@ -1,7 +1,7 @@
 <template>
-    <div class="relative flex flex-col items-start justify-start">
+    <div class="relative w-full">
         <div
-            class="test common_width_size bg-primary-white fixed top-0 z-99 flex items-start justify-start pt-6! pb-4!"
+            class="bg-primary-white fixed top-0 z-99 flex w-full items-start justify-start pt-6! pb-4!"
         >
             <RouterLink
                 to="/projects"
@@ -11,18 +11,47 @@
                 <span>{{ $t("projectsLocale.back_btn") }}</span>
             </RouterLink>
         </div>
-        <ProjectHeader
-            :name="project.name"
-            :codeUrl="project.link_to_code"
-            :deployUrl="project.link_to_deploy"
-            class="mt-16!"
-        />
-        <ProjectVideoCover :videoSrc="project.project_video_cover" />
-        <ProjectDescription :description="project.description" />
-        <ProjectRole :role="project.role" />
-        <ProjectResponsibilities :areas="project.areas_of_responsibility" />
-        <ProjectContext :context="project.context_purpose" />
-        <ProjectTechnologies :technologies="project.technologies" />
+        <div class="mt-16! flex max-w-[560px] flex-col items-start justify-start gap-12">
+            <ProjectHeader
+                :name="project.name"
+                :codeUrl="project.link_to_code"
+                :deployUrl="project.link_to_deploy"
+            />
+            <ProjectVideoCover :videoSrc="project.project_video_cover" />
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">{{ $t("projectsLocale.description_title") }}</p>
+                <p class="about_project_info_subtitle">
+                    {{ project.description }}
+                </p>
+            </div>
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">{{ $t("projectsLocale.role_title") }}</p>
+                <p class="about_project_info_subtitle">{{ project.role }}</p>
+            </div>
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">
+                    {{ $t("projectsLocale.areas_of_responsibility_titl") }}
+                </p>
+                <ul>
+                    <li
+                        v-for="(area, index) in project.areas_of_responsibility"
+                        :key="index"
+                        class="about_project_info_subtitle mb-1! ml-[14px]! list-disc last:mb-0!"
+                    >
+                        {{ area.area }}
+                    </li>
+                </ul>
+            </div>
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">
+                    {{ $t("projectsLocale.context_purpose_title") }}
+                </p>
+                <p class="about_project_info_subtitle">
+                    {{ project.context_purpose }}
+                </p>
+            </div>
+            <ProjectTechnologies :technologies="project.technologies" />
+        </div>
     </div>
 </template>
 
@@ -37,10 +66,6 @@ import { useProjectsStore } from "@/stores/useProjectsStore";
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 import ProjectHeader from "@/components/AboutProjectPage/ProjectHeader.vue";
 import ProjectVideoCover from "@/components/AboutProjectPage/ProjectVideoCover.vue";
-import ProjectDescription from "@/components/AboutProjectPage/ProjectDescription.vue";
-import ProjectRole from "@/components/AboutProjectPage/ProjectRole.vue";
-import ProjectResponsibilities from "@/components/AboutProjectPage/ProjectResponsibilities.vue";
-import ProjectContext from "@/components/AboutProjectPage/ProjectContext.vue";
 import ProjectTechnologies from "@/components/AboutProjectPage/ProjectTechnologies.vue";
 
 const route = useRoute();
