@@ -1,12 +1,12 @@
 <template>
     <section
-        class="flex min-h-screen w-full flex-col items-start justify-between overflow-hidden px-9! py-4!"
+        class="flex min-h-screen w-full flex-col items-start justify-between overflow-hidden px-8! py-6!"
     >
         <RouterView />
         <Footer v-if="!$route.meta.hideFooter" />
         <div
             v-if="isBlurVisible"
-            class="pointer-events-none fixed right-0 bottom-0 z-50 h-35 w-[calc(100%-266px)] opacity-100"
+            class="pointer-events-none fixed right-0 bottom-0 z-50 h-35 w-full opacity-100"
         >
             <BlurMask />
         </div>

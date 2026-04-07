@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-import technologyDataJson from "@/data/technology.json";
+import technologyDataJson from "@/data/technologies.json";
 
 import Badge from "@/components/ui/atoms/Badge.vue";
 
