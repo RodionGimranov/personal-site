@@ -1,5 +1,5 @@
 <template>
-    <div class="common_width_size mb-8! flex items-center justify-between">
+    <div class="flex w-full items-center justify-between">
         <p class="project_large_name text-primary-dark text-[28px] font-medium">
             {{ name }}
         </p>
