@@ -1,14 +1,10 @@
 import type { RouteLocationNormalizedLoaded } from "vue-router";
 
+import type { Locale } from "@/locales";
 import { i18n } from "@/plugins/vue-i18n";
 import projects from "@/data/projects.json";
-import type { Locale } from "@/locales";
 
-
-export function getPageTitle(
-    route: RouteLocationNormalizedLoaded,
-    locale: Locale
-): string {
+export function getPageTitle(route: RouteLocationNormalizedLoaded, locale: Locale): string {
     const titleKey = route.meta.titleKey as string | undefined;
 
     if (!titleKey) {
@@ -23,8 +19,7 @@ export function getPageTitle(
     }
 
     const project = projects[locale]?.find(
-        (p: { id: number | string; name: string }) =>
-            String(p.id) === String(projectId)
+        (p: { id: number | string; name: string }) => String(p.id) === String(projectId),
     );
 
     if (project) {
