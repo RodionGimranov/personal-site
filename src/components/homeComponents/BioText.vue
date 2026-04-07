@@ -1,12 +1,9 @@
 <template>
-    <p
-        class="text-primary-dark w-full text-4xl leading-[44px]! font-semibold"
-        v-html="formatTransferText($t('home.bio_text'))"
-    ></p>
+    <p class="text-primary-dark w-full text-center text-4xl leading-[48px]! font-semibold">
+        {{ $t("home.bio_text") }}
+    </p>
 </template>
 
-<script setup lang="ts">
-import { formatTransferText } from "@/utils/formatters";
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss"></style>

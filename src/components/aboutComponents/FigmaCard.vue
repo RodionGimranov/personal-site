@@ -11,9 +11,7 @@
                 alt="Figma Icon"
                 class="pointer-events-none"
             />
-            <p class="text-primary-dark text-base font-normal">
-                {{ $t("about.figma_card_title") }}
-            </p>
+            <p class="text-primary-dark text-base font-normal">Figma UI Kit</p>
         </div>
         <Button
             buttonType="external"

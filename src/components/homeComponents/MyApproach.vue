@@ -14,10 +14,7 @@
                     <p class="text-primary-dark text-[22px] font-medium">
                         {{ $t(item.title) }}
                     </p>
-                    <p
-                        class="text-primary-dark text-base font-normal"
-                        v-html="formatTransferText($t(item.subtitle))"
-                    />
+                    <p class="text-primary-dark text-base font-normal">{{ $t(item.subtitle) }}</p>
                 </div>
             </div>
         </div>
@@ -25,7 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { formatTransferText } from "@/utils/formatters";
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 
 type ApproachItem = {

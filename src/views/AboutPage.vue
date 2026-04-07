@@ -1,5 +1,5 @@
 <template>
-    <div class="about_page_wrapper">
+    <div class="about_page_wrapper w-full">
         <div class="row_cards_1">
             <GreetingCard />
             <!-- <LocationCard /> -->
@@ -10,14 +10,14 @@
             <div class="large_block_card_1">
                 <div class="large_row_cards_1">
                     <EmptyCard />
-                    <EmptyCard />
+                    <FigmaCard />
                 </div>
                 <ProjectStatsCard />
             </div>
             <div class="large_block_card_2">
                 <div class="row_cards_2">
                     <EmptyCard />
-                    <FigmaCard />
+                    <EmptyCard />
                 </div>
                 <PhysicsCard />
             </div>
