@@ -21,7 +21,7 @@ import { useModalStore } from "@/stores/useModalStore";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
 import { useKeyboardShortcuts } from "@/composables/useKeyboardShortcuts";
 
-import SideBar from "@/components/layout/SideBar/SideBar.vue";
+import SideBar from "@/components/layout/SideBar.vue";
 import MainContent from "@/components/layout/MainContent.vue";
 import ChangelogModal from "@/components/layout/modals/ChangelogModal.vue";
 import ShortcutsModal from "@/components/layout/modals/ShortcutsModal.vue";
