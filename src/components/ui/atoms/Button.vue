@@ -10,7 +10,9 @@
     </slot>
     <component v-else :is="componentTag" :class="mergedClasses" v-bind="componentAttrs">
         <SvgIcon v-if="icon" :name="icon!" :width="iconWidth" :height="iconHeight" />
-        <span v-if="buttonText"> {{ buttonText }} </span>
+        <slot>
+            <span v-if="buttonText"> {{ buttonText }} </span>
+        </slot>
     </component>
 </template>
 
@@ -26,7 +28,7 @@ type ShapeVariant = "regular" | "pill";
 
 const props = withDefaults(
     defineProps<{
-        buttonText?: string;
+        buttonText: string;
         buttonType?: ButtonType;
         variant?: ButtonVariant;
         padding?: PaddingVariant;
@@ -42,7 +44,6 @@ const props = withDefaults(
         rel?: string;
     }>(),
     {
-        buttonText: "Label",
         buttonType: "default",
         variant: "_gray",
         padding: "default",
@@ -115,6 +116,7 @@ function onRouterClick(e: Event) {
 .custom_btn {
     cursor: pointer;
     transition: 0.2s;
+    white-space: nowrap;
 
     font-size: 16px;
     font-weight: 400;
