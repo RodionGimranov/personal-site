@@ -27,11 +27,7 @@ const TRACKED_FILES: string[] = [
     "./src/components/aboutComponents/LocationCard.vue",
     "./src/components/aboutComponents/PhysicsCard.vue",
 
-    "./src/components/aboutProjectPage/ProjectContext.vue",
-    "./src/components/aboutProjectPage/ProjectDescription.vue",
     "./src/components/aboutProjectPage/ProjectHeader.vue",
-    "./src/components/aboutProjectPage/ProjectResponsibilities.vue",
-    "./src/components/aboutProjectPage/ProjectRole.vue",
     "./src/components/aboutProjectPage/ProjectTechnologies.vue",
     "./src/components/aboutProjectPage/ProjectVideoCover.vue",
 
@@ -46,9 +42,7 @@ const TRACKED_FILES: string[] = [
     "./src/components/layout/modals/ChangelogModal.vue",
     "./src/components/layout/modals/ShortcutsModal.vue",
 
-    "./src/components/layout/SideBar/SideBar.vue",
-    "./src/components/layout/SideBar/UserInfoPanel.vue",
-
+    "./src/components/layout/SideBar.vue",
     "./src/components/layout/Footer.vue",
     "./src/components/layout/MainContent.vue",
 
@@ -56,6 +50,7 @@ const TRACKED_FILES: string[] = [
     "./src/components/ui/atoms/BlurMask.vue",
     "./src/components/ui/atoms/Button.vue",
     "./src/components/ui/atoms/CloseButton.vue",
+    "./src/components/ui/atoms/Divider.vue",
     "./src/components/ui/atoms/Kbd.vue",
     "./src/components/ui/atoms/Skeleton.vue",
     "./src/components/ui/atoms/SvgIcon.vue",
@@ -75,18 +70,18 @@ const TRACKED_FILES: string[] = [
     "./src/data/photos.json",
     "./src/data/projects.json",
     "./src/data/songs.json",
-    "./src/data/technology.json",
+    "./src/data/technologies.json",
 
     "./src/libs/matter-js/phycalsIcons.ts",
 
     "./src/locales/en/about.json",
     "./src/locales/en/global.json",
     "./src/locales/en/home.json",
-    "./src/locales/en/projectsLocale.json",
+    "./src/locales/en/projects.locale.json",
     "./src/locales/ru/about.json",
     "./src/locales/ru/global.json",
     "./src/locales/ru/home.json",
-    "./src/locales/ru/projectsLocale.json",
+    "./src/locales/ru/projects.locale.json",
     "./src/locales/index.ts",
 
     "./src/plugins/pinia.ts",
