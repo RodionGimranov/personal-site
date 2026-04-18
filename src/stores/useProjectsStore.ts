@@ -1,67 +1,43 @@
 import { defineStore } from "pinia";
+import { useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
 
-import type { Project, Locale } from "@/types";
-import projectsDataJson from "@/data/projects.json";
+import type { Project, ProjectLocale } from "@/types";
 
-type ProjectsData = Record<Locale, Project[]>;
+import passwordGenerator from "@/data/projects/password-generator.json";
+import personalWebsite from "@/data/projects/personal-website.json";
 
-const projectsData = projectsDataJson as ProjectsData;
-
-type ProjectsState = {
-    locale: Locale;
-    selectedProjectId: number | null;
-};
+const ALL_PROJECTS: Project[] = [passwordGenerator as Project, personalWebsite as Project];
 
 export const useProjectsStore = defineStore("projects", {
-    state: (): ProjectsState => ({
-        locale: "ru",
-        selectedProjectId: null,
-    }),
+    state: () => ({}),
 
     getters: {
-        projects(state): Project[] {
-            const list = projectsData[state.locale] ?? [];
-            return [...list].sort((a, b) => b.id - a.id);
+        allProjects(): Array<Project & { locale: ProjectLocale }> {
+            const { locale } = useI18n();
+            return ALL_PROJECTS.map((project) => ({
+                ...project,
+                locale: project.i18n[locale.value as "ru" | "en"] ?? project.i18n.en,
+            }));
         },
 
-        getProjectById: (state) => {
-            return (id: number | string): Project | null => {
-                const numericId = Number(id);
-
-                return (
-                    projectsData[state.locale]?.find((project) => project.id === numericId) ?? null
-                );
+        getProjectById(): (id: number) => (Project & { locale: ProjectLocale }) | null {
+            const { locale } = useI18n();
+            return (id: number) => {
+                const project = ALL_PROJECTS.find((p) => p.id === id);
+                if (!project) return null;
+                return {
+                    ...project,
+                    locale: project.i18n[locale.value as "ru" | "en"] ?? project.i18n.en,
+                };
             };
-        },
-
-        getProjectsByIds: (state) => {
-            return (ids: number[] = []): Project[] => {
-                const list = projectsData[state.locale] ?? [];
-
-                const map = new Map<number, Project>(list.map((project) => [project.id, project]));
-
-                return ids.map((id) => map.get(id)).filter((p): p is Project => p !== undefined);
-            };
-        },
-
-        selectedProject(state): Project | null {
-            if (state.selectedProjectId === null) return null;
-
-            return (
-                projectsData[state.locale]?.find(
-                    (project) => project.id === state.selectedProjectId,
-                ) ?? null
-            );
         },
     },
 
     actions: {
-        setLocale(locale: Locale): void {
-            this.locale = locale;
-        },
-
-        selectProjectById(id: number | string): void {
-            this.selectedProjectId = Number(id);
+        openProject(id: number): void {
+            const router = useRouter();
+            router.push({ name: "aboutProjectPage", params: { id } });
         },
     },
 });
