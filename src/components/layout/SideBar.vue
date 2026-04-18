@@ -7,7 +7,7 @@
         <div class="flex w-full flex-col items-start justify-start">
             <div
                 v-if="preferencesStore.isSidebarExpanded"
-                class="hover:bg-secondary-white absolute top-2 right-2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-[8px]"
+                class="hover:bg-secondary-white absolute top-[21px] right-2 flex h-[30px] w-[30px] cursor-pointer items-center justify-center rounded-[8px]"
                 @click.stop="preferencesStore.toggleSidebar()"
             >
                 <SvgIcon name="sidebar-icon" />
@@ -257,7 +257,7 @@ $ease-out: cubic-bezier(0.4, 0, 0.2, 1);
 
 .sidebar__avatar-toggle {
     opacity: 0;
-    transition: opacity 0.2s $ease-out;
+    transition: opacity 0.2s;
 }
 
 .side_bar_container:hover .sidebar__avatar-toggle {
