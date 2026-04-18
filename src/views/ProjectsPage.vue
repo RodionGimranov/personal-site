@@ -5,29 +5,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect, type ComputedRef } from "vue";
-import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 
-import type { Locale } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
-import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
-interface Project {
-    id: string | number;
-    [key: string]: unknown;
-}
+import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
 const projectsStore = useProjectsStore();
 
-const { locale } = useI18n<{ message: unknown }, Locale>();
-
-watchEffect((): void => {
-    projectsStore.setLocale(locale.value);
-});
-
-const projects: ComputedRef<Project[]> = computed(() => {
-    return projectsStore.projects as Project[];
-});
+const projects = computed(() => projectsStore.allProjects);
 </script>
 
 <style lang="scss"></style>

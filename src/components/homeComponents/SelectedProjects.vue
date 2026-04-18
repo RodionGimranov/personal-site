@@ -4,38 +4,24 @@
             {{ $t("home.projects_home_section_title") }}
         </p>
         <div class="flex w-full items-start justify-start gap-[50px]">
-            <ProjectCard
-                v-for="project in projects"
-                :key="project.id"
-                :project="project"
-                projectWidth="320px"
-                projectHeight="206px"
-                projectNameSize="16px"
-            />
+            <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { computed, watch } from "vue";
+import { computed } from "vue";
 
-import type { Project } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
-import { usePreferencesStore } from "@/stores/usePreferencesStore";
 
 import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
 const projectsStore = useProjectsStore();
-const preferencesStore = usePreferencesStore();
 
-const projects = computed<Project[]>(() => projectsStore.getProjectsByIds([2, 0]));
+const FEATURED_PROJECT_IDS = [0];
 
-watch(
-    () => preferencesStore.currentLocale,
-    (locale) => {
-        projectsStore.setLocale(locale);
-    },
-    { immediate: true },
+const projects = computed(() =>
+    projectsStore.allProjects.filter((p) => FEATURED_PROJECT_IDS.includes(p.id)),
 );
 </script>
 

@@ -5,7 +5,7 @@
             <Badge
                 v-for="(tech, index) in technologies"
                 :key="index"
-                :label="tech.name"
+                :label="tech"
                 size="medium"
                 color="blue"
                 shape="pill"
@@ -17,12 +17,8 @@
 <script setup lang="ts">
 import Badge from "@/components/ui/atoms/Badge.vue";
 
-type TechnologyItem = {
-    name: string;
-};
-
 interface Props {
-    technologies: TechnologyItem[];
+    technologies: string[];
 }
 
 withDefaults(defineProps<Props>(), {

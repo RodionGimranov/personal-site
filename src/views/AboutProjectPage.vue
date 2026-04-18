@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full">
+    <div v-if="project" class="relative w-full">
         <div
             class="bg-primary-white fixed top-0 z-99 flex w-full items-start justify-start pt-6! pb-4!"
         >
@@ -13,20 +13,18 @@
         </div>
         <div class="mt-16! flex max-w-[560px] flex-col items-start justify-start gap-12">
             <ProjectHeader
-                :name="project.name"
-                :codeUrl="project.link_to_code"
-                :deployUrl="project.link_to_deploy"
+                :name="project.locale.name"
+                :codeUrl="project.meta.link_to_code"
+                :deployUrl="project.meta.link_to_deploy"
             />
-            <ProjectVideoCover :videoSrc="project.project_video_cover" />
+            <ProjectVideoCover :videoSrc="project.meta.project_video_cover" />
             <div class="about_project_info_container">
                 <p class="about_project_info_title">{{ $t("projectsLocale.description_title") }}</p>
-                <p class="about_project_info_subtitle">
-                    {{ project.description }}
-                </p>
+                <p class="about_project_info_subtitle">{{ project.locale.description }}</p>
             </div>
             <div class="about_project_info_container">
                 <p class="about_project_info_title">{{ $t("projectsLocale.role_title") }}</p>
-                <p class="about_project_info_subtitle">{{ project.role }}</p>
+                <p class="about_project_info_subtitle">{{ project.locale.role }}</p>
             </div>
             <div class="about_project_info_container">
                 <p class="about_project_info_title">
@@ -34,7 +32,7 @@
                 </p>
                 <ul>
                     <li
-                        v-for="(area, index) in project.areas_of_responsibility"
+                        v-for="(area, index) in project.locale.areas_of_responsibility"
                         :key="index"
                         class="about_project_info_subtitle mb-1! ml-[14px]! list-disc last:mb-0!"
                     >
@@ -46,9 +44,7 @@
                 <p class="about_project_info_title">
                     {{ $t("projectsLocale.context_purpose_title") }}
                 </p>
-                <p class="about_project_info_subtitle">
-                    {{ project.context_purpose }}
-                </p>
+                <p class="about_project_info_subtitle">{{ project.locale.context_purpose }}</p>
             </div>
             <ProjectTechnologies :technologies="project.technologies" />
         </div>
@@ -56,11 +52,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watchEffect } from "vue";
+import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { useI18n } from "vue-i18n";
 
-import type { Locale, Project } from "@/types";
 import { useProjectsStore } from "@/stores/useProjectsStore";
 
 import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
@@ -73,28 +67,15 @@ const router = useRouter();
 
 const projectsStore = useProjectsStore();
 
-const { locale } = useI18n<{ message: unknown }, Locale>();
+const project = computed(() => {
+    const found = projectsStore.getProjectById(Number(route.params.id));
 
-watchEffect((): void => {
-    projectsStore.setLocale(locale.value);
-});
-
-watchEffect((): void => {
-    const idParam = route.params.id;
-
-    if (typeof idParam === "string") {
-        projectsStore.selectProjectById(Number(idParam));
+    if (!found) {
+        router.push({ name: "notFound" });
+        return null;
     }
-});
 
-const project = computed<Project>(() => {
-    return projectsStore.selectedProject as Project;
-});
-
-watchEffect((): void => {
-    if (!projectsStore.selectedProject) {
-        router.replace("/Error");
-    }
+    return found;
 });
 </script>
 

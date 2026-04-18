@@ -2,7 +2,11 @@ import type { RouteLocationNormalizedLoaded } from "vue-router";
 
 import type { Locale } from "@/locales";
 import { i18n } from "@/plugins/vue-i18n";
-import projects from "@/data/projects.json";
+
+import passwordGenerator from "@/data/projects/password-generator.json";
+import personalWebsite from "@/data/projects/personal-website.json";
+
+const ALL_PROJECTS = [passwordGenerator, personalWebsite];
 
 export function getPageTitle(route: RouteLocationNormalizedLoaded, locale: Locale): string {
     const titleKey = route.meta.titleKey as string | undefined;
@@ -18,12 +22,11 @@ export function getPageTitle(route: RouteLocationNormalizedLoaded, locale: Local
         return baseTitle;
     }
 
-    const project = projects[locale]?.find(
-        (p: { id: number | string; name: string }) => String(p.id) === String(projectId),
-    );
+    const project = ALL_PROJECTS.find((p) => String(p.id) === String(projectId));
 
     if (project) {
-        return `${baseTitle} | ${project.name}`;
+        const projectName = project.i18n[locale]?.name;
+        return projectName ? `${baseTitle} | ${projectName}` : baseTitle;
     }
 
     return baseTitle;
