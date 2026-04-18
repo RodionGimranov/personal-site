@@ -5,7 +5,7 @@
         <div class="flex h-34 flex-col items-start justify-between">
             <p class="footer_title text-sm">{{ $t("global.footer_fun_text") }}</p>
             <p class="text-third-gray text-sm font-normal">
-                {{ $t("global.footer_copyright_text") }}
+                {{ $t("global.footer_copyright_text") }}, {{ currentYear }}
             </p>
         </div>
         <div class="flex items-start justify-start gap-[70px]">
@@ -75,6 +75,8 @@ interface SocialLink {
 }
 
 const modalStore = useModalStore();
+
+const currentYear = new Date().getFullYear();
 
 const openShortcuts = () => {
     modalStore.open("shortcuts");
