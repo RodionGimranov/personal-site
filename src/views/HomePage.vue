@@ -1,6 +1,8 @@
 <template>
     <div class="flex w-full flex-col items-start justify-start gap-[150px]">
-        <BioText />
+        <p class="text-primary-dark w-full text-center text-4xl leading-[48px]! font-semibold">
+            {{ $t("home.bio_text") }}
+        </p>
         <MyApproach />
         <TechStack />
         <SelectedProjects />
@@ -8,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import BioText from "@/components/homeComponents/BioText.vue";
 import MyApproach from "@/components/homeComponents/MyApproach.vue";
 import TechStack from "@/components/homeComponents/TechStack/TechStack.vue";
 import SelectedProjects from "@/components/homeComponents/SelectedProjects.vue";
