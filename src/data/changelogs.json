@@ -157,6 +157,20 @@
                 "Реализована поддержка горячих клавиш с обработкой нажатий для быстрого выполнения действий без использования мыши.",
                 "Оптимизирована производительность сайта и исправлены мелкие ошибки, влияющие на стабильность работы."
             ]
+        },
+        {
+            "id": 14,
+            "version": "v1.5.90",
+            "date": "23 апреля 2026",
+            "type": "minor",
+            "summary": "Расширены возможности управления интерфейсом и доработана структура страницы «О проекте» для более удобной навигации и представления контента.",
+            "changes": [
+                "Расширена система горячих клавиш, добавлены новые комбинации для ускорения взаимодействия с интерфейсом.",
+                "Реализован компактный режим сайдбара для более эффективного использования пространства экрана.",
+                "Оптимизирована внутренняя логика и структура файлов, уменьшен объём кода и упрощена поддержка проекта.",
+                "Расширена страница «О проекте» с приближением структуры к формату case study.",
+                "Добавлен UI-компонент Divider для разделения контентных блоков и улучшения визуальной структуры."
+            ]
         }
     ],
     "en": [
@@ -316,6 +330,20 @@
                 "Added a “Keyboard Shortcuts” modal with a list of available quick commands and key combinations.",
                 "Implemented keyboard shortcut support with key press handling for faster actions without using a mouse.",
                 "Optimized site performance and fixed minor issues affecting stability."
+            ]
+        },
+        {
+            "id": 14,
+            "version": "v1.5.90",
+            "date": "April 23, 2026",
+            "type": "minor",
+            "summary": "Expanded interface control capabilities and refined the structure of the “About Project” page for improved navigation and content presentation.",
+            "changes": [
+                "Extended the hotkey system with new key combinations to speed up interaction with the interface.",
+                "Implemented a compact sidebar mode for more efficient use of screen space.",
+                "Optimized internal logic and file structure, reducing code volume and simplifying project maintenance.",
+                "Enhanced the “About Project” page, bringing its structure closer to a case study format.",
+                "Added a Divider UI component to separate content blocks and improve visual structure."
             ]
         }
     ]
