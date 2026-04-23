@@ -1,26 +1,34 @@
 <template>
-    <div v-if="project" class="relative w-full">
-        <div
-            class="bg-primary-white fixed top-0 z-99 flex w-full items-start justify-start pt-6! pb-4!"
-        >
-            <RouterLink
-                to="/projects"
-                class="text-third-gray hover:text-primary-dark flex items-center justify-start gap-[2px] text-base font-medium transition duration-200"
-            >
-                <SvgIcon name="left-arrow-icon" />
-                <span>{{ $t("projectsLocale.back_btn") }}</span>
-            </RouterLink>
-        </div>
-        <div class="mt-16! flex max-w-[560px] flex-col items-start justify-start gap-12">
+    <div v-if="project" class="relative flex w-full justify-center">
+        <div class="flex max-w-[610px] flex-col items-start justify-start gap-[46px]">
             <ProjectHeader
                 :name="project.locale.name"
+                :iconUrl="project.meta.project_large_icon"
                 :codeUrl="project.meta.link_to_code"
                 :deployUrl="project.meta.link_to_deploy"
             />
             <ProjectVideoCover :videoSrc="project.meta.project_video_cover" />
             <div class="about_project_info_container">
-                <p class="about_project_info_title">{{ $t("projectsLocale.description_title") }}</p>
-                <p class="about_project_info_subtitle">{{ project.locale.description }}</p>
+                <p class="about_project_info_title">{{ $t("projectsLocale.overview_title") }}</p>
+                {{ project.locale.overview }}
+            </div>
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">{{ $t("projectsLocale.purpose_title") }}</p>
+                {{ project.locale.purpose }}
+            </div>
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">
+                    {{ $t("projectsLocale.key_features_title") }}
+                </p>
+                <ul>
+                    <li
+                        v-for="(item, index) in project.locale.key_features"
+                        :key="index"
+                        class="about_project_info_subtitle mb-1! ml-[14px]! list-disc last:mb-0!"
+                    >
+                        {{ item.feature }}
+                    </li>
+                </ul>
             </div>
             <div class="about_project_info_container">
                 <p class="about_project_info_title">{{ $t("projectsLocale.role_title") }}</p>
@@ -28,25 +36,30 @@
             </div>
             <div class="about_project_info_container">
                 <p class="about_project_info_title">
-                    {{ $t("projectsLocale.areas_of_responsibility_titl") }}
+                    {{ $t("projectsLocale.contribution_title") }}
                 </p>
-                <ul>
-                    <li
-                        v-for="(area, index) in project.locale.areas_of_responsibility"
-                        :key="index"
-                        class="about_project_info_subtitle mb-1! ml-[14px]! list-disc last:mb-0!"
-                    >
-                        {{ area.area }}
-                    </li>
-                </ul>
-            </div>
-            <div class="about_project_info_container">
-                <p class="about_project_info_title">
-                    {{ $t("projectsLocale.context_purpose_title") }}
-                </p>
-                <p class="about_project_info_subtitle">{{ project.locale.context_purpose }}</p>
+                <p class="about_project_info_subtitle">{{ project.locale.contribution }}</p>
             </div>
             <ProjectTechnologies :technologies="project.technologies" />
+            <div class="about_project_info_container">
+                <p class="about_project_info_title">{{ $t("projectsLocale.results_title") }}</p>
+                <p class="about_project_info_subtitle">{{ project.locale.results.text }}</p>
+                <div
+                    v-if="project.locale.results.metrics"
+                    class="mt-5! flex w-full flex-wrap gap-4"
+                >
+                    <MetricCard
+                        v-for="(metric, index) in project.locale.results.metrics"
+                        :key="index"
+                        :label="metric.label"
+                        :value="metric.value"
+                    />
+                </div>
+                <p class="text-third-gray text-sm font-normal">
+                    {{ $t("projectsLocale.last_data_update") }}
+                    {{ project.locale.last_data_update }}
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -57,10 +70,10 @@ import { useRoute, useRouter } from "vue-router";
 
 import { useProjectsStore } from "@/stores/useProjectsStore";
 
-import SvgIcon from "@/components/ui/atoms/SvgIcon.vue";
 import ProjectHeader from "@/components/AboutProjectPage/ProjectHeader.vue";
 import ProjectVideoCover from "@/components/AboutProjectPage/ProjectVideoCover.vue";
 import ProjectTechnologies from "@/components/AboutProjectPage/ProjectTechnologies.vue";
+import MetricCard from "@/components/AboutProjectPage/MetricCard.vue";
 
 const route = useRoute();
 const router = useRouter();
