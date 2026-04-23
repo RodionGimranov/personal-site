@@ -27,6 +27,7 @@ const TRACKED_FILES: string[] = [
     "./src/components/aboutComponents/LocationCard.vue",
     "./src/components/aboutComponents/PhysicsCard.vue",
 
+    "./src/components/AboutProjectPage/MetricCard.vue",
     "./src/components/aboutProjectPage/ProjectHeader.vue",
     "./src/components/aboutProjectPage/ProjectTechnologies.vue",
     "./src/components/aboutProjectPage/ProjectVideoCover.vue",
@@ -35,7 +36,6 @@ const TRACKED_FILES: string[] = [
     "./src/components/homeComponents/TechStack/TechStack.vue",
     "./src/components/homeComponents/TechStack/VueEcosystem.vue",
 
-    "./src/components/homeComponents/BioText.vue",
     "./src/components/homeComponents/MyApproach.vue",
     "./src/components/homeComponents/SelectedProjects.vue",
 
@@ -66,9 +66,13 @@ const TRACKED_FILES: string[] = [
 
     "./src/constants/appConstants.ts",
 
+    "./src/data/projects/medmedia-pro.json",
+    "./src/data/projects/password-generator.json",
+    "./src/data/projects/personal-website.json",
+    "./src/data/projects/suzdalfest-open-premiere.json",
+
     "./src/data/changelogs.json",
     "./src/data/photos.json",
-    "./src/data/projects.json",
     "./src/data/songs.json",
     "./src/data/technologies.json",
 
@@ -77,15 +81,16 @@ const TRACKED_FILES: string[] = [
     "./src/locales/en/about.json",
     "./src/locales/en/global.json",
     "./src/locales/en/home.json",
-    "./src/locales/en/projects.locale.json",
+    "./src/locales/en/projects.json",
     "./src/locales/ru/about.json",
     "./src/locales/ru/global.json",
     "./src/locales/ru/home.json",
-    "./src/locales/ru/projects.locale.json",
+    "./src/locales/ru/projects.json",
     "./src/locales/index.ts",
 
     "./src/plugins/pinia.ts",
     "./src/plugins/vue-i18n.ts",
+    "./src/plugins/vuetify.ts",
 
     "./src/router/index.ts",
 
@@ -118,6 +123,7 @@ const TRACKED_FILES: string[] = [
     "./src/env.d.ts",
     "./src/main.ts",
     "./src/shims-vue.d.ts",
+    "./src/shims-vuetify.d.ts",
 
     "./index.html",
     "./package.json",
