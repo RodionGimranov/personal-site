@@ -18,7 +18,7 @@ import ProjectCard from "@/components/ui/molecules/ProjectCard.vue";
 
 const projectsStore = useProjectsStore();
 
-const FEATURED_PROJECT_IDS = [0];
+const FEATURED_PROJECT_IDS = [1];
 
 const projects = computed(() =>
     projectsStore.allProjects.filter((p) => FEATURED_PROJECT_IDS.includes(p.id)),
