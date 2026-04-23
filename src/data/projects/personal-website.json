@@ -1,11 +1,13 @@
 {
     "id": 1,
     "slug": "personal-website",
+    "type": "personal_project",
 
     "meta": {
-        "project_video_cover": "https://storage.yandexcloud.net/personal-site-assets/video/project-covers/Personal-Website-Screen-Recording.mp4",
         "link_to_deploy": "https://rodiongimranov.github.io/personal-site/",
-        "link_to_code": "https://github.com/RodionGimranov/personal-site"
+        "link_to_code": "https://github.com/RodionGimranov/personal-site",
+        "project_large_icon": "https://storage.yandexcloud.net/personal-site-assets/icons/project-icons/personal-site-large-icon.svg",
+        "project_video_cover": "https://storage.yandexcloud.net/personal-site-assets/video/project-covers/Personal-Website-Screen-Recording.mp4"
     },
 
     "technologies": [
@@ -13,12 +15,14 @@
         "TypeScript",
         "Pinia",
         "Vue Router",
+        "Vuetify",
         "Vue I18n",
         "VueUse",
         "Vite",
         "Tailwind CSS",
         "CSS",
         "SCSS",
+        "HTML",
         "GSAP",
         "Mapbox GL",
         "Matter.js",
@@ -29,29 +33,72 @@
     "i18n": {
         "ru": {
             "name": "Личный сайт",
-            "description": "Личный сайт - это мой основной проект и персональная площадка, где я представляю себя как frontend-разработчика. Здесь собраны портфолио, профессиональные навыки, используемые технологии и мой подход к разработке. Сайт спроектирован с акцентом на удобство, современный дизайн и адаптивность, чтобы посетителям было легко и приятно изучать проекты и информацию.",
-            "role": "Frontend-разработчик, UX/UI-дизайнер",
-            "areas_of_responsibility": [
-                { "area": "Проектирование структуры и навигации" },
-                { "area": "Разработка архитектуры фронтенда" },
-                { "area": "Проектирование UX и дизайн интерфейсов" },
-                { "area": "Реализация анимаций и интерактивных элементов" },
-                { "area": "Настройка деплоя и оптимизация производительности" }
+            "overview": "Личный сайт реализован как SPA на Vue 3 с единым layout-слоем (App + SideBar + MainContent) и модульными страницами через Vue Router. Архитектура построена вокруг разделения данных, состояния и представления: контент хранится в JSON, состояние управляется Pinia, интерфейс собирается из переиспользуемых атомов/молекул и секционных компонентов.",
+            "purpose": "Такой подход выбран, чтобы развивать проект через данные и типизированные модели, а не через постоянную правку шаблонов и роутов. Разделение по слоям упрощает расширение: новые кейсы, локали и UI-блоки добавляются с минимальными изменениями в существующем коде. Проект используется как инженерная витрина, среда для разработки и обкатки интерактивных решений в рамках реального продукта.",
+            "key_features": [
+                {
+                    "feature": "Роутинг построен на createWebHashHistory с ленивой загрузкой view-компонентов через dynamic import."
+                },
+                {
+                    "feature": "Data-flow для кейсов идет из src/data/projects/*.json через тип Project и Pinia getter’ы с подстановкой текущей локали."
+                },
+                {
+                    "feature": "Централизованные сторы (preferences, projects, modal, musicPlayer) разделяют пользовательские настройки, навигационные состояния и медиа-логику."
+                },
+                {
+                    "feature": "Интерактивный слой объединяет визуальные модули (Web Audio визуализатор, physics-canvas на Matter.js, 3D-tilt, flip-карточки, Mapbox) и управление интерфейсом: горячие клавиши для навигации, действий и вызова модальных окон."
+                },
+                {
+                    "feature": "Мультиязычность реализована через Vue I18n: контент и данные проектов синхронизированы по локали и подставляются динамически без дублирования структуры."
+                }
             ],
-            "context_purpose": "Проект создан как персональная платформа для демонстрации опыта, подхода к разработке и уровня экспертизы. Его цель - дать потенциальным работодателям и клиентам быстрое и наглядное представление о моих компетенциях, стиле работы и технических решениях."
+            "role": "Frontend-разработчик, UX/UI-дизайнер",
+            "contribution": "Спроектирован системный каркас приложения с четким разделением ответственности между layout, view, store и data-слоем. Собрана переиспользуемая UI-система (атомы и молекулы), которая используется в навигации, карточках, модальных окнах и контентных секциях без дублирования логики. Реализован типизированный data-driven подход для страницы «О проекте»: фиксированная структура рендера и подстановка контента из модели проекта по id и локали. Добавлен automation-инструмент codeCounter, который убирает ручное обновление метрик в интерфейсе и делает техническое состояние проекта прозрачным для разработки.",
+            "results": {
+                "text": "Проект стал расширяемой системой, где контент, локализация и карточки кейсов масштабируются через данные и типы без перестройки базовой архитектуры. Централизация состояния и декомпозиция UI снизили связность между модулями и упростили поддержку изменений. Интерактивные блоки работают как изолированные модули с явной инициализацией и очисткой ресурсов (AudioContext, requestAnimationFrame, canvas, listeners), что уменьшает риск утечек при навигации. За счет lazy loading роутов, раздельных чанков сборки, loading='lazy' для изображений и preload='metadata' для видео снижена начальная нагрузка. Это создает устойчивую основу для развития проекта как продукта и как инженерной платформы.",
+                "metrics": [
+                    { "label": "Производительность", "value": 92 },
+                    { "label": "Доступность", "value": 88 },
+                    { "label": "Лучшие практики", "value": 96 },
+                    { "label": "SEO", "value": 91 }
+                ]
+            },
+            "last_data_update": "23 апреля 2026"
         },
+
         "en": {
             "name": "Personal Website",
-            "description": "This personal website is my main project and professional platform where I present myself as a frontend developer. It showcases my portfolio, technical skills, tools I work with, and my overall approach to development. The site is designed with a strong focus on usability, modern visual design, and responsiveness, ensuring a smooth and pleasant experience across devices.",
-            "role": "Frontend Developer, UX/UI Designer",
-            "areas_of_responsibility": [
-                { "area": "Information architecture and navigation design" },
-                { "area": "Frontend architecture and application structure" },
-                { "area": "UX design and interface implementation" },
-                { "area": "Animations and interactive elements" },
-                { "area": "Deployment setup and performance optimization" }
+            "overview": "A personal website built as a Vue 3 SPA with a unified layout layer (App + SideBar + MainContent) and modular pages powered by Vue Router. The architecture is based on a clear separation of data, state, and presentation: content is stored in JSON, state is managed with Pinia, and the UI is composed of reusable components.",
+            "purpose": "This approach allows the project to evolve through data and typed models instead of constant template and routing changes. The layered structure makes it easy to scale: new cases, locales, and UI blocks can be added with minimal impact on existing code. The project also serves as an engineering showcase and a space to design and iterate on interactive solutions within a real product environment.",
+            "key_features": [
+                {
+                    "feature": "Routing is implemented using createWebHashHistory with lazy-loaded views via dynamic imports."
+                },
+                {
+                    "feature": "Case data is driven by src/data/projects/*.json, combined with a typed Project model and Pinia getters with locale-aware mapping."
+                },
+                {
+                    "feature": "Centralized Pinia stores (preferences, projects, modal, musicPlayer) isolate user settings, navigation state, and media logic."
+                },
+                {
+                    "feature": "The interactive layer combines visual modules (Web Audio visualizer, Matter.js physics canvas, 3D tilt, flip cards, Mapbox) with keyboard-driven UI control for navigation, actions, and modal interactions."
+                },
+                {
+                    "feature": "Multilingual support is implemented with Vue I18n, allowing content and project data to adapt dynamically to the selected locale without duplicating structure."
+                }
             ],
-            "context_purpose": "The project was created as a personal platform to present my experience, development approach, and level of expertise. Its goal is to provide potential employers and clients with a clear and concise understanding of my skills, workflow, and technical decision-making."
+            "role": "Frontend Developer, UX/UI Designer",
+            "contribution": "Designed the overall application architecture with a clear separation between layout, views, state, and data layers. Built a reusable UI system (atoms and molecules) used across navigation, cards, modals, and content sections. Implemented a typed data-driven approach with a fixed rendering structure and dynamic content injection based on project id and locale. Developed a codeCounter script that automatically collects project metrics and syncs them with the UI, removing manual updates and improving visibility of the codebase.",
+            "results": {
+                "text": "The project evolved into a scalable system where content, localization, and case cards are driven by data and types without restructuring the core architecture. Centralized state management and UI decomposition reduced coupling and simplified maintenance. Interactive modules are implemented as isolated units with explicit initialization and cleanup (AudioContext, requestAnimationFrame, canvas, event listeners), reducing the risk of memory leaks during navigation. Performance optimizations - including route-level lazy loading, code splitting, loading=\"lazy\" for images, and preload=\"metadata\" for video - reduced initial load and improved overall user experience. This provides a solid foundation for evolving the project both as a product and as an engineering platform.",
+                "metrics": [
+                    { "label": "Performance", "value": 92 },
+                    { "label": "Accessibility", "value": 88 },
+                    { "label": "Best Practices", "value": 96 },
+                    { "label": "SEO", "value": 91 }
+                ]
+            },
+            "last_data_update": "April 23, 2026"
         }
     }
 }
