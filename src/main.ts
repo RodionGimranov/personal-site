@@ -5,6 +5,7 @@ import App from "@/App.vue";
 import { pinia } from "@/plugins/pinia";
 import router from "@/router";
 import { i18n } from "@/plugins/vue-i18n";
+import vuetify from "@/plugins/vuetify";
 
 import { getPageTitle } from "@/utils/getPageTitle";
 import { usePreferencesStore } from "@/stores/usePreferencesStore";
@@ -33,5 +34,6 @@ watch(
 
 app.use(router);
 app.use(i18n);
+app.use(vuetify);
 
 app.mount("#app");
