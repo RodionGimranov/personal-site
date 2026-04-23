@@ -4,10 +4,10 @@ import { useI18n } from "vue-i18n";
 
 import type { Project, ProjectLocale } from "@/types";
 
-import passwordGenerator from "@/data/projects/password-generator.json";
+// import passwordGenerator from "@/data/projects/password-generator.json";
 import personalWebsite from "@/data/projects/personal-website.json";
 
-const ALL_PROJECTS: Project[] = [passwordGenerator as Project, personalWebsite as Project];
+const ALL_PROJECTS: Project[] = [personalWebsite as Project];
 
 export const useProjectsStore = defineStore("projects", {
     state: () => ({}),
