@@ -155,13 +155,13 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
 }
 .about_project_info_title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--primary-gray);
-    letter-spacing: 0.04em;
+    line-height: 28px;
 }
 .about_project_info_subtitle {
     font-size: 16px;
