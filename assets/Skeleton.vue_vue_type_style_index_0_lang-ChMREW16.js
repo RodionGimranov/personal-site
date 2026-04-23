@@ -1,1 +1,0 @@
-import{d as t,c as a,f as l,o as i}from"./index-NYKqTy1e.js";const d=t({__name:"Skeleton",props:{width:{default:50},height:{default:50},radius:{default:0}},setup(e){return(o,n)=>(i(),a("div",{class:"skeleton_loader bg-fourth-gray relative inline-block overflow-hidden",style:l({width:e.width,height:e.height,borderRadius:e.radius})},null,4))}});export{d as _};
