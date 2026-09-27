@@ -36,7 +36,10 @@
                         <p class="text-primary-dark mt-2! mb-4! text-sm font-normal">
                             {{ update.summary }}
                         </p>
-                        <div v-if="update.changes" class="flex flex-col items-start justify-start">
+                        <div
+                            v-if="update.changes.length"
+                            class="flex flex-col items-start justify-start"
+                        >
                             <p class="text-primary-dark mb-2! text-base font-normal">
                                 {{ $t("global.changes_title") }}
                             </p>
@@ -74,11 +77,6 @@ const preferencesStore = usePreferencesStore();
 
 const modalRef = ref<HTMLElement | null>(null);
 
-const updates = computed(() => {
-    const list = changelogs[preferencesStore.currentLocale] || [];
-    return [...list].sort((a, b) => b.id - a.id);
-});
-
 const latestUpdate = computed(() => updates.value[0] || null);
 
 const typeColorMap: Record<string, string> = {
@@ -88,9 +86,27 @@ const typeColorMap: Record<string, string> = {
     beta: "gray",
 };
 
+const updates = computed(() => {
+    const locale = preferencesStore.locale;
+
+    return [...changelogs]
+        .map((entry) => {
+            const localized = entry.i18n?.[locale] ?? entry.i18n?.en;
+
+            return {
+                id: entry.id,
+                version: entry.version,
+                type: entry.type,
+                date: localized?.date ?? "",
+                summary: localized?.summary ?? "",
+                changes: localized?.changes ?? [],
+            };
+        })
+        .sort((a, b) => b.id - a.id);
+});
+
 const getDotClasses = (update: any) => {
     const isActive = latestUpdate.value?.id === update.id;
-
     return [typeColorMap[update.type] || "gray", { "dot-active": isActive }];
 };
 

@@ -13,6 +13,7 @@
         </p>
         <div class="flex items-center justify-center gap-3">
             <Button
+                v-if="type === 'personal_project'"
                 buttonType="external"
                 :href="codeUrl"
                 :buttonText="$t('projectsLocale.source_code_btn')"
@@ -32,10 +33,13 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
+import type { ProjectType } from "@/types";
+
 import Button from "@/components/ui/atoms/Button.vue";
 
 interface Props {
     name: string;
+    type?: ProjectType;
     iconUrl: string;
     codeUrl?: string;
     deployUrl?: string;

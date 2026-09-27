@@ -1,0 +1,86 @@
+{
+    "id": 2,
+    "slug": "suzdalfest-open-premiere",
+    "type": "commercial_project",
+
+    "meta": {
+        "link_to_deploy": "https://festapp.ru/lk/otkrytaya_premera/suzdal/",
+        "link_to_code": "",
+        "project_large_icon": "",
+        "project_video_cover": ""
+    },
+
+    "technologies": [],
+
+    "i18n": {
+        "ru": {
+            "name": "Суздальфест: Открытая Премьера",
+            "overview": "",
+            "purpose": "",
+            "key_features": [
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                }
+            ],
+            "role": "",
+            "contribution": "",
+            "results": {
+                "text": "",
+                "metrics": [
+                    { "label": "Производительность", "value": 0 },
+                    { "label": "Доступность", "value": 0 },
+                    { "label": "Лучшие практики", "value": 0 },
+                    { "label": "SEO", "value": 0 }
+                ]
+            },
+            "last_data_update": ""
+        },
+
+        "en": {
+            "name": "Suzdalfest: Open Premiere",
+            "overview": "",
+            "purpose": "",
+            "key_features": [
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                },
+                {
+                    "feature": ""
+                }
+            ],
+            "role": "",
+            "contribution": "",
+            "results": {
+                "text": "",
+                "metrics": [
+                    { "label": "Performance", "value": 0 },
+                    { "label": "Accessibility", "value": 0 },
+                    { "label": "Best Practices", "value": 0 },
+                    { "label": "SEO", "value": 0 }
+                ]
+            },
+            "last_data_update": ""
+        }
+    }
+}

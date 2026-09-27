@@ -1,7 +1,7 @@
 <template>
     <RouterLink
         v-if="project"
-        :to="{ name: 'aboutProjectPage', params: { id: project.id } }"
+        :to="{ name: 'aboutProjectPage', params: { slug: project.slug } }"
         class="project_card_container commom_card_style relative flex h-[206px] w-80 cursor-pointer items-center justify-center overflow-hidden"
     >
         <video
@@ -18,10 +18,10 @@
         </video>
         <Skeleton v-else width="100%" height="100%" />
         <div
-            class="project_name_container _glass_effect absolute bottom-3 left-3 flex items-center justify-start gap-1 rounded-full py-1! pr-3! pl-[6px]! opacity-0 transition-all duration-200"
+            class="project_name_container _glass_effect absolute bottom-3 left-3 flex max-w-[65%] items-center justify-start gap-1 rounded-full py-1! pr-3! pl-[6px]! opacity-0 transition-all duration-200"
         >
             <SvgIcon name="eye-icon" />
-            <p class="text-primary-white text-base font-normal">
+            <p class="text-primary-white truncate text-base font-normal">
                 {{ project.locale.name }}
             </p>
         </div>

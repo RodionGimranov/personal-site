@@ -66,6 +66,7 @@ const TRACKED_FILES: string[] = [
 
     "./src/constants/appConstants.ts",
 
+    "./src/data/projects/index.ts",
     "./src/data/projects/medmedia-pro.json",
     "./src/data/projects/password-generator.json",
     "./src/data/projects/personal-website.json",

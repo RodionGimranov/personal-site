@@ -20,7 +20,7 @@ const routes: RouteRecordRaw[] = [
         meta: { titleKey: "global.projects_tab_title" },
     },
     {
-        path: "/about-project/:id",
+        path: "/about-project/:slug",
         name: "aboutProjectPage",
         component: () => import("@/views/AboutProjectPage.vue"),
         meta: { titleKey: "global.about_project_tab_title" },

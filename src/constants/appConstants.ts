@@ -1,7 +1,7 @@
-export const APP_VERSION: string = "1.5.90";
+export const APP_VERSION: string = "1.6.3";
 
-export const TOTAL_LINES_OF_CODE: number = 6275;
-export const TOTAL_FILE_COUNT: number = 101;
+export const TOTAL_LINES_OF_CODE: number = 6521;
+export const TOTAL_FILE_COUNT: number = 102;
 export const TOTAL_FOLDER_COUNT: number = 32;
 export const PROJECT_SIZE_MB: number = 0.7;
 

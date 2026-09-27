@@ -14,7 +14,7 @@
 
     "tech_stack_home_section_title": "Технический стек",
     "tech_stack_card_title_1": "Экосистема Vue ",
-    "tech_stack_card_subtitle_1": "Практический опыт работы с Vue и ключевыми инструментами экосистемы - Nuxt, Pinia, Vuex, Vue Router, Vuetify, Vue i18n и VueUse. Использую их для построения масштабируемых SPA и универсальных веб-приложений.",
+    "tech_stack_card_subtitle_1": "Практический опыт работы с Vue и инструментами его экосистемы: Nuxt, Pinia, Vuex, Vue Router, NuxtUI, Vuetify и Vue i18n. Использую их для создания масштабируемых SPA и универсальных веб-приложений.",
 
     "tech_stack_card_title_2": "JS/TS Среда",
     "tech_stack_card_subtitle_2": "Разрабатываю современные решения на JavaScript и TypeScript, используя широкий набор библиотек и инструментов для реализации сложной бизнес-логики и интерфейсных задач.",

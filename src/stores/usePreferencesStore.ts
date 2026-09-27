@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 import { i18n } from "@/plugins/vue-i18n";
-import type { Locale, Theme, SidebarMode } from "@/types/";
+
+import type { Locale, Theme, SidebarMode } from "@/types";
 
 const LOCALE_KEY = "locale";
 const THEME_KEY = "theme";

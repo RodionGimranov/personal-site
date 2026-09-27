@@ -3,6 +3,7 @@
         <div class="flex max-w-[610px] flex-col items-start justify-start gap-[46px]">
             <ProjectHeader
                 :name="project.locale.name"
+                :type="project.type"
                 :iconUrl="project.meta.project_large_icon"
                 :codeUrl="project.meta.link_to_code"
                 :deployUrl="project.meta.link_to_deploy"
@@ -81,7 +82,7 @@ const router = useRouter();
 const projectsStore = useProjectsStore();
 
 const project = computed(() => {
-    const found = projectsStore.getProjectById(Number(route.params.id));
+    const found = projectsStore.getProjectBySlug(route.params.slug as string);
 
     if (!found) {
         router.push({ name: "notFound" });
